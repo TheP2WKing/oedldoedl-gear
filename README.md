@@ -1,6 +1,4 @@
-# oedldoedl-gear
-Minecraft Oedldoedl Gear Mod
-made for Oedldoedl Projects
-by TheP2WKing
+# Oedldoedl Gear
+A mod made for TheP2WKings own Oedldoedl Projects!
 
 Curseforge: https://www.curseforge.com/minecraft/mc-mods/oedldoedl-gear
