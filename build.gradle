@@ -19,7 +19,7 @@ repositories
    
 }
 
-version = "1.12.2-1.0.0.5"
+version = "1.12.2-2.0.1"
 group = "com.thep2wking.oedldoedl.gear"
 archivesBaseName = "OedldoedlGear"
 sourceCompatibility = targetCompatibility = '1.8'
@@ -38,8 +38,8 @@ minecraft
 
 dependencies 
 {
-    compile files("src/libs/OedldoedlCore-1.12.2-1.1.0.15-universal.jar")
-    compile files("src/libs/OedldoedlResources-1.12.2-1.1.0.11-universal.jar")
+    compile files("src/libs/OedldoedlCore-1.12.2-2.1.0.jar")
+    compile files("src/libs/OedldoedlResources-1.12.2-2.0.0.jar")
     compile files("src/libs/jei_1.12.2-4.16.1.302.jar")
     compile files("src/libs/theoneprobe-1.12-1.4.28.jar")
     compile files("src/libs/Baubles-1.12-1.5.2.jar")
@@ -59,10 +59,5 @@ processResources
     from(sourceSets.main.resources.srcDirs) 
     {
         exclude 'mcmod.info'
-    }
-
-    jar 
-    {
-        classifier = 'universal'
     }
 }
