@@ -1,0 +1,47 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+[[mods]]
+modId="oedldoedlgear"
+version="1.16.5-3.1.0"
+displayName="Oedldoedl Series: Gear"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/oedldoedl-gear"
+logoFile="oedldoedlgear.png"
+authors="TheP2WKing"
+description='''
+[Oedldoedl Gear Project]
+
+Provides:
+    - Tooltips
+    - Information
+    - Various Equipment For Modpacks
+    - Various Crafting Ingredients For Modpacks
+    - Basic Build-In Recipes
+    - JEI Integration
+    - High Configurability
+    - Easy Usability For Modpack Authors
+'''
+[[dependencies.oedldoedlgear]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.2,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.oedldoedlgear]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.oedldoedlgear]]
+    modId="oedldoedlcore"
+    mandatory=true
+    versionRange="[1.16.5-3.9.0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.oedldoedlgear]]
+    modId="oedldoedlresources"
+    mandatory=true
+    versionRange="[1.16.5-3.6.0,)"
+    ordering="AFTER"
+    side="BOTH"
