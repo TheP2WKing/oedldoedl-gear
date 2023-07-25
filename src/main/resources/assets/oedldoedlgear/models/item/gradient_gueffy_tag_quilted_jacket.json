@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": 
+	{
+		"layer0": "oedldoedlgear:items/gradient_gueffy_tag_quilted_jacket"
+	}
+}

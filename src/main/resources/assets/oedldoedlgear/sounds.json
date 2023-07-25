@@ -1,0 +1,29 @@
+{
+    "nuke_alarm":
+    {
+        "category": "blocks",
+        "subtitle": "sound.oedldoedlgear.nuke_alarm",
+        "sounds":
+        [
+            "oedldoedlgear:nuke_alarm"
+        ]
+    },
+    "megumin":
+    {
+        "category": "ambient",
+        "subtitle": "sound.oedldoedlgear.megumin",
+        "sounds":
+        [
+            "oedldoedlgear:megumin"
+        ]
+    },
+    "quiek":
+    {
+        "category": "ambient",
+        "subtitle": "sound.oedldoedlgear.quiek",
+        "sounds":
+        [
+            "oedldoedlgear:quiek"
+        ]
+    }
+}

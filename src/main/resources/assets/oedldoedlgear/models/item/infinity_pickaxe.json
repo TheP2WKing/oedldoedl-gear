@@ -1,0 +1,17 @@
+{
+	"parent": "item/handheld",
+	"textures": 
+	{
+		"layer0": "oedldoedlgear:items/infinity_pickaxe"
+	},
+	"overrides": 
+	[
+		{
+			"predicate": 
+			{
+				"oedldoedlgear:hammer": 1
+			},
+			"model": "oedldoedlgear:items/hammer"
+		}
+	]
+}

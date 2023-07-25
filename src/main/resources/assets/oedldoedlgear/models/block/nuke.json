@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": 
+    {
+        "top": "oedldoedlgear:blocks/nuke_top",
+        "bottom": "oedldoedlgear:blocks/nuke_bottom",
+        "side": "oedldoedlgear:blocks/nuke_side"
+    }
+}

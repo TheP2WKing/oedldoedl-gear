@@ -1,0 +1,17 @@
+{
+	"parent": "item/handheld",
+	"textures": 
+	{
+		"layer0": "oedldoedlgear:items/infinity_shovel"
+	},
+	"overrides": 
+	[
+		{
+			"predicate": 
+			{
+				"oedldoedlgear:excavator": 1
+			},
+			"model": "oedldoedlgear:items/excavator"
+		}
+	]
+}

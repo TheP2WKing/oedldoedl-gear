@@ -1,0 +1,41 @@
+{
+	"parent": "item/handheld",
+	"textures": 
+	{
+		"layer0": "oedldoedlgear:items/explosion_staff"
+	},
+
+	"display": 
+	{
+        "gui": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ -0.5, 0.5, 0 ],
+            "scale": [ 1.05, 1.05, 1.05 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 2, 0 ],
+            "scale": [ 0.5, 0.5, 0.5 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 270, 25 ],
+            "translation": [ -1.13, 3.2, 1.13 ],
+            "scale": [ 1.25, 1.25, 0.5 ]
+        },
+		"firstperson_lefthand": {
+            "rotation": [ 0, 90, 330 ],
+            "translation": [ -0.5, 3.0, 1.13 ],
+            "scale": [ 1.25, 1.25, 0.5 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 0, 270, 45 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 2, 2, 1 ]
+        },
+		"thirdperson_lefthand": {
+            "rotation": [ 0, 90, 315 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 2, 2, 1 ]
+        }
+	}
+}
