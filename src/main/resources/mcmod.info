@@ -1,0 +1,14 @@
+[
+    {
+        "modid": "oedldoedlgear",
+        "name": "Oedldoedl Gear",
+        "description": "An addon or module or whatever you want to call it for the oedldoedl series. This mod adds many different tools, armor and equipment. Originally intended to be used with mods like CraftTweaker or KubeJS to add recipes, but the mod itself adds its own basic recipes. Recipes can be disabled and some items easily configured via a config file.",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://github.com/TheP2WKing/oedldoedl-gear",
+        "authorList": ["TheP2WKing"],
+        "credits": "TheP2WKing",
+        "logoFile": "assets/oedldoedlgear/textures/gui/logo/gear_logo.png",
+        "dependencies": []
+    }
+]
