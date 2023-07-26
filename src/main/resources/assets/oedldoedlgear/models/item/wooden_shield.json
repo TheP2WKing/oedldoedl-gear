@@ -89,9 +89,9 @@
         {
             "predicate": 
             { 
-                "oedldoedlgear:blocksing": 1 
+                "blocking": 1 
             },
-            "model": "oedldoedlgear:items/wooden_shield_blocking"
+            "model": "oedldoedlgear:item/wooden_shield_blocking"
         }
     ]   
 }

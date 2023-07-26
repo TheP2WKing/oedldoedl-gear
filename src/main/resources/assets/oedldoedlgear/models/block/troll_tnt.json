@@ -2,8 +2,8 @@
     "parent": "minecraft:block/cube_bottom_top",
     "textures": 
     {
-        "top": "minecraft:block/tnt_top",
-        "bottom": "minecraft:block/tnt_bottom",
+        "top": "minecraft:blocks/tnt_top",
+        "bottom": "minecraft:blocks/tnt_bottom",
         "side": "oedldoedlgear:blocks/troll_tnt_side"
     }
 }

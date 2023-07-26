@@ -3,3 +3,669 @@ itemGroup.oedldoedlgear.name=§dOedldoedl Gear
 
 # icons
 item.oedldoedlcore.gear_icon.annotation3=Version: §e1.12.2-3.0.0
+
+# icons
+sound.oedldoedlgear.nuke_alarm=Nuke alarm
+sound.oedldoedlgear.megumin=Megumin screems
+sound.oedldoedlgear.quiek=Bottle quieking
+
+# base
+item.oedldoedlgear.base_helmet.name=Base Helmet
+item.oedldoedlgear.base_helmet.tip1=Basic helmet.
+item.oedldoedlgear.base_chestplate.name=Base Chestplate
+item.oedldoedlgear.base_chestplate.tip1=Basic chestplate.
+item.oedldoedlgear.base_leggings.name=Base Leggings
+item.oedldoedlgear.base_leggings.tip1=Basic leggings.
+item.oedldoedlgear.base_boots.name=Base Boots
+item.oedldoedlgear.base_boots.tip1=Basic boots.
+item.oedldoedlgear.base_sword.name=Base Sword
+item.oedldoedlgear.base_sword.tip1=Basic sword.
+item.oedldoedlgear.base_shovel.name=Base Shovel
+item.oedldoedlgear.base_shovel.tip1=Basic shovel.
+item.oedldoedlgear.base_pickaxe.name=Base Pickaxe
+item.oedldoedlgear.base_pickaxe.tip1=Basic pickaxe.
+item.oedldoedlgear.base_axe.name=Base Axe
+item.oedldoedlgear.base_axe.tip1=Basic axe.
+item.oedldoedlgear.base_hoe.name=Base Hoe
+item.oedldoedlgear.base_hoe.tip1=Basic hoe.
+item.oedldoedlgear.base_paxel.name=Base Paxel
+item.oedldoedlgear.base_paxel.tip1=Basic paxel.
+item.oedldoedlgear.base_smashbat.name=Base Smashbat
+item.oedldoedlgear.base_smashbat.tip1=Basic smashbat.
+item.oedldoedlgear.base_shears.name=Base Shears
+item.oedldoedlgear.base_shears.tip1=Basic shears.
+item.oedldoedlgear.base_shield.name=Base Shield
+item.oedldoedlgear.base_shield.tip1=Basic sield.
+
+# flint
+item.oedldoedlgear.flint_helmet.name=Flint Helmet
+item.oedldoedlgear.flint_helmet.tip1=What a stupid material...
+item.oedldoedlgear.flint_chestplate.name=Flint Chestplate
+item.oedldoedlgear.flint_chestplate.tip1=What a stupid material...
+item.oedldoedlgear.flint_leggings.name=Flint Leggings
+item.oedldoedlgear.flint_leggings.tip1=What a stupid material...
+item.oedldoedlgear.flint_boots.name=Flint Boots
+item.oedldoedlgear.flint_boots.tip1=What a stupid material...
+item.oedldoedlgear.flint_sword.name=Flint Sword
+item.oedldoedlgear.flint_sword.tip1=What a stupid material...
+item.oedldoedlgear.flint_shovel.name=Flint Shovel
+item.oedldoedlgear.flint_shovel.tip1=What a stupid material...
+item.oedldoedlgear.flint_pickaxe.name=Flint Pickaxe
+item.oedldoedlgear.flint_pickaxe.tip1=What a stupid material...
+item.oedldoedlgear.flint_axe.name=Flint Axe
+item.oedldoedlgear.flint_axe.tip1=What a stupid material...
+item.oedldoedlgear.flint_hoe.name=Flint Hoe
+item.oedldoedlgear.flint_hoe.tip1=What a stupid material...
+item.oedldoedlgear.flint_paxel.name=Flint Paxel
+item.oedldoedlgear.flint_paxel.tip1=What a stupid material...
+item.oedldoedlgear.flint_smashbat.name=Flint Smashbat
+item.oedldoedlgear.flint_smashbat.tip1=What a stupid material...
+item.oedldoedlgear.flint_shears.name=Flint Shears
+item.oedldoedlgear.flint_shears.tip1=What a stupid material...
+item.oedldoedlgear.flint_shield.name=Flint Shield
+item.oedldoedlgear.flint_shield.tip1=What a stupid material...
+
+# emerald
+item.oedldoedlgear.emerald_helmet.name=Emerald Helmet
+item.oedldoedlgear.emerald_helmet.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_chestplate.name=Emerald Chestplate
+item.oedldoedlgear.emerald_chestplate.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_leggings.name=Emerald Leggings
+item.oedldoedlgear.emerald_leggings.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_boots.name=Emerald Boots
+item.oedldoedlgear.emerald_boots.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_sword.name=Emerald Sword
+item.oedldoedlgear.emerald_sword.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_shovel.name=Emerald Shovel
+item.oedldoedlgear.emerald_shovel.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_pickaxe.name=Emerald Pickaxe
+item.oedldoedlgear.emerald_pickaxe.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_axe.name=Emerald Axe
+item.oedldoedlgear.emerald_axe.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_hoe.name=Emerald Hoe
+item.oedldoedlgear.emerald_hoe.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_paxel.name=Emerald Paxel
+item.oedldoedlgear.emerald_paxel.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_smashbat.name=Emerald Smashbat
+item.oedldoedlgear.emerald_smashbat.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_shears.name=Emerald Shears
+item.oedldoedlgear.emerald_shears.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.emerald_shield.name=Emerald Shield
+item.oedldoedlgear.emerald_shield.tip1=Every crappy MCreator mod adds that.
+
+# oedldoedl
+item.oedldoedlgear.oedldoedl_helmet.name=Oedldoedl Helmet
+item.oedldoedlgear.oedldoedl_helmet.tip1=A helmet made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_chestplate.name=Oedldoedl Chestplate
+item.oedldoedlgear.oedldoedl_chestplate.tip1=A chestplate made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_leggings.name=Oedldoedl Leggings
+item.oedldoedlgear.oedldoedl_leggings.tip1=A leggings made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_boots.name=Oedldoedl Boots
+item.oedldoedlgear.oedldoedl_boots.tip1=Boots made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_sword.name=Oedldoedl Sword
+item.oedldoedlgear.oedldoedl_sword.tip1=A sword made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_shovel.name=Oedldoedl Shovel
+item.oedldoedlgear.oedldoedl_shovel.tip1=A shovel made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_pickaxe.name=Oedldoedl Pickaxe
+item.oedldoedlgear.oedldoedl_pickaxe.tip1=A pickaxe made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_axe.name=Oedldoedl Axe
+item.oedldoedlgear.oedldoedl_axe.tip1=An axe made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_hoe.name=Oedldoedl Hoe
+item.oedldoedlgear.oedldoedl_hoe.tip1=A hoe made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_paxel.name=Oedldoedl Paxel
+item.oedldoedlgear.oedldoedl_paxel.tip1=A paxel made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_smashbat.name=Oedldoedl Smashbat
+item.oedldoedlgear.oedldoedl_smashbat.tip1=A smashbat made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_shears.name=Oedldoedl Shears
+item.oedldoedlgear.oedldoedl_shears.tip1=Shears made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_shield.name=Oedldoedl Shield
+item.oedldoedlgear.oedldoedl_shield.tip1=A shield made for Oedldoedl Projects.
+
+# unstable
+item.oedldoedlgear.unstable_helmet.name=Unstable Helmet
+item.oedldoedlgear.unstable_helmet.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_chestplate.name=Unstable Chestplate
+item.oedldoedlgear.unstable_chestplate.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_leggings.name=Unstable Leggings
+item.oedldoedlgear.unstable_leggings.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_boots.name=Unstable Boots
+item.oedldoedlgear.unstable_boots.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_sword.name=Unstable Sword
+item.oedldoedlgear.unstable_sword.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_shovel.name=Unstable Shovel
+item.oedldoedlgear.unstable_shovel.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_pickaxe.name=Unstable Pickaxe
+item.oedldoedlgear.unstable_pickaxe.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_axe.name=Unstable Axe
+item.oedldoedlgear.unstable_axe.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_hoe.name=Unstable Hoe
+item.oedldoedlgear.unstable_hoe.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_paxel.name=Unstable Paxel
+item.oedldoedlgear.unstable_paxel.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_smashbat.name=Unstable Smashbat
+item.oedldoedlgear.unstable_smashbat.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_shears.name=Unstable Shears
+item.oedldoedlgear.unstable_shears.tip1=Explodes on impact.
+item.oedldoedlgear.unstable_shield.name=Unstable Shield
+item.oedldoedlgear.unstable_shield.tip1=Explodes on impact.
+
+# gremorium
+item.oedldoedlgear.gremorium_helmet.name=Gremorium Helmet
+item.oedldoedlgear.gremorium_helmet.tip1=The full power of Rias.
+item.oedldoedlgear.gremorium_chestplate.name=Gremorium Chestplate
+item.oedldoedlgear.gremorium_chestplate.tip1=The full power of Rias.
+item.oedldoedlgear.gremorium_leggings.name=Gremorium Leggings
+item.oedldoedlgear.gremorium_leggings.tip1=The full power of Rias.
+item.oedldoedlgear.gremorium_boots.name=Gremorium Boots
+item.oedldoedlgear.gremorium_boots.tip1=The full power of Rias.
+item.oedldoedlgear.gremorium_armor.effects1.name=Removes Poison / Wither
+item.oedldoedlgear.gremorium_armor.effects2.name=Underwater Breathing
+item.oedldoedlgear.gremorium_armor.effects3.name=Fast Flight
+item.oedldoedlgear.gremorium_armor.effects4.name=Step Up
+item.oedldoedlgear.gremorium_sword.name=Gremorium Sword
+item.oedldoedlgear.gremorium_sword.tip1=The full power of Rias?
+item.oedldoedlgear.gremorium_shovel.name=Gremorium Shovel
+item.oedldoedlgear.gremorium_shovel.tip1=The full power of Rias?
+item.oedldoedlgear.gremorium_pickaxe.name=Gremorium Pickaxe
+item.oedldoedlgear.gremorium_pickaxe.tip1=The full power of Rias?
+item.oedldoedlgear.gremorium_axe.name=Gremorium Axe
+item.oedldoedlgear.gremorium_axe.tip1=The full power of Rias?
+item.oedldoedlgear.gremorium_hoe.name=Gremorium Hoe
+item.oedldoedlgear.gremorium_hoe.tip1=The full power of Rias?
+item.oedldoedlgear.gremorium_paxel.name=Gremorium Paxel
+item.oedldoedlgear.gremorium_paxel.tip1=The full power of Rias?
+item.oedldoedlgear.gremorium_smashbat.name=Gremorium Smashbat
+item.oedldoedlgear.gremorium_smashbat.tip1=The full power of Rias?
+item.oedldoedlgear.gremorium_shears.name=Gremorium Shears
+item.oedldoedlgear.gremorium_shears.tip1=The full power of Rias?
+item.oedldoedlgear.gremorium_shield.name=Gremorium Shield
+item.oedldoedlgear.gremorium_shield.tip1=The full power of Rias?
+
+# himejimarium
+item.oedldoedlgear.himejimarium_helmet.name=Himejimarium Helmet
+item.oedldoedlgear.himejimarium_helmet.tip1=The full power of Akeno.
+item.oedldoedlgear.himejimarium_chestplate.name=Himejimarium Chestplate
+item.oedldoedlgear.himejimarium_chestplate.tip1=The full power of Akeno.
+item.oedldoedlgear.himejimarium_leggings.name=Himejimarium Leggings
+item.oedldoedlgear.himejimarium_leggings.tip1=The full power of Akeno.
+item.oedldoedlgear.himejimarium_boots.name=Himejimarium Boots
+item.oedldoedlgear.himejimarium_boots.tip1=The full power of Akeno.
+item.oedldoedlgear.himejimarium_armor.effects1.name=Attacked Entities are Struck by Lightning \u00A7e\u00A7o(Sneak)
+item.oedldoedlgear.himejimarium_armor.effects2.name=Underwater Breathing
+item.oedldoedlgear.himejimarium_armor.effects3.name=Step Up
+item.oedldoedlgear.himejimarium_sword.name=Himejimarium Sword
+item.oedldoedlgear.himejimarium_sword.tip1=The full power of Akeno?
+item.oedldoedlgear.himejimarium_shovel.name=Himejimarium Shovel
+item.oedldoedlgear.himejimarium_shovel.tip1=The full power of Akeno?
+item.oedldoedlgear.himejimarium_pickaxe.name=Himejimarium Pickaxe
+item.oedldoedlgear.himejimarium_pickaxe.tip1=The full power of Akeno?
+item.oedldoedlgear.himejimarium_axe.name=Himejimarium Axe
+item.oedldoedlgear.himejimarium_axe.tip1=The full power of Akeno?
+item.oedldoedlgear.himejimarium_hoe.name=Himejimarium Hoe
+item.oedldoedlgear.himejimarium_hoe.tip1=The full power of Akeno?
+item.oedldoedlgear.himejimarium_paxel.name=Himejimarium Paxel
+item.oedldoedlgear.himejimarium_paxel.tip1=The full power of Akeno?
+item.oedldoedlgear.himejimarium_smashbat.name=Himejimarium Smashbat
+item.oedldoedlgear.himejimarium_smashbat.tip1=The full power of Akeno?
+item.oedldoedlgear.himejimarium_shears.name=Himejimarium Shears
+item.oedldoedlgear.himejimarium_shears.tip1=The full power of Akeno?
+item.oedldoedlgear.himejimarium_shield.name=Himejimarium Shield
+item.oedldoedlgear.himejimarium_shield.tip1=The full power of Akeno?
+
+# toujourium
+item.oedldoedlgear.toujourium_helmet.name=Toujourium Helmet
+item.oedldoedlgear.toujourium_helmet.tip1=The full power of Koneko.
+item.oedldoedlgear.toujourium_chestplate.name=Toujourium Chestplate
+item.oedldoedlgear.toujourium_chestplate.tip1=The full power of Koneko.
+item.oedldoedlgear.toujourium_leggings.name=Toujourium Leggings
+item.oedldoedlgear.toujourium_leggings.tip1=The full power of Koneko.
+item.oedldoedlgear.toujourium_boots.name=Toujourium Boots
+item.oedldoedlgear.toujourium_boots.tip1=The full power of Koneko.
+item.oedldoedlgear.toujourium_armor.effects1.name=Additional Attack Knockback
+item.oedldoedlgear.toujourium_armor.effects2.name=Underwater Breathing
+item.oedldoedlgear.toujourium_armor.effects3.name=Negates Fall Damage
+item.oedldoedlgear.toujourium_armor.effects4.name=Step Up
+item.oedldoedlgear.toujourium_sword.name=Toujourium Sword
+item.oedldoedlgear.toujourium_sword.tip1=The full power of Koneko?
+item.oedldoedlgear.toujourium_shovel.name=Toujourium Shovel
+item.oedldoedlgear.toujourium_shovel.tip1=The full power of Koneko?
+item.oedldoedlgear.toujourium_pickaxe.name=Toujourium Pickaxe
+item.oedldoedlgear.toujourium_pickaxe.tip1=The full power of Koneko?
+item.oedldoedlgear.toujourium_axe.name=Toujourium Axe
+item.oedldoedlgear.toujourium_axe.tip1=The full power of Koneko?
+item.oedldoedlgear.toujourium_hoe.name=Toujourium Hoe
+item.oedldoedlgear.toujourium_hoe.tip1=The full power of Koneko?
+item.oedldoedlgear.toujourium_paxel.name=Toujourium Paxel
+item.oedldoedlgear.toujourium_paxel.tip1=The full power of Koneko?
+item.oedldoedlgear.toujourium_smashbat.name=Toujourium Smashbat
+item.oedldoedlgear.toujourium_smashbat.tip1=The full power of Koneko?
+item.oedldoedlgear.toujourium_shears.name=Toujourium Shears
+item.oedldoedlgear.toujourium_shears.tip1=The full power of Koneko?
+item.oedldoedlgear.toujourium_shield.name=Toujourium Shield
+item.oedldoedlgear.toujourium_shield.tip1=The full power of Koneko?
+
+# argentorium
+item.oedldoedlgear.argentorium_helmet.name=Argentorium Helmet
+item.oedldoedlgear.argentorium_helmet.tip1=The full power of Asia.
+item.oedldoedlgear.argentorium_chestplate.name=Argentorium Chestplate
+item.oedldoedlgear.argentorium_chestplate.tip1=The full power of Asia.
+item.oedldoedlgear.argentorium_leggings.name=Argentorium Leggings
+item.oedldoedlgear.argentorium_leggings.tip1=The full power of Asia.
+item.oedldoedlgear.argentorium_boots.name=Argentorium Boots
+item.oedldoedlgear.argentorium_boots.tip1=The full power of Asia.
+item.oedldoedlgear.argentorium_armor.effects1.name=Bonus Damage Against Undead
+item.oedldoedlgear.argentorium_armor.effects2.name=Fast Regeneration \u00A7e\u00A7o(Sneak)
+item.oedldoedlgear.argentorium_armor.effects3.name=Underwater Breathing
+item.oedldoedlgear.argentorium_armor.effects4.name=Additional Hearts
+item.oedldoedlgear.argentorium_armor.effects5.name=Step Up
+item.oedldoedlgear.argentorium_sword.name=Argentorium Sword
+item.oedldoedlgear.argentorium_sword.tip1=The full power of Asia?
+item.oedldoedlgear.argentorium_shovel.name=Argentorium Shovel
+item.oedldoedlgear.argentorium_shovel.tip1=The full power of Asia?
+item.oedldoedlgear.argentorium_pickaxe.name=Argentorium Pickaxe
+item.oedldoedlgear.argentorium_pickaxe.tip1=The full power of Asia?
+item.oedldoedlgear.argentorium_axe.name=Argentorium Axe
+item.oedldoedlgear.argentorium_axe.tip1=The full power of Asia?
+item.oedldoedlgear.argentorium_hoe.name=Argentorium Hoe
+item.oedldoedlgear.argentorium_hoe.tip1=The full power of Asia?
+item.oedldoedlgear.argentorium_paxel.name=Argentorium Paxel
+item.oedldoedlgear.argentorium_paxel.tip1=The full power of Asia?
+item.oedldoedlgear.argentorium_smashbat.name=Argentorium Smashbat
+item.oedldoedlgear.argentorium_smashbat.tip1=The full power of Asia?
+item.oedldoedlgear.argentorium_shears.name=Argentorium Shears
+item.oedldoedlgear.argentorium_shears.tip1=The full power of Asia?
+item.oedldoedlgear.argentorium_shield.name=Argentorium Shield
+item.oedldoedlgear.argentorium_shield.tip1=The full power of Asia?
+
+# quartarium
+item.oedldoedlgear.quartarium_helmet.name=Quartarium Helmet
+item.oedldoedlgear.quartarium_helmet.tip1=The full power of Xenovia.
+item.oedldoedlgear.quartarium_chestplate.name=Quartarium Chestplate
+item.oedldoedlgear.quartarium_chestplate.tip1=The full power of Xenovia.
+item.oedldoedlgear.quartarium_leggings.name=Quartarium Leggings
+item.oedldoedlgear.quartarium_leggings.tip1=The full power of Xenovia.
+item.oedldoedlgear.quartarium_boots.name=Quartarium Boots
+item.oedldoedlgear.quartarium_boots.tip1=The full power of Xenovia.
+item.oedldoedlgear.quartarium_armor.effects1.name=Underwater Breathing
+item.oedldoedlgear.quartarium_armor.effects2.name=Life Steal
+item.oedldoedlgear.quartarium_armor.effects3.name=Step Up
+item.oedldoedlgear.quartarium_sword.name=Quartarium Sword
+item.oedldoedlgear.quartarium_sword.tip1=The full power of Xenovia?
+item.oedldoedlgear.quartarium_shovel.name=Quartarium Shovel
+item.oedldoedlgear.quartarium_shovel.tip1=The full power of Xenovia?
+item.oedldoedlgear.quartarium_pickaxe.name=Quartarium Pickaxe
+item.oedldoedlgear.quartarium_pickaxe.tip1=The full power of Xenovia?
+item.oedldoedlgear.quartarium_axe.name=Quartarium Axe
+item.oedldoedlgear.quartarium_axe.tip1=The full power of Xenovia?
+item.oedldoedlgear.quartarium_hoe.name=Quartarium Hoe
+item.oedldoedlgear.quartarium_hoe.tip1=The full power of Xenovia?
+item.oedldoedlgear.quartarium_paxel.name=Quartarium Paxel
+item.oedldoedlgear.quartarium_paxel.tip1=The full power of Xenovia?
+item.oedldoedlgear.quartarium_smashbat.name=Quartarium Smashbat
+item.oedldoedlgear.quartarium_smashbat.tip1=The full power of Xenovia?
+item.oedldoedlgear.quartarium_shears.name=Quartarium Shears
+item.oedldoedlgear.quartarium_shears.tip1=The full power of Xenovia?
+item.oedldoedlgear.quartarium_shield.name=Quartarium Shield
+item.oedldoedlgear.quartarium_shield.tip1=The full power of Xenovia?  
+
+# nagatorium
+item.oedldoedlgear.nagatorium_helmet.name=Nagatorium Helmet
+item.oedldoedlgear.nagatorium_helmet.tip1=The full power of Hayase.
+item.oedldoedlgear.nagatorium_chestplate.name=Nagatorium Chestplate
+item.oedldoedlgear.nagatorium_chestplate.tip1=The full power of Hayase.
+item.oedldoedlgear.nagatorium_leggings.name=Nagatorium Leggings
+item.oedldoedlgear.nagatorium_leggings.tip1=The full power of Hayase.
+item.oedldoedlgear.nagatorium_boots.name=Nagatorium Boots
+item.oedldoedlgear.nagatorium_boots.tip1=The full power of Hayase.
+item.oedldoedlgear.nagatorium_armor.effects1.name=Attacked Entities get Levitation \u00A7e\u00A7o(Sneak)
+item.oedldoedlgear.nagatorium_armor.effects2.name=Attacked Entities get Nasty Effects
+item.oedldoedlgear.nagatorium_armor.effects3.name=Inverts Negative Potion Effects
+item.oedldoedlgear.nagatorium_armor.effects4.name=Underwater Breathing
+item.oedldoedlgear.nagatorium_armor.effects5.name=Step Up
+item.oedldoedlgear.nagatorium_sword.name=Nagatorium Sword
+item.oedldoedlgear.nagatorium_sword.tip1=The full power of Hayase?
+item.oedldoedlgear.nagatorium_shovel.name=Nagatorium Shovel
+item.oedldoedlgear.nagatorium_shovel.tip1=The full power of Hayase?
+item.oedldoedlgear.nagatorium_pickaxe.name=Nagatorium Pickaxe
+item.oedldoedlgear.nagatorium_pickaxe.tip1=The full power of Hayase?
+item.oedldoedlgear.nagatorium_axe.name=Nagatorium Axe
+item.oedldoedlgear.nagatorium_axe.tip1=The full power of Hayase?
+item.oedldoedlgear.nagatorium_hoe.name=Nagatorium Hoe
+item.oedldoedlgear.nagatorium_hoe.tip1=The full power of Hayase?
+item.oedldoedlgear.nagatorium_paxel.name=Nagatorium Paxel
+item.oedldoedlgear.nagatorium_paxel.tip1=The full power of Hayase?
+item.oedldoedlgear.nagatorium_smashbat.name=Nagatorium Smashbat
+item.oedldoedlgear.nagatorium_smashbat.tip1=The full power of Hayase?
+item.oedldoedlgear.nagatorium_shears.name=Nagatorium Shears
+item.oedldoedlgear.nagatorium_shears.tip1=The full power of Hayase?
+item.oedldoedlgear.nagatorium_shield.name=Nagatorium Shield
+item.oedldoedlgear.nagatorium_shield.tip1=The full power of Hayase?
+
+# sakurajimarium
+item.oedldoedlgear.sakurajimarium_helmet.name=Sakurajimarium Helmet
+item.oedldoedlgear.sakurajimarium_helmet.tip1=The full power of Mai.
+item.oedldoedlgear.sakurajimarium_chestplate.name=Sakurajimarium Chestplate
+item.oedldoedlgear.sakurajimarium_chestplate.tip1=The full power of Mai.
+item.oedldoedlgear.sakurajimarium_leggings.name=Sakurajimarium Leggings
+item.oedldoedlgear.sakurajimarium_leggings.tip1=The full power of Mai.
+item.oedldoedlgear.sakurajimarium_boots.name=Sakurajimarium Boots
+item.oedldoedlgear.sakurajimarium_boots.tip1=The full power of Mai.
+item.oedldoedlgear.sakurajimarium_armor.effects1.name=
+item.oedldoedlgear.sakurajimarium_armor.effects2.name=
+item.oedldoedlgear.sakurajimarium_armor.effects3.name=
+item.oedldoedlgear.sakurajimarium_armor.effects4.name=
+item.oedldoedlgear.sakurajimarium_sword.name=Sakurajimarium Sword
+item.oedldoedlgear.sakurajimarium_sword.tip1=The full power of Mai?
+item.oedldoedlgear.sakurajimarium_shovel.name=Sakurajimarium Shovel
+item.oedldoedlgear.sakurajimarium_shovel.tip1=The full power of Mai?
+item.oedldoedlgear.sakurajimarium_pickaxe.name=Sakurajimarium Pickaxe
+item.oedldoedlgear.sakurajimarium_pickaxe.tip1=The full power of Mai?
+item.oedldoedlgear.sakurajimarium_axe.name=Sakurajimarium Axe
+item.oedldoedlgear.sakurajimarium_axe.tip1=The full power of Mai?
+item.oedldoedlgear.sakurajimarium_hoe.name=Sakurajimarium Hoe
+item.oedldoedlgear.sakurajimarium_hoe.tip1=The full power of Mai?
+item.oedldoedlgear.sakurajimarium_paxel.name=Sakurajimarium Paxel
+item.oedldoedlgear.sakurajimarium_paxel.tip1=The full power of Mai?
+item.oedldoedlgear.sakurajimarium_smashbat.name=Sakurajimarium Smashbat
+item.oedldoedlgear.sakurajimarium_smashbat.tip1=The full power of Mai?
+item.oedldoedlgear.sakurajimarium_shears.name=Sakurajimarium Shears
+item.oedldoedlgear.sakurajimarium_shears.tip1=The full power of Mai?
+item.oedldoedlgear.sakurajimarium_shield.name=Sakurajimarium Shield
+item.oedldoedlgear.sakurajimarium_shield.tip1=The full power of Mai?
+
+# infinity
+item.oedldoedlgear.infinity_helmet.name=Infinity Helmet
+item.oedldoedlgear.infinity_helmet.tip1=The most expensive helmet.
+item.oedldoedlgear.infinity_chestplate.name=Infinity Chestplate
+item.oedldoedlgear.infinity_chestplate.tip1=The most expensive chestplate.
+item.oedldoedlgear.infinity_leggings.name=Infinity Leggings
+item.oedldoedlgear.infinity_leggings.tip1=The most expensive leggings.
+item.oedldoedlgear.infinity_boots.name=Infinity Boots
+item.oedldoedlgear.infinity_boots.tip1=The most expensive boots.
+item.oedldoedlgear.infinity_armor.effects1.name=Almost Completely Invulnerable
+item.oedldoedlgear.infinity_armor.effects2.name=Mobs will no Longer Attack you
+item.oedldoedlgear.infinity_armor.effects3.name=Removes Nasty Effects
+item.oedldoedlgear.infinity_armor.effects4.name=Fastest Flight
+item.oedldoedlgear.infinity_armor.effects5.name=Looks Cool
+item.oedldoedlgear.infinity_sword.name=Sword of the Cosmos
+item.oedldoedlgear.infinity_sword.tip1=The most expensive sword.
+item.oedldoedlgear.infinity_shovel.name=Planet Eater
+item.oedldoedlgear.infinity_shovel.annotation1.name=AOE Mode:
+item.oedldoedlgear.infinity_shovel.tip1=The most expensive shovel.
+item.oedldoedlgear.infinity_pickaxe.name=World Breaker
+item.oedldoedlgear.infinity_pickaxe.annotation1.name=AOE Mode:
+item.oedldoedlgear.infinity_pickaxe.tip1=The most expensive pickaxe.
+item.oedldoedlgear.infinity_axe.name=Natures Ruin
+item.oedldoedlgear.infinity_axe.tip1=The most expensive axe.
+item.oedldoedlgear.infinity_hoe.name=Hoe of the Green Earth
+item.oedldoedlgear.infinity_hoe.tip1=The most expensive hoe.
+item.oedldoedlgear.infinity_smashbat.name=Smashbat of Indirect Teleportation
+item.oedldoedlgear.infinity_smashbat.tip1=The most expensive smashbat.
+item.oedldoedlgear.infinity_paxel.name=Dimension Demolisher
+item.oedldoedlgear.infinity_paxel.annotation1.name=AOE Mode:
+item.oedldoedlgear.infinity_paxel.tip1=The most expensive paxel.
+item.oedldoedlgear.infinity_shears.name=Shear Madness
+item.oedldoedlgear.infinity_shears.tip1=The most expensive shears.
+item.oedldoedlgear.infinity_shield.name=Block Defender
+item.oedldoedlgear.infinity_shield.tip1=The most expensive shield.
+
+# gamemode
+item.oedldoedlgear.gamemode_chestplate.name=Gamemode Chestplate
+item.oedldoedlgear.gamemode_chestplate.annotation1.name=Gamemode:
+item.oedldoedlgear.gamemode_chestplate.tip1=/gamemode ?
+item.oedldoedlgear.gamemode_chestplate.tip2=Yor gamemode has been updated.
+
+# flyingshooting
+item.oedldoedlgear.classic_flying_shooting_hoodie.name=Classic Flying Shooting Hoodie
+item.oedldoedlgear.classic_flying_shooting_hoodie.tip1=Follow Flying-Shooting.
+item.oedldoedlgear.classic_flying_shooting_hoodie.tip2=Not sponsored or something else.
+item.oedldoedlgear.black_flying_shooting_hoodie.name=Black Flying Shooting Hoodie
+item.oedldoedlgear.black_flying_shooting_hoodie.tip1=Follow Flying-Shooting.
+item.oedldoedlgear.black_flying_shooting_hoodie.tip2=Not sponsored or something else.
+item.oedldoedlgear.white_flying_shooting_hoodie.name=White Flying Shooting Hoodie
+item.oedldoedlgear.white_flying_shooting_hoodie.tip1=Follow Flying-Shooting.
+item.oedldoedlgear.white_flying_shooting_hoodie.tip2=Not sponsored or something else.
+item.oedldoedlgear.flying_shooting_college_jacket.name=Flying Shooting College Jacket
+item.oedldoedlgear.flying_shooting_college_jacket.tip1=Follow Flying-Shooting.
+
+# güffy
+item.oedldoedlgear.gradient_gueffy_tag_quilted_jacket.name=Gradient Güffy Tag Quilted Jacket
+item.oedldoedlgear.gradient_gueffy_tag_quilted_jacket.tip1=The trio of Güffy.
+
+# travel
+item.oedldoedlgear.travellers_boots.name=Travellers Boots
+item.oedldoedlgear.travellers_boots.tip1=Fast travelling.
+item.oedldoedlgear.travellers_iron_boots.name=Travellers Iron Boots
+item.oedldoedlgear.travellers_iron_boots.tip1=Faster travelling.
+item.oedldoedlgear.travellers_golden_boots.name=Travellers Golden Boots
+item.oedldoedlgear.travellers_golden_boots.tip1=Somehow fast travelling.
+item.oedldoedlgear.travellers_diamond_boots.name=Travellers Diamond Boots
+item.oedldoedlgear.travellers_diamond_boots.tip1=Much faster travelling.
+item.oedldoedlgear.travellers_emerald_boots.name=Travellers Emerald Boots
+item.oedldoedlgear.travellers_emerald_boots.tip1=Thats what I call travelling.
+item.oedldoedlgear.travellers_netherite_boots.name=Travellers Netherite Boots
+item.oedldoedlgear.travellers_netherite_boots.tip1=Insane fast travelling.
+item.oedldoedlgear.travellers_armor.effects1.name=Step Up
+
+# longfall
+item.oedldoedlgear.long_fall_boots.name=Long Fall Boots
+item.oedldoedlgear.long_fall_boots.tip1=Fall as long as you want.
+item.oedldoedlgear.long_fall_armor.effects1.name=Negates Fall Damage
+
+# horsearmor
+item.oedldoedlgear.base_horse_armor.name=Base Horse Armor
+item.oedldoedlgear.base_horse_armor.tip1=Basic horse armor.
+item.oedldoedlgear.emerald_horse_armor.name=Emerald Horse Armor
+item.oedldoedlgear.emerald_horse_armor.tip1=Every crappy MCreator mod adds that.
+item.oedldoedlgear.chainmail_horse_armor.name=Chainmail Horse Armor
+item.oedldoedlgear.chainmail_horse_armor.tip1=Who ever need this?
+item.oedldoedlgear.netherite_horse_armor.name=Netherite Horse Armor
+item.oedldoedlgear.netherite_horse_armor.tip1=That is what the word needed.
+
+# wood
+item.oedldoedlgear.wooden_helmet.name=Wooden Helmet
+item.oedldoedlgear.wooden_helmet.tip1=Be the log.
+item.oedldoedlgear.wooden_chestplate.name=Wooden Chestplate
+item.oedldoedlgear.wooden_chestplate.tip1=Be the log.
+item.oedldoedlgear.wooden_leggings.name=Wooden Leggings
+item.oedldoedlgear.wooden_leggings.tip1=Be the log.
+item.oedldoedlgear.wooden_boots.name=Wooden Boots
+item.oedldoedlgear.wooden_boots.tip1=Be the log.
+item.oedldoedlgear.wooden_paxel.name=Wooden Paxel
+item.oedldoedlgear.wooden_paxel.tip1=Also known as AIOT or Multitool.
+item.oedldoedlgear.wooden_smashbat.name=Wooden Smashbat
+item.oedldoedlgear.wooden_smashbat.tip1=Wow, so far...
+item.oedldoedlgear.wooden_shears.name=Wooden Shears
+item.oedldoedlgear.wooden_shears.tip1=We need more mods with wooden shears.
+item.oedldoedlgear.wooden_shield.name=Wooden Shield
+item.oedldoedlgear.wooden_shield.tip1=Why does this even exist?
+
+# stone
+item.oedldoedlgear.stone_paxel.name=Stone Paxel
+item.oedldoedlgear.stone_paxel.tip1=Also known as AIOT or Multitool.
+item.oedldoedlgear.stone_smashbat.name=Stone Smashbat
+item.oedldoedlgear.stone_smashbat.tip1=Nice try.
+item.oedldoedlgear.stone_shears.name=Stone Shears
+item.oedldoedlgear.stone_shears.tip1=How sharp is stone really?
+item.oedldoedlgear.stone_shield.name=Stone Shield
+item.oedldoedlgear.stone_shield.tip1=Just for decoration.
+
+# gold
+item.oedldoedlgear.golden_paxel.name=Golden Paxel
+item.oedldoedlgear.golden_paxel.tip1=Also known as AIOT or Multitool.
+item.oedldoedlgear.golden_smashbat.name=Golden Smashbat
+item.oedldoedlgear.golden_smashbat.tip1=Straigt up.
+item.oedldoedlgear.golden_shears.name=Golden Shears
+item.oedldoedlgear.golden_shears.tip1=What a waste of gold.
+item.oedldoedlgear.golden_shield.name=Golden Shield
+item.oedldoedlgear.golden_shield.tip1=Shiny shield.
+
+# irom
+item.oedldoedlgear.iron_paxel.name=Iron Paxel
+item.oedldoedlgear.iron_paxel.tip1=Also known as AIOT or Multitool.
+item.oedldoedlgear.iron_smashbat.name=Iron Smashbat
+item.oedldoedlgear.iron_smashbat.tip1=That sound...
+item.oedldoedlgear.iron_shield.name=Iron Shield
+item.oedldoedlgear.iron_shield.tip1=Durable shield.
+
+# diamond
+item.oedldoedlgear.diamond_paxel.name=Diamond Paxel
+item.oedldoedlgear.diamond_paxel.tip1=Also known as AIOT or Multitool.
+item.oedldoedlgear.diamond_smashbat.name=Diamond Smashbat
+item.oedldoedlgear.diamond_smashbat.tip1=Kicks the mobs in the ass.
+item.oedldoedlgear.diamond_shears.name=Diamond Shears
+item.oedldoedlgear.diamond_shears.tip1=Shiny shears.
+item.oedldoedlgear.diamond_shield.name=Diamond Shield
+item.oedldoedlgear.diamond_shield.tip1=Durable shield.
+
+# carrot
+item.oedldoedlgear.riding_smashbat.name=Riding Smashbat
+item.oedldoedlgear.riding_smashbat.tip1=Completely legal, I promise.
+item.oedldoedlgear.golden_riding_smashbat.name=Golden Riding Smashbat
+item.oedldoedlgear.golden_riding_smashbat.tip1=A long ride.
+
+# tools
+item.oedldoedlgear.bedrock_breaker.name=Bedrock Breaker
+item.oedldoedlgear.bedrock_breaker.tip1=I wonder what will it do?
+item.oedldoedlgear.ban_hammer.name=Ban Hammer
+item.oedldoedlgear.ban_hammer.tip1=Bans players from Multiplayer Servers.
+item.oedldoedlgear.ban_hammer.tip2=Succesfully banned player from this server!
+item.oedldoedlgear.kick_stick.name=Kick Stick
+item.oedldoedlgear.kick_stick.tip1=Kicks players from Multiplayer Servers.
+item.oedldoedlgear.kick_stick.tip2=Succesfully kicked player from this server!
+item.oedldoedlgear.explosion_staff.name=Staff of Explosion
+item.oedldoedlgear.explosion_staff.tip1=EXPLOOOOOOSION!
+item.oedldoedlgear.explosion_staff.annotation1.name=Range in blocks:
+item.oedldoedlgear.lightning_staff.name=Staff of Lightning
+item.oedldoedlgear.lightning_staff.tip1=(War) Thunder!
+item.oedldoedlgear.lightning_staff.annotation1.name=Range in blocks:
+item.oedldoedlgear.bref_power.name=Bref Power Lime and Dirt  
+item.oedldoedlgear.bref_power.tip1=Do not let it get into your eyes.
+item.oedldoedlgear.needle.name=Needle
+item.oedldoedlgear.needle.annotation1.name=Uses left:
+item.oedldoedlgear.needle.tip1=Neat!
+item.oedldoedlgear.admin_staff.name=Staff of Administration
+item.oedldoedlgear.admin_staff.tip1=God of MC!
+item.oedldoedlgear.admin_staff.annotation1.name=Mode:
+item.oedldoedlgear.skull_wand.name=Skull Wand
+item.oedldoedlgear.skull_wand.tip1=Shoot starving skulls." ,
+item.oedldoedlgear.fire_wand.name=Fire Wand
+item.oedldoedlgear.fire_wand.tip1=Shoot exploding fireballs.
+
+# thowables
+item.oedldoedlgear.rocky_snowball.name=Rocky Snowball
+item.oedldoedlgear.rocky_snowball.tip1=One of the oldest tricks.
+item.oedldoedlgear.explosive_snowball.name=Explosive Snowball
+item.oedldoedlgear.explosive_snowball.tip1=That is something new I guess.
+item.oedldoedlgear.dynamite.name=Dynamite  
+item.oedldoedlgear.dynamite.tip1=Throwable TNT.
+item.oedldoedlgear.charged_dynamite.name=Charged Dynamite
+item.oedldoedlgear.charged_dynamite.tip1=Throwable TNT. Really Strong.
+item.oedldoedlgear.combat_dynamite.name=Combat Dynamite
+item.oedldoedlgear.combat_dynamite.tip1=Also known as DIEnamite!
+
+# ingreadients
+item.oedldoedlgear.base_toolkit.name=Base Toolkit
+item.oedldoedlgear.base_toolkit.tip1=The beginning of upgrades.
+item.oedldoedlgear.oedldoedl_toolkit.name=Oedldoedl Toolkit
+item.oedldoedlgear.oedldoedl_toolkit.tip1=Upgrade base to oedldoedl tools / armor.
+item.oedldoedlgear.gremorium_toolkit.name=Gremorium Toolkit
+item.oedldoedlgear.gremorium_toolkit.tip1=Upgrade base to gremorium tools / armor.
+item.oedldoedlgear.himejimarium_toolkit.name=Himejimarium Toolkit
+item.oedldoedlgear.himejimarium_toolkit.tip1=Upgrade base to himejimarium tools / armor.
+item.oedldoedlgear.toujourium_toolkit.name=Toujourium Toolkit
+item.oedldoedlgear.toujourium_toolkit.tip1=Upgrade base to toujourium tools / armor.
+item.oedldoedlgear.argentorium_toolkit.name=Argentorium Toolkit
+item.oedldoedlgear.argentorium_toolkit.tip1=Upgrade base to argentorium tools / armor.
+item.oedldoedlgear.quartarium_toolkit.name=Quartarium Toolkit
+item.oedldoedlgear.quartarium_toolkit.tip1=Upgrade base to quartarium tools / armor.
+item.oedldoedlgear.nagatorium_toolkit.name=Nagatorium Toolkit
+item.oedldoedlgear.nagatorium_toolkit.tip1=Upgrade base to nagatorium tools / armor.
+item.oedldoedlgear.sakurajimarium_toolkit.name=Sakurajimarium Toolkit
+item.oedldoedlgear.sakurajimarium_toolkit.tip1=Upgrade base to sakurajimarium tools / armor.
+
+item.oedldoedlgear.white_fabric.name=White Fabric
+item.oedldoedlgear.white_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.orange_fabric.name=Orange Fabric
+item.oedldoedlgear.orange_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.magenta_fabric.name=Magneta Fabric
+item.oedldoedlgear.magenta_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.light_blue_fabric.name=Light Blue Fabric
+item.oedldoedlgear.light_blue_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.yellow_fabric.name=Yellow Fabric
+item.oedldoedlgear.yellow_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.lime_fabric.name=Lime Fabric
+item.oedldoedlgear.lime_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.pink_fabric.name=Pink Fabric
+item.oedldoedlgear.pink_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.gray_fabric.name=Gray Fabric
+item.oedldoedlgear.gray_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.light_gray_fabric.name=Light Gray Fabric
+item.oedldoedlgear.light_gray_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.cyan_fabric.name=Cyan Fabric
+item.oedldoedlgear.cyan_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.purple_fabric.name=Purple Fabric
+item.oedldoedlgear.purple_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.blue_fabric.name=Blue Fabric
+item.oedldoedlgear.blue_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.brown_fabric.name=Brown Fabric
+item.oedldoedlgear.brown_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.green_fabric.name=Green Fabric
+item.oedldoedlgear.green_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.red_fabric.name=Red Fabric
+item.oedldoedlgear.red_fabric.tip1=Forge is the better Modlader.
+item.oedldoedlgear.black_fabric.name=Black Fabric
+item.oedldoedlgear.black_fabric.tip1=Forge is the better Modlader.
+
+item.oedldoedlgear.hardened_leather.name=Hardened Leather
+item.oedldoedlgear.hardened_leather.tip1=Bee polite to the bees.
+item.oedldoedlgear.travellers_leather.name=Travellers Leather
+item.oedldoedlgear.travellers_leather.tip1=For travelling only.
+
+item.oedldoedlgear.leather_stick.name=Leather Stick
+item.oedldoedlgear.leather_stick.tip1=So soft.
+item.oedldoedlgear.obsidian_stick.name=Obsidian Stick
+item.oedldoedlgear.obsidian_stick.tip1=Rock solid.
+item.oedldoedlgear.neutronium_stick.name=Neutronium Stick
+item.oedldoedlgear.neutronium_stick.tip1=Please do not weigh a ton.
+
+item.oedldoedlgear.explosion_core.name=Explosion Core
+item.oedldoedlgear.explosion_core.tip1=The beginning of something nasty.
+item.oedldoedlgear.charged_essence.name=Charged Essence
+item.oedldoedlgear.charged_essence.tip1=Superchared!
+
+item.oedldoedlgear.chainmail.name=Chainmail
+item.oedldoedlgear.chainmail.tip1=You have 1 unread mail...
+item.oedldoedlgear.note_of_suffering.name=Note of Suffering
+item.oedldoedlgear.note_of_suffering.annotation1.name=Last Updated by: \u00A7eTheP2WKing (25.02.2022)
+item.oedldoedlgear.note_of_suffering.tip1=Why am I doing this, what is going on with my life?
+item.oedldoedlgear.note_of_suffering.tip2=Which life you may ask, well...
+item.oedldoedlgear.note_of_suffering.tip3=\u00A7oAaccomplishments: Mental Breakdowns and Lack of Sleep.
+item.oedldoedlgear.note_of_suffering.tip4=\u00A7nAvailable on Discord: TheP2WKing#0001
+item.oedldoedlgear.note_of_suffering.tip5=\u00A7mSubscribe to my OnlyFans TheFKKKing!
+
+# misc
+item.oedldoedlgear.squid_bucket.name=Bucket of Squid
+item.oedldoedlgear.squid_bucket.tip1=How did we get here?
+
+# blocks
+tile.oedldoedlgear.nuke.name=Nuke
+entity.oedldoedlgear.nuke.name=Primed Nuke - RUN
+tile.oedldoedlgear.nuke.tip1=I recommend putting on some earmuffs.
+tile.oedldoedlgear.troll_tnt.name=Troll TNT
+entity.oedldoedlgear.troll_tnt.name=Primed Troll TNT
+tile.oedldoedlgear.troll_tnt.tip1=Do NOT break!
+tile.oedldoedlgear.badrock.name=Badrock
+tile.oedldoedlgear.badrock.tip1=The pun is as bad as the rock.
+tile.oedldoedlgear.magical_wood.name=Magical Wood
+tile.oedldoedlgear.magical_wood.tip1=Am I a wizard? NO!
+
+# jump pads
+tile.oedldoedlgear.jump_pad.name=Jump Pad
+tile.oedldoedlgear.jump_pad.tip1=Get hight.
+tile.oedldoedlgear.jump_pad_plus.name=Jump Pad+
+tile.oedldoedlgear.jump_pad_plus.tip1=Get much more hight.
+tile.oedldoedlgear.jump_pad_plus_plus.name=Jump Pad++
+tile.oedldoedlgear.jump_pad_plus_plus.tip1=Get insane hight.
+tile.oedldoedlgear.jump_pad_plus_plus_plus.name=Jump Pad+++
+tile.oedldoedlgear.jump_pad_plus_plus_plus.tip1=Get the ultimate hight.
