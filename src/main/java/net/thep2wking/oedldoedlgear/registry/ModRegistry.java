@@ -10,6 +10,7 @@ import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 import net.thep2wking.oedldoedlgear.init.ModBlocks;
 import net.thep2wking.oedldoedlgear.init.ModItems;
+import net.thep2wking.oedldoedlgear.init.ModSounds;
 import net.thep2wking.oedldoedlresources.OedldoedlResources;
 
 @Mod.EventBusSubscriber
@@ -250,10 +251,58 @@ public class ModRegistry {
 
 		ModRegistryHelper.registerItem(event, ModItems.RIDING_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.GOLDEN_RIDING_SMASHBAT);
+
+		ModRegistryHelper.registerItem(event, ModItems.BAN_HAMMER);
+		ModRegistryHelper.registerItem(event, ModItems.KICK_STICK);
+		ModRegistryHelper.registerItem(event, ModItems.EXPLOSION_STAFF);
+		ModRegistryHelper.registerItem(event, ModItems.LIGHTNING_STAFF);
+		ModRegistryHelper.registerItem(event, ModItems.ADMIN_STAFF);
+		ModRegistryHelper.registerItem(event, ModItems.SKULL_WAND);
+		ModRegistryHelper.registerItem(event, ModItems.FIRE_WAND);
+		ModRegistryHelper.registerItem(event, ModItems.BEDROCK_BREAKER);
+		ModRegistryHelper.registerItem(event, ModItems.NEEDLE);
+		ModRegistryHelper.registerItem(event, ModItems.BREF_POWER);
+		
+		ModRegistryHelper.registerItem(event, ModItems.ROCKY_SNOWBALL);
+		ModRegistryHelper.registerItem(event, ModItems.EXPLOSIVE_SNOWBALL);
+		ModRegistryHelper.registerItem(event, ModItems.DYNAMITE);
+		ModRegistryHelper.registerItem(event, ModItems.COMBAT_DYNAMITE);
+		ModRegistryHelper.registerItem(event, ModItems.CHARGED_DYNAMITE);
+
+		ModRegistryHelper.registerItem(event, ModItems.WHITE_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.ORANGE_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.MAGENTA_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.LIGHT_BLUE_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.YELLOW_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.LIME_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.PINK_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.GRAY_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.LIGHT_GRAY_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.CYAN_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.PURPLE_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.BLUE_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.BROWN_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.GREEN_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.ORANGE_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.RED_FABRIC);
+		ModRegistryHelper.registerItem(event, ModItems.BLACK_FABRIC);
+
+		ModRegistryHelper.registerItem(event, ModItems.HARDENED_LEATHER);
+		ModRegistryHelper.registerItem(event, ModItems.TRAVELLERS_LEATHER);
+
+		ModRegistryHelper.registerItem(event, ModItems.EXPLOSION_CORE);
+		ModRegistryHelper.registerItem(event, ModItems.CHARGED_ESSENCE);
+
+		ModRegistryHelper.registerItem(event, ModItems.CHAINMAIL);
+		ModRegistryHelper.registerItem(event, ModItems.NOTE_OF_SUFFERING);
 	}
 
 	@SubscribeEvent
 	public static void onSoundEventRegister(RegistryEvent.Register<SoundEvent> event) {
 		ModLogger.registeredSoundEventsLogger(OedldoedlResources.MODID);
+
+		ModRegistryHelper.registerSoundEvent(event, ModSounds.NUKE_ALARM);
+		ModRegistryHelper.registerSoundEvent(event, ModSounds.MEGUMIN);
+		ModRegistryHelper.registerSoundEvent(event, ModSounds.QUIEK);
 	}
 }
