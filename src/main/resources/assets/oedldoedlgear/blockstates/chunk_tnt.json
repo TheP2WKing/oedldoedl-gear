@@ -3,15 +3,15 @@
     {
         "normal": 
         { 
-            "model": "oedldoedlgear:nuke"
+            "model": "oedldoedlgear:chunk_tnt"
         },
         "explode=false": 
         { 
-            "model": "oedldoedlgear:nuke"
+            "model": "oedldoedlgear:chunk_tnt"
         },
         "explode=true": 
         { 
-            "model": "oedldoedlgear:nuke"
+            "model": "oedldoedlgear:chunk_tnt"
         }
     }
 }

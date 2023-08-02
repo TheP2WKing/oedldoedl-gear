@@ -73,11 +73,11 @@ public class ItemExplosionStaff extends ModItemBase {
 
 				} else {
 					world.playSound(null, player.getPosition(), ModSounds.MEGUMIN, SoundCategory.AMBIENT, 1f, 1f);
-					player.world.createExplosion(null, end.x, end.y, end.z, 10, true);
+					player.world.createExplosion(null, end.x, end.y, end.z, 15, true);
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
-					player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 20, 0, false, false));
+					player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 60, 0, false, false));
 					player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 100, 9, false, false));
-					player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 100, 1, false, false));
+					player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 200, 1, false, false));
 					player.getCooldownTracker().setCooldown(this, 100);
 					stack.damageItem(1, player);
 				}
@@ -89,11 +89,11 @@ public class ItemExplosionStaff extends ModItemBase {
 				int z = blockPos.getZ();
 
 				world.playSound(null, player.getPosition(), ModSounds.MEGUMIN, SoundCategory.AMBIENT, 4f, 1f);
-				player.world.createExplosion(null, x, y, z, 10, true);
+				player.world.createExplosion(null, x, y, z, 15, true);
 				player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
-				player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 20, 0, false, false));
+				player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 60, 0, false, false));
 				player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 100, 9, false, false));
-				player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 100, 1, false, false));
+				player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 200, 1, false, false));
 				player.getCooldownTracker().setCooldown(this, 100);
 				stack.damageItem(1, player);
 			}

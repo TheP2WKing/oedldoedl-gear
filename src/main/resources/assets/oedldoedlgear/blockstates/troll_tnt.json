@@ -4,6 +4,14 @@
         "normal": 
         { 
             "model": "oedldoedlgear:troll_tnt"
+        },
+        "explode=false": 
+        { 
+            "model": "oedldoedlgear:troll_tnt"
+        },
+        "explode=true": 
+        { 
+            "model": "oedldoedlgear:troll_tnt"
         }
     }
 }

@@ -19,6 +19,7 @@ import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
+import net.thep2wking.oedldoedlgear.init.ModEntities;
 import net.thep2wking.oedldoedlgear.util.proxy.CommonProxy;
 
 @Mod(modid = OedldoedlGear.MODID, name = OedldoedlGear.NAME, version = OedldoedlGear.VERSION, dependencies = OedldoedlGear.DEPENDENCIES)
@@ -55,6 +56,7 @@ public class OedldoedlGear {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ModLogger.preInitLogger(MODID);
+        ModEntities.registerEntities();
         PROXY.preInit(event);
     }
 
@@ -63,6 +65,7 @@ public class OedldoedlGear {
         ModLogger.initLogger(MODID);
         // ModRecipes.registerOreDict();
         // ModRecipes.registerRecipes();
+        PROXY.render();
         PROXY.init(event);
     }
 

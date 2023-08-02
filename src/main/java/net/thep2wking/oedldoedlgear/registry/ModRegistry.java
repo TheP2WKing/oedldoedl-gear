@@ -23,6 +23,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerBlock(event, ModBlocks.MAGICAL_WOOD);
 		ModRegistryHelper.registerBlock(event, ModBlocks.NUKE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.TROLL_TNT);
+		ModRegistryHelper.registerBlock(event, ModBlocks.CHUNK_TNT);
 	}
 
 	@SubscribeEvent
@@ -33,6 +34,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItemBlock(event, ModItems.MAGICAL_WOOD);
 		ModRegistryHelper.registerItemBlock(event, ModItems.NUKE);
 		ModRegistryHelper.registerItemBlock(event, ModItems.TROLL_TNT);
+		ModRegistryHelper.registerItemBlock(event, ModItems.CHUNK_TNT);
 
 		ModRegistryHelper.registerItem(event, ModItems.BASE_HELMET);
 		ModRegistryHelper.registerItem(event, ModItems.BASE_CHESTPLATE);
@@ -110,7 +112,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.TRAVELLERS_EMERALD_BOOTS);
 
 		ModRegistryHelper.registerItem(event, ModItems.LONG_FALL_BOOTS);
-		
+
 		ModRegistryHelper.registerItem(event, ModItems.BASE_HORSE_ARMOR);
 		ModRegistryHelper.registerItem(event, ModItems.CHAINMAIL_HORSE_ARMOR);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_HORSE_ARMOR);
@@ -204,7 +206,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.QUARTARIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.QUARTARIUM_SHEARS);
 		ModRegistryHelper.registerItem(event, ModItems.QUARTARIUM_SHIELD);
-		
+
 		ModRegistryHelper.registerItem(event, ModItems.NAGATORIUM_SWORD);
 		ModRegistryHelper.registerItem(event, ModItems.NAGATORIUM_SHOVEL);
 		ModRegistryHelper.registerItem(event, ModItems.NAGATORIUM_PICKAXE);
@@ -262,7 +264,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.BEDROCK_BREAKER);
 		ModRegistryHelper.registerItem(event, ModItems.NEEDLE);
 		ModRegistryHelper.registerItem(event, ModItems.BREF_POWER);
-		
+
 		ModRegistryHelper.registerItem(event, ModItems.ROCKY_SNOWBALL);
 		ModRegistryHelper.registerItem(event, ModItems.EXPLOSIVE_SNOWBALL);
 		ModRegistryHelper.registerItem(event, ModItems.DYNAMITE);
