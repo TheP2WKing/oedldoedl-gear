@@ -1,6 +1,8 @@
 package net.thep2wking.oedldoedlgear.content.item.armor;
 
 import java.util.List;
+import java.util.UUID;
+
 import javax.annotation.Nullable;
 
 import com.google.common.collect.LinkedHashMultimap;
@@ -8,6 +10,7 @@ import com.google.common.collect.Multimap;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -16,6 +19,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,6 +27,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.init.ModItems;
@@ -54,11 +59,35 @@ public class ItemToujouriumArmor extends ModItemArmorBase {
 		return 6757;
 	}
 
+	public static final UUID HELMET_UUID = UUID.fromString("9b138dbb-5bf2-4d7e-a847-4f00028282d5");
+	public static final UUID CHESTPLATE_UUID = UUID.fromString("3e14006b-b061-442f-82c8-c01a45aa447e");
+	public static final UUID LEGGINGS_UUID = UUID.fromString("f7a931a6-df2b-4252-af36-3b6ba816b698");
+	public static final UUID BOOTS_UUID = UUID.fromString("85c94001-ad40-4dfc-8b7a-da670c35ec10");
+
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
 		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
 		if (slot == this.getEquipmentSlot()) {
 			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
+
+			if (slot == EntityEquipmentSlot.HEAD) {
+				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(
+						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
+			}
+			if (slot == EntityEquipmentSlot.CHEST) {
+				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
+						new AttributeModifier(CHESTPLATE_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
+								AttributeModifierOperation.ADD));
+			}
+			if (slot == EntityEquipmentSlot.LEGS) {
+				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
+						new AttributeModifier(LEGGINGS_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
+								AttributeModifierOperation.ADD));
+			}
+			if (slot == EntityEquipmentSlot.FEET) {
+				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(BOOTS_UUID,
+						ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
+			}
 			return attributes;
 		}
 		return attributes;
@@ -107,23 +136,25 @@ public class ItemToujouriumArmor extends ModItemArmorBase {
 	// @SubscribeEvent
 	// @SuppressWarnings("null")
 	// public static void onLivingHurt(LivingHurtEvent event) {
-	// 	if (event.getSource() instanceof EntityDamageSource
-	// 			&& !((EntityDamageSource) event.getSource()).getIsThornsDamage()) {
-	// 		if (event.getSource().getTrueSource() instanceof EntityPlayer) {
-	// 			EntityPlayer player = (EntityPlayer) event.getSource().getTrueSource();
-	// 			ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-	// 			ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-	// 			ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-	// 			ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-	// 			if (((!head.isEmpty()) && (head.getItem() == ModItems.TOUJOURIUM_HELMET) && (!chest.isEmpty())
-	// 					&& (chest.getItem() == ModItems.TOUJOURIUM_CHESTPLATE) && (!legs.isEmpty())
-	// 					&& (legs.getItem() == ModItems.TOUJOURIUM_LEGGINGS) && (!feet.isEmpty())
-	// 					&& (feet.getItem() == ModItems.TOUJOURIUM_BOOTS))) {
-	// 				event.getEntityLiving()
-	// 						.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 10, 20, false, false));
-	// 			}
-	// 		}
-	// 	}
+	// if (event.getSource() instanceof EntityDamageSource
+	// && !((EntityDamageSource) event.getSource()).getIsThornsDamage()) {
+	// if (event.getSource().getTrueSource() instanceof EntityPlayer) {
+	// EntityPlayer player = (EntityPlayer) event.getSource().getTrueSource();
+	// ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
+	// ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
+	// ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
+	// ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
+	// if (((!head.isEmpty()) && (head.getItem() == ModItems.TOUJOURIUM_HELMET) &&
+	// (!chest.isEmpty())
+	// && (chest.getItem() == ModItems.TOUJOURIUM_CHESTPLATE) && (!legs.isEmpty())
+	// && (legs.getItem() == ModItems.TOUJOURIUM_LEGGINGS) && (!feet.isEmpty())
+	// && (feet.getItem() == ModItems.TOUJOURIUM_BOOTS))) {
+	// event.getEntityLiving()
+	// .addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 10, 20, false,
+	// false));
+	// }
+	// }
+	// }
 	// }
 
 	@SubscribeEvent
@@ -138,7 +169,7 @@ public class ItemToujouriumArmor extends ModItemArmorBase {
 					&& (chest.getItem() == ModItems.TOUJOURIUM_CHESTPLATE) && (!legs.isEmpty())
 					&& (legs.getItem() == ModItems.TOUJOURIUM_LEGGINGS) && (!feet.isEmpty())
 					&& (feet.getItem() == ModItems.TOUJOURIUM_BOOTS))) {
-						event.setStrength(3);
+				event.setStrength(3);
 			}
 		}
 	}

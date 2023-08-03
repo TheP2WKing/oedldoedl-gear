@@ -33,45 +33,27 @@ import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 
 @Mod.EventBusSubscriber
-public class ItemArgentoriumArmor extends ModItemArmorBase {
-	public enum AttributeUUIDArg {
-		HELMET_UUID("711b80d3-e561-4a7d-9c4a-2edb008ccaad"), CHESTPLATE_UUID("faaea4eb-ca15-49e5-a741-46d169adf826"),
-		LEGGINGS_UUID("123b072e-0e57-4535-9d3e-c80eb01bd09e"), BOOTS_UUID("5f2aed44-f8a9-483d-b513-d3bee1279dcb");
-
-		public String ids;
-
-		AttributeUUIDArg(String ids) {
-			this.ids = ids;
-		}
-	}
-
-	public AttributeUUIDArg uuid;
-
-	public ItemArgentoriumArmor(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
-			EntityEquipmentSlot slot, AttributeUUIDArg uuid, EnumRarity rarity, boolean hasEffect, int tooltipLines,
-			int annotationLines) {
+public class ItemQuartariumArmor extends ModItemArmorBase {
+	public ItemQuartariumArmor(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
+			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines, annotationLines);
-		this.uuid = uuid;
 	}
 
 	@Override
 	public int getMaxDamage(ItemStack stack) {
-		return 8355;
+		return 8758;
 	}
 
-	public static final UUID HELMET_UUID = UUID.fromString("b50da645-e7f0-42f8-ae0f-53c638c8a699");
-	public static final UUID CHESTPLATE_UUID = UUID.fromString("663d7a4b-a0cc-46e2-884c-a7e81f7b4853");
-	public static final UUID LEGGINGS_UUID = UUID.fromString("ce943ee0-ba7e-41ee-930a-7f97e28d287c");
-	public static final UUID BOOTS_UUID = UUID.fromString("68c8e01f-3a53-4e45-93f8-b822aecaff21");
+	public static final UUID HELMET_UUID = UUID.fromString("e86a0fb4-341c-4d0c-981a-7e7cfc68ce82");
+	public static final UUID CHESTPLATE_UUID = UUID.fromString("f0ae4755-68ad-4c80-bed8-f6df6b6924b2");
+	public static final UUID LEGGINGS_UUID = UUID.fromString("80dd2917-7999-4be0-87d5-ee38d598b0e6");
+	public static final UUID BOOTS_UUID = UUID.fromString("5cc4f29f-263b-441d-8e3b-a347974f084b");
 
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
 		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
 		if (slot == this.getEquipmentSlot()) {
 			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			attributes.put(SharedMonsterAttributes.MAX_HEALTH.getName(),
-					new AttributeModifier(UUID.fromString(this.uuid.ids),
-							ModReferences.ATTRIBUTE_MAX_HEALTH, 10, AttributeModifierOperation.ADD));
 			if (slot == EntityEquipmentSlot.HEAD) {
 				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(
 						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
@@ -101,21 +83,15 @@ public class ItemArgentoriumArmor extends ModItemArmorBase {
 		ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
 		ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
 		ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-
-		if (((!head.isEmpty()) && (head.getItem() == ModItems.ARGENTORIUM_HELMET) && (!chest.isEmpty())
-				&& (chest.getItem() == ModItems.ARGENTORIUM_CHESTPLATE) && (!legs.isEmpty())
-				&& (legs.getItem() == ModItems.ARGENTORIUM_LEGGINGS) && (!feet.isEmpty())
-				&& (feet.getItem() == ModItems.ARGENTORIUM_BOOTS))) {
+		if (((!head.isEmpty()) && (head.getItem() == ModItems.QUARTARIUM_HELMET) && (!chest.isEmpty())
+				&& (chest.getItem() == ModItems.QUARTARIUM_CHESTPLATE) && (!legs.isEmpty())
+				&& (legs.getItem() == ModItems.QUARTARIUM_LEGGINGS) && (!feet.isEmpty())
+				&& (feet.getItem() == ModItems.QUARTARIUM_BOOTS))) {
 			player.stepHeight = 1.1f;
 			player.setAir(300);
 
-			if (player.isSneaking()) {
-				player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 100, 0, false, false));
-			}
 			player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
-			player.addPotionEffect(new PotionEffect(MobEffects.SATURATION, 200, 1, false, false));
-		} else {
-			player.stepHeight = 0.6F;
+			player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 200, 1, false, false));
 		}
 	}
 
@@ -130,22 +106,19 @@ public class ItemArgentoriumArmor extends ModItemArmorBase {
 				ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
 				ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
 				ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-				if (((!head.isEmpty()) && (head.getItem() == ModItems.ARGENTORIUM_HELMET) && (!chest.isEmpty())
-						&& (chest.getItem() == ModItems.ARGENTORIUM_CHESTPLATE) && (!legs.isEmpty())
-						&& (legs.getItem() == ModItems.ARGENTORIUM_LEGGINGS) && (!feet.isEmpty())
-						&& (feet.getItem() == ModItems.ARGENTORIUM_BOOTS))) {
-					if (event.getEntityLiving().isEntityUndead()) {
-						event.getEntityLiving().setHealth(event.getEntityLiving().getHealth() - 14.5f);
-					} else if (player.isSneaking()) {
-						event.getEntityLiving()
-								.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 40, 3, false, false));
-					}
+				if (((!head.isEmpty()) && (head.getItem() == ModItems.QUARTARIUM_HELMET) && (!chest.isEmpty())
+						&& (chest.getItem() == ModItems.QUARTARIUM_CHESTPLATE) && (!legs.isEmpty())
+						&& (legs.getItem() == ModItems.QUARTARIUM_LEGGINGS) && (!feet.isEmpty())
+						&& (feet.getItem() == ModItems.QUARTARIUM_BOOTS))) {
+					player.setHealth(player.getHealth() + event.getAmount() / 4);
+					event.getEntityLiving()
+							.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 40, 0, false, false));
 				}
 			}
 		}
 	}
 
-	public static final String ARMOR_NAME = "item." + OedldoedlGear.MODID + ".argentorium_armor";
+	public static final String ARMOR_NAME = "item." + OedldoedlGear.MODID + ".quartarium_armor";
 
 	@Override
 	@SideOnly(Side.CLIENT)
@@ -166,12 +139,10 @@ public class ItemArgentoriumArmor extends ModItemArmorBase {
 		if (ModTooltips.showEffectTip()) {
 			ModTooltips.addEffectHeader(tooltip, ModTooltips.EFFECT_FULL_ARMOR);
 			ModTooltips.addPotionEffect(tooltip, MobEffects.NIGHT_VISION.getName(), false, 1, 400);
-			ModTooltips.addPotionEffect(tooltip, MobEffects.SATURATION.getName(), false, 2, 200);
+			ModTooltips.addPotionEffect(tooltip, MobEffects.STRENGTH.getName(), false, 2, 200);
 			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 1);
 			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 2);
 			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 3);
-			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 4);
-			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 5);
 		} else if (ModTooltips.showEffectTipKey()) {
 			ModTooltips.addKey(tooltip, ModTooltips.KEY_EFFECTS);
 		}

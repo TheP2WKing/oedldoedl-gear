@@ -1,11 +1,17 @@
 package net.thep2wking.oedldoedlgear.content.item.armor;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.annotation.Nullable;
 
+import com.google.common.collect.LinkedHashMultimap;
+import com.google.common.collect.Multimap;
+
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -15,6 +21,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EntityDamageSource;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.event.entity.EntityStruckByLightningEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -22,6 +29,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.init.ModItems;
@@ -36,6 +44,39 @@ public class ItemHimejimariumArmor extends ModItemArmorBase {
 	@Override
 	public int getMaxDamage(ItemStack stack) {
 		return 10260;
+	}
+
+	public static final UUID HELMET_UUID = UUID.fromString("ff3e0e2d-d79f-4e42-9002-de7eafd7f64c");
+	public static final UUID CHESTPLATE_UUID = UUID.fromString("e55eab59-d57d-4cbb-8b54-2b0b94146505");
+	public static final UUID LEGGINGS_UUID = UUID.fromString("da6d0ff5-fb6a-46ef-9cee-947129d2dea6");
+	public static final UUID BOOTS_UUID = UUID.fromString("58046f2b-dd6d-4995-b73e-bb46b1714816");
+
+	@Override
+	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
+		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
+		if (slot == this.getEquipmentSlot()) {
+			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
+			if (slot == EntityEquipmentSlot.HEAD) {
+				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(
+						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
+			}
+			if (slot == EntityEquipmentSlot.CHEST) {
+				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
+						new AttributeModifier(CHESTPLATE_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
+								AttributeModifierOperation.ADD));
+			}
+			if (slot == EntityEquipmentSlot.LEGS) {
+				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
+						new AttributeModifier(LEGGINGS_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
+								AttributeModifierOperation.ADD));
+			}
+			if (slot == EntityEquipmentSlot.FEET) {
+				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(BOOTS_UUID,
+						ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
+			}
+			return attributes;
+		}
+		return attributes;
 	}
 
 	@Override

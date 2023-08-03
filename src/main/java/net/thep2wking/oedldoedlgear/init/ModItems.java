@@ -23,7 +23,10 @@ import net.thep2wking.oedldoedlgear.content.item.armor.ItemArgentoriumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemGremoriumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemHimejimariumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemLongFallBoots;
+import net.thep2wking.oedldoedlgear.content.item.armor.ItemNagatoriumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemOedldoedlArmor;
+import net.thep2wking.oedldoedlgear.content.item.armor.ItemQuartariumArmor;
+import net.thep2wking.oedldoedlgear.content.item.armor.ItemSakurajimariumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemToujouriumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemArgentoriumArmor.AttributeUUIDArg;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemChainmail;
@@ -63,9 +66,9 @@ public class ModItems {
 
 	// oedldoedl armor
 	public static final Item OEDLDOEDL_HELMET = new ItemOedldoedlArmor(OedldoedlGear.MODID, "oedldoedl_helmet", OedldoedlGear.TAB, ModArmorMaterial.OEDLDOEDL, 0, EntityEquipmentSlot.HEAD, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
-	public static final Item OEDLDOEDL_CHESTPLATE = new ModItemArmorBase(OedldoedlGear.MODID, "oedldoedl_chestplate", OedldoedlGear.TAB, ModArmorMaterial.OEDLDOEDL, 0, EntityEquipmentSlot.CHEST, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
-	public static final Item OEDLDOEDL_LEGGINGS = new ModItemArmorBase(OedldoedlGear.MODID, "oedldoedl_leggings", OedldoedlGear.TAB, ModArmorMaterial.OEDLDOEDL, 1, EntityEquipmentSlot.LEGS, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
-	public static final Item OEDLDOEDL_BOOTS = new ModItemArmorBase(OedldoedlGear.MODID, "oedldoedl_boots", OedldoedlGear.TAB, ModArmorMaterial.OEDLDOEDL, 0, EntityEquipmentSlot.FEET, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
+	public static final Item OEDLDOEDL_CHESTPLATE = new ItemOedldoedlArmor(OedldoedlGear.MODID, "oedldoedl_chestplate", OedldoedlGear.TAB, ModArmorMaterial.OEDLDOEDL, 0, EntityEquipmentSlot.CHEST, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
+	public static final Item OEDLDOEDL_LEGGINGS = new ItemOedldoedlArmor(OedldoedlGear.MODID, "oedldoedl_leggings", OedldoedlGear.TAB, ModArmorMaterial.OEDLDOEDL, 1, EntityEquipmentSlot.LEGS, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
+	public static final Item OEDLDOEDL_BOOTS = new ItemOedldoedlArmor(OedldoedlGear.MODID, "oedldoedl_boots", OedldoedlGear.TAB, ModArmorMaterial.OEDLDOEDL, 0, EntityEquipmentSlot.FEET, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 
 	// wooden armor
 	public static final Item WOODEN_HELMET = new ModItemArmorBase(OedldoedlGear.MODID, "wooden_helmet", OedldoedlGear.TAB, ModArmorMaterial.WOOD, 0, EntityEquipmentSlot.HEAD, ModRarities.WHITE, false, 1, 0);
@@ -110,22 +113,22 @@ public class ModItems {
 	public static final Item ARGENTORIUM_BOOTS = new ItemArgentoriumArmor(OedldoedlGear.MODID, "argentorium_boots", OedldoedlGear.TAB, ModArmorMaterial.ARGENTORIUM, 0, EntityEquipmentSlot.FEET, AttributeUUIDArg.BOOTS_UUID, ModRarities.YELLOW, true, 1, 0).setRGBBarColor(0xfbd985);
 	
 	// quartarium armor
-	public static final Item QUARTARIUM_HELMET = new ModItemArmorBase(OedldoedlGear.MODID, "quartarium_helmet", OedldoedlGear.TAB, ModArmorMaterial.QUARTARIUM, 0, EntityEquipmentSlot.HEAD, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
-	public static final Item QUARTARIUM_CHESTPLATE = new ModItemArmorBase(OedldoedlGear.MODID, "quartarium_chestplate", OedldoedlGear.TAB, ModArmorMaterial.QUARTARIUM, 0, EntityEquipmentSlot.CHEST, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
-	public static final Item QUARTARIUM_LEGGINGS = new ModItemArmorBase(OedldoedlGear.MODID, "quartarium_leggings", OedldoedlGear.TAB, ModArmorMaterial.QUARTARIUM, 1, EntityEquipmentSlot.LEGS, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
-	public static final Item QUARTARIUM_BOOTS = new ModItemArmorBase(OedldoedlGear.MODID, "quartarium_boots", OedldoedlGear.TAB, ModArmorMaterial.QUARTARIUM, 0, EntityEquipmentSlot.FEET, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
+	public static final Item QUARTARIUM_HELMET = new ItemQuartariumArmor(OedldoedlGear.MODID, "quartarium_helmet", OedldoedlGear.TAB, ModArmorMaterial.QUARTARIUM, 0, EntityEquipmentSlot.HEAD, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
+	public static final Item QUARTARIUM_CHESTPLATE = new ItemQuartariumArmor(OedldoedlGear.MODID, "quartarium_chestplate", OedldoedlGear.TAB, ModArmorMaterial.QUARTARIUM, 0, EntityEquipmentSlot.CHEST, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
+	public static final Item QUARTARIUM_LEGGINGS = new ItemQuartariumArmor(OedldoedlGear.MODID, "quartarium_leggings", OedldoedlGear.TAB, ModArmorMaterial.QUARTARIUM, 1, EntityEquipmentSlot.LEGS, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
+	public static final Item QUARTARIUM_BOOTS = new ItemQuartariumArmor(OedldoedlGear.MODID, "quartarium_boots", OedldoedlGear.TAB, ModArmorMaterial.QUARTARIUM, 0, EntityEquipmentSlot.FEET, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
 
 	// nagatorium armor
-	public static final Item NAGATORIUM_HELMET = new ModItemArmorBase(OedldoedlGear.MODID, "nagatorium_helmet", OedldoedlGear.TAB, ModArmorMaterial.NAGATORIUM, 0, EntityEquipmentSlot.HEAD, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
-	public static final Item NAGATORIUM_CHESTPLATE = new ModItemArmorBase(OedldoedlGear.MODID, "nagatorium_chestplate", OedldoedlGear.TAB, ModArmorMaterial.NAGATORIUM, 0, EntityEquipmentSlot.CHEST, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
-	public static final Item NAGATORIUM_LEGGINGS = new ModItemArmorBase(OedldoedlGear.MODID, "nagatorium_leggings", OedldoedlGear.TAB, ModArmorMaterial.NAGATORIUM, 1, EntityEquipmentSlot.LEGS, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
-	public static final Item NAGATORIUM_BOOTS = new ModItemArmorBase(OedldoedlGear.MODID, "nagatorium_boots", OedldoedlGear.TAB, ModArmorMaterial.NAGATORIUM, 0, EntityEquipmentSlot.FEET, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
+	public static final Item NAGATORIUM_HELMET = new ItemNagatoriumArmor(OedldoedlGear.MODID, "nagatorium_helmet", OedldoedlGear.TAB, ModArmorMaterial.NAGATORIUM, 0, EntityEquipmentSlot.HEAD, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
+	public static final Item NAGATORIUM_CHESTPLATE = new ItemNagatoriumArmor(OedldoedlGear.MODID, "nagatorium_chestplate", OedldoedlGear.TAB, ModArmorMaterial.NAGATORIUM, 0, EntityEquipmentSlot.CHEST, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
+	public static final Item NAGATORIUM_LEGGINGS = new ItemNagatoriumArmor(OedldoedlGear.MODID, "nagatorium_leggings", OedldoedlGear.TAB, ModArmorMaterial.NAGATORIUM, 1, EntityEquipmentSlot.LEGS, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
+	public static final Item NAGATORIUM_BOOTS = new ItemNagatoriumArmor(OedldoedlGear.MODID, "nagatorium_boots", OedldoedlGear.TAB, ModArmorMaterial.NAGATORIUM, 0, EntityEquipmentSlot.FEET, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
 
 	// sakurajimarium armor
-	public static final Item SAKURAJIMARIUM_HELMET = new ModItemArmorBase(OedldoedlGear.MODID, "sakurajimarium_helmet", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 0, EntityEquipmentSlot.HEAD, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
-	public static final Item SAKURAJIMARIUM_CHESTPLATE = new ModItemArmorBase(OedldoedlGear.MODID, "sakurajimarium_chestplate", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 0, EntityEquipmentSlot.CHEST, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
-	public static final Item SAKURAJIMARIUM_LEGGINGS = new ModItemArmorBase(OedldoedlGear.MODID, "sakurajimarium_leggings", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 1, EntityEquipmentSlot.LEGS, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
-	public static final Item SAKURAJIMARIUM_BOOTS = new ModItemArmorBase(OedldoedlGear.MODID, "sakurajimarium_boots", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 0, EntityEquipmentSlot.FEET, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
+	public static final Item SAKURAJIMARIUM_HELMET = new ItemSakurajimariumArmor(OedldoedlGear.MODID, "sakurajimarium_helmet", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 0, EntityEquipmentSlot.HEAD, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
+	public static final Item SAKURAJIMARIUM_CHESTPLATE = new ItemSakurajimariumArmor(OedldoedlGear.MODID, "sakurajimarium_chestplate", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 0, EntityEquipmentSlot.CHEST, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
+	public static final Item SAKURAJIMARIUM_LEGGINGS = new ItemSakurajimariumArmor(OedldoedlGear.MODID, "sakurajimarium_leggings", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 1, EntityEquipmentSlot.LEGS, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
+	public static final Item SAKURAJIMARIUM_BOOTS = new ItemSakurajimariumArmor(OedldoedlGear.MODID, "sakurajimarium_boots", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 0, EntityEquipmentSlot.FEET, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 
 	// gamemode armor
 	public static final Item GAMEMODE_CHESTPLATE = new ModItemArmorBase(OedldoedlGear.MODID, "gamemode_chestplate", OedldoedlGear.TAB, ModArmorMaterial.GAMEMODE_CHESTPLATE, 0, EntityEquipmentSlot.CHEST, ModRarities.RED, true, 2, 1);
