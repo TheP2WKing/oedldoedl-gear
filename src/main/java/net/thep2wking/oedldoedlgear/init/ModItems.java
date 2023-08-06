@@ -20,6 +20,8 @@ import net.thep2wking.oedldoedlcore.util.ModHitSound;
 import net.thep2wking.oedldoedlcore.util.ModRarities;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemArgentoriumArmor;
+import net.thep2wking.oedldoedlgear.content.item.armor.ItemEmeraldArmor;
+import net.thep2wking.oedldoedlgear.content.item.armor.ItemGamemodeChestplate;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemGremoriumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemHimejimariumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemLongFallBoots;
@@ -83,10 +85,10 @@ public class ModItems {
 	public static final Item FLINT_BOOTS = new ModItemArmorBase(OedldoedlGear.MODID, "flint_boots", OedldoedlGear.TAB, ModArmorMaterial.FLINT, 0, EntityEquipmentSlot.FEET, ModRarities.WHITE, false, 1, 0);
 
 	// emerald armor
-	public static final Item EMERALD_HELMET = new ModItemArmorBase(OedldoedlGear.MODID, "emerald_helmet", OedldoedlGear.TAB, ModArmorMaterial.EMERALD, 0, EntityEquipmentSlot.HEAD, ModRarities.WHITE, false, 1, 0);
-	public static final Item EMERALD_CHESTPLATE = new ModItemArmorBase(OedldoedlGear.MODID, "emerald_chestplate", OedldoedlGear.TAB, ModArmorMaterial.EMERALD, 0, EntityEquipmentSlot.CHEST, ModRarities.WHITE, false, 1, 0);
-	public static final Item EMERALD_LEGGINGS = new ModItemArmorBase(OedldoedlGear.MODID, "emerald_leggings", OedldoedlGear.TAB, ModArmorMaterial.EMERALD, 1, EntityEquipmentSlot.LEGS, ModRarities.WHITE, false, 1, 0);
-	public static final Item EMERALD_BOOTS = new ModItemArmorBase(OedldoedlGear.MODID, "emerald_boots", OedldoedlGear.TAB, ModArmorMaterial.EMERALD, 0, EntityEquipmentSlot.FEET, ModRarities.WHITE, false, 1, 0);
+	public static final Item EMERALD_HELMET = new ItemEmeraldArmor(OedldoedlGear.MODID, "emerald_helmet", OedldoedlGear.TAB, ModArmorMaterial.EMERALD, 0, EntityEquipmentSlot.HEAD, ModRarities.WHITE, false, 1, 0);
+	public static final Item EMERALD_CHESTPLATE = new ItemEmeraldArmor(OedldoedlGear.MODID, "emerald_chestplate", OedldoedlGear.TAB, ModArmorMaterial.EMERALD, 0, EntityEquipmentSlot.CHEST, ModRarities.WHITE, false, 1, 0);
+	public static final Item EMERALD_LEGGINGS = new ItemEmeraldArmor(OedldoedlGear.MODID, "emerald_leggings", OedldoedlGear.TAB, ModArmorMaterial.EMERALD, 1, EntityEquipmentSlot.LEGS, ModRarities.WHITE, false, 1, 0);
+	public static final Item EMERALD_BOOTS = new ItemEmeraldArmor(OedldoedlGear.MODID, "emerald_boots", OedldoedlGear.TAB, ModArmorMaterial.EMERALD, 0, EntityEquipmentSlot.FEET, ModRarities.WHITE, false, 1, 0);
 
 	// gremorium armor
 	public static final Item GREMORIUM_HELMET = new ItemGremoriumArmor(OedldoedlGear.MODID, "gremorium_helmet", OedldoedlGear.TAB, ModArmorMaterial.GREMORIUM, 0, EntityEquipmentSlot.HEAD, ModRarities.DARK_RED, true, 1, 0).setRGBBarColor(0x990000);
@@ -131,7 +133,7 @@ public class ModItems {
 	public static final Item SAKURAJIMARIUM_BOOTS = new ItemSakurajimariumArmor(OedldoedlGear.MODID, "sakurajimarium_boots", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 0, EntityEquipmentSlot.FEET, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 
 	// gamemode armor
-	public static final Item GAMEMODE_CHESTPLATE = new ModItemArmorBase(OedldoedlGear.MODID, "gamemode_chestplate", OedldoedlGear.TAB, ModArmorMaterial.GAMEMODE_CHESTPLATE, 0, EntityEquipmentSlot.CHEST, ModRarities.RED, true, 2, 1);
+	public static final Item GAMEMODE_CHESTPLATE = new ItemGamemodeChestplate(OedldoedlGear.MODID, "gamemode_chestplate", OedldoedlGear.TAB, ModArmorMaterial.GAMEMODE_CHESTPLATE, 0, EntityEquipmentSlot.CHEST, ModRarities.RED, true, 2, 1);
 
 	// flying shooting armor
 	public static final Item CLASSIC_FLYING_SHOOTING_HOODIE = new ModItemArmorBase(OedldoedlGear.MODID, "classic_flying_shooting_hoodie", OedldoedlGear.TAB, ModArmorMaterial.FLYING_SHOOTING_HOODIE_CLASSIC, 0, EntityEquipmentSlot.CHEST, ModRarities.AQUA, false, 2, 0);

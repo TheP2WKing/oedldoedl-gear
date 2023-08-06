@@ -3,6 +3,7 @@ package net.thep2wking.oedldoedlgear.content.item.tool;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
@@ -37,8 +38,7 @@ public class ItemKickStick extends ModItemBase {
 			World world = player.getEntityWorld();
 			MinecraftServer server = world.getMinecraftServer();
 			if (target instanceof EntityPlayer && server != null) {
-				server.getCommandManager().executeCommand(server.getCommandSenderEntity(),
-						"/kick " + playerTarget.getGameProfile().getName() + " " + "DUMMY KICK MESSAGE");
+				((EntityPlayerMP)playerTarget).connection.disconnect(new TextComponentString("DUMMY BAN MESSAG"));
 				player.sendMessage(new TextComponentString("[")
 						.appendSibling(new TextComponentTranslation(TextFormatting.RED + this.getUnlocalizedName()))
 						.appendSibling(new TextComponentString("] ")).appendSibling(new TextComponentTranslation(

@@ -17,6 +17,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.GameType;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -102,18 +103,30 @@ public class ItemAdminStaff extends ModItemBase {
 		} else if (!world.isRemote) {
 			if (getMode(stack) == Mode.Day || getMode(stack) == Mode.Night || getMode(stack) == Mode.Clear
 					|| getMode(stack) == Mode.Rain || getMode(stack) == Mode.Thunder) {
-				world.getMinecraftServer().getCommandManager().executeCommand(
-						world.getMinecraftServer().getCommandSenderEntity(),
-						getMode(stack).name.toString());
-				player.getCooldownTracker().setCooldown(this, 40);
+				if (getMode(stack) == Mode.Day) {
+					world.getWorldInfo().setWorldTime(1000);
+				} else if (getMode(stack) == Mode.Night) {
+					world.getWorldInfo().setWorldTime(13000);
+				} else if (getMode(stack) == Mode.Clear) {
+					world.getWorldInfo().setCleanWeatherTime(0);
+					world.getWorldInfo().setRaining(false);
+					world.getWorldInfo().setThundering(false);
+				} else if (getMode(stack) == Mode.Rain) {
+					world.getWorldInfo().setRaining(true);
+					world.getWorldInfo().setThundering(false);
+				} else if (getMode(stack) == Mode.Thunder) {
+					world.getWorldInfo().setRaining(true);
+					world.getWorldInfo().setThundering(true);
+				}
 			}
+
 			if (getMode(stack) == Mode.Creative || getMode(stack) == Mode.Survival) {
-				world.getMinecraftServer().getCommandManager().executeCommand(
-						world.getMinecraftServer().getCommandSenderEntity(),
-						getMode(stack).name.toString() + " " + player.getGameProfile().getName());
-				player.getCooldownTracker().setCooldown(this, 40);
+				if (getMode(stack) == Mode.Creative) {
+					player.setGameType(GameType.CREATIVE);
+				} else {
+					player.setGameType(GameType.SURVIVAL);
+				}
 			}
-			stack.damageItem(1, player);
 		}
 		return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
 	}
