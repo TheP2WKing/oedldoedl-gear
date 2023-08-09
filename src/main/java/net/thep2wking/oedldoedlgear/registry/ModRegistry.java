@@ -30,9 +30,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerItemBlock(event, ModItems.BADROCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.MAGICAL_WOOD);
 
-		
-		ModRegistryHelper.registerItemBlock(event, ModItems.SPAWNER);
-
 		ModRegistryHelper.registerItem(event, ModItems.BASE_HELMET);
 		ModRegistryHelper.registerItem(event, ModItems.BASE_CHESTPLATE);
 		ModRegistryHelper.registerItem(event, ModItems.BASE_LEGGINGS);
