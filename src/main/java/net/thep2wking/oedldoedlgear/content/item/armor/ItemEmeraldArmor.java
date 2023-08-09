@@ -24,6 +24,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.init.ModItems;
@@ -71,14 +72,8 @@ public class ItemEmeraldArmor extends ModItemArmorBase {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-		ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-		ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-		ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-		if (((!head.isEmpty()) && (head.getItem() == ModItems.EMERALD_HELMET) && (!chest.isEmpty())
-				&& (chest.getItem() == ModItems.EMERALD_CHESTPLATE) && (!legs.isEmpty())
-				&& (legs.getItem() == ModItems.EMERALD_LEGGINGS) && (!feet.isEmpty())
-				&& (feet.getItem() == ModItems.EMERALD_BOOTS))) {
+		if (ModArmorHelper.hasFullArmorSet(player, ModItems.EMERALD_HELMET, ModItems.EMERALD_CHESTPLATE,
+				ModItems.EMERALD_LEGGINGS, ModItems.EMERALD_BOOTS)) {
 			player.addPotionEffect(new PotionEffect(MobEffects.LUCK, 200, 0, false, false));
 		}
 	}

@@ -5,26 +5,16 @@ import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.thep2wking.oedldoedlgear.content.entity.EntityChargedDynamite;
 import net.thep2wking.oedldoedlgear.content.entity.EntityChargedEssence;
-import net.thep2wking.oedldoedlgear.content.entity.EntityChunkTNTPrimed;
 import net.thep2wking.oedldoedlgear.content.entity.EntityCombatDynamite;
 import net.thep2wking.oedldoedlgear.content.entity.EntityDynamite;
 import net.thep2wking.oedldoedlgear.content.entity.EntityExplosionCore;
 import net.thep2wking.oedldoedlgear.content.entity.EntityExplosiveSnowball;
-import net.thep2wking.oedldoedlgear.content.entity.EntityNukePrimed;
 import net.thep2wking.oedldoedlgear.content.entity.EntityRockySnowball;
-import net.thep2wking.oedldoedlgear.content.entity.EntityTrollTNTPrimed;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 
 public class ModRenderer {
 	@SuppressWarnings("deprecation")
 	public static void registerRenderer() {
-		RenderingRegistry.registerEntityRenderingHandler(EntityNukePrimed.class,
-				new NukeRender(Minecraft.getMinecraft().getRenderManager()));
-		RenderingRegistry.registerEntityRenderingHandler(EntityTrollTNTPrimed.class,
-				new TrollTNTRender(Minecraft.getMinecraft().getRenderManager()));
-		RenderingRegistry.registerEntityRenderingHandler(EntityChunkTNTPrimed.class,
-				new ChunkTNTRender(Minecraft.getMinecraft().getRenderManager()));
-
 		RenderingRegistry.registerEntityRenderingHandler(EntityExplosiveSnowball.class,
 				new RenderSnowball<EntityExplosiveSnowball>(Minecraft.getMinecraft().getRenderManager(),
 						ModItems.EXPLOSIVE_SNOWBALL, Minecraft.getMinecraft().getRenderItem()));

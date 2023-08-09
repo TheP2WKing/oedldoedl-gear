@@ -10,10 +10,10 @@ import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlresources.init.ModItems;
 
 public class ModArmorMaterial {
-	public static final ArmorMaterial WOOD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "wood", 8,
-			new int[] { 1, 3, 2, 1 }, 0f, 6, SoundEvents.BLOCK_WOOD_PLACE, Item.getItemFromBlock(Blocks.LOG), 0);
+	public static final ArmorMaterial WOOD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "wooden", 8,
+			new int[] { 1, 2, 3, 1 }, 0f, 6, SoundEvents.BLOCK_WOOD_PLACE, Item.getItemFromBlock(Blocks.LOG), 0);
 	public static final ArmorMaterial FLINT = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "flint", 10,
-			new int[] { 2, 4, 3, 2 }, 0f, 6, SoundEvents.BLOCK_GRAVEL_STEP, Items.FLINT, 0);
+			new int[] { 2, 3, 4, 2 }, 0f, 6, SoundEvents.BLOCK_GRAVEL_STEP, Items.FLINT, 0);
 	public static final ArmorMaterial EMERALD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "emerald",
 			35, new int[] { 4, 7, 9, 4 }, 2.0f, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Items.EMERALD, 0);
 	public static final ArmorMaterial BASE = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "base", 20,
@@ -56,22 +56,23 @@ public class ModArmorMaterial {
 
 	public static final ArmorMaterial FLYING_SHOOTING_HOODIE_CLASSIC = ModArmorMaterialBase.addArmorMaterial(
 			OedldoedlGear.MODID, "classic_flying_shooting_hoodie", 100, new int[] { 0, 0, 8, 0 }, 4.0f, 20,
-			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, Items.AIR, 0);
+			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, net.thep2wking.oedldoedlgear.init.ModItems.BLUE_FABRIC, 0);
 	public static final ArmorMaterial FLYING_SHOOTING_HOODIE_BLACK = ModArmorMaterialBase.addArmorMaterial(
 			OedldoedlGear.MODID, "black_flying_shooting_hoodie", 100, new int[] { 0, 0, 8, 0 }, 4.0f, 20,
-			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, Items.AIR, 0);
+			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, net.thep2wking.oedldoedlgear.init.ModItems.BLACK_FABRIC, 0);
 	public static final ArmorMaterial FLYING_SHOOTING_HOODIE_WHITE = ModArmorMaterialBase.addArmorMaterial(
 			OedldoedlGear.MODID, "white_flying_shooting_hoodie", 100, new int[] { 0, 0, 8, 0 }, 4.0f, 20,
-			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, Items.AIR, 0);
+			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, net.thep2wking.oedldoedlgear.init.ModItems.WHITE_FABRIC, 0);
 	public static final ArmorMaterial FLYING_SHOOTING_HOODIE_COLLEGE_JACKET = ModArmorMaterialBase.addArmorMaterial(
 			OedldoedlGear.MODID, "flying_shooting_college_jacket", 150, new int[] { 0, 0, 10, 0 }, 6.0f, 30,
-			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, Items.AIR, 0);
+			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, net.thep2wking.oedldoedlgear.init.ModItems.BLACK_FABRIC, 0);
 	public static final ArmorMaterial GUEFFY_JACKET = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
 			"gradient_gueffy_tag_quilted_jacket", 100, new int[] { 0, 0, 8, 0 }, 6.0f, 20,
-			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, Items.AIR, 0);
+			SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, net.thep2wking.oedldoedlgear.init.ModItems.MAGENTA_FABRIC, 0);
 
 	public static final ArmorMaterial TRAVELLERS_BOOTS = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
-			"travellers_boots", 5, new int[] { 2, 0, 0, 0 }, 0f, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, Items.AIR, 0);
+			"travellers_boots", 5, new int[] { 2, 0, 0, 0 }, 0f, 9, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+			net.thep2wking.oedldoedlgear.init.ModItems.TRAVELLERS_LEATHER, 0);
 	public static final ArmorMaterial TRAVELLERS_IRON_BOOTS = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
 			"travellers_iron_boots", 15, new int[] { 3, 0, 0, 0 }, 1f, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON,
 			Items.IRON_INGOT, 0);

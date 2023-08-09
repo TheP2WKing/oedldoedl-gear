@@ -21,9 +21,6 @@ public class ModRegistry {
 
 		ModRegistryHelper.registerBlock(event, ModBlocks.BADROCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MAGICAL_WOOD);
-		ModRegistryHelper.registerBlock(event, ModBlocks.NUKE);
-		ModRegistryHelper.registerBlock(event, ModBlocks.TROLL_TNT);
-		ModRegistryHelper.registerBlock(event, ModBlocks.CHUNK_TNT);
 	}
 
 	@SubscribeEvent
@@ -32,9 +29,9 @@ public class ModRegistry {
 
 		ModRegistryHelper.registerItemBlock(event, ModItems.BADROCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.MAGICAL_WOOD);
-		ModRegistryHelper.registerItemBlock(event, ModItems.NUKE);
-		ModRegistryHelper.registerItemBlock(event, ModItems.TROLL_TNT);
-		ModRegistryHelper.registerItemBlock(event, ModItems.CHUNK_TNT);
+
+		
+		ModRegistryHelper.registerItemBlock(event, ModItems.SPAWNER);
 
 		ModRegistryHelper.registerItem(event, ModItems.BASE_HELMET);
 		ModRegistryHelper.registerItem(event, ModItems.BASE_CHESTPLATE);
@@ -285,7 +282,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.BLUE_FABRIC);
 		ModRegistryHelper.registerItem(event, ModItems.BROWN_FABRIC);
 		ModRegistryHelper.registerItem(event, ModItems.GREEN_FABRIC);
-		ModRegistryHelper.registerItem(event, ModItems.ORANGE_FABRIC);
 		ModRegistryHelper.registerItem(event, ModItems.RED_FABRIC);
 		ModRegistryHelper.registerItem(event, ModItems.BLACK_FABRIC);
 

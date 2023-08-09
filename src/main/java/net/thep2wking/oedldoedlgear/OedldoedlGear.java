@@ -20,6 +20,7 @@ import net.thep2wking.oedldoedlcore.init.ModItems;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlgear.init.ModEntities;
+import net.thep2wking.oedldoedlgear.registry.ModRecipes;
 import net.thep2wking.oedldoedlgear.util.proxy.CommonProxy;
 
 @Mod(modid = OedldoedlGear.MODID, name = OedldoedlGear.NAME, version = OedldoedlGear.VERSION, dependencies = OedldoedlGear.DEPENDENCIES)
@@ -29,7 +30,7 @@ public class OedldoedlGear {
     public static final String MC_VERSION = "1.12.2";
     public static final String NAME = "Oedldoedl Gear";
     public static final String VERSION = MC_VERSION + "-" + "3.0.0";
-    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-3.0.0,);required-after:oedldoedlresources@[1.12.2-3.0.0,);";
+    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-3.0.0,);required-after:oedldoedlresources@[1.12.2-3.0.0,);required-after:codechickenlib;";
     public static final String CLIENT_PROXY_CLASS = "net.thep2wking.oedldoedlgear.util.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "net.thep2wking.oedldoedlgear.util.proxy.ServerProxy";
 
@@ -63,8 +64,8 @@ public class OedldoedlGear {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         ModLogger.initLogger(MODID);
-        // ModRecipes.registerOreDict();
-        // ModRecipes.registerRecipes();
+        ModRecipes.registerOreDict();
+        ModRecipes.registerRecipes();
         PROXY.render();
         PROXY.init(event);
     }
