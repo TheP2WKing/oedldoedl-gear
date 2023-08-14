@@ -42,7 +42,7 @@
     "textures": 
     {
         "shield_front": "oedldoedlgear:entity/emerald_shield",
-        "shield_base": "minecraft:entity/shield_base",
+        "shield_base": "oedldoedlgear:entity/emerald_shield",
         "particle": "minecraft:block/emerald_block"
     },
 

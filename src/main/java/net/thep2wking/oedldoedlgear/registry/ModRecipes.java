@@ -42,6 +42,7 @@ public class ModRecipes {
 		ModRecipeHelper.addOreDict("toolHoe", ModItems.QUARTARIUM_HOE, 0);
 		ModRecipeHelper.addOreDict("toolHoe", ModItems.NAGATORIUM_HOE, 0);
 		ModRecipeHelper.addOreDict("toolHoe", ModItems.SAKURAJIMARIUM_HOE, 0);
+		ModRecipeHelper.addOreDict("toolHoe", ModItems.KITAGAWARIUM_HOE, 0);
 
 		ModRecipeHelper.addOreDict("fabric", ModItems.WHITE_FABRIC, 0);
 		ModRecipeHelper.addOreDict("fabric", ModItems.ORANGE_FABRIC, 0);
@@ -85,6 +86,34 @@ public class ModRecipes {
 				material, 'B', bootsIn, 'C', "leatherTravellers");
 	}
 
+	public static void addHelmetRecipe(String modid, String name, @Nonnull ItemStack helmet, String material) {
+		ModRecipeHelper.addShapedRecipe(modid, "armor/" + name + "_helmet", helmet, "ABA", "A A", 'A', material, 'B',
+				name + "Star");
+	}
+
+	public static void addChestplateRecipe(String modid, String name, @Nonnull ItemStack chestplate, String material) {
+		ModRecipeHelper.addShapedRecipe(modid, "armor/" + name + "_chestplate", chestplate, "A A", "ABA", "AAA", 'A',
+				material, 'B', name + "Star");
+	}
+
+	public static void addLeggingsRecipe(String modid, String name, @Nonnull ItemStack leggings, String material) {
+		ModRecipeHelper.addShapedRecipe(modid, "armor/" + name + "_leggings", leggings, "ABA", "A A", "A A", 'A',
+				material, 'B', name + "Star");
+	}
+
+	public static void addBootsRecipe(String modid, String name, @Nonnull ItemStack boots, String material) {
+		ModRecipeHelper.addShapedRecipe(modid, "armor/" + name + "_boots", boots, "A A", "A B", 'A', material, 'B',
+		name + "Star");
+	}
+
+	public static void addFullStarArmorRecipe(String modid, String name, @Nonnull ItemStack helmet,
+			@Nonnull ItemStack chestplate, @Nonnull ItemStack leggings, @Nonnull ItemStack boots, String material) {
+		addHelmetRecipe(modid, name, helmet, material);
+		addChestplateRecipe(modid, name, chestplate, material);
+		addLeggingsRecipe(modid, name, leggings, material);
+		addBootsRecipe(modid, name, boots, material);
+	}
+
 	public static void registerRecipes() {
 		ModLogger.registeredRecipesLogger(OedldoedlGear.MODID);
 
@@ -110,42 +139,42 @@ public class ModRecipes {
 				new ItemStack(Items.CHAINMAIL_LEGGINGS, 1, 0),
 				new ItemStack(Items.CHAINMAIL_BOOTS, 1, 0), "chainmail");
 
-		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "gremorium",
+		addFullStarArmorRecipe(OedldoedlGear.MODID, "gremorium",
 				new ItemStack(ModItems.GREMORIUM_HELMET, 1, 0),
 				new ItemStack(ModItems.GREMORIUM_CHESTPLATE, 1, 0),
 				new ItemStack(ModItems.GREMORIUM_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.GREMORIUM_BOOTS, 1, 0), "ingotGremorium");
-		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "himejimarium",
+		addFullStarArmorRecipe(OedldoedlGear.MODID, "himejimarium",
 				new ItemStack(ModItems.HIMEJIMARIUM_HELMET, 1, 0),
 				new ItemStack(ModItems.HIMEJIMARIUM_CHESTPLATE, 1, 0),
 				new ItemStack(ModItems.HIMEJIMARIUM_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.HIMEJIMARIUM_BOOTS, 1, 0), "ingotHimejimarium");
-		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "toujourium",
+		addFullStarArmorRecipe(OedldoedlGear.MODID, "toujourium",
 				new ItemStack(ModItems.TOUJOURIUM_HELMET, 1, 0),
 				new ItemStack(ModItems.TOUJOURIUM_CHESTPLATE, 1, 0),
 				new ItemStack(ModItems.TOUJOURIUM_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.TOUJOURIUM_BOOTS, 1, 0), "ingotToujourium");
-		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "argentorium",
+		addFullStarArmorRecipe(OedldoedlGear.MODID, "argentorium",
 				new ItemStack(ModItems.ARGENTORIUM_HELMET, 1, 0),
 				new ItemStack(ModItems.ARGENTORIUM_CHESTPLATE, 1, 0),
 				new ItemStack(ModItems.ARGENTORIUM_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.ARGENTORIUM_BOOTS, 1, 0), "ingotArgentorium");
-		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "quartarium",
+		addFullStarArmorRecipe(OedldoedlGear.MODID, "quartarium",
 				new ItemStack(ModItems.QUARTARIUM_HELMET, 1, 0),
 				new ItemStack(ModItems.QUARTARIUM_CHESTPLATE, 1, 0),
 				new ItemStack(ModItems.QUARTARIUM_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.QUARTARIUM_BOOTS, 1, 0), "ingotQuartarium");
-		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "nagatorium",
+		addFullStarArmorRecipe(OedldoedlGear.MODID, "nagatorium",
 				new ItemStack(ModItems.NAGATORIUM_HELMET, 1, 0),
 				new ItemStack(ModItems.NAGATORIUM_CHESTPLATE, 1, 0),
 				new ItemStack(ModItems.NAGATORIUM_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.NAGATORIUM_BOOTS, 1, 0), "ingotNagatorium");
-		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "sakurajimarium",
+		addFullStarArmorRecipe(OedldoedlGear.MODID, "sakurajimarium",
 				new ItemStack(ModItems.SAKURAJIMARIUM_HELMET, 1, 0),
 				new ItemStack(ModItems.SAKURAJIMARIUM_CHESTPLATE, 1, 0),
 				new ItemStack(ModItems.SAKURAJIMARIUM_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.SAKURAJIMARIUM_BOOTS, 1, 0), "ingotSakurajimarium");
-		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "kitagawarium",
+		addFullStarArmorRecipe(OedldoedlGear.MODID, "kitagawarium",
 				new ItemStack(ModItems.KITAGAWARIUM_HELMET, 1, 0),
 				new ItemStack(ModItems.KITAGAWARIUM_CHESTPLATE, 1, 0),
 				new ItemStack(ModItems.KITAGAWARIUM_LEGGINGS, 1, 0),

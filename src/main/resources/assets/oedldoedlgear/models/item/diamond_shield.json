@@ -42,7 +42,7 @@
     "textures": 
     {
         "shield_front": "oedldoedlgear:entity/diamond_shield",
-        "shield_base": "minecraft:entity/shield_base",
+        "shield_base": "oedldoedlgear:entity/diamond_shield",
         "particle": "minecraft:block/diamond_block"
     },
 
