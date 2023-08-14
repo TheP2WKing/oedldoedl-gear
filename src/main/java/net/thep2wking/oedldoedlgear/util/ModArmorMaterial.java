@@ -43,6 +43,9 @@ public class ModArmorMaterial {
 	public static final ArmorMaterial SAKURAJIMARIUM = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
 			"sakurajimarium", 8054, new int[] { 10, 16, 20, 10 }, 8.0f, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
 			ModItems.SAKURAJIMARIUM_INGOT, 0);
+	public static final ArmorMaterial KITAGAWARIUM = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
+			"kitagawarium", 8658, new int[] { 10, 16, 20, 10 }, 8.0f, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
+			ModItems.KITAGAWARIUM_INGOT, 0);
 
 	public static final ArmorMaterial WIZARED_HAT_BLACK = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
 			"wizared_hat", 0, new int[] { 5, 0, 0, 0 }, 2.0f, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,

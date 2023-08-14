@@ -373,6 +373,38 @@ item.oedldoedlgear.sakurajimarium_shears.tip1=The full power of Mai?
 item.oedldoedlgear.sakurajimarium_shield.name=Sakurajimarium Shield
 item.oedldoedlgear.sakurajimarium_shield.tip1=The full power of Mai?
 
+# kitagawarium
+item.oedldoedlgear.kitagawarium_helmet.name=Kitagawarium Helmet
+item.oedldoedlgear.kitagawarium_helmet.tip1=The full power of Marin.
+item.oedldoedlgear.kitagawarium_chestplate.name=Kitagawarium Chestplate
+item.oedldoedlgear.kitagawarium_chestplate.tip1=The full power of Marin.
+item.oedldoedlgear.kitagawarium_leggings.name=Kitagawarium Leggings
+item.oedldoedlgear.kitagawarium_leggings.tip1=The full power of Marin.
+item.oedldoedlgear.kitagawarium_boots.name=Kitagawarium Boots
+item.oedldoedlgear.kitagawarium_boots.tip1=The full power of Marin.
+item.oedldoedlgear.kitagawarium_armor.effects1=
+item.oedldoedlgear.kitagawarium_armor.effects2=
+item.oedldoedlgear.kitagawarium_armor.effects3=
+item.oedldoedlgear.kitagawarium_armor.effects4=
+item.oedldoedlgear.kitagawarium_sword.name=Kitagawarium Sword
+item.oedldoedlgear.kitagawarium_sword.tip1=The full power of Marin?
+item.oedldoedlgear.kitagawarium_shovel.name=Kitagawarium Shovel
+item.oedldoedlgear.kitagawarium_shovel.tip1=The full power of Marin?
+item.oedldoedlgear.kitagawarium_pickaxe.name=Kitagawarium Pickaxe
+item.oedldoedlgear.kitagawarium_pickaxe.tip1=The full power of Marin?
+item.oedldoedlgear.kitagawarium_axe.name=Kitagawarium Axe
+item.oedldoedlgear.kitagawarium_axe.tip1=The full power of Marin?
+item.oedldoedlgear.kitagawarium_hoe.name=Kitagawarium Hoe
+item.oedldoedlgear.kitagawarium_hoe.tip1=The full power of Marin?
+item.oedldoedlgear.kitagawarium_paxel.name=Kitagawarium Paxel
+item.oedldoedlgear.kitagawarium_paxel.tip1=The full power of Marin?
+item.oedldoedlgear.kitagawarium_smashbat.name=Kitagawarium Smashbat
+item.oedldoedlgear.kitagawarium_smashbat.tip1=The full power of Marin?
+item.oedldoedlgear.kitagawarium_shears.name=Kitagawarium Shears
+item.oedldoedlgear.kitagawarium_shears.tip1=The full power of Marin?
+item.oedldoedlgear.kitagawarium_shield.name=Kitagawarium Shield
+item.oedldoedlgear.kitagawarium_shield.tip1=The full power of Marin?
+
 # infinity
 item.oedldoedlgear.infinity_helmet.name=Infinity Helmet
 item.oedldoedlgear.infinity_helmet.tip1=The most expensive helmet.
@@ -651,15 +683,6 @@ item.oedldoedlgear.squid_bucket.name=Bucket of Squid
 item.oedldoedlgear.squid_bucket.tip1=How did we get here?
 
 # blocks
-tile.oedldoedlgear.nuke.name=Nuke
-entity.oedldoedlgear.nuke.name=Nuke - RUN
-tile.oedldoedlgear.nuke.tip1=I recommend putting on some earmuffs.
-tile.oedldoedlgear.troll_tnt.name=Troll TNT
-entity.oedldoedlgear.troll_tnt.name=Block of Troll TNT
-tile.oedldoedlgear.troll_tnt.tip1=Do NOT break!
-tile.oedldoedlgear.chunk_tnt.name=Chunk TNT
-entity.oedldoedlgear.chunk_tnt.name=Block of Chunk TNT
-tile.oedldoedlgear.chunk_tnt.tip1=Who thought that was a good idea?
 tile.oedldoedlgear.badrock.name=Badrock
 tile.oedldoedlgear.badrock.tip1=The pun is as bad as the rock.
 tile.oedldoedlgear.magical_wood.name=Magical Wood

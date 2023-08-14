@@ -24,6 +24,7 @@ import net.thep2wking.oedldoedlgear.content.item.armor.ItemEmeraldArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemGamemodeChestplate;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemGremoriumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemHimejimariumArmor;
+import net.thep2wking.oedldoedlgear.content.item.armor.ItemKitagawariumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemLongFallBoots;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemNagatoriumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemOedldoedlArmor;
@@ -130,6 +131,12 @@ public class ModItems {
 	public static final Item SAKURAJIMARIUM_LEGGINGS = new ItemSakurajimariumArmor(OedldoedlGear.MODID, "sakurajimarium_leggings", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 1, EntityEquipmentSlot.LEGS, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 	public static final Item SAKURAJIMARIUM_BOOTS = new ItemSakurajimariumArmor(OedldoedlGear.MODID, "sakurajimarium_boots", OedldoedlGear.TAB, ModArmorMaterial.SAKURAJIMARIUM, 0, EntityEquipmentSlot.FEET, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 
+	// kitagawarium armor
+	public static final Item KITAGAWARIUM_HELMET = new ItemKitagawariumArmor(OedldoedlGear.MODID, "kitagawarium_helmet", OedldoedlGear.TAB, ModArmorMaterial.KITAGAWARIUM, 0, EntityEquipmentSlot.HEAD, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_CHESTPLATE = new ItemKitagawariumArmor(OedldoedlGear.MODID, "kitagawarium_chestplate", OedldoedlGear.TAB, ModArmorMaterial.KITAGAWARIUM, 0, EntityEquipmentSlot.CHEST, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_LEGGINGS = new ItemKitagawariumArmor(OedldoedlGear.MODID, "kitagawarium_leggings", OedldoedlGear.TAB, ModArmorMaterial.KITAGAWARIUM, 1, EntityEquipmentSlot.LEGS, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_BOOTS = new ItemKitagawariumArmor(OedldoedlGear.MODID, "kitagawarium_boots", OedldoedlGear.TAB, ModArmorMaterial.KITAGAWARIUM, 0, EntityEquipmentSlot.FEET, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+		
 	// gamemode armor
 	public static final Item GAMEMODE_CHESTPLATE = new ItemGamemodeChestplate(OedldoedlGear.MODID, "gamemode_chestplate", OedldoedlGear.TAB, ModArmorMaterial.GAMEMODE_CHESTPLATE, 0, EntityEquipmentSlot.CHEST, ModRarities.RED, true, 2, 1);
 
@@ -278,34 +285,46 @@ public class ModItems {
 	public static final Item SAKURAJIMARIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "sakurajimarium_shears", OedldoedlGear.TAB, ModToolMaterial.SAKURAJIMARIUM, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 	public static final Item SAKURAJIMARIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "sakurajimarium_shield", OedldoedlGear.TAB, ModToolMaterial.SAKURAJIMARIUM, 4.0f, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 
+	// kitagawarium tools 
+	public static final Item KITAGAWARIUM_SWORD = new ModItemSwordBase(OedldoedlGear.MODID, "kitagawarium_sword", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 3f, -2.4f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_SHOVEL = new ModItemShovelBase(OedldoedlGear.MODID, "kitagawarium_shovel", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 1.5f, -3f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_PICKAXE = new ModItemPickaxeBase(OedldoedlGear.MODID, "kitagawarium_pickaxe", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 1f, -2.8f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_AXE = new ModItemAxeBase(OedldoedlGear.MODID, "kitagawarium_axe", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 6f, -3f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_HOE = new ModItemHoeBase(OedldoedlGear.MODID, "kitagawarium_hoe", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, -6f, -0f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "kitagawarium_paxel", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 4f, -3f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "kitagawarium_smashbat", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 0f, -2f, 20f, 10f, ModHitSound.GEM, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "kitagawarium_shears", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "kitagawarium_shield", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 4.0f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+
+		
 	// wooden tools
 	public static final Item WOODEN_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "wooden_paxel", OedldoedlGear.TAB, ToolMaterial.WOOD, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item WOODEN_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "wooden_smashbat", OedldoedlGear.TAB, ToolMaterial.WOOD, 0f, -2f, 4f, 2f, ModHitSound.WOOD, ModRarities.WHITE, false, 1, 0);
 	public static final Item WOODEN_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "wooden_shears", OedldoedlGear.TAB, ToolMaterial.WOOD, ModRarities.WHITE, false, 1, 0);
-	public static final Item WOODEN_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "wooden_shield", OedldoedlGear.TAB, ToolMaterial.WOOD, ModRarities.WHITE, false, 1, 0);
+	public static final Item WOODEN_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "wooden_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_WOOD, ModRarities.WHITE, false, 1, 0);
 
 	// stone tools
 	public static final Item STONE_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "stone_paxel", OedldoedlGear.TAB, ToolMaterial.STONE, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item STONE_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "stone_smashbat", OedldoedlGear.TAB, ToolMaterial.STONE, 0f, -2f, 6f, 3f, ModHitSound.WOOD, ModRarities.WHITE, false, 1, 0);
 	public static final Item STONE_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "stone_shears", OedldoedlGear.TAB, ToolMaterial.STONE, ModRarities.WHITE, false, 1, 0);
-	public static final Item STONE_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "stone_shield", OedldoedlGear.TAB, ToolMaterial.STONE, ModRarities.WHITE, false, 1, 0);
+	public static final Item STONE_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "stone_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_STONE, ModRarities.WHITE, false, 1, 0);
 
 	// golden tools
 	public static final Item GOLDEN_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "golden_paxel", OedldoedlGear.TAB, ToolMaterial.GOLD, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item GOLDEN_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "golden_smashbat", OedldoedlGear.TAB, ToolMaterial.GOLD, 0f, -2f, 4f, 10f, ModHitSound.METAL, ModRarities.WHITE, false, 1, 0);
 	public static final Item GOLDEN_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "golden_shears", OedldoedlGear.TAB, ToolMaterial.GOLD, ModRarities.WHITE, false, 1, 0);
-	public static final Item GOLDEN_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "golden_shield", OedldoedlGear.TAB, ToolMaterial.GOLD, ModRarities.WHITE, false, 1, 0);
+	public static final Item GOLDEN_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "golden_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_GOLD, ModRarities.WHITE, false, 1, 0);
 
 	// iron tools
 	public static final Item IRON_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "iron_paxel", OedldoedlGear.TAB, ToolMaterial.IRON, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item IRON_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "iron_smashbat", OedldoedlGear.TAB, ToolMaterial.IRON, 0f, -2f, 8f, 4f, ModHitSound.METAL, ModRarities.WHITE, false, 1, 0);
-	public static final Item IRON_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "iron_shield", OedldoedlGear.TAB, ToolMaterial.IRON, ModRarities.WHITE, false, 1, 0);
+	public static final Item IRON_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "iron_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_IRON, ModRarities.WHITE, false, 1, 0);
 
 	// diamond tools
 	public static final Item DIAMOND_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "diamond_paxel", OedldoedlGear.TAB, ToolMaterial.DIAMOND, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item DIAMOND_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "diamond_smashbat", OedldoedlGear.TAB, ToolMaterial.DIAMOND, 0f, -2f, 12f, 6f, ModHitSound.GEM, ModRarities.WHITE, false, 1, 0);
 	public static final Item DIAMOND_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "diamond_shears", OedldoedlGear.TAB, ToolMaterial.DIAMOND, ModRarities.WHITE, false, 1, 0);
-	public static final Item DIAMOND_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "diamond_shield", OedldoedlGear.TAB, ToolMaterial.DIAMOND, ModRarities.WHITE, false, 1, 0);
+	public static final Item DIAMOND_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "diamond_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_DIAMOND, ModRarities.WHITE, false, 1, 0);
 
 	// carrot tools
 	public static final Item RIDING_SMASHBAT = new ItemRidingSmashbat(OedldoedlGear.MODID, "riding_smashbat", OedldoedlGear.TAB, ModToolMaterial.CARROT, -1f, -2f, 15f, 5f, ModHitSound.WOOD, ModRarities.GOLD, false, 1, 0);

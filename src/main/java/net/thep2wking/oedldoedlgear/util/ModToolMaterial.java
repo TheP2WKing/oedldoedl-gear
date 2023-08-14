@@ -1,5 +1,6 @@
 package net.thep2wking.oedldoedlgear.util;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item.ToolMaterial;
 import net.thep2wking.oedldoedlcore.api.tool.ModToolMaterialBase;
@@ -35,4 +36,17 @@ public class ModToolMaterial {
 			7656, 6, 25f, 12f, 32, ModItems.NAGATORIUM_INGOT, 0);
 	public static final ToolMaterial SAKURAJIMARIUM = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
 			"sakurajimarium", 8054, 6, 25f, 12f, 32, ModItems.SAKURAJIMARIUM_INGOT, 0);
+		public static final ToolMaterial KITAGAWARIUM = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
+			"kitagawarium", 8658, 6, 25f, 12f, 32, ModItems.KITAGAWARIUM_INGOT, 0);
+
+	public static final ToolMaterial SHIELD_WOOD = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
+			"shield_wood", 59, 0, 0f, 0f, 0, Blocks.PLANKS, 0);
+	public static final ToolMaterial SHIELD_STONE = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
+			"shield_stone", 131, 0, 0f, 0f, 0, Blocks.COBBLESTONE, 0);
+	public static final ToolMaterial SHIELD_IRON = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
+			"shield_iron", 250, 0, 0f, 0f, 0, Items.IRON_INGOT, 0);
+	public static final ToolMaterial SHIELD_DIAMOND = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
+			"shield_diamond", 1561, 0, 0f, 0f, 0, Items.DIAMOND, 0);
+	public static final ToolMaterial SHIELD_GOLD = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
+			"shield_diamond", 32, 0, 0f, 0f, 0, Items.GOLD_INGOT, 0);
 }

@@ -90,6 +90,11 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_LEGGINGS);
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_BOOTS);
 
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_BOOTS);
+
 		ModRegistryHelper.registerItem(event, ModItems.GAMEMODE_CHESTPLATE);
 
 		ModRegistryHelper.registerItem(event, ModItems.CLASSIC_FLYING_SHOOTING_HOODIE);
@@ -220,6 +225,16 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_SHEARS);
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_SHIELD);
+
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_PAXEL);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_SMASHBAT);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_SMASHBAT);
