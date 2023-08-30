@@ -100,7 +100,7 @@ public class ItemNagatoriumArmor extends ModItemArmorBase {
 			player.setAir(300);
 
 			player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
-			player.addPotionEffect(new PotionEffect(MobEffects.LUCK, 200, 9, false, false));
+			player.addPotionEffect(new PotionEffect(MobEffects.UNLUCK, 200, 9, false, false));
 
 			effectToInvert(player, MobEffects.HUNGER, MobEffects.SATURATION);
 			effectToInvert(player, MobEffects.INSTANT_DAMAGE, MobEffects.INSTANT_HEALTH);
@@ -174,7 +174,7 @@ public class ItemNagatoriumArmor extends ModItemArmorBase {
 		if (ModTooltips.showEffectTip()) {
 			ModTooltips.addEffectHeader(tooltip, ModTooltips.EFFECT_FULL_ARMOR);
 			ModTooltips.addPotionEffect(tooltip, MobEffects.NIGHT_VISION.getName(), false, 1, 400);
-			ModTooltips.addPotionEffect(tooltip, MobEffects.LUCK.getName(), false, 10, 200);
+			ModTooltips.addPotionEffect(tooltip, MobEffects.UNLUCK.getName(), true, 10, 200);
 			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 1);
 			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 2);
 			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 3);
