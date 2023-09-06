@@ -81,7 +81,6 @@ public class ModRecipes {
 
 	public static void addTravellersBootsUpgrade(String modid, String name, @Nonnull ItemStack bootsOut,
 			@Nonnull ItemStack bootsIn, String material) {
-		ModRecipeHelper.addOreDict("fabricGreen", ModItems.GREEN_FABRIC, 0);
 		ModRecipeHelper.addShapedRecipe(modid, "armor/" + name + "_boots", bootsOut, "ABA", "CAC", 'A',
 				material, 'B', bootsIn, 'C', "leatherTravellers");
 	}
@@ -103,7 +102,7 @@ public class ModRecipes {
 
 	public static void addBootsRecipe(String modid, String name, @Nonnull ItemStack boots, String material) {
 		ModRecipeHelper.addShapedRecipe(modid, "armor/" + name + "_boots", boots, "A A", "A B", 'A', material, 'B',
-		name + "Star");
+				name + "Star");
 	}
 
 	public static void addFullStarArmorRecipe(String modid, String name, @Nonnull ItemStack helmet,
@@ -112,6 +111,11 @@ public class ModRecipes {
 		addChestplateRecipe(modid, name, chestplate, material);
 		addLeggingsRecipe(modid, name, leggings, material);
 		addBootsRecipe(modid, name, boots, material);
+	}
+
+	public static void addFabricRecipe(String modid, String name, @Nonnull ItemStack fabric, String color) {
+		ModRecipeHelper.addShapedRecipe(modid, name, fabric, "AB ", "BCB", " B ", 'A', "toolNeedle", 'B',
+				"string", 'C', "wool" + color.substring(0, 1).toUpperCase() + color.substring(1));
 	}
 
 	public static void registerRecipes() {
@@ -374,5 +378,7 @@ public class ModRecipes {
 				new ItemStack(ModItems.BAN_HAMMER, 1, 0), " A ", " BA", "B  ", 'A', "commandBlock", 'B', "stickWood");
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/kick_Stick",
 				new ItemStack(ModItems.KICK_STICK, 1, 0), "  A", " A ", "B  ", 'A', "commandBlock", 'B', "stickWood");
+
+		addFabricRecipe(OedldoedlGear.MODID, "white_fabric", new ItemStack(ModItems.WHITE_FABRIC, 2, 0), "white");
 	}
 }
