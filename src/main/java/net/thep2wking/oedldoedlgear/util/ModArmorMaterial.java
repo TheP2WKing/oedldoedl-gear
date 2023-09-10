@@ -12,8 +12,6 @@ import net.thep2wking.oedldoedlresources.init.ModItems;
 public class ModArmorMaterial {
 	public static final ArmorMaterial WOOD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "wood", 8,
 			new int[] { 1, 2, 4, 1 }, 0f, 6, SoundEvents.BLOCK_WOOD_PLACE, Item.getItemFromBlock(Blocks.LOG), 0);
-	public static final ArmorMaterial FLINT = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "flint", 10,
-			new int[] { 2, 3, 5, 2 }, 0f, 6, SoundEvents.BLOCK_GRAVEL_STEP, Items.FLINT, 0);
 	public static final ArmorMaterial EMERALD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "emerald",
 			35, new int[] { 4, 7, 9, 4 }, 2.0f, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Items.EMERALD, 0);
 	public static final ArmorMaterial BASE = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "base", 20,

@@ -17,7 +17,7 @@ public class ItemRidingSmashbat extends ModItemSmashbatBase {
 
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		attacker.startRiding(attacker, true);
+		attacker.startRiding(target);
 		return super.hitEntity(stack, target, attacker);
 	}
 }

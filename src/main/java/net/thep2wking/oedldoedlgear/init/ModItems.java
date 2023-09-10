@@ -34,10 +34,8 @@ import net.thep2wking.oedldoedlgear.content.item.armor.ItemToujouriumArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemWoodenArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemArgentoriumArmor.AttributeUUIDArg;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemChainmail;
-import net.thep2wking.oedldoedlgear.content.item.misc.ItemChargedDynamite;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemChargedEssence;
-import net.thep2wking.oedldoedlgear.content.item.misc.ItemCombatDynamite;
-import net.thep2wking.oedldoedlgear.content.item.misc.ItemDynamite;
+import net.thep2wking.oedldoedlgear.content.item.misc.ItemChargedSnowball;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemExplosionCore;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemExplosiveSnowball;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemRockySnowball;
@@ -46,10 +44,12 @@ import net.thep2wking.oedldoedlgear.content.item.tool.ItemBanHammer;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemBedrockBreaker;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemBrefPower;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemExplosionStaff;
+import net.thep2wking.oedldoedlgear.content.item.tool.ItemFireWand;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemKickStick;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemLightningStaff;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemNeedle;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemRidingSmashbat;
+import net.thep2wking.oedldoedlgear.content.item.tool.ItemSkullWand;
 import net.thep2wking.oedldoedlgear.util.ModArmorMaterial;
 import net.thep2wking.oedldoedlgear.util.ModHorseArmorMaterial;
 import net.thep2wking.oedldoedlgear.util.ModToolMaterial;
@@ -76,12 +76,6 @@ public class ModItems {
 	public static final Item WOODEN_CHESTPLATE = new ItemWoodenArmor(OedldoedlGear.MODID, "wooden_chestplate", OedldoedlGear.TAB, ModArmorMaterial.WOOD, 0, EntityEquipmentSlot.CHEST, ModRarities.WHITE, false, 1, 0);
 	public static final Item WOODEN_LEGGINGS = new ItemWoodenArmor(OedldoedlGear.MODID, "wooden_leggings", OedldoedlGear.TAB, ModArmorMaterial.WOOD, 1, EntityEquipmentSlot.LEGS, ModRarities.WHITE, false, 1, 0);
 	public static final Item WOODEN_BOOTS = new ItemWoodenArmor(OedldoedlGear.MODID, "wooden_boots", OedldoedlGear.TAB, ModArmorMaterial.WOOD, 0, EntityEquipmentSlot.FEET, ModRarities.WHITE, false, 1, 0);
-		
-	// flint armor
-	public static final Item FLINT_HELMET = new ModItemArmorBase(OedldoedlGear.MODID, "flint_helmet", OedldoedlGear.TAB, ModArmorMaterial.FLINT, 0, EntityEquipmentSlot.HEAD, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_CHESTPLATE = new ModItemArmorBase(OedldoedlGear.MODID, "flint_chestplate", OedldoedlGear.TAB, ModArmorMaterial.FLINT, 0, EntityEquipmentSlot.CHEST, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_LEGGINGS = new ModItemArmorBase(OedldoedlGear.MODID, "flint_leggings", OedldoedlGear.TAB, ModArmorMaterial.FLINT, 1, EntityEquipmentSlot.LEGS, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_BOOTS = new ModItemArmorBase(OedldoedlGear.MODID, "flint_boots", OedldoedlGear.TAB, ModArmorMaterial.FLINT, 0, EntityEquipmentSlot.FEET, ModRarities.WHITE, false, 1, 0);
 
 	// emerald armor
 	public static final Item EMERALD_HELMET = new ItemEmeraldArmor(OedldoedlGear.MODID, "emerald_helmet", OedldoedlGear.TAB, ModArmorMaterial.EMERALD, 0, EntityEquipmentSlot.HEAD, ModRarities.WHITE, false, 1, 0);
@@ -186,17 +180,6 @@ public class ModItems {
 	public static final Item OEDLDOEDL_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "oedldoedl_shears", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 	public static final Item OEDLDOEDL_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "oedldoedl_shield", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, 2.0f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 
-	// flint tools 
-	public static final Item FLINT_SWORD = new ModItemSwordBase(OedldoedlGear.MODID, "flint_sword", OedldoedlGear.TAB, ModToolMaterial.FLINT, 3f, -2.4f, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_SHOVEL = new ModItemShovelBase(OedldoedlGear.MODID, "flint_shovel", OedldoedlGear.TAB, ModToolMaterial.FLINT, 1.5f, -3f, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_PICKAXE = new ModItemPickaxeBase(OedldoedlGear.MODID, "flint_pickaxe", OedldoedlGear.TAB, ModToolMaterial.FLINT, 1f, -2.8f, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_AXE = new ModItemAxeBase(OedldoedlGear.MODID, "flint_axe", OedldoedlGear.TAB, ModToolMaterial.FLINT, 6f, -3.1f, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_HOE = new ModItemHoeBase(OedldoedlGear.MODID, "flint_hoe", OedldoedlGear.TAB, ModToolMaterial.FLINT, -1f, -2f, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "flint_paxel", OedldoedlGear.TAB, ModToolMaterial.FLINT, 4f, -3f, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "flint_smashbat", OedldoedlGear.TAB, ModToolMaterial.FLINT, 0f, -2f, 5f, 2.5f, ModHitSound.WOOD, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "flint_shears", OedldoedlGear.TAB, ModToolMaterial.FLINT, ModRarities.WHITE, false, 1, 0);
-	public static final Item FLINT_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "flint_shield", OedldoedlGear.TAB, ModToolMaterial.FLINT, ModRarities.WHITE, false, 1, 0);
-
 	// emerald tools 
 	public static final Item EMERALD_SWORD = new ModItemSwordBase(OedldoedlGear.MODID, "emerald_sword", OedldoedlGear.TAB, ModToolMaterial.EMERALD, 3f, -2.4f, ModRarities.WHITE, false, 1, 0);
 	public static final Item EMERALD_SHOVEL = new ModItemShovelBase(OedldoedlGear.MODID, "emerald_shovel", OedldoedlGear.TAB, ModToolMaterial.EMERALD, 1.5f, -3f, ModRarities.WHITE, false, 1, 0);
@@ -206,7 +189,6 @@ public class ModItems {
 	public static final Item EMERALD_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "emerald_paxel", OedldoedlGear.TAB, ModToolMaterial.EMERALD, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item EMERALD_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "emerald_smashbat", OedldoedlGear.TAB, ModToolMaterial.EMERALD, 0f, -2f, 11f, 5.5f, ModHitSound.GEM, ModRarities.WHITE, false, 1, 0);
 	public static final Item EMERALD_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "emerald_shears", OedldoedlGear.TAB, ModToolMaterial.EMERALD, ModRarities.WHITE, false, 1, 0);
-	public static final Item EMERALD_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "emerald_shield", OedldoedlGear.TAB, ModToolMaterial.EMERALD, ModRarities.WHITE, false, 1, 0);
 
 	// gremorium tools 
 	public static final Item GREMORIUM_SWORD = new ModItemSwordBase(OedldoedlGear.MODID, "gremorium_sword", OedldoedlGear.TAB, ModToolMaterial.GREMORIUM, 3f, -2.4f, ModRarities.DARK_RED, true, 1, 0).setRGBBarColor(0x990000);
@@ -296,35 +278,29 @@ public class ModItems {
 	public static final Item KITAGAWARIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "kitagawarium_shears", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
 	public static final Item KITAGAWARIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "kitagawarium_shield", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 4.0f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
 
-		
 	// wooden tools
 	public static final Item WOODEN_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "wooden_paxel", OedldoedlGear.TAB, ToolMaterial.WOOD, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item WOODEN_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "wooden_smashbat", OedldoedlGear.TAB, ToolMaterial.WOOD, 0f, -2f, 4f, 2f, ModHitSound.WOOD, ModRarities.WHITE, false, 1, 0);
 	public static final Item WOODEN_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "wooden_shears", OedldoedlGear.TAB, ToolMaterial.WOOD, ModRarities.WHITE, false, 1, 0);
-	public static final Item WOODEN_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "wooden_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_WOOD, ModRarities.WHITE, false, 1, 0);
 
 	// stone tools
 	public static final Item STONE_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "stone_paxel", OedldoedlGear.TAB, ToolMaterial.STONE, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item STONE_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "stone_smashbat", OedldoedlGear.TAB, ToolMaterial.STONE, 0f, -2f, 6f, 3f, ModHitSound.WOOD, ModRarities.WHITE, false, 1, 0);
 	public static final Item STONE_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "stone_shears", OedldoedlGear.TAB, ToolMaterial.STONE, ModRarities.WHITE, false, 1, 0);
-	public static final Item STONE_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "stone_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_STONE, ModRarities.WHITE, false, 1, 0);
 
 	// golden tools
 	public static final Item GOLDEN_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "golden_paxel", OedldoedlGear.TAB, ToolMaterial.GOLD, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item GOLDEN_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "golden_smashbat", OedldoedlGear.TAB, ToolMaterial.GOLD, 0f, -2f, 4f, 10f, ModHitSound.METAL, ModRarities.WHITE, false, 1, 0);
 	public static final Item GOLDEN_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "golden_shears", OedldoedlGear.TAB, ToolMaterial.GOLD, ModRarities.WHITE, false, 1, 0);
-	public static final Item GOLDEN_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "golden_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_GOLD, ModRarities.WHITE, false, 1, 0);
 
 	// iron tools
 	public static final Item IRON_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "iron_paxel", OedldoedlGear.TAB, ToolMaterial.IRON, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item IRON_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "iron_smashbat", OedldoedlGear.TAB, ToolMaterial.IRON, 0f, -2f, 8f, 4f, ModHitSound.METAL, ModRarities.WHITE, false, 1, 0);
-	public static final Item IRON_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "iron_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_IRON, ModRarities.WHITE, false, 1, 0);
 
 	// diamond tools
 	public static final Item DIAMOND_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "diamond_paxel", OedldoedlGear.TAB, ToolMaterial.DIAMOND, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item DIAMOND_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "diamond_smashbat", OedldoedlGear.TAB, ToolMaterial.DIAMOND, 0f, -2f, 12f, 6f, ModHitSound.GEM, ModRarities.WHITE, false, 1, 0);
 	public static final Item DIAMOND_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "diamond_shears", OedldoedlGear.TAB, ToolMaterial.DIAMOND, ModRarities.WHITE, false, 1, 0);
-	public static final Item DIAMOND_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "diamond_shield", OedldoedlGear.TAB, ModToolMaterial.SHIELD_DIAMOND, ModRarities.WHITE, false, 1, 0);
 
 	// carrot tools
 	public static final Item RIDING_SMASHBAT = new ItemRidingSmashbat(OedldoedlGear.MODID, "riding_smashbat", OedldoedlGear.TAB, ModToolMaterial.CARROT, -1f, -2f, 15f, 5f, ModHitSound.WOOD, ModRarities.GOLD, false, 1, 0);
@@ -336,8 +312,8 @@ public class ModItems {
 	public static final Item EXPLOSION_STAFF = new ItemExplosionStaff(OedldoedlGear.MODID, "explosion_staff", OedldoedlGear.TAB, ModRarities.RED, false, 1, 1);
 	public static final Item LIGHTNING_STAFF = new ItemLightningStaff(OedldoedlGear.MODID, "lightning_staff", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 1);
 	public static final Item ADMIN_STAFF = new ItemAdminStaff(OedldoedlGear.MODID, "admin_staff", OedldoedlGear.TAB, ModRarities.RED, true, 1, 1);
-	public static final Item SKULL_WAND = new ModItemBase(OedldoedlGear.MODID, "skull_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
-	public static final Item FIRE_WAND = new ModItemBase(OedldoedlGear.MODID, "fire_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
+	public static final Item SKULL_WAND = new ItemSkullWand(OedldoedlGear.MODID, "skull_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
+	public static final Item FIRE_WAND = new ItemFireWand(OedldoedlGear.MODID, "fire_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item BEDROCK_BREAKER = new ItemBedrockBreaker(OedldoedlGear.MODID, "bedrock_breaker", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 0);
 	public static final Item NEEDLE = new ItemNeedle(OedldoedlGear.MODID, "needle", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 1);
 	public static final Item BREF_POWER = new ItemBrefPower(OedldoedlGear.MODID, "bref_power", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
@@ -345,9 +321,7 @@ public class ModItems {
 	// throwables
 	public static final Item ROCKY_SNOWBALL = new ItemRockySnowball(OedldoedlGear.MODID, "rocky_snowball", OedldoedlGear.TAB, ModRarities.WHITE, false, 1, 0);
 	public static final Item EXPLOSIVE_SNOWBALL = new ItemExplosiveSnowball(OedldoedlGear.MODID, "explosive_snowball", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
-	public static final Item DYNAMITE = new ItemDynamite(OedldoedlGear.MODID, "dynamite", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
-	public static final Item COMBAT_DYNAMITE = new ItemCombatDynamite(OedldoedlGear.MODID, "combat_dynamite", OedldoedlGear.TAB, ModRarities.GREEN, false, 1, 0);
-	public static final Item CHARGED_DYNAMITE = new ItemChargedDynamite(OedldoedlGear.MODID, "charged_dynamite", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 0);
+	public static final Item CHARGED_SNOWBALL = new ItemChargedSnowball(OedldoedlGear.MODID, "charged_snowball", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 0);
 
 	// ingredients
 	public static final Item WHITE_FABRIC = new ModItemBase(OedldoedlGear.MODID, "white_fabric", OedldoedlGear.TAB, ModRarities.WHITE, false, 1, 0);
@@ -367,7 +341,6 @@ public class ModItems {
 	public static final Item RED_FABRIC = new ModItemBase(OedldoedlGear.MODID, "red_fabric", OedldoedlGear.TAB, ModRarities.WHITE, false, 1, 0);
 	public static final Item BLACK_FABRIC = new ModItemBase(OedldoedlGear.MODID, "black_fabric", OedldoedlGear.TAB, ModRarities.WHITE, false, 1, 0);
 
-	public static final Item HARDENED_LEATHER = new ModItemBase(OedldoedlGear.MODID, "hardened_leather", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item TRAVELLERS_LEATHER = new ModItemBase(OedldoedlGear.MODID, "travellers_leather", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 
 	public static final Item EXPLOSION_CORE = new ItemExplosionCore(OedldoedlGear.MODID, "explosion_core", OedldoedlGear.TAB, ModRarities.RED, false, 1, 0);

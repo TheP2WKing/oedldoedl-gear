@@ -37,34 +37,6 @@ item.oedldoedlgear.base_shears.tip1=Basic shears.
 item.oedldoedlgear.base_shield.name=Base Shield
 item.oedldoedlgear.base_shield.tip1=Basic sield.
 
-# flint
-item.oedldoedlgear.flint_helmet.name=Flint Helmet
-item.oedldoedlgear.flint_helmet.tip1=What a stupid material...
-item.oedldoedlgear.flint_chestplate.name=Flint Chestplate
-item.oedldoedlgear.flint_chestplate.tip1=What a stupid material...
-item.oedldoedlgear.flint_leggings.name=Flint Leggings
-item.oedldoedlgear.flint_leggings.tip1=What a stupid material...
-item.oedldoedlgear.flint_boots.name=Flint Boots
-item.oedldoedlgear.flint_boots.tip1=What a stupid material...
-item.oedldoedlgear.flint_sword.name=Flint Sword
-item.oedldoedlgear.flint_sword.tip1=What a stupid material...
-item.oedldoedlgear.flint_shovel.name=Flint Shovel
-item.oedldoedlgear.flint_shovel.tip1=What a stupid material...
-item.oedldoedlgear.flint_pickaxe.name=Flint Pickaxe
-item.oedldoedlgear.flint_pickaxe.tip1=What a stupid material...
-item.oedldoedlgear.flint_axe.name=Flint Axe
-item.oedldoedlgear.flint_axe.tip1=What a stupid material...
-item.oedldoedlgear.flint_hoe.name=Flint Hoe
-item.oedldoedlgear.flint_hoe.tip1=What a stupid material...
-item.oedldoedlgear.flint_paxel.name=Flint Paxel
-item.oedldoedlgear.flint_paxel.tip1=What a stupid material...
-item.oedldoedlgear.flint_smashbat.name=Flint Smashbat
-item.oedldoedlgear.flint_smashbat.tip1=What a stupid material...
-item.oedldoedlgear.flint_shears.name=Flint Shears
-item.oedldoedlgear.flint_shears.tip1=What a stupid material...
-item.oedldoedlgear.flint_shield.name=Flint Shield
-item.oedldoedlgear.flint_shield.tip1=What a stupid material...
-
 # emerald
 item.oedldoedlgear.emerald_helmet.name=Emerald Helmet
 item.oedldoedlgear.emerald_helmet.tip1=Every crappy MCreator mod adds that.
@@ -90,8 +62,6 @@ item.oedldoedlgear.emerald_smashbat.name=Emerald Smashbat
 item.oedldoedlgear.emerald_smashbat.tip1=Every crappy MCreator mod adds that.
 item.oedldoedlgear.emerald_shears.name=Emerald Shears
 item.oedldoedlgear.emerald_shears.tip1=Every crappy MCreator mod adds that.
-item.oedldoedlgear.emerald_shield.name=Emerald Shield
-item.oedldoedlgear.emerald_shield.tip1=Every crappy MCreator mod adds that.
 
 # oedldoedl
 item.oedldoedlgear.oedldoedl_helmet.name=Oedldoedl Helmet
@@ -509,9 +479,6 @@ item.oedldoedlgear.wooden_smashbat.name=Wooden Smashbat
 item.oedldoedlgear.wooden_smashbat.tip1=Wow, so far...
 item.oedldoedlgear.wooden_shears.name=Wooden Shears
 item.oedldoedlgear.wooden_shears.tip1=We need more mods with wooden shears.
-item.oedldoedlgear.wooden_shield.name=Wooden Shield
-item.oedldoedlgear.wooden_shield.tip1=Why does this even exist?
-
 # stone
 item.oedldoedlgear.stone_paxel.name=Stone Paxel
 item.oedldoedlgear.stone_paxel.tip1=Also known as AIOT or Multitool.
@@ -519,8 +486,6 @@ item.oedldoedlgear.stone_smashbat.name=Stone Smashbat
 item.oedldoedlgear.stone_smashbat.tip1=Nice try.
 item.oedldoedlgear.stone_shears.name=Stone Shears
 item.oedldoedlgear.stone_shears.tip1=How sharp is stone really?
-item.oedldoedlgear.stone_shield.name=Stone Shield
-item.oedldoedlgear.stone_shield.tip1=Just for decoration.
 
 # gold
 item.oedldoedlgear.golden_paxel.name=Golden Paxel
@@ -529,17 +494,12 @@ item.oedldoedlgear.golden_smashbat.name=Golden Smashbat
 item.oedldoedlgear.golden_smashbat.tip1=Straigt up.
 item.oedldoedlgear.golden_shears.name=Golden Shears
 item.oedldoedlgear.golden_shears.tip1=What a waste of gold.
-item.oedldoedlgear.golden_shield.name=Golden Shield
-item.oedldoedlgear.golden_shield.tip1=Shiny shield.
 
 # irom
 item.oedldoedlgear.iron_paxel.name=Iron Paxel
 item.oedldoedlgear.iron_paxel.tip1=Also known as AIOT or Multitool.
 item.oedldoedlgear.iron_smashbat.name=Iron Smashbat
 item.oedldoedlgear.iron_smashbat.tip1=That sound...
-item.oedldoedlgear.iron_shield.name=Iron Shield
-item.oedldoedlgear.iron_shield.tip1=Durable shield.
-
 # diamond
 item.oedldoedlgear.diamond_paxel.name=Diamond Paxel
 item.oedldoedlgear.diamond_paxel.tip1=Also known as AIOT or Multitool.
@@ -547,8 +507,6 @@ item.oedldoedlgear.diamond_smashbat.name=Diamond Smashbat
 item.oedldoedlgear.diamond_smashbat.tip1=Kicks the mobs in the ass.
 item.oedldoedlgear.diamond_shears.name=Diamond Shears
 item.oedldoedlgear.diamond_shears.tip1=Shiny shears.
-item.oedldoedlgear.diamond_shield.name=Diamond Shield
-item.oedldoedlgear.diamond_shield.tip1=Durable shield.
 
 # carrot
 item.oedldoedlgear.riding_smashbat.name=Riding Smashbat
@@ -576,13 +534,13 @@ item.oedldoedlgear.lightning_staff.annotation2=(Halved while Sneaking)
 item.oedldoedlgear.bref_power.name=Bref Power Lime and Dirt  
 item.oedldoedlgear.bref_power.tip1=Do not let it get into your eyes.
 item.oedldoedlgear.needle.name=Needle
-item.oedldoedlgear.needle.tip1=Neat!
+item.oedldoedlgear.needle.tip1=Neat and reuseable!
 item.oedldoedlgear.admin_staff.name=Staff of Administration
 item.oedldoedlgear.admin_staff.tip1=God of MC!
 item.oedldoedlgear.admin_staff.annotation1=Mode:
-item.oedldoedlgear.skull_wand.name=Skull Wand
+item.oedldoedlgear.skull_wand.name=Wand of Withering
 item.oedldoedlgear.skull_wand.tip1=Shoot starving skulls.
-item.oedldoedlgear.fire_wand.name=Fire Wand
+item.oedldoedlgear.fire_wand.name=Wand of Fire
 item.oedldoedlgear.fire_wand.tip1=Shoot exploding fireballs.
 
 # thowables
@@ -590,12 +548,8 @@ item.oedldoedlgear.rocky_snowball.name=Rocky Snowball
 item.oedldoedlgear.rocky_snowball.tip1=One of the oldest tricks.
 item.oedldoedlgear.explosive_snowball.name=Explosive Snowball
 item.oedldoedlgear.explosive_snowball.tip1=That is something new I guess.
-item.oedldoedlgear.dynamite.name=Dynamite  
-item.oedldoedlgear.dynamite.tip1=Throwable TNT.
-item.oedldoedlgear.charged_dynamite.name=Charged Dynamite
-item.oedldoedlgear.charged_dynamite.tip1=Throwable TNT. Really Strong.
-item.oedldoedlgear.combat_dynamite.name=Combat Dynamite
-item.oedldoedlgear.combat_dynamite.tip1=Also known as DIEnamite!
+item.oedldoedlgear.charged_snowball.name=Charged Snowball
+item.oedldoedlgear.charged_snowball.tip1=Is there something that make sense?
 
 # ingreadients
 item.oedldoedlgear.base_toolkit.name=Base Toolkit
@@ -650,8 +604,6 @@ item.oedldoedlgear.red_fabric.tip1=Forge is the better Modlader.
 item.oedldoedlgear.black_fabric.name=Black Fabric
 item.oedldoedlgear.black_fabric.tip1=Forge is the better Modlader.
 
-item.oedldoedlgear.hardened_leather.name=Hardened Leather
-item.oedldoedlgear.hardened_leather.tip1=Bee polite to the bees.
 item.oedldoedlgear.travellers_leather.name=Travellers Leather
 item.oedldoedlgear.travellers_leather.tip1=For travelling only.
 

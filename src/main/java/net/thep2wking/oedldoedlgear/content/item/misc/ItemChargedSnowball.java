@@ -12,12 +12,13 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
-import net.thep2wking.oedldoedlgear.content.entity.EntityCombatDynamite;
+import net.thep2wking.oedldoedlgear.content.entity.EntityChargedSnowball;
 
-public class ItemCombatDynamite extends ModItemBase {
-	public ItemCombatDynamite(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
+public class ItemChargedSnowball extends ModItemBase {
+	public ItemChargedSnowball(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
 			int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
+		setMaxStackSize(16);
 	}
 
 	@Override
@@ -31,11 +32,10 @@ public class ItemCombatDynamite extends ModItemBase {
 				0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 
 		if (!worldIn.isRemote) {
-			EntityCombatDynamite entity = new EntityCombatDynamite(worldIn, playerIn);
+			EntityChargedSnowball entity = new EntityChargedSnowball(worldIn, playerIn);
 			entity.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
 			worldIn.spawnEntity(entity);
 		}
-		playerIn.getCooldownTracker().setCooldown(this, 10);
 		playerIn.addStat(StatList.getObjectUseStats(this));
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemstack);
 	}

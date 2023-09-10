@@ -45,11 +45,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_LEGGINGS);
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_BOOTS);
 
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_HELMET);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_CHESTPLATE);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_LEGGINGS);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_BOOTS);
-
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_HELMET);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_CHESTPLATE);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_LEGGINGS);
@@ -136,16 +131,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SHEARS);
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SHIELD);
 
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_SWORD);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_SHOVEL);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_PICKAXE);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_AXE);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_HOE);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_PAXEL);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_SMASHBAT);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_SHEARS);
-		ModRegistryHelper.registerItem(event, ModItems.FLINT_SHIELD);
-
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_SWORD);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_SHOVEL);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_PICKAXE);
@@ -154,7 +139,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_SHEARS);
-		ModRegistryHelper.registerItem(event, ModItems.EMERALD_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_SWORD);
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_SHOVEL);
@@ -239,26 +223,21 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_SHEARS);
-		ModRegistryHelper.registerItem(event, ModItems.WOODEN_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.STONE_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.STONE_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.STONE_SHEARS);
-		ModRegistryHelper.registerItem(event, ModItems.STONE_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.GOLDEN_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.GOLDEN_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.GOLDEN_SHEARS);
-		ModRegistryHelper.registerItem(event, ModItems.GOLDEN_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.IRON_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.IRON_SMASHBAT);
-		ModRegistryHelper.registerItem(event, ModItems.IRON_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_SHEARS);
-		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.RIDING_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.GOLDEN_RIDING_SMASHBAT);
@@ -276,9 +255,7 @@ public class ModRegistry {
 
 		ModRegistryHelper.registerItem(event, ModItems.ROCKY_SNOWBALL);
 		ModRegistryHelper.registerItem(event, ModItems.EXPLOSIVE_SNOWBALL);
-		ModRegistryHelper.registerItem(event, ModItems.DYNAMITE);
-		ModRegistryHelper.registerItem(event, ModItems.COMBAT_DYNAMITE);
-		ModRegistryHelper.registerItem(event, ModItems.CHARGED_DYNAMITE);
+		ModRegistryHelper.registerItem(event, ModItems.CHARGED_SNOWBALL);
 
 		ModRegistryHelper.registerItem(event, ModItems.WHITE_FABRIC);
 		ModRegistryHelper.registerItem(event, ModItems.ORANGE_FABRIC);
@@ -297,7 +274,6 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.RED_FABRIC);
 		ModRegistryHelper.registerItem(event, ModItems.BLACK_FABRIC);
 
-		ModRegistryHelper.registerItem(event, ModItems.HARDENED_LEATHER);
 		ModRegistryHelper.registerItem(event, ModItems.TRAVELLERS_LEATHER);
 
 		ModRegistryHelper.registerItem(event, ModItems.EXPLOSION_CORE);
