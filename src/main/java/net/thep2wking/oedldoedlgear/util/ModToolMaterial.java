@@ -1,5 +1,6 @@
 package net.thep2wking.oedldoedlgear.util;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item.ToolMaterial;
 import net.thep2wking.oedldoedlcore.api.tool.ModToolMaterialBase;
@@ -16,10 +17,16 @@ public class ModToolMaterial {
 	public static final ToolMaterial OEDLDOEDL = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "oedldoedl",
 			4096, 5, 16f, 8f, 20, ModItems.OEDLDOEDL_INGOT, 0);
 
-	public static final ToolMaterial CARROT = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "carrot", 10, 0,
+	public static final ToolMaterial LAUNCHING = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "launching",
+			64, 0, 1f, 1f, 3, Items.GUNPOWDER, 0);
+	public static final ToolMaterial BLASTING = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "blasting", 64,
+			0, 1f, 1f, 3, Blocks.TNT, 0);
+	public static final ToolMaterial LIGHTNING = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "lightning",
+			64, 0, 1f, 1f, 3, Items.GLOWSTONE_DUST, 0);
+	public static final ToolMaterial RIDING = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "riding", 32, 0,
 			1f, 1f, 3, Items.CARROT, 0);
-	public static final ToolMaterial GOLDEN_CARROT = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
-			"golden_carrot", 20, 0, 1f, 1f, 6, Items.GOLDEN_CARROT, 0);
+	public static final ToolMaterial GOLDEN_RIDING = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
+			"golden_riding", 64, 0, 1f, 1f, 6, Items.GOLDEN_CARROT, 0);
 
 	public static final ToolMaterial GREMORIUM = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "gremorium",
 			9958, 6, 25f, 12f, 32, ModItems.GREMORIUM_INGOT, 0);
@@ -35,6 +42,6 @@ public class ModToolMaterial {
 			7656, 6, 25f, 12f, 32, ModItems.NAGATORIUM_INGOT, 0);
 	public static final ToolMaterial SAKURAJIMARIUM = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
 			"sakurajimarium", 8054, 6, 25f, 12f, 32, ModItems.SAKURAJIMARIUM_INGOT, 0);
-		public static final ToolMaterial KITAGAWARIUM = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
+	public static final ToolMaterial KITAGAWARIUM = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID,
 			"kitagawarium", 8658, 6, 25f, 12f, 32, ModItems.KITAGAWARIUM_INGOT, 0);
 }

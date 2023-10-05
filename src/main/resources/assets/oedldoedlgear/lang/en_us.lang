@@ -479,6 +479,7 @@ item.oedldoedlgear.wooden_smashbat.name=Wooden Smashbat
 item.oedldoedlgear.wooden_smashbat.tip1=Wow, so far...
 item.oedldoedlgear.wooden_shears.name=Wooden Shears
 item.oedldoedlgear.wooden_shears.tip1=We need more mods with wooden shears.
+
 # stone
 item.oedldoedlgear.stone_paxel.name=Stone Paxel
 item.oedldoedlgear.stone_paxel.tip1=Also known as AIOT or Multitool.
@@ -495,11 +496,12 @@ item.oedldoedlgear.golden_smashbat.tip1=Straigt up.
 item.oedldoedlgear.golden_shears.name=Golden Shears
 item.oedldoedlgear.golden_shears.tip1=What a waste of gold.
 
-# irom
+# iron
 item.oedldoedlgear.iron_paxel.name=Iron Paxel
 item.oedldoedlgear.iron_paxel.tip1=Also known as AIOT or Multitool.
 item.oedldoedlgear.iron_smashbat.name=Iron Smashbat
 item.oedldoedlgear.iron_smashbat.tip1=That sound...
+
 # diamond
 item.oedldoedlgear.diamond_paxel.name=Diamond Paxel
 item.oedldoedlgear.diamond_paxel.tip1=Also known as AIOT or Multitool.
@@ -508,7 +510,13 @@ item.oedldoedlgear.diamond_smashbat.tip1=Kicks the mobs in the ass.
 item.oedldoedlgear.diamond_shears.name=Diamond Shears
 item.oedldoedlgear.diamond_shears.tip1=Shiny shears.
 
-# carrot
+# smashbats
+item.oedldoedlgear.launching_smashbat.name=Launching Smashbat
+item.oedldoedlgear.launching_smashbat.tip1=
+item.oedldoedlgear.blasting_smashbat.name=Blasting Smashbat
+item.oedldoedlgear.blasting_smashbat.tip1=
+item.oedldoedlgear.lightning_smashbat.name=Lightning Smashbat
+item.oedldoedlgear.lightning_smashbat.tip1=
 item.oedldoedlgear.riding_smashbat.name=Riding Smashbat
 item.oedldoedlgear.riding_smashbat.tip1=Completely legal, I promise.
 item.oedldoedlgear.golden_riding_smashbat.name=Golden Riding Smashbat

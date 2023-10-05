@@ -42,10 +42,13 @@ import net.thep2wking.oedldoedlgear.content.item.misc.ItemRockySnowball;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemAdminStaff;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemBanHammer;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemBedrockBreaker;
+import net.thep2wking.oedldoedlgear.content.item.tool.ItemBlastingSmashbat;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemBrefPower;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemExplosionStaff;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemFireWand;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemKickStick;
+import net.thep2wking.oedldoedlgear.content.item.tool.ItemLaunchingSmashbat;
+import net.thep2wking.oedldoedlgear.content.item.tool.ItemLightningSmashbat;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemLightningStaff;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemNeedle;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemRidingSmashbat;
@@ -302,9 +305,12 @@ public class ModItems {
 	public static final Item DIAMOND_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "diamond_smashbat", OedldoedlGear.TAB, ToolMaterial.DIAMOND, 0f, -2f, 12f, 6f, ModHitSound.GEM, ModRarities.WHITE, false, 1, 0);
 	public static final Item DIAMOND_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "diamond_shears", OedldoedlGear.TAB, ToolMaterial.DIAMOND, ModRarities.WHITE, false, 1, 0);
 
-	// carrot tools
-	public static final Item RIDING_SMASHBAT = new ItemRidingSmashbat(OedldoedlGear.MODID, "riding_smashbat", OedldoedlGear.TAB, ModToolMaterial.CARROT, -1f, -2f, 15f, 5f, ModHitSound.WOOD, ModRarities.GOLD, false, 1, 0);
-	public static final Item GOLDEN_RIDING_SMASHBAT = new ItemRidingSmashbat(OedldoedlGear.MODID, "golden_riding_smashbat", OedldoedlGear.TAB, ModToolMaterial.GOLDEN_CARROT, -1f, -2f, 20f, 7f, ModHitSound.WOOD, ModRarities.YELLOW, false, 1, 0);
+	// smashbat tools
+	public static final Item LAUNCHING_SMASHBAT = new ItemLaunchingSmashbat(OedldoedlGear.MODID, "launching_smashbat", OedldoedlGear.TAB, ModToolMaterial.LAUNCHING, -1f, -2f, 4f, 4f, ModHitSound.WOOD, ModRarities.GREEN, false, 1, 0);
+	public static final Item BLASTING_SMASHBAT = new ItemBlastingSmashbat(OedldoedlGear.MODID, "blasting_smashbat", OedldoedlGear.TAB, ModToolMaterial.BLASTING, -1f, -2f, 8f, 4f, ModHitSound.METAL, ModRarities.RED, false, 1, 0);
+	public static final Item LIGHTNING_SMASHBAT = new ItemLightningSmashbat(OedldoedlGear.MODID, "lightning_smashbat", OedldoedlGear.TAB, ModToolMaterial.LIGHTNING, -1f, -2f, 6f, 4f, ModHitSound.METAL, ModRarities.YELLOW, false, 1, 0);
+	public static final Item RIDING_SMASHBAT = new ItemRidingSmashbat(OedldoedlGear.MODID, "riding_smashbat", OedldoedlGear.TAB, ModToolMaterial.RIDING, -1f, -2f, 15f, 5f, ModHitSound.WOOD, ModRarities.GOLD, false, 1, 0);
+	public static final Item GOLDEN_RIDING_SMASHBAT = new ItemRidingSmashbat(OedldoedlGear.MODID, "golden_riding_smashbat", OedldoedlGear.TAB, ModToolMaterial.GOLDEN_RIDING, -1f, -2f, 20f, 7f, ModHitSound.WOOD, ModRarities.YELLOW, false, 1, 0);
 
 	// misc tools
 	public static final Item BAN_HAMMER = new ItemBanHammer(OedldoedlGear.MODID, "ban_hammer", OedldoedlGear.TAB, ModRarities.RED, true, 1, 0);

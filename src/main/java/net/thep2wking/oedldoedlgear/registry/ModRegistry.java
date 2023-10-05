@@ -239,6 +239,9 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.DIAMOND_SHEARS);
 
+		ModRegistryHelper.registerItem(event, ModItems.LAUNCHING_SMASHBAT);
+		ModRegistryHelper.registerItem(event, ModItems.BLASTING_SMASHBAT);
+		ModRegistryHelper.registerItem(event, ModItems.LIGHTNING_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.RIDING_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.GOLDEN_RIDING_SMASHBAT);
 
