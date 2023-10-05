@@ -17,7 +17,7 @@ public class ItemBlastingSmashbat extends ModItemSmashbatBase {
 
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		target.world.createExplosion(attacker, target.posX, target.posY, target.posZ, 2.0f, false);
+		target.world.newExplosion(attacker, target.posX, target.posY, target.posZ, 1.0f, false, false);
 		return super.hitEntity(stack, target, attacker);
 	}
 }
