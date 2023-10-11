@@ -1,5 +1,7 @@
 package net.thep2wking.oedldoedlgear.content.item.tool;
 
+import java.util.HashMap;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.SoundEvents;
@@ -21,14 +23,15 @@ public class ItemLaunchingSmashbat extends ModItemSmashbatBase {
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 		target.playSound(SoundEvents.ENTITY_CREEPER_PRIMED, 1.0f, 0.5f);
+		explosionEvent.put(target.getEntityId(), new DelayedExplosionEvent());
 		return super.hitEntity(stack, target, attacker);
 	}
 
-	// @SubscribeEvent
-    // public static void onUpdate(LivingEvent.LivingUpdateEvent event) {
-    //     Entity entity = event.getEntityLiving();
-	// 	if(!entity.world.isRemote && (double)entity.fallDistance > 0.5 && ) {
-	// 		entity.world.createExplosion(null, entity.posX, entity.posY, entity.posZ, 2.0f, false);
-	// 	}
-    // }
+	@SuppressWarnings("all")
+	public static HashMap<Integer, DelayedExplosionEvent> explosionEvent = new HashMap();
+
+	public static class DelayedExplosionEvent {
+		public int targetEntityId;
+		public int attackerEntityId;
+	}
 }

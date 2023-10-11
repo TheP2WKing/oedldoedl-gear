@@ -5,17 +5,21 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item.ToolMaterial;
 import net.thep2wking.oedldoedlcore.api.tool.ModToolMaterialBase;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
+import net.thep2wking.oedldoedlgear.init.ModBlocks;
 import net.thep2wking.oedldoedlresources.init.ModItems;
 
 public class ModToolMaterial {
-	public static final ToolMaterial FLINT = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "flint", 125, 1,
-			3f, 1f, 6, Items.FLINT, 0);
-	public static final ToolMaterial EMERALD = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "emerald", 1789,
-			3, 8.5f, 3.5f, 12, Items.EMERALD, 0);
 	public static final ToolMaterial BASE = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "base", 420, 2, 4f,
 			2f, 8, ModItems.BASE_INGOT, 0);
 	public static final ToolMaterial OEDLDOEDL = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "oedldoedl",
 			4096, 5, 16f, 8f, 20, ModItems.OEDLDOEDL_INGOT, 0);
+
+	public static final ToolMaterial DIRT = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "dirt", 26,
+			0, 1.5f, -0.5f, 4, ModBlocks.ENHANCED_DIRT, 0);
+	public static final ToolMaterial EMERALD = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "emerald", 1789,
+			3, 8.5f, 3.5f, 12, Items.EMERALD, 0);
+	public static final ToolMaterial SLIME = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "slime", 2048,
+			4, 10f, 5f, 18, Items.SLIME_BALL, 0);
 
 	public static final ToolMaterial LAUNCHING = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "launching",
 			64, 0, 1f, 1f, 3, Items.GUNPOWDER, 0);

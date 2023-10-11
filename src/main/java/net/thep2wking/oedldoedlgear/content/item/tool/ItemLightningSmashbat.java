@@ -1,8 +1,9 @@
 package net.thep2wking.oedldoedlgear.content.item.tool;
 
+import java.util.HashMap;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemSmashbatBase;
@@ -18,7 +19,15 @@ public class ItemLightningSmashbat extends ModItemSmashbatBase {
 
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		target.world.addWeatherEffect(new EntityLightningBolt(target.world, target.posX, target.posY, target.posZ, false));
+		lightningEvent.put(target.getEntityId(), new DelayedLightningEvent());
 		return super.hitEntity(stack, target, attacker);
+	}
+
+	@SuppressWarnings("all")
+	public static HashMap<Integer, DelayedLightningEvent> lightningEvent = new HashMap();
+
+	public static class DelayedLightningEvent {
+		public int targetEntityId;
+		public int attackerEntityId;
 	}
 }

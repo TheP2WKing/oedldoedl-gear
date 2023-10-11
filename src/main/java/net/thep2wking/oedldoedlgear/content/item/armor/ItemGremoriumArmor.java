@@ -23,6 +23,7 @@ import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
@@ -74,14 +75,8 @@ public class ItemGremoriumArmor extends ModItemArmorBase {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-		ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-		ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-		ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-		if (((!head.isEmpty()) && (head.getItem() == ModItems.GREMORIUM_HELMET) && (!chest.isEmpty())
-				&& (chest.getItem() == ModItems.GREMORIUM_CHESTPLATE) && (!legs.isEmpty())
-				&& (legs.getItem() == ModItems.GREMORIUM_LEGGINGS) && (!feet.isEmpty())
-				&& (feet.getItem() == ModItems.GREMORIUM_BOOTS))) {
+		if (ModArmorHelper.hasFullArmorSet(player, ModItems.GREMORIUM_HELMET, ModItems.GREMORIUM_CHESTPLATE,
+				ModItems.GREMORIUM_LEGGINGS, ModItems.GREMORIUM_BOOTS)) {
 			player.stepHeight = 1.1f;
 			player.setAir(300);
 
@@ -92,7 +87,7 @@ public class ItemGremoriumArmor extends ModItemArmorBase {
 			player.removePotionEffect(MobEffects.WITHER);
 
 			player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
-			player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 200, 2, false, false));
+			player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 200, 1, false, false));
 		} else {
 			if (!player.isCreative() && !player.isSpectator()) {
 				player.capabilities.allowFlying = false;
@@ -124,7 +119,7 @@ public class ItemGremoriumArmor extends ModItemArmorBase {
 		if (ModTooltips.showEffectTip()) {
 			ModTooltips.addEffectHeader(tooltip, ModTooltips.EFFECT_FULL_ARMOR);
 			ModTooltips.addPotionEffect(tooltip, MobEffects.NIGHT_VISION.getName(), false, 1, 400);
-			ModTooltips.addPotionEffect(tooltip, MobEffects.HASTE.getName(), false, 3, 200);
+			ModTooltips.addPotionEffect(tooltip, MobEffects.HASTE.getName(), false, 2, 200);
 			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 1);
 			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 2);
 			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 3);

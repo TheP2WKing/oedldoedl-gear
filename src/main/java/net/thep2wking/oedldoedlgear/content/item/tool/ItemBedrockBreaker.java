@@ -24,7 +24,7 @@ public class ItemBedrockBreaker extends ModItemBase {
 			int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		setMaxStackSize(1);
-		setMaxDamage(50);
+		setMaxDamage(128);
 	}
 
 	@Override

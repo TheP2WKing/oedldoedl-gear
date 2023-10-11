@@ -7,18 +7,24 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.thep2wking.oedldoedlcore.api.armor.ModArmorMaterialBase;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
+import net.thep2wking.oedldoedlgear.init.ModBlocks;
 import net.thep2wking.oedldoedlresources.init.ModItems;
 
 public class ModArmorMaterial {
-	public static final ArmorMaterial WOOD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "wood", 8,
-			new int[] { 1, 2, 4, 1 }, 0f, 6, SoundEvents.BLOCK_WOOD_PLACE, Item.getItemFromBlock(Blocks.LOG), 0);
-	public static final ArmorMaterial EMERALD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "emerald",
-			35, new int[] { 4, 7, 9, 4 }, 2.0f, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Items.EMERALD, 0);
 	public static final ArmorMaterial BASE = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "base", 20,
 			new int[] { 3, 6, 6, 3 }, 0.5f, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, ModItems.BASE_INGOT, 0);
 	public static final ArmorMaterial OEDLDOEDL = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
 			"oedldoedl", 140, new int[] { 6, 10, 12, 6 }, 6.0f, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
 			ModItems.OEDLDOEDL_INGOT, 0);
+
+	public static final ArmorMaterial DIRT = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "dirt", 4,
+			new int[] { 1, 1, 1, 1 }, 0f, 4, SoundEvents.BLOCK_GRAVEL_PLACE, ModBlocks.ENHANCED_DIRT, 0);
+	public static final ArmorMaterial WOOD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "wood", 8,
+			new int[] { 1, 2, 4, 1 }, 0f, 6, SoundEvents.BLOCK_WOOD_PLACE, Blocks.LOG, 0);
+	public static final ArmorMaterial EMERALD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "emerald",
+			35, new int[] { 4, 7, 9, 4 }, 2.0f, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Items.EMERALD, 0);
+	public static final ArmorMaterial SLIME = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "slime",
+			88, new int[] { 5, 8, 10, 5 }, 4.0f, 16, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Items.SLIME_BALL, 0);
 
 	public static final ArmorMaterial GREMORIUM = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
 			"gremorium", 9958, new int[] { 10, 16, 20, 10 }, 8.0f, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
@@ -46,8 +52,11 @@ public class ModArmorMaterial {
 			ModItems.KITAGAWARIUM_INGOT, 0);
 
 	public static final ArmorMaterial WIZARED_HAT_BLACK = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
-			"wizared_hat", 0, new int[] { 5, 0, 0, 0 }, 2.0f, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
-			Item.getItemFromBlock(Blocks.WOOL), 15);
+			"black_wizard_hat", 0, new int[] { 0, 0, 0, 3 }, 2.0f, 20, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+			net.thep2wking.oedldoedlgear.init.ModItems.BLACK_FABRIC, 0);
+	public static final ArmorMaterial WIZARED_HAT_BLUE = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
+			"blue_wizard_hat", 0, new int[] { 0, 0, 0, 3 }, 2.0f, 20, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+			net.thep2wking.oedldoedlgear.init.ModItems.BLUE_FABRIC, 0);
 	public static final ArmorMaterial LONG_FALL_BOOTS = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
 			"long_fall_boots", 0, new int[] { 4, 0, 0, 0 }, 2.0f, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
 			Item.getItemFromBlock(Blocks.OBSIDIAN), 0);

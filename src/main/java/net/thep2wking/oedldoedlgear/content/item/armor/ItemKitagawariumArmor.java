@@ -24,6 +24,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
@@ -76,14 +77,8 @@ public class ItemKitagawariumArmor extends ModItemArmorBase {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-		ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-		ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-		ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-		if (((!head.isEmpty()) && (head.getItem() == ModItems.KITAGAWARIUM_HELMET) && (!chest.isEmpty())
-				&& (chest.getItem() == ModItems.KITAGAWARIUM_CHESTPLATE) && (!legs.isEmpty())
-				&& (legs.getItem() == ModItems.KITAGAWARIUM_LEGGINGS) && (!feet.isEmpty())
-				&& (feet.getItem() == ModItems.KITAGAWARIUM_BOOTS))) {
+		if (ModArmorHelper.hasFullArmorSet(player, ModItems.KITAGAWARIUM_HELMET, ModItems.KITAGAWARIUM_CHESTPLATE,
+				ModItems.KITAGAWARIUM_LEGGINGS, ModItems.KITAGAWARIUM_BOOTS)) {
 			player.stepHeight = 1.1f;
 			player.setAir(300);
 

@@ -1,29 +1,23 @@
 {
-    "nuke_alarm":
-    {
-        "category": "blocks",
-        "subtitle": "sound.oedldoedlgear.nuke_alarm",
-        "sounds":
-        [
-            "oedldoedlgear:nuke_alarm"
-        ]
-    },
-    "megumin":
-    {
+    "megumin": {
         "category": "ambient",
         "subtitle": "sound.oedldoedlgear.megumin",
-        "sounds":
-        [
+        "sounds": [
             "oedldoedlgear:megumin"
         ]
     },
-    "quiek":
-    {
+    "quiek": {
         "category": "ambient",
         "subtitle": "sound.oedldoedlgear.quiek",
-        "sounds":
-        [
+        "sounds": [
             "oedldoedlgear:quiek"
+        ]
+    },
+    "oniisan": {
+        "category": "blocks",
+        "subtitle": "sound.oedldoedlgear.oniisan",
+        "sounds": [
+            "oedldoedlgear:oniisan"
         ]
     }
 }

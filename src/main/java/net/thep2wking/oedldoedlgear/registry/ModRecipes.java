@@ -2,6 +2,7 @@ package net.thep2wking.oedldoedlgear.registry;
 
 import javax.annotation.Nonnull;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
@@ -16,8 +17,9 @@ public class ModRecipes {
 		ModLogger.registeredOreDictLogger(OedldoedlGear.MODID);
 
 		ModRecipeHelper.addOreDict("bedrock", ModBlocks.BADROCK, 0);
-
+		ModRecipeHelper.addOreDict("dirtEnhanced", ModBlocks.ENHANCED_DIRT, 0);
 		ModRecipeHelper.addOreDict("magicWood", ModBlocks.MAGICAL_WOOD, 0);
+		ModRecipeHelper.addOreDict("blockMagicWood", ModBlocks.MAGICAL_WOOD, 0);
 
 		ModRecipeHelper.addOreDict("toolNeedle", ModItems.NEEDLE, 0);
 
@@ -32,6 +34,7 @@ public class ModRecipes {
 
 		ModRecipeHelper.addOreDict("toolHoe", ModItems.BASE_HOE, 0);
 		ModRecipeHelper.addOreDict("toolHoe", ModItems.OEDLDOEDL_HOE, 0);
+		ModRecipeHelper.addOreDict("toolHoe", ModItems.DIRT_HOE, 0);
 		ModRecipeHelper.addOreDict("toolHoe", ModItems.EMERALD_HOE, 0);
 
 		ModRecipeHelper.addOreDict("toolHoe", ModItems.GREMORIUM_HOE, 0);
@@ -125,20 +128,24 @@ public class ModRecipes {
 				new ItemStack(ModItems.BASE_CHESTPLATE, 1, 0), new ItemStack(ModItems.BASE_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.BASE_BOOTS, 1, 0), "ingotBase");
 		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "oedldoedl",
-				new ItemStack(ModItems.OEDLDOEDL_HELMET, 1, 0),
-				new ItemStack(ModItems.OEDLDOEDL_CHESTPLATE, 1, 0), new ItemStack(ModItems.OEDLDOEDL_LEGGINGS, 1, 0),
-				new ItemStack(ModItems.OEDLDOEDL_BOOTS, 1, 0), "ingotOedldoedl");
+				new ItemStack(ModItems.OEDLDOEDL_HELMET, 1, 0), new ItemStack(ModItems.OEDLDOEDL_CHESTPLATE, 1, 0),
+				new ItemStack(ModItems.OEDLDOEDL_LEGGINGS, 1, 0), new ItemStack(ModItems.OEDLDOEDL_BOOTS, 1, 0),
+				"ingotOedldoedl");
+		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_HELMET, 1, 0),
+				new ItemStack(ModItems.DIRT_CHESTPLATE, 1, 0), new ItemStack(ModItems.DIRT_LEGGINGS, 1, 0),
+				new ItemStack(ModItems.DIRT_BOOTS, 1, 0), "dirtEnhanced");
 		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "wooden", new ItemStack(ModItems.WOODEN_HELMET, 1, 0),
 				new ItemStack(ModItems.WOODEN_CHESTPLATE, 1, 0), new ItemStack(ModItems.WOODEN_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.WOODEN_BOOTS, 1, 0), "logWood");
 		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "emerald", new ItemStack(ModItems.EMERALD_HELMET, 1, 0),
 				new ItemStack(ModItems.EMERALD_CHESTPLATE, 1, 0), new ItemStack(ModItems.EMERALD_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.EMERALD_BOOTS, 1, 0), "gemEmerald");
+		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "slime", new ItemStack(ModItems.SLIME_HELMET, 1, 0),
+				new ItemStack(ModItems.SLIME_CHESTPLATE, 1, 0), new ItemStack(ModItems.SLIME_LEGGINGS, 1, 0),
+				new ItemStack(ModItems.SLIME_BOOTS, 1, 0), "slimeball");
 		ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "chainmail",
-				new ItemStack(Items.CHAINMAIL_HELMET, 1, 0),
-				new ItemStack(Items.CHAINMAIL_CHESTPLATE, 1, 0),
-				new ItemStack(Items.CHAINMAIL_LEGGINGS, 1, 0),
-				new ItemStack(Items.CHAINMAIL_BOOTS, 1, 0), "chainmail");
+				new ItemStack(Items.CHAINMAIL_HELMET, 1, 0), new ItemStack(Items.CHAINMAIL_CHESTPLATE, 1, 0),
+				new ItemStack(Items.CHAINMAIL_LEGGINGS, 1, 0), new ItemStack(Items.CHAINMAIL_BOOTS, 1, 0), "chainmail");
 
 		addFullStarArmorRecipe(OedldoedlGear.MODID, "gremorium",
 				new ItemStack(ModItems.GREMORIUM_HELMET, 1, 0),
@@ -180,6 +187,13 @@ public class ModRecipes {
 				new ItemStack(ModItems.KITAGAWARIUM_CHESTPLATE, 1, 0),
 				new ItemStack(ModItems.KITAGAWARIUM_LEGGINGS, 1, 0),
 				new ItemStack(ModItems.KITAGAWARIUM_BOOTS, 1, 0), "ingotKitagawarium");
+
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/black_wizard_hat",
+				new ItemStack(ModItems.BLACK_WIZARD_HAT, 1, 0), " A ", " B ", "BBB", 'A', "ghastTear", 'B',
+				"fabricBlack");
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/blue_wizard_hat",
+				new ItemStack(ModItems.BLUE_WIZARD_HAT, 1, 0), " A ", " B ", "BCB", 'A', "ghastTear", 'B', "fabricBlue",
+				'C', "fabricYellow");
 
 		ModRecipeHelper.addChestplateRecipe(OedldoedlGear.MODID, "gamemode",
 				new ItemStack(ModItems.GAMEMODE_CHESTPLATE, 1, 0), "commandBlock");
@@ -234,6 +248,7 @@ public class ModRecipes {
 				new ItemStack(ModItems.BASE_PAXEL, 1, 0), new ItemStack(ModItems.BASE_SMASHBAT, 1, 0),
 				new ItemStack(ModItems.BASE_SHEARS, 1, 0), new ItemStack(ModItems.BASE_SHIELD, 1, 0),
 				"stickWood", "ingotBase");
+
 		ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "oedldoedl",
 				new ItemStack(ModItems.OEDLDOEDL_SWORD, 1, 0),
 				new ItemStack(ModItems.OEDLDOEDL_SHOVEL, 1, 0), new ItemStack(ModItems.OEDLDOEDL_PICKAXE, 1, 0),
@@ -241,23 +256,59 @@ public class ModRecipes {
 				new ItemStack(ModItems.OEDLDOEDL_PAXEL, 1, 0), new ItemStack(ModItems.OEDLDOEDL_SMASHBAT, 1, 0),
 				new ItemStack(ModItems.OEDLDOEDL_SHEARS, 1, 0), new ItemStack(ModItems.OEDLDOEDL_SHIELD, 1, 0),
 				"stickWood", "ingotOedldoedl");
-		ModRecipeHelper.addSwordRecipe(OedldoedlGear.MODID, "emerald",
-				new ItemStack(ModItems.EMERALD_SWORD, 1, 0), "stickWood", "gemEmerald");
-		ModRecipeHelper.addShovelRecipe(OedldoedlGear.MODID, "emerald",
-				new ItemStack(ModItems.EMERALD_SHOVEL, 1, 0), "stickWood", "gemEmerald");
-		ModRecipeHelper.addPickaxeRecipe(OedldoedlGear.MODID, "emerald",
-				new ItemStack(ModItems.EMERALD_PICKAXE, 1, 0), "stickWood", "gemEmerald");
+		ModRecipeHelper.addSwordRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_SWORD, 1, 0),
+				"stickWood", "dirtEnhanced");
+		ModRecipeHelper.addShovelRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_SHOVEL, 1, 0),
+				"stickWood", "dirtEnhanced");
+		ModRecipeHelper.addPickaxeRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_PICKAXE, 1, 0),
+				"stickWood", "dirtEnhanced");
+		ModRecipeHelper.addAxeRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_AXE, 1, 0), "stickWood",
+				"dirtEnhanced");
+		ModRecipeHelper.addHoeRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_HOE, 1, 0), "stickWood",
+				"dirtEnhanced");
+		ModRecipeHelper.addPaxelRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_PAXEL, 1, 0),
+				"stickWood", new ItemStack(ModItems.DIRT_AXE, 1, 0), new ItemStack(ModItems.DIRT_SHOVEL, 1, 0),
+				new ItemStack(ModItems.DIRT_PICKAXE, 1, 0));
+		ModRecipeHelper.addSmashbatRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_SMASHBAT, 1, 0),
+				"dirtEnhanced");
+		ModRecipeHelper.addShearsRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_SHEARS, 1, 0),
+				"dirtEnhanced");
+
+		ModRecipeHelper.addSwordRecipe(OedldoedlGear.MODID, "emerald", new ItemStack(ModItems.EMERALD_SWORD, 1, 0),
+				"stickWood", "gemEmerald");
+		ModRecipeHelper.addShovelRecipe(OedldoedlGear.MODID, "emerald", new ItemStack(ModItems.EMERALD_SHOVEL, 1, 0),
+				"stickWood", "gemEmerald");
+		ModRecipeHelper.addPickaxeRecipe(OedldoedlGear.MODID, "emerald", new ItemStack(ModItems.EMERALD_PICKAXE, 1, 0),
+				"stickWood", "gemEmerald");
 		ModRecipeHelper.addAxeRecipe(OedldoedlGear.MODID, "emerald", new ItemStack(ModItems.EMERALD_AXE, 1, 0),
 				"stickWood", "gemEmerald");
 		ModRecipeHelper.addHoeRecipe(OedldoedlGear.MODID, "emerald", new ItemStack(ModItems.EMERALD_HOE, 1, 0),
 				"stickWood", "gemEmerald");
-		ModRecipeHelper.addPaxelRecipe(OedldoedlGear.MODID, "emerald",
-				new ItemStack(ModItems.EMERALD_PAXEL, 1, 0), "stickWood", new ItemStack(ModItems.EMERALD_AXE, 1, 0),
-				new ItemStack(ModItems.EMERALD_SHOVEL, 1, 0), new ItemStack(ModItems.EMERALD_PICKAXE, 1, 0));
+		ModRecipeHelper.addPaxelRecipe(OedldoedlGear.MODID, "emerald", new ItemStack(ModItems.EMERALD_PAXEL, 1, 0),
+				"stickWood", new ItemStack(ModItems.EMERALD_AXE, 1, 0), new ItemStack(ModItems.EMERALD_SHOVEL, 1, 0),
+				new ItemStack(ModItems.EMERALD_PICKAXE, 1, 0));
 		ModRecipeHelper.addSmashbatRecipe(OedldoedlGear.MODID, "emerald",
 				new ItemStack(ModItems.EMERALD_SMASHBAT, 1, 0), "gemEmerald");
-		ModRecipeHelper.addShearsRecipe(OedldoedlGear.MODID, "emerald",
-				new ItemStack(ModItems.EMERALD_SHEARS, 1, 0), "gemEmerald");
+		ModRecipeHelper.addShearsRecipe(OedldoedlGear.MODID, "emerald", new ItemStack(ModItems.EMERALD_SHEARS, 1, 0),
+				"gemEmerald");
+
+		ModRecipeHelper.addSwordRecipe(OedldoedlGear.MODID, "slime", new ItemStack(ModItems.SLIME_SWORD, 1, 0),
+				"stickWood", "slimeball");
+		ModRecipeHelper.addShovelRecipe(OedldoedlGear.MODID, "slime", new ItemStack(ModItems.SLIME_SHOVEL, 1, 0),
+				"stickWood", "slimeball");
+		ModRecipeHelper.addPickaxeRecipe(OedldoedlGear.MODID, "slime", new ItemStack(ModItems.SLIME_PICKAXE, 1, 0),
+				"stickWood", "slimeball");
+		ModRecipeHelper.addAxeRecipe(OedldoedlGear.MODID, "slime", new ItemStack(ModItems.SLIME_AXE, 1, 0), "stickWood",
+				"slimeball");
+		ModRecipeHelper.addHoeRecipe(OedldoedlGear.MODID, "slime", new ItemStack(ModItems.SLIME_HOE, 1, 0), "stickWood",
+				"slimeball");
+		ModRecipeHelper.addPaxelRecipe(OedldoedlGear.MODID, "slime", new ItemStack(ModItems.SLIME_PAXEL, 1, 0),
+				"stickWood", new ItemStack(ModItems.SLIME_AXE, 1, 0), new ItemStack(ModItems.SLIME_SHOVEL, 1, 0),
+				new ItemStack(ModItems.SLIME_PICKAXE, 1, 0));
+		ModRecipeHelper.addSmashbatRecipe(OedldoedlGear.MODID, "slime", new ItemStack(ModItems.SLIME_SMASHBAT, 1, 0),
+				"slimeball");
+		ModRecipeHelper.addShearsRecipe(OedldoedlGear.MODID, "slime", new ItemStack(ModItems.SLIME_SHEARS, 1, 0),
+				"slimeball");
 
 		ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "gremorium",
 				new ItemStack(ModItems.GREMORIUM_SWORD, 1, 0),
@@ -358,11 +409,24 @@ public class ModRecipes {
 		ModRecipeHelper.addShearsRecipe(OedldoedlGear.MODID, "diamond", new ItemStack(ModItems.DIAMOND_SHEARS, 1, 0),
 				"gemDiamond");
 
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/launching_smashbat",
+				new ItemStack(ModItems.LAUNCHING_SMASHBAT, 1, 0), "ABA", "ABA", " C ", 'A', "gunpowder", 'B',
+				new ItemStack(Items.BLAZE_ROD, 1, 0), 'C', "leather");
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/blasting_smashbat",
+				new ItemStack(ModItems.BLASTING_SMASHBAT, 1, 0), "ABA", "ABA", " C ", 'A', "gemFlint", 'B', "tnt", 'C',
+				"leather");
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/lightning_smashbat",
+				new ItemStack(ModItems.LIGHTNING_SMASHBAT, 1, 0), "ABA", "ABA", " C ", 'A', "dustGlowstone", 'B',
+				"ingotIron", 'C', "leather");
 		ModRecipeHelper.addSmashbatRecipe(OedldoedlGear.MODID, "rididng", new ItemStack(ModItems.RIDING_SMASHBAT, 1, 0),
 				"cropCarrot");
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/golden_riding_smashbat",
 				new ItemStack(ModItems.GOLDEN_RIDING_SMASHBAT, 1, 0), "A", "A", "B", 'A',
 				new ItemStack(Items.GOLDEN_CARROT, 1, 0), 'B', "leather");
+
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/pork_hammer",
+				new ItemStack(ModItems.PORK_HAMMER, 1, 0), " A ", " BA", "B  ", 'A',
+				new ItemStack(Items.PORKCHOP, 1, 0), 'B', "stickWood");
 
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/ban_hammer",
 				new ItemStack(ModItems.BAN_HAMMER, 1, 0), " A ", " BA", "B  ", 'A', "commandBlock", 'B', "stickWood");
@@ -370,10 +434,11 @@ public class ModRecipes {
 				new ItemStack(ModItems.KICK_STICK, 1, 0), "  A", " A ", "B  ", 'A', "commandBlock", 'B', "stickWood");
 
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/explosion_staff",
-				new ItemStack(ModItems.EXPLOSION_STAFF, 1, 0), " AB", "CDA", "AC ", 'A', "magicWood", 'B', "string",
-				'C', "ingotGold", 'D', "coreExplosion");
+				new ItemStack(ModItems.EXPLOSION_STAFF, 1, 0), " AB", "CDA", "AC ", 'A', "blockMagicWood", 'B',
+				"string", 'C', "ingotGold", 'D', "coreExplosion");
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/lightning_staff",
-				new ItemStack(ModItems.LIGHTNING_STAFF, 1, 0), " AB", "CDA", "AC ", 'A', "magicWood", 'B', "dyeWhite",
+				new ItemStack(ModItems.LIGHTNING_STAFF, 1, 0), " AB", "CDA", "AC ", 'A', "blockMagicWood", 'B',
+				"dyeWhite",
 				'C', "dyeBlack", 'D', "essenceCharged");
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/admin_staff",
 				ModNBTUtil.addNBTItem(ModItems.ADMIN_STAFF, "Mode", "Day"), " AA", " BA", "B  ", 'A', "commandBlock",
@@ -384,6 +449,8 @@ public class ModRecipes {
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/fire_wand", new ItemStack(ModItems.FIRE_WAND, 1, 0),
 				" AB", " CD", "C  ", 'A', "tnt", 'B', new ItemStack(Items.FIRE_CHARGE, 1, 0), 'C', "stickWood", 'D',
 				"ingotGold");
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/fly_swatter",
+				new ItemStack(ModItems.FLY_SWATTER, 1, 0), " AA", " AA", "B  ", 'A', "string", 'B', "stickWood");
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/bedrock_breaker",
 				new ItemStack(ModItems.BEDROCK_BREAKER, 1, 0), " AA", " AA", "B  ", 'A', "bedrock", 'B', "stickWood");
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/needle", new ItemStack(ModItems.NEEDLE, 1, 0), "  A",
@@ -432,8 +499,26 @@ public class ModRecipes {
 
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "badrock", new ItemStack(ModBlocks.BADROCK, 1, 0), "ABA",
 				"CDC", "ABA", 'A', "nuggetBedrockium", 'B', "dyeGray", 'C', "dyeLightGray", 'D', "stone");
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "enhanced_dirt",
+				new ItemStack(ModBlocks.ENHANCED_DIRT, 4, 0), " A ", "ABA", " A ", 'A', "dirt", 'B',
+				Items.ENCHANTED_BOOK);
 		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "magical_wood",
 				new ItemStack(ModBlocks.MAGICAL_WOOD, 1, 0), "ABA", "BCB", "ABA", 'A', "nuggetGold", 'B', "ingotGold",
 				'C', "bookshelf");
+
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "jump_pad", new ItemStack(ModBlocks.JUMP_PAD, 1, 0), "A",
+				"B", 'A', "slimeball", 'B', new ItemStack(Blocks.WOODEN_PRESSURE_PLATE, 1, 0));
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "jump_pad_plus",
+				new ItemStack(ModBlocks.JUMP_PAD_PLUS, 1, 0),
+				"A", "B", 'A', "slimeball", 'B', new ItemStack(ModBlocks.JUMP_PAD, 1, 0));
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "jump_pad_plus_plus",
+				new ItemStack(ModBlocks.JUMP_PAD_PLUS_PLUS, 1, 0),
+				"A", "B", 'A', "slimeball", 'B', new ItemStack(ModBlocks.JUMP_PAD_PLUS, 1, 0));
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "jump_pad_plus_plus_plus",
+				new ItemStack(ModBlocks.JUMP_PAD_PLUS_PLUS_PLUS, 1, 0),
+				"A", "B", 'A', "slimeball", 'B', new ItemStack(ModBlocks.JUMP_PAD_PLUS_PLUS, 1, 0));
+		ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "impact_pad",
+				new ItemStack(ModBlocks.IMPACT_PAD, 1, 0),
+				"A", "B", 'A', "wool", 'B', new ItemStack(Blocks.WOODEN_PRESSURE_PLATE, 1, 0));
 	}
 }

@@ -29,6 +29,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
@@ -81,15 +82,8 @@ public class ItemHimejimariumArmor extends ModItemArmorBase {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-		ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-		ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-		ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-
-		if (((!head.isEmpty()) && (head.getItem() == ModItems.HIMEJIMARIUM_HELMET) && (!chest.isEmpty())
-				&& (chest.getItem() == ModItems.HIMEJIMARIUM_CHESTPLATE) && (!legs.isEmpty())
-				&& (legs.getItem() == ModItems.HIMEJIMARIUM_LEGGINGS) && (!feet.isEmpty())
-				&& (feet.getItem() == ModItems.HIMEJIMARIUM_BOOTS))) {
+		if (ModArmorHelper.hasFullArmorSet(player, ModItems.HIMEJIMARIUM_HELMET, ModItems.HIMEJIMARIUM_CHESTPLATE,
+				ModItems.HIMEJIMARIUM_LEGGINGS, ModItems.HIMEJIMARIUM_BOOTS)) {
 			player.stepHeight = 1.1f;
 			player.setAir(300);
 
@@ -110,20 +104,17 @@ public class ItemHimejimariumArmor extends ModItemArmorBase {
 				&& !((EntityDamageSource) event.getSource()).getIsThornsDamage()) {
 			if (event.getSource().getTrueSource() instanceof EntityPlayer) {
 				EntityPlayer player = (EntityPlayer) event.getSource().getTrueSource();
-				ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-				ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-				ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-				ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-				if (((!head.isEmpty()) && (head.getItem() == ModItems.HIMEJIMARIUM_HELMET) && (!chest.isEmpty())
-						&& (chest.getItem() == ModItems.HIMEJIMARIUM_CHESTPLATE) && (!legs.isEmpty())
-						&& (legs.getItem() == ModItems.HIMEJIMARIUM_LEGGINGS) && (!feet.isEmpty())
-						&& (feet.getItem() == ModItems.HIMEJIMARIUM_BOOTS) && player.isSneaking())) {
-					player.world.addWeatherEffect(new EntityLightningBolt(player.world,
-							event.getEntity().getPosition().getX(), event.getEntity().getPosition().getY(),
-							event.getEntity().getPosition().getZ(), false));
-					player.world.addWeatherEffect(new EntityLightningBolt(player.world,
-							event.getEntity().getPosition().getX(), event.getEntity().getPosition().getY(),
-							event.getEntity().getPosition().getZ(), false));
+				if (ModArmorHelper.hasFullArmorSet(player, ModItems.HIMEJIMARIUM_HELMET,
+						ModItems.HIMEJIMARIUM_CHESTPLATE, ModItems.HIMEJIMARIUM_LEGGINGS,
+						ModItems.HIMEJIMARIUM_BOOTS)) {
+					if (player.isSneaking()) {
+						player.world.addWeatherEffect(new EntityLightningBolt(player.world,
+								event.getEntity().getPosition().getX(), event.getEntity().getPosition().getY(),
+								event.getEntity().getPosition().getZ(), false));
+						player.world.addWeatherEffect(new EntityLightningBolt(player.world,
+								event.getEntity().getPosition().getX(), event.getEntity().getPosition().getY(),
+								event.getEntity().getPosition().getZ(), false));
+					}
 				}
 			}
 		}
@@ -133,10 +124,8 @@ public class ItemHimejimariumArmor extends ModItemArmorBase {
 	public static void onEntityStruckByLightning(EntityStruckByLightningEvent event) {
 		if (event.getEntity() instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.getEntity();
-			if (player.inventory.armorInventory.get(3).getItem().equals(ModItems.HIMEJIMARIUM_HELMET)
-					&& player.inventory.armorInventory.get(2).getItem().equals(ModItems.HIMEJIMARIUM_CHESTPLATE)
-					&& player.inventory.armorInventory.get(1).getItem().equals(ModItems.HIMEJIMARIUM_LEGGINGS)
-					&& player.inventory.armorInventory.get(0).getItem().equals(ModItems.HIMEJIMARIUM_BOOTS)) {
+			if (ModArmorHelper.hasFullArmorSet(player, ModItems.HIMEJIMARIUM_HELMET, ModItems.HIMEJIMARIUM_CHESTPLATE,
+					ModItems.HIMEJIMARIUM_LEGGINGS, ModItems.HIMEJIMARIUM_BOOTS)) {
 				event.setCanceled(true);
 			}
 		}

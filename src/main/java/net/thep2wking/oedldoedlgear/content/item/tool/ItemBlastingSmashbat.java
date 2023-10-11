@@ -16,8 +16,16 @@ public class ItemBlastingSmashbat extends ModItemSmashbatBase {
 	}
 
 	@Override
+	public void setEntitySmashMotion(EntityLivingBase target) {
+		target.motionX *= (horizontalMotion / 2);
+		target.motionY *= (verticalMotion / 4);
+		target.motionZ *= (horizontalMotion / 2);
+	}
+
+	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 		target.world.newExplosion(attacker, target.posX, target.posY, target.posZ, 1.0f, false, false);
+		this.setEntitySmashMotion(target);
 		return super.hitEntity(stack, target, attacker);
 	}
 }

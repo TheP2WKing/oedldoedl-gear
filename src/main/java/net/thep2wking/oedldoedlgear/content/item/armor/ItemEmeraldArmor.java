@@ -48,22 +48,22 @@ public class ItemEmeraldArmor extends ModItemArmorBase {
 			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
 			if (slot == EntityEquipmentSlot.HEAD) {
 				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(
-						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.25,
+						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.1,
 						AttributeModifierOperation.ADD));
 			}
 			if (slot == EntityEquipmentSlot.CHEST) {
 				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(CHESTPLATE_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.25,
+						new AttributeModifier(CHESTPLATE_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.1,
 								AttributeModifierOperation.ADD));
 			}
 			if (slot == EntityEquipmentSlot.LEGS) {
 				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(LEGGINGS_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.25,
+						new AttributeModifier(LEGGINGS_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.1,
 								AttributeModifierOperation.ADD));
 			}
 			if (slot == EntityEquipmentSlot.FEET) {
 				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(BOOTS_UUID,
-						ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.25, AttributeModifierOperation.ADD));
+						ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.1, AttributeModifierOperation.ADD));
 			}
 			return attributes;
 		}

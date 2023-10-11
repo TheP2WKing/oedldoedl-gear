@@ -4,10 +4,10 @@ itemGroup.oedldoedlgear.name=§dOedldoedl Gear
 # icons
 item.oedldoedlcore.gear_icon.annotation3=Version: §e1.12.2-3.0.0
 
-# icons
-sound.oedldoedlgear.nuke_alarm=Nuke alarm
+# sound
 sound.oedldoedlgear.megumin=Megumin screems
 sound.oedldoedlgear.quiek=Bottle quieking
+sound.oedldoedlgear.oniisan=Oneesan wispering
 
 # base
 item.oedldoedlgear.base_helmet.name=Base Helmet
@@ -37,6 +37,33 @@ item.oedldoedlgear.base_shears.tip1=Basic shears.
 item.oedldoedlgear.base_shield.name=Base Shield
 item.oedldoedlgear.base_shield.tip1=Basic sield.
 
+# dirt
+item.oedldoedlgear.dirt_helmet.name=Dirt Helmet
+item.oedldoedlgear.dirt_helmet.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_chestplate.name=Dirt Chestplate
+item.oedldoedlgear.dirt_chestplate.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_leggings.name=Dirt Leggings
+item.oedldoedlgear.dirt_leggings.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_boots.name=Dirt Boots
+item.oedldoedlgear.dirt_boots.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_armor.effects1=Generate Diamonds §e§o(Sneak)
+item.oedldoedlgear.dirt_sword.name=Dirt Sword
+item.oedldoedlgear.dirt_sword.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_shovel.name=Dirt Shovel
+item.oedldoedlgear.dirt_shovel.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_pickaxe.name=Dirt Pickaxe
+item.oedldoedlgear.dirt_pickaxe.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_axe.name=Dirt Axe
+item.oedldoedlgear.dirt_axe.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_hoe.name=Dirt Hoe
+item.oedldoedlgear.dirt_hoe.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_paxel.name=Dirt Paxel
+item.oedldoedlgear.dirt_paxel.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_smashbat.name=Dirt Smashbat
+item.oedldoedlgear.dirt_smashbat.tip1=No dirty tricks...
+item.oedldoedlgear.dirt_shears.name=Dirt Shears
+item.oedldoedlgear.dirt_shears.tip1=No dirty tricks...
+
 # emerald
 item.oedldoedlgear.emerald_helmet.name=Emerald Helmet
 item.oedldoedlgear.emerald_helmet.tip1=Every crappy MCreator mod adds that.
@@ -63,6 +90,32 @@ item.oedldoedlgear.emerald_smashbat.tip1=Every crappy MCreator mod adds that.
 item.oedldoedlgear.emerald_shears.name=Emerald Shears
 item.oedldoedlgear.emerald_shears.tip1=Every crappy MCreator mod adds that.
 
+# slime
+item.oedldoedlgear.slime_helmet.name=Slime Helmet
+item.oedldoedlgear.slime_helmet.tip1=Slimetastic!
+item.oedldoedlgear.slime_chestplate.name=Slime Chestplate
+item.oedldoedlgear.slime_chestplate.tip1=Slimetastic!
+item.oedldoedlgear.slime_leggings.name=Slime Leggings
+item.oedldoedlgear.slime_leggings.tip1=Slimetastic!
+item.oedldoedlgear.slime_boots.name=Slime Boots
+item.oedldoedlgear.slime_boots.tip1=Slimetastic!
+item.oedldoedlgear.slime_sword.name=Slime Sword
+item.oedldoedlgear.slime_sword.tip1=Slimetastic!
+item.oedldoedlgear.slime_shovel.name=Slime Shovel
+item.oedldoedlgear.slime_shovel.tip1=Slimetastic!
+item.oedldoedlgear.slime_pickaxe.name=Slime Pickaxe
+item.oedldoedlgear.slime_pickaxe.tip1=Slimetastic!
+item.oedldoedlgear.slime_axe.name=Slime Axe
+item.oedldoedlgear.slime_axe.tip1=Slimetastic!
+item.oedldoedlgear.slime_hoe.name=Slime Hoe
+item.oedldoedlgear.slime_hoe.tip1=Slimetastic!
+item.oedldoedlgear.slime_paxel.name=Slime Paxel
+item.oedldoedlgear.slime_paxel.tip1=Slimetastic!
+item.oedldoedlgear.slime_smashbat.name=Slime Smashbat
+item.oedldoedlgear.slime_smashbat.tip1=Slimetastic!
+item.oedldoedlgear.slime_shears.name=Slime Shears
+item.oedldoedlgear.slime_shears.tip1=Slimetastic!
+
 # oedldoedl
 item.oedldoedlgear.oedldoedl_helmet.name=Oedldoedl Helmet
 item.oedldoedlgear.oedldoedl_helmet.tip1=A helmet made for Oedldoedl Projects.
@@ -72,6 +125,8 @@ item.oedldoedlgear.oedldoedl_leggings.name=Oedldoedl Leggings
 item.oedldoedlgear.oedldoedl_leggings.tip1=A leggings made for Oedldoedl Projects.
 item.oedldoedlgear.oedldoedl_boots.name=Oedldoedl Boots
 item.oedldoedlgear.oedldoedl_boots.tip1=Boots made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_armor.effects1=Underwater Breathing
+item.oedldoedlgear.oedldoedl_armor.effects2=Step Up
 item.oedldoedlgear.oedldoedl_sword.name=Oedldoedl Sword
 item.oedldoedlgear.oedldoedl_sword.tip1=A sword made for Oedldoedl Projects.
 item.oedldoedlgear.oedldoedl_shovel.name=Oedldoedl Shovel
@@ -411,6 +466,16 @@ item.oedldoedlgear.infinity_shears.tip1=The most expensive shears.
 item.oedldoedlgear.infinity_shield.name=Block Defender
 item.oedldoedlgear.infinity_shield.tip1=The most expensive shield.
 
+# wizard
+item.oedldoedlgear.black_wizard_hat.name=Black Wizard Hat
+item.oedldoedlgear.black_wizard_hat.annotation1=Stored Potion:
+item.oedldoedlgear.black_wizard_hat.annotation2=None
+item.oedldoedlgear.black_wizard_hat.tip1=Stores Potion Effects for later.
+item.oedldoedlgear.blue_wizard_hat.name=Blue Wizard Hat
+item.oedldoedlgear.blue_wizard_hat.annotation1=Stored Potion:
+item.oedldoedlgear.blue_wizard_hat.annotation2=None
+item.oedldoedlgear.blue_wizard_hat.tip1=Stores Potion Effects for later.
+
 # gamemode
 item.oedldoedlgear.gamemode_chestplate.name=Gamemode Chestplate
 item.oedldoedlgear.gamemode_chestplate.annotation1=Gamemode:
@@ -506,25 +571,26 @@ item.oedldoedlgear.iron_smashbat.tip1=That sound...
 item.oedldoedlgear.diamond_paxel.name=Diamond Paxel
 item.oedldoedlgear.diamond_paxel.tip1=Also known as AIOT or Multitool.
 item.oedldoedlgear.diamond_smashbat.name=Diamond Smashbat
-item.oedldoedlgear.diamond_smashbat.tip1=Kicks the mobs in the ass.
+item.oedldoedlgear.diamond_smashbat.tip1=Kick the mobs in the ass.
 item.oedldoedlgear.diamond_shears.name=Diamond Shears
 item.oedldoedlgear.diamond_shears.tip1=Shiny shears.
 
 # smashbats
 item.oedldoedlgear.launching_smashbat.name=Launching Smashbat
-item.oedldoedlgear.launching_smashbat.tip1=
+item.oedldoedlgear.launching_smashbat.tip1=Wait for it...
 item.oedldoedlgear.blasting_smashbat.name=Blasting Smashbat
-item.oedldoedlgear.blasting_smashbat.tip1=
+item.oedldoedlgear.blasting_smashbat.tip1=Kablow!
 item.oedldoedlgear.lightning_smashbat.name=Lightning Smashbat
-item.oedldoedlgear.lightning_smashbat.tip1=
+item.oedldoedlgear.lightning_smashbat.tip1=Wait for it...
 item.oedldoedlgear.riding_smashbat.name=Riding Smashbat
 item.oedldoedlgear.riding_smashbat.tip1=Completely legal, I promise.
 item.oedldoedlgear.golden_riding_smashbat.name=Golden Riding Smashbat
 item.oedldoedlgear.golden_riding_smashbat.tip1=A long ride.
 
 # tools
-item.oedldoedlgear.bedrock_breaker.name=Bedrock Breaker
-item.oedldoedlgear.bedrock_breaker.tip1=I wonder what will it do?
+item.oedldoedlgear.pork_hammer.name=Pork Hammer
+item.oedldoedlgear.pork_hammer.tip1=Spawns raw Porkchop, why?
+item.oedldoedlgear.pork_hammer.tip2=Also known as Ham-mer.
 item.oedldoedlgear.ban_hammer.name=Ban Hammer
 item.oedldoedlgear.ban_hammer.tip1=Bans players from Multiplayer Servers.
 item.oedldoedlgear.ban_hammer.tip2=Succesfully banned player from this server!
@@ -539,10 +605,6 @@ item.oedldoedlgear.lightning_staff.name=Staff of Lightning
 item.oedldoedlgear.lightning_staff.tip1=(War) Thunder!
 item.oedldoedlgear.lightning_staff.annotation1=Range in blocks:
 item.oedldoedlgear.lightning_staff.annotation2=(Halved while Sneaking)
-item.oedldoedlgear.bref_power.name=Bref Power Lime and Dirt  
-item.oedldoedlgear.bref_power.tip1=Do not let it get into your eyes.
-item.oedldoedlgear.needle.name=Needle
-item.oedldoedlgear.needle.tip1=Neat and reuseable!
 item.oedldoedlgear.admin_staff.name=Staff of Administration
 item.oedldoedlgear.admin_staff.tip1=God of MC!
 item.oedldoedlgear.admin_staff.annotation1=Mode:
@@ -550,6 +612,14 @@ item.oedldoedlgear.skull_wand.name=Wand of Withering
 item.oedldoedlgear.skull_wand.tip1=Shoot starving skulls.
 item.oedldoedlgear.fire_wand.name=Wand of Fire
 item.oedldoedlgear.fire_wand.tip1=Shoot exploding fireballs.
+item.oedldoedlgear.fly_swatter.name=Fly Swatter
+item.oedldoedlgear.fly_swatter.tip1=Hit me more, Oniisan...
+item.oedldoedlgear.bedrock_breaker.name=Bedrock Breaker
+item.oedldoedlgear.bedrock_breaker.tip1=I wonder what will it do?
+item.oedldoedlgear.needle.name=Needle
+item.oedldoedlgear.needle.tip1=Neat and reuseable!
+item.oedldoedlgear.bref_power.name=Bref Power Lime and Dirt  
+item.oedldoedlgear.bref_power.tip1=Do not let it get into your eyes.
 
 # thowables
 item.oedldoedlgear.rocky_snowball.name=Rocky Snowball
@@ -644,6 +714,8 @@ item.oedldoedlgear.squid_bucket.tip1=How did we get here?
 # blocks
 tile.oedldoedlgear.badrock.name=Badrock
 tile.oedldoedlgear.badrock.tip1=The pun is as bad as the rock.
+tile.oedldoedlgear.enhanced_dirt.name=Enhanced Dirt
+tile.oedldoedlgear.enhanced_dirt.tip1=Better than dirt.
 tile.oedldoedlgear.magical_wood.name=Magical Wood
 tile.oedldoedlgear.magical_wood.tip1=Am I a wizard? NO!
 
@@ -656,3 +728,5 @@ tile.oedldoedlgear.jump_pad_plus_plus.name=Jump Pad++
 tile.oedldoedlgear.jump_pad_plus_plus.tip1=Get insane hight.
 tile.oedldoedlgear.jump_pad_plus_plus_plus.name=Jump Pad+++
 tile.oedldoedlgear.jump_pad_plus_plus_plus.tip1=Get the ultimate hight.
+tile.oedldoedlgear.impact_pad.name=Impact Pad
+tile.oedldoedlgear.impact_pad.tip1=Uhhh...

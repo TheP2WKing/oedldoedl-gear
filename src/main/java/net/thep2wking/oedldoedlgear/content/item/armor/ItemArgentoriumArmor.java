@@ -27,6 +27,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
@@ -97,15 +98,8 @@ public class ItemArgentoriumArmor extends ModItemArmorBase {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-		ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-		ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-		ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-
-		if (((!head.isEmpty()) && (head.getItem() == ModItems.ARGENTORIUM_HELMET) && (!chest.isEmpty())
-				&& (chest.getItem() == ModItems.ARGENTORIUM_CHESTPLATE) && (!legs.isEmpty())
-				&& (legs.getItem() == ModItems.ARGENTORIUM_LEGGINGS) && (!feet.isEmpty())
-				&& (feet.getItem() == ModItems.ARGENTORIUM_BOOTS))) {
+		if (ModArmorHelper.hasFullArmorSet(player, ModItems.ARGENTORIUM_HELMET, ModItems.ARGENTORIUM_CHESTPLATE,
+				ModItems.ARGENTORIUM_LEGGINGS, ModItems.ARGENTORIUM_BOOTS)) {
 			player.stepHeight = 1.1f;
 			player.setAir(300);
 
@@ -126,14 +120,8 @@ public class ItemArgentoriumArmor extends ModItemArmorBase {
 				&& !((EntityDamageSource) event.getSource()).getIsThornsDamage()) {
 			if (event.getSource().getTrueSource() instanceof EntityPlayer) {
 				EntityPlayer player = (EntityPlayer) event.getSource().getTrueSource();
-				ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-				ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-				ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-				ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-				if (((!head.isEmpty()) && (head.getItem() == ModItems.ARGENTORIUM_HELMET) && (!chest.isEmpty())
-						&& (chest.getItem() == ModItems.ARGENTORIUM_CHESTPLATE) && (!legs.isEmpty())
-						&& (legs.getItem() == ModItems.ARGENTORIUM_LEGGINGS) && (!feet.isEmpty())
-						&& (feet.getItem() == ModItems.ARGENTORIUM_BOOTS))) {
+				if (ModArmorHelper.hasFullArmorSet(player, ModItems.ARGENTORIUM_HELMET, ModItems.ARGENTORIUM_CHESTPLATE,
+						ModItems.ARGENTORIUM_LEGGINGS, ModItems.ARGENTORIUM_BOOTS)) {
 					if (event.getEntityLiving().isEntityUndead()) {
 						event.getEntityLiving().setHealth(event.getEntityLiving().getHealth() - 14.5f);
 					} else if (player.isSneaking()) {

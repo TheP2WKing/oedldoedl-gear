@@ -27,6 +27,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
@@ -79,14 +80,8 @@ public class ItemQuartariumArmor extends ModItemArmorBase {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-		ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-		ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-		ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-		if (((!head.isEmpty()) && (head.getItem() == ModItems.QUARTARIUM_HELMET) && (!chest.isEmpty())
-				&& (chest.getItem() == ModItems.QUARTARIUM_CHESTPLATE) && (!legs.isEmpty())
-				&& (legs.getItem() == ModItems.QUARTARIUM_LEGGINGS) && (!feet.isEmpty())
-				&& (feet.getItem() == ModItems.QUARTARIUM_BOOTS))) {
+		if (ModArmorHelper.hasFullArmorSet(player, ModItems.QUARTARIUM_HELMET, ModItems.QUARTARIUM_CHESTPLATE,
+				ModItems.QUARTARIUM_LEGGINGS, ModItems.QUARTARIUM_BOOTS)) {
 			player.stepHeight = 1.1f;
 			player.setAir(300);
 
@@ -102,14 +97,8 @@ public class ItemQuartariumArmor extends ModItemArmorBase {
 				&& !((EntityDamageSource) event.getSource()).getIsThornsDamage()) {
 			if (event.getSource().getTrueSource() instanceof EntityPlayer) {
 				EntityPlayer player = (EntityPlayer) event.getSource().getTrueSource();
-				ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-				ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-				ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-				ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-				if (((!head.isEmpty()) && (head.getItem() == ModItems.QUARTARIUM_HELMET) && (!chest.isEmpty())
-						&& (chest.getItem() == ModItems.QUARTARIUM_CHESTPLATE) && (!legs.isEmpty())
-						&& (legs.getItem() == ModItems.QUARTARIUM_LEGGINGS) && (!feet.isEmpty())
-						&& (feet.getItem() == ModItems.QUARTARIUM_BOOTS))) {
+				if (ModArmorHelper.hasFullArmorSet(player, ModItems.QUARTARIUM_HELMET, ModItems.QUARTARIUM_CHESTPLATE,
+						ModItems.QUARTARIUM_LEGGINGS, ModItems.QUARTARIUM_BOOTS)) {
 					player.setHealth(player.getHealth() + event.getAmount() / 4);
 					event.getEntityLiving()
 							.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 40, 0, false, false));

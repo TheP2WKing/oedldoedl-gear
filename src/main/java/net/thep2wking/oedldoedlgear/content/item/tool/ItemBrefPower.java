@@ -37,7 +37,7 @@ public class ItemBrefPower extends ModItemBase {
 			int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		setMaxStackSize(1);
-		setMaxDamage(250);
+		setMaxDamage(256);
 	}
 
 	@Override

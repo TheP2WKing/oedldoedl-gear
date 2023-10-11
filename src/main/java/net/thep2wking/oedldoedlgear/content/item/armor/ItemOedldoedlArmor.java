@@ -23,8 +23,10 @@ import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
+import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 
 public class ItemOedldoedlArmor extends ModItemArmorBase {
@@ -46,22 +48,22 @@ public class ItemOedldoedlArmor extends ModItemArmorBase {
 
 			if (slot == EntityEquipmentSlot.HEAD) {
 				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(
-						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.5,
+						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.25,
 						AttributeModifierOperation.ADD));
 			}
 			if (slot == EntityEquipmentSlot.CHEST) {
 				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(CHESTPLATE_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.5,
+						new AttributeModifier(CHESTPLATE_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.25,
 								AttributeModifierOperation.ADD));
 			}
 			if (slot == EntityEquipmentSlot.LEGS) {
 				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(LEGGINGS_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.5,
+						new AttributeModifier(LEGGINGS_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.25,
 								AttributeModifierOperation.ADD));
 			}
 			if (slot == EntityEquipmentSlot.FEET) {
 				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(BOOTS_UUID,
-						ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.5, AttributeModifierOperation.ADD));
+						ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.25, AttributeModifierOperation.ADD));
 			}
 			return attributes;
 		}
@@ -70,20 +72,18 @@ public class ItemOedldoedlArmor extends ModItemArmorBase {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-		ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-		ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-		ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-		if (((!head.isEmpty()) && (head.getItem() == ModItems.OEDLDOEDL_HELMET) && (!chest.isEmpty())
-				&& (chest.getItem() == ModItems.OEDLDOEDL_CHESTPLATE) && (!legs.isEmpty())
-				&& (legs.getItem() == ModItems.OEDLDOEDL_LEGGINGS) && (!feet.isEmpty())
-				&& (feet.getItem() == ModItems.OEDLDOEDL_BOOTS))) {
+		if (ModArmorHelper.hasFullArmorSet(player, ModItems.OEDLDOEDL_HELMET, ModItems.OEDLDOEDL_CHESTPLATE,
+				ModItems.OEDLDOEDL_LEGGINGS, ModItems.OEDLDOEDL_BOOTS)) {
 			player.stepHeight = 1.1f;
 			player.setAir(300);
 
 			player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
+		} else {
+			player.stepHeight = 0.6F;
 		}
 	}
+
+	public static final String ARMOR_NAME = "item." + OedldoedlGear.MODID + ".oedldoedl_armor";
 
 	@Override
 	@SideOnly(Side.CLIENT)
@@ -104,6 +104,8 @@ public class ItemOedldoedlArmor extends ModItemArmorBase {
 		if (ModTooltips.showEffectTip()) {
 			ModTooltips.addEffectHeader(tooltip, ModTooltips.EFFECT_FULL_ARMOR);
 			ModTooltips.addPotionEffect(tooltip, MobEffects.NIGHT_VISION.getName(), false, 1, 400);
+			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 1);
+			ModTooltips.addCustomEffectInformation(tooltip, ARMOR_NAME, 2);
 		} else if (ModTooltips.showEffectTipKey()) {
 			ModTooltips.addKey(tooltip, ModTooltips.KEY_EFFECTS);
 		}

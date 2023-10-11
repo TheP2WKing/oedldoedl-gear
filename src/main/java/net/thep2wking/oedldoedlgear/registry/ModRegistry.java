@@ -20,7 +20,13 @@ public class ModRegistry {
 		ModLogger.registeredBlocksLogger(OedldoedlResources.MODID);
 
 		ModRegistryHelper.registerBlock(event, ModBlocks.BADROCK);
+		ModRegistryHelper.registerBlock(event, ModBlocks.ENHANCED_DIRT);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MAGICAL_WOOD);
+		ModRegistryHelper.registerBlock(event, ModBlocks.JUMP_PAD);
+		ModRegistryHelper.registerBlock(event, ModBlocks.JUMP_PAD_PLUS);
+		ModRegistryHelper.registerBlock(event, ModBlocks.JUMP_PAD_PLUS_PLUS);
+		ModRegistryHelper.registerBlock(event, ModBlocks.JUMP_PAD_PLUS_PLUS_PLUS);
+		ModRegistryHelper.registerBlock(event, ModBlocks.IMPACT_PAD);
 	}
 
 	@SubscribeEvent
@@ -28,7 +34,13 @@ public class ModRegistry {
 		ModLogger.registeredItemsLogger(OedldoedlResources.MODID);
 
 		ModRegistryHelper.registerItemBlock(event, ModItems.BADROCK);
+		ModRegistryHelper.registerItemBlock(event, ModItems.ENHANCED_DIRT);
 		ModRegistryHelper.registerItemBlock(event, ModItems.MAGICAL_WOOD);
+		ModRegistryHelper.registerItemBlock(event, ModItems.JUMP_PAD);
+		ModRegistryHelper.registerItemBlock(event, ModItems.JUMP_PAD_PLUS);
+		ModRegistryHelper.registerItemBlock(event, ModItems.JUMP_PAD_PLUS_PLUS);
+		ModRegistryHelper.registerItemBlock(event, ModItems.JUMP_PAD_PLUS_PLUS_PLUS);
+		ModRegistryHelper.registerItemBlock(event, ModItems.IMPACT_PAD);
 
 		ModRegistryHelper.registerItem(event, ModItems.BASE_HELMET);
 		ModRegistryHelper.registerItem(event, ModItems.BASE_CHESTPLATE);
@@ -40,6 +52,11 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_LEGGINGS);
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_BOOTS);
 
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_BOOTS);
+
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_HELMET);
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_CHESTPLATE);
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_LEGGINGS);
@@ -49,6 +66,11 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_CHESTPLATE);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_LEGGINGS);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_BOOTS);
 
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_HELMET);
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_CHESTPLATE);
@@ -89,6 +111,9 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_CHESTPLATE);
 		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_LEGGINGS);
 		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_BOOTS);
+
+		ModRegistryHelper.registerItem(event, ModItems.BLACK_WIZARD_HAT);
+		ModRegistryHelper.registerItem(event, ModItems.BLUE_WIZARD_HAT);
 
 		ModRegistryHelper.registerItem(event, ModItems.GAMEMODE_CHESTPLATE);
 
@@ -131,6 +156,15 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SHEARS);
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SHIELD);
 
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_PAXEL);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_SMASHBAT);
+		ModRegistryHelper.registerItem(event, ModItems.DIRT_SHEARS);
+
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_SWORD);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_SHOVEL);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_PICKAXE);
@@ -139,6 +173,15 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.EMERALD_SHEARS);
+
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_PAXEL);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_SMASHBAT);
+		ModRegistryHelper.registerItem(event, ModItems.SLIME_SHEARS);
 
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_SWORD);
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_SHOVEL);
@@ -245,6 +288,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.RIDING_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.GOLDEN_RIDING_SMASHBAT);
 
+		ModRegistryHelper.registerItem(event, ModItems.PORK_HAMMER);
 		ModRegistryHelper.registerItem(event, ModItems.BAN_HAMMER);
 		ModRegistryHelper.registerItem(event, ModItems.KICK_STICK);
 		ModRegistryHelper.registerItem(event, ModItems.EXPLOSION_STAFF);
@@ -252,6 +296,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.ADMIN_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.SKULL_WAND);
 		ModRegistryHelper.registerItem(event, ModItems.FIRE_WAND);
+		ModRegistryHelper.registerItem(event, ModItems.FLY_SWATTER);
 		ModRegistryHelper.registerItem(event, ModItems.BEDROCK_BREAKER);
 		ModRegistryHelper.registerItem(event, ModItems.NEEDLE);
 		ModRegistryHelper.registerItem(event, ModItems.BREF_POWER);
@@ -290,8 +335,8 @@ public class ModRegistry {
 	public static void onSoundEventRegister(RegistryEvent.Register<SoundEvent> event) {
 		ModLogger.registeredSoundEventsLogger(OedldoedlResources.MODID);
 
-		ModRegistryHelper.registerSoundEvent(event, ModSounds.NUKE_ALARM);
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.MEGUMIN);
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.QUIEK);
+		ModRegistryHelper.registerSoundEvent(event, ModSounds.ONIISAN);
 	}
 }

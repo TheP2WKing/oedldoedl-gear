@@ -27,6 +27,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
+import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
@@ -95,14 +96,8 @@ public class ItemToujouriumArmor extends ModItemArmorBase {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-		ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-		ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-		ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-		if (((!head.isEmpty()) && (head.getItem() == ModItems.TOUJOURIUM_HELMET) && (!chest.isEmpty())
-				&& (chest.getItem() == ModItems.TOUJOURIUM_CHESTPLATE) && (!legs.isEmpty())
-				&& (legs.getItem() == ModItems.TOUJOURIUM_LEGGINGS) && (!feet.isEmpty())
-				&& (feet.getItem() == ModItems.TOUJOURIUM_BOOTS))) {
+		if (ModArmorHelper.hasFullArmorSet(player, ModItems.TOUJOURIUM_HELMET, ModItems.TOUJOURIUM_CHESTPLATE,
+				ModItems.TOUJOURIUM_LEGGINGS, ModItems.TOUJOURIUM_BOOTS)) {
 			player.stepHeight = 1.1f;
 			player.setAir(300);
 
@@ -119,14 +114,8 @@ public class ItemToujouriumArmor extends ModItemArmorBase {
 	public static void onLivingFall(LivingFallEvent event) {
 		if (event.getEntity() instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.getEntityLiving();
-			ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-			ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-			ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-			ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-			if (((!head.isEmpty()) && (head.getItem() == ModItems.TOUJOURIUM_HELMET) && (!chest.isEmpty())
-					&& (chest.getItem() == ModItems.TOUJOURIUM_CHESTPLATE) && (!legs.isEmpty())
-					&& (legs.getItem() == ModItems.TOUJOURIUM_LEGGINGS) && (!feet.isEmpty())
-					&& (feet.getItem() == ModItems.TOUJOURIUM_BOOTS))) {
+			if (ModArmorHelper.hasFullArmorSet(player, ModItems.TOUJOURIUM_HELMET, ModItems.TOUJOURIUM_CHESTPLATE,
+					ModItems.TOUJOURIUM_LEGGINGS, ModItems.TOUJOURIUM_BOOTS)) {
 				event.setDamageMultiplier(0);
 				event.setDistance(0);
 			}
@@ -161,14 +150,8 @@ public class ItemToujouriumArmor extends ModItemArmorBase {
 	public static void onLivingKnockback(LivingKnockBackEvent event) {
 		if (event.getAttacker() instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.getAttacker();
-			ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-			ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-			ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-			ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-			if (((!head.isEmpty()) && (head.getItem() == ModItems.TOUJOURIUM_HELMET) && (!chest.isEmpty())
-					&& (chest.getItem() == ModItems.TOUJOURIUM_CHESTPLATE) && (!legs.isEmpty())
-					&& (legs.getItem() == ModItems.TOUJOURIUM_LEGGINGS) && (!feet.isEmpty())
-					&& (feet.getItem() == ModItems.TOUJOURIUM_BOOTS))) {
+			if (ModArmorHelper.hasFullArmorSet(player, ModItems.TOUJOURIUM_HELMET, ModItems.TOUJOURIUM_CHESTPLATE,
+					ModItems.TOUJOURIUM_LEGGINGS, ModItems.TOUJOURIUM_BOOTS)) {
 				event.setStrength(3);
 			}
 		}

@@ -22,7 +22,6 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
@@ -33,7 +32,7 @@ public class ItemSkullWand extends ModItemBase {
 			int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		setMaxStackSize(1);
-		setMaxDamage(100);
+		setMaxDamage(128);
 	}
 
 	@Override
@@ -69,12 +68,11 @@ public class ItemSkullWand extends ModItemBase {
 					player.posZ + deltaZ, vecX, vecY, vecZ) {
 				@Override
 				public void onImpact(RayTraceResult result) {
-					if (!this.world.isRemote && result.entityHit != null) {
-						((EntityLivingBase) result.entityHit)
-								.addPotionEffect(new PotionEffect(MobEffects.WITHER, 200, 1));
+					if (!this.world.isRemote && result.entityHit != null && result.entityHit instanceof EntityLivingBase) {
+						EntityLivingBase entity = (EntityLivingBase) result.entityHit;
+						entity.addPotionEffect(new PotionEffect(MobEffects.WITHER, 200, 1));
 					}
-					this.world.newExplosion(this, this.posX, this.posY, this.posZ, 1.0F, false,
-							ForgeEventFactory.getMobGriefingEvent(this.world, this.shootingEntity));
+					this.world.newExplosion(this, this.posX, this.posY, this.posZ, 1.0F, false, true);
 					this.setDead();
 				}
 			};

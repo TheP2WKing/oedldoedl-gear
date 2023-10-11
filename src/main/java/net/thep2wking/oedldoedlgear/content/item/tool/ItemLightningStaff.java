@@ -31,7 +31,7 @@ public class ItemLightningStaff extends ModItemBase {
 	public ItemLightningStaff(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		setMaxStackSize(1);
-		setMaxDamage(100);
+		setMaxDamage(128);
 	}
 
 	@Override
