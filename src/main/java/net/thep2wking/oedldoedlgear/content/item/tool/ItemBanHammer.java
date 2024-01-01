@@ -12,6 +12,7 @@ import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 
 public class ItemBanHammer extends ModItemBase {
 	public ItemBanHammer(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
@@ -32,13 +33,14 @@ public class ItemBanHammer extends ModItemBase {
 
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		if (target instanceof EntityPlayer) {
+		if (target instanceof EntityPlayer && GearConfig.CONTENT.ADMINTOOLS.ENABLE_BAN_HAMMER) {
 			EntityPlayer player = (EntityPlayer) attacker;
 			EntityPlayer playerTarget = (EntityPlayer) target;
 			World world = player.getEntityWorld();
 			MinecraftServer server = world.getMinecraftServer();
 			if (target instanceof EntityPlayer && server != null) {
-				((EntityPlayerMP)playerTarget).connection.disconnect(new TextComponentString("DUMMY BAN MESSAG"));
+				((EntityPlayerMP) playerTarget).connection
+						.disconnect(new TextComponentString(GearConfig.CONTENT.ADMINTOOLS.BAN_MESSAGE));
 				player.sendMessage(new TextComponentString("[")
 						.appendSibling(new TextComponentTranslation(TextFormatting.RED + this.getUnlocalizedName()))
 						.appendSibling(new TextComponentString("] ")).appendSibling(new TextComponentTranslation(

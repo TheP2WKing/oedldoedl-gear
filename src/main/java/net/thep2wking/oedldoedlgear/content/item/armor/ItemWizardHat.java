@@ -26,6 +26,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.model.ModelWizardHat;
 
 public class ItemWizardHat extends ModItemArmorBase {
@@ -103,23 +104,25 @@ public class ItemWizardHat extends ModItemArmorBase {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack src) {
 		super.onArmorTick(world, player, src);
-		if (getPotion(src) == null) {
-			if (!player.getActivePotionEffects().isEmpty()) {
-				Collection<PotionEffect> c = player.getActivePotionEffects();
-				PotionEffect[] effect = c.toArray(new PotionEffect[c.size()]);
-				int i = world.rand.nextInt(effect.length);
-				String potionCode = Objects.requireNonNull(effect[i].getPotion().getRegistryName()).toString();
-				setPotion(src, potionCode);
-				setPotionEffectLevel(src, effect[i].getAmplifier());
-				player.removePotionEffect(effect[i].getPotion());
+		if (GearConfig.CONTENT.WIZARED_HAT_STORE_POTIONS) {
+			if (getPotion(src) == null) {
+				if (!player.getActivePotionEffects().isEmpty()) {
+					Collection<PotionEffect> c = player.getActivePotionEffects();
+					PotionEffect[] effect = c.toArray(new PotionEffect[c.size()]);
+					int i = world.rand.nextInt(effect.length);
+					String potionCode = Objects.requireNonNull(effect[i].getPotion().getRegistryName()).toString();
+					setPotion(src, potionCode);
+					setPotionEffectLevel(src, effect[i].getAmplifier());
+					player.removePotionEffect(effect[i].getPotion());
+				}
+			} else {
+				Potion potion = Potion.getPotionFromResourceLocation(getPotion(src));
+				if (potion == null) {
+					return;
+				}
+				int level = getPotionEffectLevel(src);
+				player.addPotionEffect(new PotionEffect(potion, 400, level, false, false));
 			}
-		} else {
-			Potion potion = Potion.getPotionFromResourceLocation(getPotion(src));
-			if (potion == null) {
-				return;
-			}
-			int level = getPotionEffectLevel(src);
-			player.addPotionEffect(new PotionEffect(potion, 400, level, false, false));
 		}
 	}
 
@@ -128,16 +131,19 @@ public class ItemWizardHat extends ModItemArmorBase {
 	@SuppressWarnings("null")
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (ModTooltips.showAnnotationTip()) {
-			String potionID = getPotion(stack);
-			if (potionID != null && Potion.getPotionFromResourceLocation(potionID) != null) {
-				tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
-						+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW
-						+ I18n.format(Objects.requireNonNull(Potion.getPotionFromResourceLocation(potionID).getName()))
-						+ " (" + (getPotionEffectLevel(stack) + 1) + ")");
-			} else {
-				tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
-						+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW
-						+ I18n.format(this.getUnlocalizedName() + ".annotation2"));
+			if (GearConfig.CONTENT.WIZARED_HAT_STORE_POTIONS) {
+				String potionID = getPotion(stack);
+				if (potionID != null && Potion.getPotionFromResourceLocation(potionID) != null) {
+					tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
+							+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW
+							+ I18n.format(
+									Objects.requireNonNull(Potion.getPotionFromResourceLocation(potionID).getName()))
+							+ " (" + (getPotionEffectLevel(stack) + 1) + ")");
+				} else {
+					tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
+							+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW
+							+ I18n.format(this.getUnlocalizedName() + ".annotation2"));
+				}
 			}
 		}
 		if (ModTooltips.showInfoTip()) {

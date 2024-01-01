@@ -31,6 +31,7 @@ import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 
 @Mod.EventBusSubscriber
@@ -71,25 +72,11 @@ public class ItemArgentoriumArmor extends ModItemArmorBase {
 		if (slot == this.getEquipmentSlot()) {
 			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
 			attributes.put(SharedMonsterAttributes.MAX_HEALTH.getName(),
-					new AttributeModifier(UUID.fromString(this.uuid.ids),
-							ModReferences.ATTRIBUTE_MAX_HEALTH, 10, AttributeModifierOperation.ADD));
-			if (slot == EntityEquipmentSlot.HEAD) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(
-						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
-			}
-			if (slot == EntityEquipmentSlot.CHEST) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(CHESTPLATE_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
-								AttributeModifierOperation.ADD));
-			}
-			if (slot == EntityEquipmentSlot.LEGS) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(LEGGINGS_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
-								AttributeModifierOperation.ADD));
-			}
-			if (slot == EntityEquipmentSlot.FEET) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(BOOTS_UUID,
-						ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
+					new AttributeModifier(UUID.fromString(this.uuid.ids), ModReferences.ATTRIBUTE_MAX_HEALTH, 10,
+							AttributeModifierOperation.ADD));
+			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+				ModArmorHelper.addKnockbackResistanceModifier(attributes, this, slot, HELMET_UUID, CHESTPLATE_UUID,
+						LEGGINGS_UUID, BOOTS_UUID, 1);
 			}
 			return attributes;
 		}
@@ -100,13 +87,19 @@ public class ItemArgentoriumArmor extends ModItemArmorBase {
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 		if (ModArmorHelper.hasFullArmorSet(player, ModItems.ARGENTORIUM_HELMET, ModItems.ARGENTORIUM_CHESTPLATE,
 				ModItems.ARGENTORIUM_LEGGINGS, ModItems.ARGENTORIUM_BOOTS)) {
-			player.stepHeight = 1.1f;
-			player.setAir(300);
+			if (GearConfig.PROPERTIES.ARMOR_STEP_UP) {
+				player.stepHeight = 1.1f;
+			}
+			if (GearConfig.PROPERTIES.ARMOR_UNLIMITED_AIR) {
+				player.setAir(300);
+			}
+			if (GearConfig.PROPERTIES.ARMOR_NIGHT_VISION) {
+				player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
+			}
 
 			if (player.isSneaking()) {
 				player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 100, 0, false, false));
 			}
-			player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
 			player.addPotionEffect(new PotionEffect(MobEffects.SATURATION, 200, 1, false, false));
 		} else {
 			player.stepHeight = 0.6F;

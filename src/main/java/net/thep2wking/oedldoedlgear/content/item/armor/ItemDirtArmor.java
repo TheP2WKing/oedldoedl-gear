@@ -21,6 +21,7 @@ import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 
 public class ItemDirtArmor extends ModItemArmorBase {
@@ -47,7 +48,7 @@ public class ItemDirtArmor extends ModItemArmorBase {
 			player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 200, 0, false, false));
 			player.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 200, 0, false, false));
 
-			if (!world.isRemote && player.isSneaking()) {
+			if (!world.isRemote && player.isSneaking() && GearConfig.CONTENT.DIRT_ARMOR_SPAWNS_DIAMONDS) {
 				world.spawnEntity(new EntityItem(world, player.posX, player.posY, player.posZ,
 						new ItemStack(Items.DIAMOND, 1, 0)));
 			}

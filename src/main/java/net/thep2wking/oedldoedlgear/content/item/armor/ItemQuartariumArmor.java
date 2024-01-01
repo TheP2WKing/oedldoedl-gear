@@ -10,7 +10,6 @@ import com.google.common.collect.Multimap;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -20,7 +19,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EntityDamageSource;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -28,9 +26,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
-import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 
 @Mod.EventBusSubscriber
@@ -55,23 +53,9 @@ public class ItemQuartariumArmor extends ModItemArmorBase {
 		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
 		if (slot == this.getEquipmentSlot()) {
 			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			if (slot == EntityEquipmentSlot.HEAD) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(
-						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
-			}
-			if (slot == EntityEquipmentSlot.CHEST) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(CHESTPLATE_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
-								AttributeModifierOperation.ADD));
-			}
-			if (slot == EntityEquipmentSlot.LEGS) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(LEGGINGS_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
-								AttributeModifierOperation.ADD));
-			}
-			if (slot == EntityEquipmentSlot.FEET) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(BOOTS_UUID,
-						ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
+			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+				ModArmorHelper.addKnockbackResistanceModifier(attributes, this, slot, HELMET_UUID, CHESTPLATE_UUID,
+						LEGGINGS_UUID, BOOTS_UUID, 1);
 			}
 			return attributes;
 		}
@@ -82,10 +66,16 @@ public class ItemQuartariumArmor extends ModItemArmorBase {
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 		if (ModArmorHelper.hasFullArmorSet(player, ModItems.QUARTARIUM_HELMET, ModItems.QUARTARIUM_CHESTPLATE,
 				ModItems.QUARTARIUM_LEGGINGS, ModItems.QUARTARIUM_BOOTS)) {
-			player.stepHeight = 1.1f;
-			player.setAir(300);
+			if (GearConfig.PROPERTIES.ARMOR_STEP_UP) {
+				player.stepHeight = 1.1f;
+			}
+			if (GearConfig.PROPERTIES.ARMOR_UNLIMITED_AIR) {
+				player.setAir(300);
+			}
+			if (GearConfig.PROPERTIES.ARMOR_NIGHT_VISION) {
+				player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
+			}
 
-			player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
 			player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 200, 1, false, false));
 		}
 	}

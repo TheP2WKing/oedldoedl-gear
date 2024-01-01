@@ -11,18 +11,15 @@ import com.google.common.collect.Multimap;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EntityDamageSource;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -30,9 +27,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
-import net.thep2wking.oedldoedlcore.util.ModReferences;
+import net.thep2wking.oedldoedlcore.util.ModPotionUtil;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 
 @Mod.EventBusSubscriber
@@ -57,60 +55,45 @@ public class ItemNagatoriumArmor extends ModItemArmorBase {
 		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
 		if (slot == this.getEquipmentSlot()) {
 			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			if (slot == EntityEquipmentSlot.HEAD) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(
-						HELMET_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
-			}
-			if (slot == EntityEquipmentSlot.CHEST) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(CHESTPLATE_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
-								AttributeModifierOperation.ADD));
-			}
-			if (slot == EntityEquipmentSlot.LEGS) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(),
-						new AttributeModifier(LEGGINGS_UUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1,
-								AttributeModifierOperation.ADD));
-			}
-			if (slot == EntityEquipmentSlot.FEET) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(BOOTS_UUID,
-						ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD));
+			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+				ModArmorHelper.addKnockbackResistanceModifier(attributes, this, slot, HELMET_UUID, CHESTPLATE_UUID,
+						LEGGINGS_UUID, BOOTS_UUID, 1);
 			}
 			return attributes;
 		}
 		return attributes;
 	}
 
-	public static void effectToInvert(EntityPlayer player, Potion effectIn, Potion effectOut) {
-		if (player.isPotionActive(effectIn)) {
-			player.removePotionEffect(effectIn);
-			player.addPotionEffect(new PotionEffect(effectOut, 200, 1, false, false));
-		}
-	}
-
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 		if (ModArmorHelper.hasFullArmorSet(player, ModItems.NAGATORIUM_HELMET, ModItems.NAGATORIUM_CHESTPLATE,
 				ModItems.NAGATORIUM_LEGGINGS, ModItems.NAGATORIUM_BOOTS)) {
-			player.stepHeight = 1.1f;
-			player.setAir(300);
-
-			player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
-			player.addPotionEffect(new PotionEffect(MobEffects.UNLUCK, 200, 9, false, false));
-
-			effectToInvert(player, MobEffects.HUNGER, MobEffects.SATURATION);
-			effectToInvert(player, MobEffects.INSTANT_DAMAGE, MobEffects.INSTANT_HEALTH);
-			effectToInvert(player, MobEffects.MINING_FATIGUE, MobEffects.HASTE);
-			effectToInvert(player, MobEffects.POISON, MobEffects.REGENERATION);
-			effectToInvert(player, MobEffects.SLOWNESS, MobEffects.SPEED);
-			effectToInvert(player, MobEffects.WEAKNESS, MobEffects.STRENGTH);
-			effectToInvert(player, MobEffects.WITHER, MobEffects.REGENERATION);
-
+			if (GearConfig.PROPERTIES.ARMOR_STEP_UP) {
+				player.stepHeight = 1.1f;
+			}
+			if (GearConfig.PROPERTIES.ARMOR_UNLIMITED_AIR) {
+				player.setAir(300);
+			}
+			if (GearConfig.PROPERTIES.ARMOR_NIGHT_VISION) {
+				player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
+			}
+			
+			ModPotionUtil.invertEffect(player, MobEffects.HUNGER, MobEffects.SATURATION, 200, 0);
+			ModPotionUtil.invertEffect(player, MobEffects.INSTANT_DAMAGE, MobEffects.INSTANT_HEALTH, 200, 0);
+			ModPotionUtil.invertEffect(player, MobEffects.MINING_FATIGUE, MobEffects.HASTE, 200, 0);
+			ModPotionUtil.invertEffect(player, MobEffects.POISON, MobEffects.REGENERATION, 200, 0);
+			ModPotionUtil.invertEffect(player, MobEffects.SLOWNESS, MobEffects.SPEED, 200, 0);
+			ModPotionUtil.invertEffect(player, MobEffects.WEAKNESS, MobEffects.STRENGTH, 200, 0);
+			ModPotionUtil.invertEffect(player, MobEffects.WITHER, MobEffects.REGENERATION, 200, 0);
+			
 			player.removePotionEffect(MobEffects.LEVITATION);
 			player.removePotionEffect(MobEffects.BLINDNESS);
 			player.removePotionEffect(MobEffects.GLOWING);
 			player.removePotionEffect(MobEffects.INVISIBILITY);
 			player.removePotionEffect(MobEffects.NAUSEA);
 			player.removePotionEffect(MobEffects.UNLUCK);
+
+			player.addPotionEffect(new PotionEffect(MobEffects.UNLUCK, 200, 9, false, false));
 		}
 	}
 

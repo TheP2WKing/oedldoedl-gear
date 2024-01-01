@@ -24,6 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 
 public class ItemAdminStaff extends ModItemBase {
 	public ItemAdminStaff(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
@@ -84,50 +85,53 @@ public class ItemAdminStaff extends ModItemBase {
 
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-		ItemStack stack = player.getHeldItem(hand);
-		if (!world.isRemote && player.isSneaking()) {
-			NBTTagCompound tags = stack.getTagCompound();
-			Mode mode = getMode(stack);
-			mode = mode.getNext();
-			setMode(stack, mode);
-			stack.setTagCompound(tags);
-			player.swingArm(hand);
-			player.sendMessage(
-					new TextComponentString(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
-							+ I18n.format(this.getUnlocalizedName() + ".annotation1"))
-							.appendSibling(new TextComponentString(
-									" " + TextFormatting.YELLOW + getMode(stack).name().toString())));
+		if (GearConfig.CONTENT.ADMINTOOLS.ENABLE_ADMIN_STAFF) {
+			ItemStack stack = player.getHeldItem(hand);
+			if (!world.isRemote && player.isSneaking()) {
+				NBTTagCompound tags = stack.getTagCompound();
+				Mode mode = getMode(stack);
+				mode = mode.getNext();
+				setMode(stack, mode);
+				stack.setTagCompound(tags);
+				player.swingArm(hand);
+				player.sendMessage(
+						new TextComponentString(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
+								+ I18n.format(this.getUnlocalizedName() + ".annotation1"))
+								.appendSibling(new TextComponentString(
+										" " + TextFormatting.YELLOW + getMode(stack).name().toString())));
+				return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
+
+			} else if (!world.isRemote) {
+				if (getMode(stack) == Mode.Day || getMode(stack) == Mode.Night || getMode(stack) == Mode.Clear
+						|| getMode(stack) == Mode.Rain || getMode(stack) == Mode.Thunder) {
+					if (getMode(stack) == Mode.Day) {
+						world.getWorldInfo().setWorldTime(1000);
+					} else if (getMode(stack) == Mode.Night) {
+						world.getWorldInfo().setWorldTime(13000);
+					} else if (getMode(stack) == Mode.Clear) {
+						world.getWorldInfo().setCleanWeatherTime(0);
+						world.getWorldInfo().setRaining(false);
+						world.getWorldInfo().setThundering(false);
+					} else if (getMode(stack) == Mode.Rain) {
+						world.getWorldInfo().setRaining(true);
+						world.getWorldInfo().setThundering(false);
+					} else if (getMode(stack) == Mode.Thunder) {
+						world.getWorldInfo().setRaining(true);
+						world.getWorldInfo().setThundering(true);
+					}
+				}
+
+				if (getMode(stack) == Mode.Creative || getMode(stack) == Mode.Survival) {
+					if (getMode(stack) == Mode.Creative) {
+						player.setGameType(GameType.CREATIVE);
+					} else {
+						player.setGameType(GameType.SURVIVAL);
+					}
+				}
+			}
 			return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
-
-		} else if (!world.isRemote) {
-			if (getMode(stack) == Mode.Day || getMode(stack) == Mode.Night || getMode(stack) == Mode.Clear
-					|| getMode(stack) == Mode.Rain || getMode(stack) == Mode.Thunder) {
-				if (getMode(stack) == Mode.Day) {
-					world.getWorldInfo().setWorldTime(1000);
-				} else if (getMode(stack) == Mode.Night) {
-					world.getWorldInfo().setWorldTime(13000);
-				} else if (getMode(stack) == Mode.Clear) {
-					world.getWorldInfo().setCleanWeatherTime(0);
-					world.getWorldInfo().setRaining(false);
-					world.getWorldInfo().setThundering(false);
-				} else if (getMode(stack) == Mode.Rain) {
-					world.getWorldInfo().setRaining(true);
-					world.getWorldInfo().setThundering(false);
-				} else if (getMode(stack) == Mode.Thunder) {
-					world.getWorldInfo().setRaining(true);
-					world.getWorldInfo().setThundering(true);
-				}
-			}
-
-			if (getMode(stack) == Mode.Creative || getMode(stack) == Mode.Survival) {
-				if (getMode(stack) == Mode.Creative) {
-					player.setGameType(GameType.CREATIVE);
-				} else {
-					player.setGameType(GameType.SURVIVAL);
-				}
-			}
 		}
-		return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
+		return super.onItemRightClick(world, player, hand);
 	}
 
 	public static void setMode(ItemStack itemStack, Mode toolMode) {
@@ -158,9 +162,11 @@ public class ItemAdminStaff extends ModItemBase {
 	@SuppressWarnings("null")
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (ModTooltips.showAnnotationTip()) {
-			tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
-					+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW
-					+ stack.getTagCompound().getString("Mode"));
+			if (GearConfig.CONTENT.ADMINTOOLS.ENABLE_ADMIN_STAFF) {
+				tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
+						+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW
+						+ stack.getTagCompound().getString("Mode"));
+			}
 		}
 		if (ModTooltips.showInfoTip()) {
 			for (int i = 1; i <= tooltipLines; ++i) {
