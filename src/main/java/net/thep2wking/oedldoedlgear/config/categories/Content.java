@@ -20,6 +20,19 @@ public class Content {
 	@Config.Name("Dirt Armor Spawns Diamonds")
 	public boolean DIRT_ARMOR_SPAWNS_DIAMONDS = true;
 
+	@Config.Name("Pork Hammer Spawns Porkchop")
+	public boolean PORK_HAMMER_SPAWNS_PORKCHOP = true;
+
+	@Config.Name("Bref Power Cooldown")
+	@Config.RangeInt(min = 0, max = 1000)
+	public int BREF_POWER_COOLDOWN = 10;
+
+	@Config.Name("Bref Power Sound")
+	public boolean BREF_POWER_SOUND = true;
+
+	@Config.Name("Fly Swatter Sound")
+	public boolean FLY_SWATTER_SOUND = true;
+
 	@Config.Name("jumppads")
 	public final Jumppads JUMPPADS = new Jumppads();
 
@@ -81,5 +94,85 @@ public class Content {
 
 		@Config.Name("Kick Message")
 		public String KICK_MESSAGE = "You have been Kicked!";
+	}
+
+	@Config.Name("bedrockbreaker")
+	public final Bedrockbreaker BEDROCKBREAKER = new Bedrockbreaker();
+
+	public static class Bedrockbreaker {
+		@Config.Name("Bedrock Breaker Breaks Bedrock")
+		public boolean BREAKS_BEDROCK = true;
+	
+		@Config.Name("Bedrock Breaker Debuffs")
+		public boolean DEBUFFS = true;
+	
+		@Config.Name("Bedrock Breaker Cooldown")
+		@Config.RangeInt(min = 0, max = 1000)
+		public int COOLDOWN = 40;
+	}
+
+	@Config.Name("staffs")
+	public final Staffs STAFFS = new Staffs();
+
+	public static class Staffs {
+		@Config.Name("Explosion Staff Range")
+		@Config.RangeInt(min = 0, max = 100)
+		public int EXPLOSION_STAFF_RANGE = 40;
+	
+		@Config.Name("Explosion Staff Explosion Strength")
+		@Config.RangeInt(min = 0, max = 50)
+		public int EXPLOSION_STAFF_EXPLOSION_STRENGTH = 15;
+
+		@Config.Name("Explosion Staff Explosion Damage")
+		public boolean EXPLOSION_STAFF_EXPLOSION_DAMAGE = true;
+
+		@Config.Name("Explosion Staff Explosion Fire")
+		public boolean EXPLOSION_STAFF_EXPLOSION_FIRE = false;
+
+		@Config.Name("Explosion Staff Spawns Lightning")
+		public boolean EXPLOSION_STAFF_SPAWNS_LIGHTNING = true;
+
+		@Config.Name("Explosion Staff Sound")
+		public boolean EXPLOSION_STAFF_SOUND = true;
+
+		@Config.Name("Explosion Staff Cooldown")
+		@Config.RangeInt(min = 0, max = 1000)
+		public int EXPLOSION_STAFF_COOLDOWN = 100;
+
+		@Config.Name("Explosion Staff Debuffs")
+		public boolean EXPLOSION_STAFF_DEBUFFS = true;
+
+		@Config.Name("Lighning Staff Range")
+		@Config.RangeInt(min = 0, max = 100)
+		public int LIGHTNING_STAFF_RANGE = 60;
+
+		@Config.Name("Lighning Staff Cooldown")
+		@Config.RangeInt(min = 0, max = 1000)
+		public int LIGHTNING_STAFF_COOLDOWN = 60;
+	}
+
+	@Config.Name("smashbats")
+	public final Smashbats SMASHBATS = new Smashbats();
+
+	public static class Smashbats {
+		@Config.Name("Launching Smashbat Explosion Strength")
+		@Config.RangeInt(min = 0, max = 50)
+		public int LAUNCHING_SMASHBAT_EXPLOSION_STRENGTH = 2;
+
+		@Config.Name("Launching Smashbat Explosion Damage")
+		public boolean LAUNCHING_SMASHBAT_EXPLOSION_DAMAGE = false;
+
+		@Config.Name("Launching Smashbat Explosion Fire")
+		public boolean LAUNCHING_SMASHBAT_EXPLOSION_FIRE = false;
+
+		@Config.Name("Blasting Smashbat Explosion Strength")
+		@Config.RangeInt(min = 0, max = 50)
+		public int BLASTING_SMASHBAT_EXPLOSION_STRENGTH = 1;
+
+		@Config.Name("Blasting Smashbat Explosion Damage")
+		public boolean BLASTING_SMASHBAT_EXPLOSION_DAMAGE = false;
+
+		@Config.Name("Blasting Smashbat Explosion Fire")
+		public boolean BLASTING_SMASHBAT_EXPLOSION_FIRE = false;
 	}
 }

@@ -14,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 
 public class ItemPorkHammer extends ModItemBase {
 	public ItemPorkHammer(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
@@ -51,7 +52,9 @@ public class ItemPorkHammer extends ModItemBase {
 			EntityLivingBase entityLiving) {
 		EntityPlayer player = (EntityPlayer) entityLiving;
 		stack.damageItem(1, player);
-		dropPork(stack, worldIn, pos);
+		if (GearConfig.CONTENT.PORK_HAMMER_SPAWNS_PORKCHOP) {
+			dropPork(stack, worldIn, pos);
+		}
 		return super.onBlockDestroyed(stack, worldIn, state, pos, entityLiving);
 	}
 
@@ -60,7 +63,7 @@ public class ItemPorkHammer extends ModItemBase {
 		World world = entity.getEntityWorld();
 		Random random = new Random();
 		stack.damageItem(1, player);
-		if (random.nextInt(5) == 0) {
+		if (random.nextInt(5) == 0 && GearConfig.CONTENT.PORK_HAMMER_SPAWNS_PORKCHOP) {
 			dropPork(stack, world, entity.getPosition());
 		}
 		return super.onLeftClickEntity(stack, player, entity);

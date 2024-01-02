@@ -494,11 +494,12 @@ item.oedldoedlgear.white_flying_shooting_hoodie.tip1=Follow Flying-Shooting.
 item.oedldoedlgear.white_flying_shooting_hoodie.tip2=Not sponsored or something else.
 item.oedldoedlgear.flying_shooting_college_jacket.name=Flying Shooting College Jacket
 item.oedldoedlgear.flying_shooting_college_jacket.tip1=Follow Flying-Shooting.
-item.oedldoedlgear.flying_shooting_college_jacket.tip2=You are lucky to get your Hands on this!
+item.oedldoedlgear.flying_shooting_college_jacket.tip2=Not sponsored or something else.
+item.oedldoedlgear.flying_shooting_college_jacket.tip3=You are lucky to get your Hands on this!
 
 # güffy
 item.oedldoedlgear.gradient_gueffy_tag_quilted_jacket.name=Gradient Güffy Tag Quilted Jacket
-item.oedldoedlgear.gradient_gueffy_tag_quilted_jacket.tip1=The trio of Güffy.
+item.oedldoedlgear.gradient_gueffy_tag_quilted_jacket.tip1=From different Universe...?
 
 # travel
 item.oedldoedlgear.travellers_boots.name=Travellers Boots

@@ -25,10 +25,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModBlocks;
 
 public class ItemLightningStaff extends ModItemBase {
-	public ItemLightningStaff(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
+	public ItemLightningStaff(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
+			int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		setMaxStackSize(1);
 		setMaxDamage(128);
@@ -51,7 +53,7 @@ public class ItemLightningStaff extends ModItemBase {
 		if (!world.isRemote) {
 			Vec3d lookVec = player.getLookVec();
 			Vec3d start = new Vec3d(player.posX, player.posY + player.getEyeHeight(), player.posZ);
-			int distance = 60;
+			int distance = GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_RANGE;
 			boolean gothrough = false;
 
 			if (player.isSneaking()) {
@@ -72,7 +74,7 @@ public class ItemLightningStaff extends ModItemBase {
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z + 2, false));
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z - 2, false));
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
-					player.getCooldownTracker().setCooldown(this, 60);
+					player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_COOLDOWN);
 					stack.damageItem(1, player);
 				}
 				return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
@@ -87,7 +89,7 @@ public class ItemLightningStaff extends ModItemBase {
 				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z + 2, false));
 				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z - 2, false));
 				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z, false));
-				player.getCooldownTracker().setCooldown(this, 60);
+				player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_COOLDOWN);
 				stack.damageItem(1, player);
 			}
 			return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
@@ -100,7 +102,8 @@ public class ItemLightningStaff extends ModItemBase {
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (ModTooltips.showAnnotationTip()) {
 			tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
-					+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW + "60" + " "
+					+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW
+					+ GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_RANGE + " "
 					+ TextFormatting.ITALIC + I18n.format(this.getUnlocalizedName() + ".annotation2"));
 		}
 		if (ModTooltips.showInfoTip()) {

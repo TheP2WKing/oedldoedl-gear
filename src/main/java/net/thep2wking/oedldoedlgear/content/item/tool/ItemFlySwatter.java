@@ -10,6 +10,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModSounds;
 
 public class ItemFlySwatter extends ModItemBase {
@@ -39,7 +40,7 @@ public class ItemFlySwatter extends ModItemBase {
 
 	@Override
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
-		if (entity instanceof EntityLiving) {
+		if (entity instanceof EntityLiving && GearConfig.CONTENT.FLY_SWATTER_SOUND) {
 			entity.world.playSound(null, entity.getPosition(), ModSounds.ONIISAN, SoundCategory.AMBIENT, 1.0f, 1.0f);
 		}
 		return super.onLeftClickEntity(stack, player, entity);

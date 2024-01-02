@@ -30,6 +30,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModSounds;
 
 public class ItemBrefPower extends ModItemBase {
@@ -54,9 +55,12 @@ public class ItemBrefPower extends ModItemBase {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		ItemStack stack = player.getHeldItem(hand);
-		world.playSound(player, player.getPosition(), ModSounds.QUIEK, SoundCategory.AMBIENT,
-				world.rand.nextFloat() + 0.5f, player.world.rand.nextFloat() * 0.5f + 0.75f);
-		player.getCooldownTracker().setCooldown(this, 10);
+		if (GearConfig.CONTENT.BREF_POWER_SOUND) {
+			world.playSound(player, player.getPosition(), ModSounds.QUIEK, SoundCategory.AMBIENT,
+					world.rand.nextFloat() + 0.5f, player.world.rand.nextFloat() * 0.5f + 0.75f);
+		}
+		player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.BREF_POWER_COOLDOWN);
+		stack.damageItem(1, player);
 		if (world instanceof WorldServer) {
 			double d0 = (double) (-MathHelper.sin(player.rotationYaw * 0.017453292F));
 			double d1 = (double) MathHelper.cos(player.rotationYaw * 0.017453292F);

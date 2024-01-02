@@ -6,6 +6,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemSmashbatBase;
 import net.thep2wking.oedldoedlcore.util.ModHitSound;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 
 public class ItemBlastingSmashbat extends ModItemSmashbatBase {
 	public ItemBlastingSmashbat(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
@@ -24,7 +25,10 @@ public class ItemBlastingSmashbat extends ModItemSmashbatBase {
 
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		target.world.newExplosion(attacker, target.posX, target.posY, target.posZ, 1.0f, false, false);
+		target.world.newExplosion(attacker, target.posX, target.posY, target.posZ,
+				GearConfig.CONTENT.SMASHBATS.BLASTING_SMASHBAT_EXPLOSION_STRENGTH,
+				GearConfig.CONTENT.SMASHBATS.BLASTING_SMASHBAT_EXPLOSION_FIRE,
+				GearConfig.CONTENT.SMASHBATS.BLASTING_SMASHBAT_EXPLOSION_DAMAGE);
 		this.setEntitySmashMotion(target);
 		return super.hitEntity(stack, target, attacker);
 	}

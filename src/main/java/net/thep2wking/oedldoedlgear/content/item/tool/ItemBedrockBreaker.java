@@ -17,6 +17,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModBlocks;
 
 public class ItemBedrockBreaker extends ModItemBase {
@@ -42,20 +43,27 @@ public class ItemBedrockBreaker extends ModItemBase {
 	@Override
 	public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing facing,
 			float hitX, float hitY, float hitZ) {
-		IBlockState state = world.getBlockState(pos);
-		ItemStack stack = player.getHeldItem(hand);
-		Block block = state.getBlock();
-		if (state.getBlock() == Blocks.BEDROCK || state.getBlock() == ModBlocks.BADROCK){
-			if (!world.isRemote) {
-				world.destroyBlock(pos, false);
-				world.spawnEntity(new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(),
-						new ItemStack(Item.getItemFromBlock(block))));
-				player.getCooldownTracker().setCooldown(this, 40);
-				stack.damageItem(1, player);
-				player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 20, 0, false, false));
+		if (GearConfig.CONTENT.BEDROCKBREAKER.BREAKS_BEDROCK) {
+			IBlockState state = world.getBlockState(pos);
+			ItemStack stack = player.getHeldItem(hand);
+			Block block = state.getBlock();
+			if (state.getBlock() == Blocks.BEDROCK || state.getBlock() == ModBlocks.BADROCK) {
+				if (!world.isRemote) {
+					world.destroyBlock(pos, false);
+					if (!player.capabilities.isCreativeMode) {
+						world.spawnEntity(new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(),
+								new ItemStack(Item.getItemFromBlock(block))));
+					}
+					player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.BEDROCKBREAKER.COOLDOWN);
+					stack.damageItem(1, player);
+					if (!player.capabilities.isCreativeMode && GearConfig.CONTENT.BEDROCKBREAKER.DEBUFFS) {
+						player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 20, 0, false, false));
+					}
+				}
+				return EnumActionResult.SUCCESS;
 			}
-			return EnumActionResult.SUCCESS;
+			return EnumActionResult.FAIL;
 		}
-		return EnumActionResult.FAIL;
+		return super.onItemUse(player, world, pos, hand, facing, hitX, hitY, hitZ);
 	}
 }

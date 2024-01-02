@@ -169,7 +169,7 @@ public class ModItems {
 	public static final Item CLASSIC_FLYING_SHOOTING_HOODIE = new ModItemArmorBase(OedldoedlGear.MODID, "classic_flying_shooting_hoodie", OedldoedlGear.TAB, ModArmorMaterial.FLYING_SHOOTING_HOODIE_CLASSIC, 0, EntityEquipmentSlot.CHEST, ModRarities.AQUA, false, 2, 0);
 	public static final Item BLACK_FLYING_SHOOTING_HOODIE = new ModItemArmorBase(OedldoedlGear.MODID, "black_flying_shooting_hoodie", OedldoedlGear.TAB, ModArmorMaterial.FLYING_SHOOTING_HOODIE_BLACK, 0, EntityEquipmentSlot.CHEST, ModRarities.AQUA, false, 2, 0);
 	public static final Item WHITE_FLYING_SHOOTING_HOODIE = new ModItemArmorBase(OedldoedlGear.MODID, "white_flying_shooting_hoodie", OedldoedlGear.TAB, ModArmorMaterial.FLYING_SHOOTING_HOODIE_WHITE, 0, EntityEquipmentSlot.CHEST, ModRarities.AQUA, false, 2, 0);
-	public static final Item FLYING_SHOOTING_COLLEGE_JACKET = new ModItemArmorBase(OedldoedlGear.MODID, "flying_shooting_college_jacket", OedldoedlGear.TAB, ModArmorMaterial.FLYING_SHOOTING_HOODIE_COLLEGE_JACKET, 0, EntityEquipmentSlot.CHEST, ModRarities.LIGHT_PURPLE, false, 2, 0);
+	public static final Item FLYING_SHOOTING_COLLEGE_JACKET = new ModItemArmorBase(OedldoedlGear.MODID, "flying_shooting_college_jacket", OedldoedlGear.TAB, ModArmorMaterial.FLYING_SHOOTING_HOODIE_COLLEGE_JACKET, 0, EntityEquipmentSlot.CHEST, ModRarities.LIGHT_PURPLE, false, 3, 0);
 	
 	// gueffy armor
 	public static final Item GRADIENT_GUEFFY_TAG_QUILTED_JACKET = new ModItemArmorBase(OedldoedlGear.MODID, "gradient_gueffy_tag_quilted_jacket", OedldoedlGear.TAB, ModArmorMaterial.GUEFFY_JACKET, 0, EntityEquipmentSlot.CHEST, ModRarities.LIGHT_PURPLE, false, 1, 0);

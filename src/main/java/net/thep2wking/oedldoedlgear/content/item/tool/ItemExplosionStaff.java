@@ -28,6 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
+import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModBlocks;
 import net.thep2wking.oedldoedlgear.init.ModSounds;
 
@@ -56,7 +57,7 @@ public class ItemExplosionStaff extends ModItemBase {
 		if (!world.isRemote) {
 			Vec3d lookVec = player.getLookVec();
 			Vec3d start = new Vec3d(player.posX, player.posY + player.getEyeHeight(), player.posZ);
-			int distance = 40;
+			int distance = GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_RANGE;
 			boolean gothrough = false;
 
 			if (player.isSneaking()) {
@@ -73,12 +74,19 @@ public class ItemExplosionStaff extends ModItemBase {
 
 				} else {
 					world.playSound(null, player.getPosition(), ModSounds.MEGUMIN, SoundCategory.AMBIENT, 1f, 1f);
-					player.world.createExplosion(null, end.x, end.y, end.z, 15, true);
-					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
-					player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 60, 0, false, false));
-					player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 100, 9, false, false));
-					player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 200, 1, false, false));
-					player.getCooldownTracker().setCooldown(this, 100);
+					player.world.newExplosion(null, end.x, end.y, end.z,
+							GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_STRENGTH,
+							GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_FIRE,
+							GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_DAMAGE);
+					if (GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_SPAWNS_LIGHTNING) {
+						player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
+					}
+					if (!player.capabilities.isCreativeMode && GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_DEBUFFS) {
+						player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 60, 0, false, false));
+						player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 100, 9, false, false));
+						player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 200, 1, false, false));
+					}
+					player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_COOLDOWN);
 					stack.damageItem(1, player);
 				}
 				return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
@@ -89,12 +97,18 @@ public class ItemExplosionStaff extends ModItemBase {
 				int z = blockPos.getZ();
 
 				world.playSound(null, player.getPosition(), ModSounds.MEGUMIN, SoundCategory.AMBIENT, 4f, 1f);
-				player.world.createExplosion(null, x, y, z, 15, true);
-				player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
-				player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 60, 0, false, false));
-				player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 100, 9, false, false));
-				player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 200, 1, false, false));
-				player.getCooldownTracker().setCooldown(this, 100);
+				player.world.newExplosion(null, x, y, z, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_STRENGTH,
+						GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_FIRE,
+						GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_DAMAGE);
+				if (GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_SPAWNS_LIGHTNING) {
+					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
+				}
+				if (!player.capabilities.isCreativeMode && GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_DEBUFFS) {
+					player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 60, 0, false, false));
+					player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 100, 9, false, false));
+					player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 200, 1, false, false));
+				}
+				player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_COOLDOWN);
 				stack.damageItem(1, player);
 			}
 			return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
@@ -107,7 +121,8 @@ public class ItemExplosionStaff extends ModItemBase {
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (ModTooltips.showAnnotationTip()) {
 			tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
-					+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW + "40" + " "
+					+ I18n.format(this.getUnlocalizedName() + ".annotation1") + " " + TextFormatting.YELLOW
+					+ GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_RANGE + " "
 					+ TextFormatting.ITALIC + I18n.format(this.getUnlocalizedName() + ".annotation2"));
 		}
 		if (ModTooltips.showInfoTip()) {
