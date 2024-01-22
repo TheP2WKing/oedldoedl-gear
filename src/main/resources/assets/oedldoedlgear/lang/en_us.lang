@@ -607,6 +607,10 @@ item.oedldoedlgear.lightning_staff.name=Staff of Lightning
 item.oedldoedlgear.lightning_staff.tip1=(War) Thunder!
 item.oedldoedlgear.lightning_staff.annotation1=Range in blocks:
 item.oedldoedlgear.lightning_staff.annotation2=(Halved while Sneaking)
+item.oedldoedlgear.frieren_staff.name=Staff of Frieren
+item.oedldoedlgear.frieren_staff.tip1=Beyond Minecrafts End...
+item.oedldoedlgear.frieren_staff.annotation1=Range in blocks:
+item.oedldoedlgear.frieren_staff.annotation2=(Halved while Sneaking)
 item.oedldoedlgear.admin_staff.name=Staff of Administration
 item.oedldoedlgear.admin_staff.tip1=God of MC!
 item.oedldoedlgear.admin_staff.annotation1=Mode:
@@ -701,6 +705,7 @@ item.oedldoedlgear.charged_essence.tip1=Superchared!
 
 item.oedldoedlgear.chainmail.name=Chainmail
 item.oedldoedlgear.chainmail.tip1=You have 1 unread mail...
+
 item.oedldoedlgear.note_of_suffering.name=Note of Suffering
 item.oedldoedlgear.note_of_suffering.annotation1=Last Updated by: §eTheP2WKing §o(07/30/2023)
 item.oedldoedlgear.note_of_suffering.tip1=Why am I doing this, what is going on with my life?
@@ -708,6 +713,35 @@ item.oedldoedlgear.note_of_suffering.tip2=Which life you may ask, well...
 item.oedldoedlgear.note_of_suffering.tip3=§oAaccomplishments: Making this mod for the third time.
 item.oedldoedlgear.note_of_suffering.tip4=§nAvailable on Discord: thep2wking
 item.oedldoedlgear.note_of_suffering.tip5=§mSubscribe to my OnlyFans TheFKKKing!
+
+item.oedldoedlgear.oedldoedl_tos.name=Oedldoedl TOS
+item.oedldoedlgear.oedldoedl_tos.annotation1=Last Updated by: §eOedldoedl Dev Team §o(01/02/2024)
+item.oedldoedlgear.oedldoedl_tos.tip1=Violations can lead to reports!
+item.oedldoedlgear.oedldoedl_tos.tip2=§oDo not kick or spit!
+item.oedldoedlgear.oedldoedl_tos.tip3=§oDo not rush through the modpack!
+item.oedldoedlgear.oedldoedl_tos.tip4=§oDo not build ugly looking buildings!
+item.oedldoedlgear.oedldoedl_tos.tip5=§oDo not be an "Discord Rentner"!
+item.oedldoedlgear.oedldoedl_tos.tip6=§oDo not be toxic!
+item.oedldoedlgear.oedldoedl_tos.tip7=§oDo not watch Darling in the Franxx!
+item.oedldoedlgear.oedldoedl_tos.tip8=§nTheP2WKing is not affected by these rules!
+
+item.oedldoedlgear.crafting_license.name=Crafting License
+item.oedldoedlgear.crafting_license.annotation1=Last Updated by: §eTheP2WKings Lawyer §o(01/02/2024)
+item.oedldoedlgear.crafting_license.tip1=Used for items that are way to easy to get...
+item.oedldoedlgear.crafting_license.tip2=Crafting without the appropriate license violates TOS!
+item.oedldoedlgear.crafting_license.tip3=Licensing starts at 999.99 Euros per Month.
+item.oedldoedlgear.crafting_license.tip4=Flofino loves it to spend money on stupid things.
+item.oedldoedlgear.crafting_license.tip5=§mThis item is corruptible!
+
+item.oedldoedlgear.bill_of_revenge.name=Bill of Revenge
+item.oedldoedlgear.bill_of_revenge.annotation1=Last Updated by: §eArchive Inc. §o(01/02/2024)
+item.oedldoedlgear.bill_of_revenge.tip1=Let me explain the story behind it...
+item.oedldoedlgear.bill_of_revenge.tip2=Fofino does not like it when everything is too difficult.
+item.oedldoedlgear.bill_of_revenge.tip3=I am the sadism in person and make everything extra hard.
+item.oedldoedlgear.bill_of_revenge.tip4=But I did not tell him that the fun also costs something.
+item.oedldoedlgear.bill_of_revenge.tip5=That is apparently how live works...
+item.oedldoedlgear.bill_of_revenge.tip6=I wish you a lot of fun while desperate!
+item.oedldoedlgear.bill_of_revenge.tip7=§oInstall nasty laughting in the background here!
 
 # misc
 item.oedldoedlgear.squid_bucket.name=Bucket of Squid

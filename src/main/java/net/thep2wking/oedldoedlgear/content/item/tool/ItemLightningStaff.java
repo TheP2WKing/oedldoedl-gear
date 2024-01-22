@@ -33,7 +33,7 @@ public class ItemLightningStaff extends ModItemBase {
 			int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		setMaxStackSize(1);
-		setMaxDamage(128);
+		setMaxDamage(256);
 	}
 
 	@Override
@@ -50,49 +50,48 @@ public class ItemLightningStaff extends ModItemBase {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		ItemStack stack = player.getHeldItem(hand);
-		if (!world.isRemote) {
-			Vec3d lookVec = player.getLookVec();
-			Vec3d start = new Vec3d(player.posX, player.posY + player.getEyeHeight(), player.posZ);
-			int distance = GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_RANGE;
-			boolean gothrough = false;
-
-			if (player.isSneaking()) {
-				distance /= 2;
-			}
-
-			Vec3d end = start.addVector(lookVec.x * distance, lookVec.y * distance, lookVec.z * distance);
-			RayTraceResult position = gothrough ? null : world.rayTraceBlocks(start, end);
+		Vec3d lookVec = player.getLookVec();
+		Vec3d start = new Vec3d(player.posX, player.posY + player.getEyeHeight(), player.posZ);
+		int distance = GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_RANGE;
+		boolean gothrough = false;
+		if (player.isSneaking()) {
+			distance /= 2;
+		}
+		Vec3d end = start.addVector(lookVec.x * distance, lookVec.y * distance, lookVec.z * distance);
+		RayTraceResult position = gothrough ? null : world.rayTraceBlocks(start, end);
+		if (gothrough) {
+			position = null;
+		}
+		if (position == null) {
 			if (gothrough) {
-				position = null;
-			}
-			if (position == null) {
-				if (gothrough) {
-
-				} else {
+			} else {
+				if (!world.isRemote) {
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x + 2, end.y, end.z, false));
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x - 2, end.y, end.z, false));
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z + 2, false));
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z - 2, false));
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
-					player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_COOLDOWN);
-					stack.damageItem(1, player);
 				}
-				return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
-			} else {
-				BlockPos blockPos = position.getBlockPos();
-				int x = blockPos.getX();
-				int y = blockPos.getY();
-				int z = blockPos.getZ();
-
+				player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_COOLDOWN);
+				stack.damageItem(1, player);
+				player.swingArm(hand);
+			}
+			return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
+		} else {
+			BlockPos blockPos = position.getBlockPos();
+			int x = blockPos.getX();
+			int y = blockPos.getY();
+			int z = blockPos.getZ();
+			if (!world.isRemote) {
 				player.world.addWeatherEffect(new EntityLightningBolt(world, x + 2, y, z, false));
 				player.world.addWeatherEffect(new EntityLightningBolt(world, x - 2, y, z, false));
 				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z + 2, false));
 				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z - 2, false));
 				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z, false));
-				player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_COOLDOWN);
-				stack.damageItem(1, player);
 			}
-			return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
+			player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_COOLDOWN);
+			stack.damageItem(1, player);
+			player.swingArm(hand);
 		}
 		return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
 	}

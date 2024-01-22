@@ -31,7 +31,10 @@ public class ModRecipes {
 
 			ModRecipeHelper.addOreDict("chainmail", ModItems.CHAINMAIL, 0);
 
-			ModRecipeHelper.addOreDict("noteSuffering", ModItems.NOTE_OF_SUFFERING, 0);
+			ModRecipeHelper.addOreDict("paperSuffering", ModItems.NOTE_OF_SUFFERING, 0);
+			ModRecipeHelper.addOreDict("paperBill", ModItems.BILL_OF_REVENGE, 0);
+			ModRecipeHelper.addOreDict("paperLicense", ModItems.CRAFTING_LICENSE, 0);
+			ModRecipeHelper.addOreDict("paperTos", ModItems.OEDLDOEDL_TOS, 0);
 
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.BASE_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.OEDLDOEDL_HOE, 0);

@@ -2,7 +2,7 @@
 	"parent": "item/handheld",
 	"textures": 
 	{
-		"layer0": "oedldoedlgear:items/explosion_staff"
+		"layer0": "oedldoedlgear:items/frieren_staff"
 	},
 	"display": 
 	{

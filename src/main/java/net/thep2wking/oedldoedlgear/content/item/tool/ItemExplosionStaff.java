@@ -37,7 +37,7 @@ public class ItemExplosionStaff extends ModItemBase {
 			int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		setMaxStackSize(1);
-		setMaxDamage(128);
+		setMaxDamage(256);
 	}
 
 	@Override
@@ -54,52 +54,28 @@ public class ItemExplosionStaff extends ModItemBase {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		ItemStack stack = player.getHeldItem(hand);
-		if (!world.isRemote) {
-			Vec3d lookVec = player.getLookVec();
-			Vec3d start = new Vec3d(player.posX, player.posY + player.getEyeHeight(), player.posZ);
-			int distance = GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_RANGE;
-			boolean gothrough = false;
-
-			if (player.isSneaking()) {
-				distance /= 2;
-			}
-
-			Vec3d end = start.addVector(lookVec.x * distance, lookVec.y * distance, lookVec.z * distance);
-			RayTraceResult position = gothrough ? null : world.rayTraceBlocks(start, end);
+		Vec3d lookVec = player.getLookVec();
+		Vec3d start = new Vec3d(player.posX, player.posY + player.getEyeHeight(), player.posZ);
+		int distance = GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_RANGE;
+		boolean gothrough = false;
+		if (player.isSneaking()) {
+			distance /= 2;
+		}
+		Vec3d end = start.addVector(lookVec.x * distance, lookVec.y * distance, lookVec.z * distance);
+		RayTraceResult position = gothrough ? null : world.rayTraceBlocks(start, end);
+		if (gothrough) {
+			position = null;
+		}
+		if (position == null) {
 			if (gothrough) {
-				position = null;
-			}
-			if (position == null) {
-				if (gothrough) {
-
-				} else {
-					world.playSound(null, player.getPosition(), ModSounds.MEGUMIN, SoundCategory.AMBIENT, 1f, 1f);
+			} else {
+				world.playSound(null, player.getPosition(), ModSounds.MEGUMIN, SoundCategory.AMBIENT, 1f, 1f);
+				if (!world.isRemote) {
 					player.world.newExplosion(null, end.x, end.y, end.z,
 							GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_STRENGTH,
 							GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_FIRE,
 							GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_DAMAGE);
-					if (GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_SPAWNS_LIGHTNING) {
-						player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
-					}
-					if (!player.capabilities.isCreativeMode && GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_DEBUFFS) {
-						player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 60, 0, false, false));
-						player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 100, 9, false, false));
-						player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 200, 1, false, false));
-					}
-					player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_COOLDOWN);
-					stack.damageItem(1, player);
 				}
-				return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
-			} else {
-				BlockPos blockPos = position.getBlockPos();
-				int x = blockPos.getX();
-				int y = blockPos.getY();
-				int z = blockPos.getZ();
-
-				world.playSound(null, player.getPosition(), ModSounds.MEGUMIN, SoundCategory.AMBIENT, 4f, 1f);
-				player.world.newExplosion(null, x, y, z, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_STRENGTH,
-						GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_FIRE,
-						GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_DAMAGE);
 				if (GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_SPAWNS_LIGHTNING) {
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
 				}
@@ -110,8 +86,32 @@ public class ItemExplosionStaff extends ModItemBase {
 				}
 				player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_COOLDOWN);
 				stack.damageItem(1, player);
+				player.swingArm(hand);
 			}
 			return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
+		} else {
+			BlockPos blockPos = position.getBlockPos();
+			int x = blockPos.getX();
+			int y = blockPos.getY();
+			int z = blockPos.getZ();
+
+			world.playSound(null, player.getPosition(), ModSounds.MEGUMIN, SoundCategory.AMBIENT, 4f, 1f);
+			if (!world.isRemote) {
+				player.world.newExplosion(null, x, y, z, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_STRENGTH,
+						GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_FIRE,
+						GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_DAMAGE);
+			}
+			if (GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_SPAWNS_LIGHTNING) {
+				player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
+			}
+			if (!player.capabilities.isCreativeMode && GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_DEBUFFS) {
+				player.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 60, 0, false, false));
+				player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 100, 9, false, false));
+				player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 200, 1, false, false));
+			}
+			player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_COOLDOWN);
+			stack.damageItem(1, player);
+			player.swingArm(hand);
 		}
 		return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
 	}

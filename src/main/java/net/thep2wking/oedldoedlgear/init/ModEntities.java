@@ -8,6 +8,7 @@ import net.thep2wking.oedldoedlgear.content.entity.EntityChargedEssence;
 import net.thep2wking.oedldoedlgear.content.entity.EntityChargedSnowball;
 import net.thep2wking.oedldoedlgear.content.entity.EntityExplosionCore;
 import net.thep2wking.oedldoedlgear.content.entity.EntityExplosiveSnowball;
+import net.thep2wking.oedldoedlgear.content.entity.EntityMagic;
 import net.thep2wking.oedldoedlgear.content.entity.EntityRockySnowball;
 
 public class ModEntities {
@@ -30,5 +31,9 @@ public class ModEntities {
 		EntityRegistry.registerModEntity(new ResourceLocation(OedldoedlGear.MODID, "charged_essence"),
 				EntityChargedEssence.class, OedldoedlGear.MODID + "." + "charged_essence", 4, OedldoedlGear.INSTANCE,
 				64, 10, true);
+
+		EntityRegistry.registerModEntity(new ResourceLocation(OedldoedlGear.MODID, "magic"),
+				EntityMagic.class, OedldoedlGear.MODID + "." + "magic", 5, OedldoedlGear.INSTANCE,
+				64, 5, true);
 	}
 }

@@ -51,6 +51,7 @@ import net.thep2wking.oedldoedlgear.content.item.tool.ItemBrefPower;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemExplosionStaff;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemFireWand;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemFlySwatter;
+import net.thep2wking.oedldoedlgear.content.item.tool.ItemFrierenStaff;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemKickStick;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemLaunchingSmashbat;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemLightningSmashbat;
@@ -367,12 +368,13 @@ public class ModItems {
 	public static final Item KICK_STICK = new ItemKickStick(OedldoedlGear.MODID, "kick_stick", OedldoedlGear.TAB, ModRarities.RED, true, 1, 0);
 	public static final Item EXPLOSION_STAFF = new ItemExplosionStaff(OedldoedlGear.MODID, "explosion_staff", OedldoedlGear.TAB, ModRarities.RED, false, 1, 1);
 	public static final Item LIGHTNING_STAFF = new ItemLightningStaff(OedldoedlGear.MODID, "lightning_staff", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 1);
+	public static final Item FRIEREN_STAFF = new ItemFrierenStaff(OedldoedlGear.MODID, "frieren_staff", OedldoedlGear.TAB, ModRarities.GOLD, false, 1, 1);
 	public static final Item ADMIN_STAFF = new ItemAdminStaff(OedldoedlGear.MODID, "admin_staff", OedldoedlGear.TAB, ModRarities.RED, true, 1, 1);
 	public static final Item SKULL_WAND = new ItemSkullWand(OedldoedlGear.MODID, "skull_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item FIRE_WAND = new ItemFireWand(OedldoedlGear.MODID, "fire_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item FLY_SWATTER = new ItemFlySwatter(OedldoedlGear.MODID, "fly_swatter", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item BEDROCK_BREAKER = new ItemBedrockBreaker(OedldoedlGear.MODID, "bedrock_breaker", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 0);
-	public static final Item NEEDLE = new ItemNeedle(OedldoedlGear.MODID, "needle", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 1);
+	public static final Item NEEDLE = new ItemNeedle(OedldoedlGear.MODID, "needle", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item BREF_POWER = new ItemBrefPower(OedldoedlGear.MODID, "bref_power", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 
 	// throwables
@@ -404,5 +406,9 @@ public class ModItems {
 	public static final Item CHARGED_ESSENCE = new ItemChargedEssence(OedldoedlGear.MODID, "charged_essence", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 0);
 
 	public static final Item CHAINMAIL = new ItemChainmail(OedldoedlGear.MODID, "chainmail", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
+	
 	public static final Item NOTE_OF_SUFFERING = new ModItemBase(OedldoedlGear.MODID, "note_of_suffering", OedldoedlGear.TAB, ModRarities.LIGHT_PURPLE, false, 5, 1);
+	public static final Item BILL_OF_REVENGE = new ModItemBase(OedldoedlGear.MODID, "bill_of_revenge", OedldoedlGear.TAB, ModRarities.LIGHT_PURPLE, false, 7, 1);
+	public static final Item CRAFTING_LICENSE = new ModItemBase(OedldoedlGear.MODID, "crafting_license", OedldoedlGear.TAB, ModRarities.LIGHT_PURPLE, false, 5, 1);
+	public static final Item OEDLDOEDL_TOS = new ModItemBase(OedldoedlGear.MODID, "oedldoedl_tos", OedldoedlGear.TAB, ModRarities.LIGHT_PURPLE, false, 8, 1);
 }

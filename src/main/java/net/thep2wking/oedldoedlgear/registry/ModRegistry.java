@@ -293,6 +293,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.KICK_STICK);
 		ModRegistryHelper.registerItem(event, ModItems.EXPLOSION_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.LIGHTNING_STAFF);
+		ModRegistryHelper.registerItem(event, ModItems.FRIEREN_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.ADMIN_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.SKULL_WAND);
 		ModRegistryHelper.registerItem(event, ModItems.FIRE_WAND);
@@ -328,7 +329,11 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.CHARGED_ESSENCE);
 
 		ModRegistryHelper.registerItem(event, ModItems.CHAINMAIL);
+
 		ModRegistryHelper.registerItem(event, ModItems.NOTE_OF_SUFFERING);
+		ModRegistryHelper.registerItem(event, ModItems.BILL_OF_REVENGE);
+		ModRegistryHelper.registerItem(event, ModItems.CRAFTING_LICENSE);
+		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_TOS);
 	}
 
 	@SubscribeEvent
