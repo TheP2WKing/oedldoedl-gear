@@ -1,14 +1,18 @@
 package net.thep2wking.oedldoedlgear.content.item.tool;
 
+import java.util.Date;
+
+import com.mojang.authlib.GameProfile;
+
+import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.management.UserListBansEntry;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
@@ -38,13 +42,17 @@ public class ItemBanHammer extends ModItemBase {
 			EntityPlayer playerTarget = (EntityPlayer) target;
 			World world = player.getEntityWorld();
 			MinecraftServer server = world.getMinecraftServer();
+			GameProfile profile = playerTarget.getGameProfile();
+			Date expiryTime = null;
+			UserListBansEntry banEntry = new UserListBansEntry(profile, new Date(),
+					playerTarget.getDisplayName().toString(), expiryTime, GearConfig.CONTENT.ADMINTOOLS.BAN_MESSAGE);
 			if (target instanceof EntityPlayer && server != null) {
-				((EntityPlayerMP) playerTarget).connection
-						.disconnect(new TextComponentString(GearConfig.CONTENT.ADMINTOOLS.BAN_MESSAGE));
+				server.getPlayerList().getBannedPlayers().addEntry(banEntry);
 				player.sendMessage(new TextComponentString("[")
-						.appendSibling(new TextComponentTranslation(TextFormatting.RED + this.getUnlocalizedName()))
-						.appendSibling(new TextComponentString("] ")).appendSibling(new TextComponentTranslation(
-								TextFormatting.ITALIC + this.getUnlocalizedName() + ".tip2")));
+						.appendSibling(new TextComponentString(
+								TextFormatting.RED + I18n.format(this.getUnlocalizedName() + ".name")))
+						.appendSibling(new TextComponentString("] "))
+						.appendSibling(new TextComponentString(I18n.format(this.getUnlocalizedName() + ".tip2"))));
 			}
 		}
 		return super.hitEntity(stack, target, attacker);

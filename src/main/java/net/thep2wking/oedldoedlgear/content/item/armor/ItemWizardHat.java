@@ -53,7 +53,6 @@ public class ItemWizardHat extends ModItemArmorBase {
 		return model == null ? _default : model;
 	}
 
-	@SuppressWarnings("null")
 	public static void setPotion(ItemStack src, String potionEffectCode) {
 		NBTTagCompound tag;
 		if (!src.hasTagCompound()) {
@@ -65,7 +64,6 @@ public class ItemWizardHat extends ModItemArmorBase {
 		src.setTagCompound(tag);
 	}
 
-	@SuppressWarnings("null")
 	public static String getPotion(ItemStack src) {
 		if (!src.hasTagCompound())
 			return null;
@@ -77,7 +75,6 @@ public class ItemWizardHat extends ModItemArmorBase {
 		}
 	}
 
-	@SuppressWarnings("null")
 	public static void setPotionEffectLevel(ItemStack src, int level) {
 		NBTTagCompound tag;
 		if (!src.hasTagCompound()) {
@@ -89,7 +86,6 @@ public class ItemWizardHat extends ModItemArmorBase {
 		src.setTagCompound(tag);
 	}
 
-	@SuppressWarnings("null")
 	public static int getPotionEffectLevel(ItemStack src) {
 		if (!src.hasTagCompound())
 			return 0;
@@ -128,7 +124,6 @@ public class ItemWizardHat extends ModItemArmorBase {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	@SuppressWarnings("null")
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (ModTooltips.showAnnotationTip()) {
 			if (GearConfig.CONTENT.WIZARED_HAT_STORE_POTIONS) {

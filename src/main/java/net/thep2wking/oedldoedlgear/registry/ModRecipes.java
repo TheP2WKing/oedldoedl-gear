@@ -27,7 +27,8 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("leatherTravellers", ModItems.TRAVELLERS_LEATHER, 0);
 
 			ModRecipeHelper.addOreDict("coreExplosion", ModItems.EXPLOSION_CORE, 0);
-			ModRecipeHelper.addOreDict("essenceCharged", ModItems.CHARGED_ESSENCE, 0);
+			ModRecipeHelper.addOreDict("coreCharged", ModItems.CHARGED_CORE, 0);
+			ModRecipeHelper.addOreDict("coreMystic", ModItems.MYSTIC_CORE, 0);
 
 			ModRecipeHelper.addOreDict("chainmail", ModItems.CHAINMAIL, 0);
 
@@ -40,6 +41,7 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.OEDLDOEDL_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.DIRT_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.EMERALD_HOE, 0);
+			ModRecipeHelper.addOreDict("toolHoe", ModItems.SLIME_HOE, 0);
 
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.GREMORIUM_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.HIMEJIMARIUM_HOE, 0);
@@ -86,7 +88,6 @@ public class ModRecipes {
 		}
 	}
 
-	@SuppressWarnings("null")
 	public static void registerRecipes() {
 		ModLogger.registeredRecipesLogger(OedldoedlGear.MODID);
 
@@ -416,10 +417,13 @@ public class ModRecipes {
 
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/explosion_staff",
 					new ItemStack(ModItems.EXPLOSION_STAFF, 1, 0), " AB", "CDA", "AC ", 'A', "blockMagicWood", 'B',
-					"string", 'C', "ingotGold", 'D', "coreExplosion");
+					"ingotGold", 'C', "fabricWhite", 'D', "coreExplosion");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/lightning_staff",
 					new ItemStack(ModItems.LIGHTNING_STAFF, 1, 0), " AB", "CDA", "AC ", 'A', "blockMagicWood", 'B',
-					"dyeWhite", 'C', "dyeBlack", 'D', "essenceCharged");
+					"dyeWhite", 'C', "fabricBlack", 'D', "coreCharged");
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/frieren_staff",
+					new ItemStack(ModItems.FRIEREN_STAFF, 1, 0), " AB", "CDA", "AC ", 'A', "blockMagicWood", 'B',
+					"ingotGold", 'C', "fabricRed", 'D', "coreMystic");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/admin_staff",
 					ModNBTUtil.addNBTItem(ModItems.ADMIN_STAFF, "Mode", "Day"), " AA", " BA", "B  ", 'A',
 					"commandBlock", 'B', "stickWood");
@@ -488,9 +492,12 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "explosion_core",
 					new ItemStack(ModItems.EXPLOSION_CORE, 1, 0), "AAA", "ABA", "AAA", 'A', "tnt", 'B',
 					"blockOedldoedl");
-			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "charged_essence",
-					new ItemStack(ModItems.CHARGED_ESSENCE, 1, 0), "ABA", "BCB", "ABA", 'A', "dyeWhite", 'B',
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "charged_core",
+					new ItemStack(ModItems.CHARGED_CORE, 1, 0), "ABA", "BCB", "ABA", 'A', "dyeWhite", 'B',
 					"dyeLightBlue", 'C', "blockOedldoedl");
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "mystic_core",
+					new ItemStack(ModItems.MYSTIC_CORE, 1, 0), "ABA", "CDC", "ABA", 'A', "ingotGold", 'B',
+					"dyeRed", 'C', ModNBTUtil.addSplashPotion("strong_harming"), 'D', "blockOedldoedl");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "chainmail", new ItemStack(ModItems.CHAINMAIL, 4, 0),
 					"AAA", "BCB", "ABA", 'A', "nuggetIron", 'B', "ingotIron", 'C', "paper");
 

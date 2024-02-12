@@ -152,11 +152,15 @@ public class Content {
 
 		@Config.Name("Frieren Staff Range")
 		@Config.RangeInt(min = 0, max = 100)
-		public int FRIEREN_STAFF_RANGE = 50;
+		public int FRIEREN_STAFF_RANGE = 30;
 
 		@Config.Name("Frieren Staff Cooldown")
 		@Config.RangeInt(min = 0, max = 1000)
-		public int FRIEREN_STAFF_COOLDOWN = 20;
+		public int FRIEREN_STAFF_COOLDOWN = 40;
+
+		@Config.Name("Frieren Staff Magic Damage")
+		@Config.RangeInt(min = 0, max = 1000000)
+		public int FRIEREN_STAFF_MAGIC_DAMAGE = 12;
 	}
 
 	@Config.Name("smashbats")

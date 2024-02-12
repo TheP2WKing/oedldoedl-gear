@@ -3,21 +3,27 @@ package net.thep2wking.oedldoedlgear.registry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
+import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.init.ModBlocks;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 import net.thep2wking.oedldoedlgear.init.ModSounds;
-import net.thep2wking.oedldoedlresources.OedldoedlResources;
 
 @Mod.EventBusSubscriber
 public class ModRegistry {
 	@SubscribeEvent
+	public static void onModelRegister(ModelRegistryEvent event) {
+		ModRegistryHelper.registerModels(event, OedldoedlGear.MODID);
+	}
+	
+	@SubscribeEvent
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) {
-		ModLogger.registeredBlocksLogger(OedldoedlResources.MODID);
+		ModLogger.registeredBlocksLogger(OedldoedlGear.MODID);
 
 		ModRegistryHelper.registerBlock(event, ModBlocks.BADROCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.ENHANCED_DIRT);
@@ -31,7 +37,7 @@ public class ModRegistry {
 
 	@SubscribeEvent
 	public static void onItemRegister(RegistryEvent.Register<Item> event) {
-		ModLogger.registeredItemsLogger(OedldoedlResources.MODID);
+		ModLogger.registeredItemsLogger(OedldoedlGear.MODID);
 
 		ModRegistryHelper.registerItemBlock(event, ModItems.BADROCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.ENHANCED_DIRT);
@@ -326,7 +332,8 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.TRAVELLERS_LEATHER);
 
 		ModRegistryHelper.registerItem(event, ModItems.EXPLOSION_CORE);
-		ModRegistryHelper.registerItem(event, ModItems.CHARGED_ESSENCE);
+		ModRegistryHelper.registerItem(event, ModItems.CHARGED_CORE);
+		ModRegistryHelper.registerItem(event, ModItems.MYSTIC_CORE);
 
 		ModRegistryHelper.registerItem(event, ModItems.CHAINMAIL);
 
@@ -338,7 +345,7 @@ public class ModRegistry {
 
 	@SubscribeEvent
 	public static void onSoundEventRegister(RegistryEvent.Register<SoundEvent> event) {
-		ModLogger.registeredSoundEventsLogger(OedldoedlResources.MODID);
+		ModLogger.registeredSoundEventsLogger(OedldoedlGear.MODID);
 
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.MEGUMIN);
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.QUIEK);

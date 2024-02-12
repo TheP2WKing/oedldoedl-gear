@@ -37,7 +37,7 @@ public class ItemExplosionStaff extends ModItemBase {
 			int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		setMaxStackSize(1);
-		setMaxDamage(256);
+		setMaxDamage(512);
 	}
 
 	@Override
@@ -97,7 +97,7 @@ public class ItemExplosionStaff extends ModItemBase {
 
 			world.playSound(null, player.getPosition(), ModSounds.MEGUMIN, SoundCategory.AMBIENT, 4f, 1f);
 			if (!world.isRemote) {
-				player.world.newExplosion(null, x, y, z, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_STRENGTH,
+				player.world.newExplosion(null, x, y + 0.5, z, GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_STRENGTH,
 						GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_FIRE,
 						GearConfig.CONTENT.STAFFS.EXPLOSION_STAFF_EXPLOSION_DAMAGE);
 			}

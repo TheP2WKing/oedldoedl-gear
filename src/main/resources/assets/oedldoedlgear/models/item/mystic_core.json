@@ -2,6 +2,6 @@
 	"parent": "item/generated",
 	"textures": 
 	{
-		"layer0": "oedldoedlgear:items/charged_essence"
+		"layer0": "oedldoedlgear:items/mystic_core"
 	}
 }

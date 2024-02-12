@@ -2,7 +2,7 @@
 itemGroup.oedldoedlgear.name=§dOedldoedl Gear
 
 # icons
-item.oedldoedlcore.gear_icon.annotation3=Version: §e1.12.2-3.0.0
+item.oedldoedlcore.gear_icon.annotation3=Version: §e1.12.2-4.0.0
 
 # sound
 sound.oedldoedlgear.megumin=Megumin screems
@@ -700,8 +700,10 @@ item.oedldoedlgear.neutronium_stick.tip1=Please do not weigh a ton.
 
 item.oedldoedlgear.explosion_core.name=Explosion Core
 item.oedldoedlgear.explosion_core.tip1=The beginning of something nasty.
-item.oedldoedlgear.charged_essence.name=Charged Essence
-item.oedldoedlgear.charged_essence.tip1=Superchared!
+item.oedldoedlgear.charged_core.name=Charged Core
+item.oedldoedlgear.charged_core.tip1=Superchared!
+item.oedldoedlgear.mystic_core.name=Mystic Core
+item.oedldoedlgear.mystic_core.tip1=So old that helpful tooltips did not exist yet...
 
 item.oedldoedlgear.chainmail.name=Chainmail
 item.oedldoedlgear.chainmail.tip1=You have 1 unread mail...

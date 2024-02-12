@@ -88,7 +88,6 @@ public class ItemHimejimariumArmor extends ModItemArmorBase {
 	}
 
 	@SubscribeEvent
-	@SuppressWarnings("null")
 	public static void onLivingHurt(LivingHurtEvent event) {
 		if (event.getSource() instanceof EntityDamageSource
 				&& !((EntityDamageSource) event.getSource()).getIsThornsDamage()) {

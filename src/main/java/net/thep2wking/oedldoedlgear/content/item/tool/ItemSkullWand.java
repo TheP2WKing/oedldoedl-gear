@@ -32,7 +32,7 @@ public class ItemSkullWand extends ModItemBase {
 			int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		setMaxStackSize(1);
-		setMaxDamage(128);
+		setMaxDamage(256);
 	}
 
 	@Override

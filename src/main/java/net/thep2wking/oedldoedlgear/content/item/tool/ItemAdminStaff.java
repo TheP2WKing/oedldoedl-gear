@@ -159,7 +159,6 @@ public class ItemAdminStaff extends ModItemBase {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	@SuppressWarnings("null")
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		if (ModTooltips.showAnnotationTip()) {
 			if (GearConfig.CONTENT.ADMINTOOLS.ENABLE_ADMIN_STAFF) {

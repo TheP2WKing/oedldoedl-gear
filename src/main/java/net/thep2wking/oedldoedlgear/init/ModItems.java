@@ -38,9 +38,7 @@ import net.thep2wking.oedldoedlgear.content.item.armor.ItemWizardHat;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemWoodenArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemArgentoriumArmor.AttributeUUIDArg;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemChainmail;
-import net.thep2wking.oedldoedlgear.content.item.misc.ItemChargedEssence;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemChargedSnowball;
-import net.thep2wking.oedldoedlgear.content.item.misc.ItemExplosionCore;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemExplosiveSnowball;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemRockySnowball;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemAdminStaff;
@@ -402,8 +400,9 @@ public class ModItems {
 
 	public static final Item TRAVELLERS_LEATHER = new ModItemBase(OedldoedlGear.MODID, "travellers_leather", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 
-	public static final Item EXPLOSION_CORE = new ItemExplosionCore(OedldoedlGear.MODID, "explosion_core", OedldoedlGear.TAB, ModRarities.RED, false, 1, 0);
-	public static final Item CHARGED_ESSENCE = new ItemChargedEssence(OedldoedlGear.MODID, "charged_essence", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 0);
+	public static final Item EXPLOSION_CORE = new ModItemBase(OedldoedlGear.MODID, "explosion_core", OedldoedlGear.TAB, ModRarities.RED, false, 1, 0);
+	public static final Item CHARGED_CORE = new ModItemBase(OedldoedlGear.MODID, "charged_core", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 0);
+	public static final Item MYSTIC_CORE = new ModItemBase(OedldoedlGear.MODID, "mystic_core", OedldoedlGear.TAB, ModRarities.GOLD, false, 1, 0);
 
 	public static final Item CHAINMAIL = new ItemChainmail(OedldoedlGear.MODID, "chainmail", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	

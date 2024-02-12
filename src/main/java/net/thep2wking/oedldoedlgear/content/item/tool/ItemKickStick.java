@@ -1,5 +1,6 @@
 package net.thep2wking.oedldoedlgear.content.item.tool;
 
+import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -8,7 +9,6 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
@@ -38,13 +38,14 @@ public class ItemKickStick extends ModItemBase {
 			EntityPlayer playerTarget = (EntityPlayer) target;
 			World world = player.getEntityWorld();
 			MinecraftServer server = world.getMinecraftServer();
-			if (target instanceof EntityPlayer && server != null) {
+			if (target instanceof EntityPlayerMP && server != null) {
 				((EntityPlayerMP) playerTarget).connection
-						.disconnect(new TextComponentString(GearConfig.CONTENT.ADMINTOOLS.KICK_MESSAGE));
+						.disconnect(new TextComponentString(GearConfig.CONTENT.ADMINTOOLS.BAN_MESSAGE));
 				player.sendMessage(new TextComponentString("[")
-						.appendSibling(new TextComponentTranslation(TextFormatting.RED + this.getUnlocalizedName()))
-						.appendSibling(new TextComponentString("] ")).appendSibling(new TextComponentTranslation(
-								TextFormatting.ITALIC + this.getUnlocalizedName() + ".tip2")));
+						.appendSibling(new TextComponentString(
+								TextFormatting.RED + I18n.format(this.getUnlocalizedName() + ".name")))
+						.appendSibling(new TextComponentString("] "))
+						.appendSibling(new TextComponentString(I18n.format(this.getUnlocalizedName() + ".tip2"))));
 			}
 		}
 		return super.hitEntity(stack, target, attacker);
