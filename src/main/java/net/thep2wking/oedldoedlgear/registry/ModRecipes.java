@@ -505,7 +505,7 @@ public class ModRecipes {
 					"ABA", "CDC", "ABA", 'A', "nuggetBedrockium", 'B', "dyeGray", 'C', "dyeLightGray", 'D', "stone");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "enhanced_dirt",
 					new ItemStack(ModBlocks.ENHANCED_DIRT, 4, 0), " A ", "ABA", " A ", 'A', "dirt", 'B',
-					Items.ENCHANTED_BOOK);
+					"enchantedBook");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "magical_wood",
 					new ItemStack(ModBlocks.MAGICAL_WOOD, 1, 0), "ABA", "BCB", "ABA", 'A', "nuggetGold", 'B',
 					"ingotGold", 'C', "bookshelf");
