@@ -1,4 +1,4 @@
-# Oedldoedl Core
+# Oedldoedl Gear
 
 [![curseforge](https://img.shields.io/static/v1?message=%20curseforge&logo=curseforge&style=for-the-badge&labelColor=f16436&color=1a1a1a&logoColor=0d0d0d&label)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-gear)
 [![versions](https://img.shields.io/static/v1?message=for%201.12.2%20|%201.16.5&logo=curseforge&style=for-the-badge&labelColor=f16436&color=1a1a1a&logoColor=0d0d0d&label)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-gear/files/all)
