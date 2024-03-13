@@ -53,4 +53,4 @@ This version is not compatible with older versions and will not work. Back up yo
 
 - removed baubles and movend them to oedldoedl curiosity
 - removed base cap and moved it to oedldoedl curiosity
-- removed option to switch armor models
+- removed now deprecated config options
