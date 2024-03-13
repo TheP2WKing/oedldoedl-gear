@@ -18,9 +18,9 @@ This version is not compatible with older versions and will not work. Back up yo
 - added knockback resistance to some armor types
 - added smashbats for all supported resources
 - added shears for supported resources
-- added enchanced dirt, wood and slime armor and tools
+- added enhanced dirt, wood and slime armor and tools
 - added travelers and long fall boots
-- added wizared hats that store potion effects
+- added wizard hats that store potion effects
 - added gamemode chestplate
 - added pink güffy jacket
 - added four new smashbats with different abilities
@@ -35,7 +35,7 @@ This version is not compatible with older versions and will not work. Back up yo
 - added four new wands inspired by tv series
 - added tooltips for items that have mode and range attributes
 - added config options to disable various armor and tools properties
-- added 5 new jumpppads
+- added 5 new jumppads
   
 ### Changed
 
@@ -51,6 +51,6 @@ This version is not compatible with older versions and will not work. Back up yo
 
 ### Removed
 
-- removed baubles and movend them to oedldoedl curiosity
+- removed baubles and moved them to oedldoedl curiosity
 - removed base cap and moved it to oedldoedl curiosity
 - removed now deprecated config options
