@@ -61,6 +61,7 @@ public class ItemBrefPower extends ModItemBase {
 		}
 		player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.BREF_POWER_COOLDOWN);
 		stack.damageItem(1, player);
+		player.swingArm(hand);
 		if (world instanceof WorldServer) {
 			double d0 = (double) (-MathHelper.sin(player.rotationYaw * 0.017453292F));
 			double d1 = (double) MathHelper.cos(player.rotationYaw * 0.017453292F);

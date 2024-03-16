@@ -2,6 +2,7 @@ package net.thep2wking.oedldoedlgear.registry;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.init.PotionTypes;
 import net.minecraft.item.ItemStack;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModNBTUtil;
@@ -10,6 +11,7 @@ import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModBlocks;
 import net.thep2wking.oedldoedlgear.init.ModItems;
+import net.thep2wking.oedldoedlgear.init.ModPotions;
 import net.thep2wking.oedldoedlgear.util.ModGearRecipeHelper;
 
 public class ModRecipes {
@@ -19,8 +21,13 @@ public class ModRecipes {
 		if (GearConfig.RECIPES.DEFAULT_OREDICT) {
 			ModRecipeHelper.addOreDict("bedrock", ModBlocks.BADROCK, 0);
 			ModRecipeHelper.addOreDict("dirtEnhanced", ModBlocks.ENHANCED_DIRT, 0);
+
 			ModRecipeHelper.addOreDict("magicWood", ModBlocks.MAGICAL_WOOD, 0);
 			ModRecipeHelper.addOreDict("blockMagicWood", ModBlocks.MAGICAL_WOOD, 0);
+			ModRecipeHelper.addOreDict("logWood", ModBlocks.MAGICAL_WOOD, 0);
+			ModRecipeHelper.addOreDict("blockPlankMagicWood", ModBlocks.MAGICAL_WOOD_PLANKS, 0);
+			ModRecipeHelper.addOreDict("plankMagicWood", ModBlocks.MAGICAL_WOOD_PLANKS, 0);
+			ModRecipeHelper.addOreDict("plankWood", ModBlocks.MAGICAL_WOOD_PLANKS, 0);
 
 			ModRecipeHelper.addOreDict("toolNeedle", ModItems.NEEDLE, 0);
 
@@ -337,9 +344,15 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/black_wizard_hat",
 					new ItemStack(ModItems.BLACK_WIZARD_HAT, 1, 0), " A ", " B ", "BBB", 'A', "ghastTear", 'B',
 					"fabricBlack");
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/black_wizard_hat_clear",
+					new ItemStack(ModItems.BLACK_WIZARD_HAT, 1, 0), "A", 'A',
+					new ItemStack(ModItems.BLACK_WIZARD_HAT, 1, 0));
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/blue_wizard_hat",
 					new ItemStack(ModItems.BLUE_WIZARD_HAT, 1, 0), " A ", " B ", "BCB", 'A', "ghastTear", 'B',
 					"fabricBlue", 'C', "fabricYellow");
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/blue_wizard_hat_clear",
+					new ItemStack(ModItems.BLUE_WIZARD_HAT, 1, 0), "A", 'A',
+					new ItemStack(ModItems.BLUE_WIZARD_HAT, 1, 0));
 			ModRecipeHelper.addChestplateRecipe(OedldoedlGear.MODID, "gamemode",
 					new ItemStack(ModItems.GAMEMODE_CHESTPLATE, 1, 0), "commandBlock");
 
@@ -505,10 +518,12 @@ public class ModRecipes {
 					"ABA", "CDC", "ABA", 'A', "nuggetBedrockium", 'B', "dyeGray", 'C', "dyeLightGray", 'D', "stone");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "enhanced_dirt",
 					new ItemStack(ModBlocks.ENHANCED_DIRT, 4, 0), " A ", "ABA", " A ", 'A', "dirt", 'B',
-					"enchantedBook");
+					"bookEnchanted");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "magical_wood",
 					new ItemStack(ModBlocks.MAGICAL_WOOD, 1, 0), "ABA", "BCB", "ABA", 'A', "nuggetGold", 'B',
 					"ingotGold", 'C', "bookshelf");
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "magical_wood_planks",
+					new ItemStack(ModBlocks.MAGICAL_WOOD_PLANKS, 4, 0), "A", 'A', "blockMagicWood");
 
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "jump_pad", new ItemStack(ModBlocks.JUMP_PAD, 1, 0),
 					"A", "B", 'A', "slimeball", 'B', new ItemStack(Blocks.WOODEN_PRESSURE_PLATE, 1, 0));
@@ -524,6 +539,16 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "impact_pad",
 					new ItemStack(ModBlocks.IMPACT_PAD, 1, 0),
 					"A", "B", 'A', "wool", 'B', new ItemStack(Blocks.WOODEN_PRESSURE_PLATE, 1, 0));
+		}
+
+		if (GearConfig.RECIPES.BREWING_RECIPES) {
+			ModRecipeHelper.addBrewingRecipe(ModPotions.FLIGHT_NORMAL, PotionTypes.AWKWARD,
+					new ItemStack(Items.ELYTRA, 1, 0));
+			ModRecipeHelper.addBrewingRecipe(ModPotions.FLIGHT_LONG, ModPotions.FLIGHT_NORMAL,
+					new ItemStack(Items.REDSTONE, 1, 0));
+
+			ModRecipeHelper.addBrewingRecipe(ModPotions.MILK_NORMAL, PotionTypes.WATER,
+					new ItemStack(Items.MILK_BUCKET, 1, 0));
 		}
 	}
 }

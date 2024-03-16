@@ -33,21 +33,21 @@ import net.thep2wking.oedldoedlgear.init.ModItems;
 
 @Mod.EventBusSubscriber
 public class ItemToujouriumArmor extends ModItemArmorBase {
-	public enum AttributeUUIDArg {
+	public enum ToujouriumUUIDs {
 		HELMET_UUID("72973f80-73c6-434e-bbce-cb28a5c5d6c3"), CHESTPLATE_UUID("edddc8d4-84a4-42fa-8654-d5704ca26225"),
 		LEGGINGS_UUID("0222ad71-5a72-4490-acce-fd8fb8eb70ee"), BOOTS_UUID("1229d236-1cbd-4415-b367-1f0ed5a00ae6");
 
 		public String ids;
 
-		AttributeUUIDArg(String ids) {
+		ToujouriumUUIDs(String ids) {
 			this.ids = ids;
 		}
 	}
 
-	public AttributeUUIDArg uuid;
+	public ToujouriumUUIDs uuid;
 
 	public ItemToujouriumArmor(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
-			EntityEquipmentSlot slot, AttributeUUIDArg uuid, EnumRarity rarity, boolean hasEffect, int tooltipLines,
+			EntityEquipmentSlot slot, ToujouriumUUIDs uuid, EnumRarity rarity, boolean hasEffect, int tooltipLines,
 			int annotationLines) {
 		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines, annotationLines);
 		this.uuid = uuid;
@@ -110,30 +110,6 @@ public class ItemToujouriumArmor extends ModItemArmorBase {
 			}
 		}
 	}
-
-	// @SubscribeEvent
-	// @SuppressWarnings("null")
-	// public static void onLivingHurt(LivingHurtEvent event) {
-	// if (event.getSource() instanceof EntityDamageSource
-	// && !((EntityDamageSource) event.getSource()).getIsThornsDamage()) {
-	// if (event.getSource().getTrueSource() instanceof EntityPlayer) {
-	// EntityPlayer player = (EntityPlayer) event.getSource().getTrueSource();
-	// ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-	// ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
-	// ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-	// ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
-	// if (((!head.isEmpty()) && (head.getItem() == ModItems.TOUJOURIUM_HELMET) &&
-	// (!chest.isEmpty())
-	// && (chest.getItem() == ModItems.TOUJOURIUM_CHESTPLATE) && (!legs.isEmpty())
-	// && (legs.getItem() == ModItems.TOUJOURIUM_LEGGINGS) && (!feet.isEmpty())
-	// && (feet.getItem() == ModItems.TOUJOURIUM_BOOTS))) {
-	// event.getEntityLiving()
-	// .addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 10, 20, false,
-	// false));
-	// }
-	// }
-	// }
-	// }
 
 	@SubscribeEvent
 	public static void onLivingKnockback(LivingKnockBackEvent event) {

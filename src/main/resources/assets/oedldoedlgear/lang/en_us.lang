@@ -2,12 +2,25 @@
 itemGroup.oedldoedlgear.name=§dOedldoedl Gear
 
 # icons
-item.oedldoedlcore.gear_icon.annotation3=Version: §e1.12.2-4.0.0
+item.oedldoedlcore.gear_icon.annotation3=Version: §e1.12.2-4.1.0
 
-# sound
+# sounds
 sound.oedldoedlgear.megumin=Megumin screems
 sound.oedldoedlgear.quiek=Bottle quieking
 sound.oedldoedlgear.oniisan=Oneesan wispering
+
+## potions
+oedldoedlgear.flight=Flight
+potion.effect.oedldoedlgear.flight=Potion of Flight
+splash_potion.effect.oedldoedlgear.flight=Splash Potion of Flight
+lingering_potion.effect.oedldoedlgear.flight=Lingering Potion of Flight
+tipped_arrow.effect.oedldoedlgear.flight=Arrow of Flight
+
+oedldoedlgear.milk=Milk
+potion.effect.oedldoedlgear.milk=Bottle of Milk
+splash_potion.effect.oedldoedlgear.milk=Splash Bottle of Milk
+lingering_potion.effect.oedldoedlgear.milk=Lingering Bottle of Milk
+tipped_arrow.effect.oedldoedlgear.milk=Arrow of Milk
 
 # base
 item.oedldoedlgear.base_helmet.name=Base Helmet
@@ -125,7 +138,7 @@ item.oedldoedlgear.oedldoedl_leggings.name=Oedldoedl Leggings
 item.oedldoedlgear.oedldoedl_leggings.tip1=A leggings made for Oedldoedl Projects.
 item.oedldoedlgear.oedldoedl_boots.name=Oedldoedl Boots
 item.oedldoedlgear.oedldoedl_boots.tip1=Boots made for Oedldoedl Projects.
-item.oedldoedlgear.oedldoedl_armor.effects1=Underwater Breathing
+item.oedldoedlgear.oedldoedl_armor.effects1=Unlimited Air
 item.oedldoedlgear.oedldoedl_armor.effects2=Step Up
 item.oedldoedlgear.oedldoedl_sword.name=Oedldoedl Sword
 item.oedldoedlgear.oedldoedl_sword.tip1=A sword made for Oedldoedl Projects.
@@ -146,34 +159,6 @@ item.oedldoedlgear.oedldoedl_shears.tip1=Shears made for Oedldoedl Projects.
 item.oedldoedlgear.oedldoedl_shield.name=Oedldoedl Shield
 item.oedldoedlgear.oedldoedl_shield.tip1=A shield made for Oedldoedl Projects.
 
-# unstable
-item.oedldoedlgear.unstable_helmet.name=Unstable Helmet
-item.oedldoedlgear.unstable_helmet.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_chestplate.name=Unstable Chestplate
-item.oedldoedlgear.unstable_chestplate.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_leggings.name=Unstable Leggings
-item.oedldoedlgear.unstable_leggings.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_boots.name=Unstable Boots
-item.oedldoedlgear.unstable_boots.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_sword.name=Unstable Sword
-item.oedldoedlgear.unstable_sword.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_shovel.name=Unstable Shovel
-item.oedldoedlgear.unstable_shovel.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_pickaxe.name=Unstable Pickaxe
-item.oedldoedlgear.unstable_pickaxe.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_axe.name=Unstable Axe
-item.oedldoedlgear.unstable_axe.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_hoe.name=Unstable Hoe
-item.oedldoedlgear.unstable_hoe.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_paxel.name=Unstable Paxel
-item.oedldoedlgear.unstable_paxel.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_smashbat.name=Unstable Smashbat
-item.oedldoedlgear.unstable_smashbat.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_shears.name=Unstable Shears
-item.oedldoedlgear.unstable_shears.tip1=Explodes on impact.
-item.oedldoedlgear.unstable_shield.name=Unstable Shield
-item.oedldoedlgear.unstable_shield.tip1=Explodes on impact.
-
 # gremorium
 item.oedldoedlgear.gremorium_helmet.name=Gremorium Helmet
 item.oedldoedlgear.gremorium_helmet.tip1=The full power of Rias.
@@ -184,7 +169,7 @@ item.oedldoedlgear.gremorium_leggings.tip1=The full power of Rias.
 item.oedldoedlgear.gremorium_boots.name=Gremorium Boots
 item.oedldoedlgear.gremorium_boots.tip1=The full power of Rias.
 item.oedldoedlgear.gremorium_armor.effects1=Removes Poison / Wither
-item.oedldoedlgear.gremorium_armor.effects2=Underwater Breathing
+item.oedldoedlgear.gremorium_armor.effects2=Unlimited Air
 item.oedldoedlgear.gremorium_armor.effects3=Fast Flight
 item.oedldoedlgear.gremorium_armor.effects4=Step Up
 item.oedldoedlgear.gremorium_sword.name=Gremorium Sword
@@ -216,7 +201,7 @@ item.oedldoedlgear.himejimarium_leggings.tip1=The full power of Akeno.
 item.oedldoedlgear.himejimarium_boots.name=Himejimarium Boots
 item.oedldoedlgear.himejimarium_boots.tip1=The full power of Akeno.
 item.oedldoedlgear.himejimarium_armor.effects1=Attacked Entities are Struck by Lightning §e§o(Sneak)
-item.oedldoedlgear.himejimarium_armor.effects2=Underwater Breathing
+item.oedldoedlgear.himejimarium_armor.effects2=Unlimited Air
 item.oedldoedlgear.himejimarium_armor.effects3=Step Up
 item.oedldoedlgear.himejimarium_sword.name=Himejimarium Sword
 item.oedldoedlgear.himejimarium_sword.tip1=The full power of Akeno?
@@ -247,8 +232,8 @@ item.oedldoedlgear.toujourium_leggings.tip1=The full power of Koneko.
 item.oedldoedlgear.toujourium_boots.name=Toujourium Boots
 item.oedldoedlgear.toujourium_boots.tip1=The full power of Koneko.
 item.oedldoedlgear.toujourium_armor.effects1=Additional Attack Knockback
-item.oedldoedlgear.toujourium_armor.effects2=Underwater Breathing
-item.oedldoedlgear.toujourium_armor.effects3=Negates Fall Damage
+item.oedldoedlgear.toujourium_armor.effects2=Negates Fall Damage
+item.oedldoedlgear.toujourium_armor.effects3=Unlimited Air
 item.oedldoedlgear.toujourium_armor.effects4=Step Up
 item.oedldoedlgear.toujourium_sword.name=Toujourium Sword
 item.oedldoedlgear.toujourium_sword.tip1=The full power of Koneko?
@@ -280,8 +265,8 @@ item.oedldoedlgear.argentorium_boots.name=Argentorium Boots
 item.oedldoedlgear.argentorium_boots.tip1=The full power of Asia.
 item.oedldoedlgear.argentorium_armor.effects1=Bonus Damage Against Undead
 item.oedldoedlgear.argentorium_armor.effects2=Fast Regeneration §e§o(Sneak)
-item.oedldoedlgear.argentorium_armor.effects3=Underwater Breathing
-item.oedldoedlgear.argentorium_armor.effects4=Additional Hearts
+item.oedldoedlgear.argentorium_armor.effects3=Additional Max Health
+item.oedldoedlgear.argentorium_armor.effects4=Unlimited Air
 item.oedldoedlgear.argentorium_armor.effects5=Step Up
 item.oedldoedlgear.argentorium_sword.name=Argentorium Sword
 item.oedldoedlgear.argentorium_sword.tip1=The full power of Asia?
@@ -311,7 +296,7 @@ item.oedldoedlgear.quartarium_leggings.name=Quartarium Leggings
 item.oedldoedlgear.quartarium_leggings.tip1=The full power of Xenovia.
 item.oedldoedlgear.quartarium_boots.name=Quartarium Boots
 item.oedldoedlgear.quartarium_boots.tip1=The full power of Xenovia.
-item.oedldoedlgear.quartarium_armor.effects1=Underwater Breathing
+item.oedldoedlgear.quartarium_armor.effects1=Unlimited Air
 item.oedldoedlgear.quartarium_armor.effects2=Life Steal
 item.oedldoedlgear.quartarium_armor.effects3=Step Up
 item.oedldoedlgear.quartarium_sword.name=Quartarium Sword
@@ -345,7 +330,7 @@ item.oedldoedlgear.nagatorium_boots.tip1=The full power of Hayase.
 item.oedldoedlgear.nagatorium_armor.effects1=Attacked Entities get Levitation §e§o(Sneak)
 item.oedldoedlgear.nagatorium_armor.effects2=Attacked Entities get Nasty Effects
 item.oedldoedlgear.nagatorium_armor.effects3=Inverts Negative Potion Effects
-item.oedldoedlgear.nagatorium_armor.effects4=Underwater Breathing
+item.oedldoedlgear.nagatorium_armor.effects4=Unlimited Air
 item.oedldoedlgear.nagatorium_armor.effects5=Step Up
 item.oedldoedlgear.nagatorium_sword.name=Nagatorium Sword
 item.oedldoedlgear.nagatorium_sword.tip1=The full power of Hayase?
@@ -375,10 +360,10 @@ item.oedldoedlgear.sakurajimarium_leggings.name=Sakurajimarium Leggings
 item.oedldoedlgear.sakurajimarium_leggings.tip1=The full power of Mai.
 item.oedldoedlgear.sakurajimarium_boots.name=Sakurajimarium Boots
 item.oedldoedlgear.sakurajimarium_boots.tip1=The full power of Mai.
-item.oedldoedlgear.sakurajimarium_armor.effects1=
-item.oedldoedlgear.sakurajimarium_armor.effects2=
-item.oedldoedlgear.sakurajimarium_armor.effects3=
-item.oedldoedlgear.sakurajimarium_armor.effects4=
+item.oedldoedlgear.sakurajimarium_armor.effects1=Fast Forward Time §e§o(Sneak)
+item.oedldoedlgear.sakurajimarium_armor.effects2=Additional Reach Distance
+item.oedldoedlgear.sakurajimarium_armor.effects3=Unlimited Air
+item.oedldoedlgear.sakurajimarium_armor.effects4=Step Up
 item.oedldoedlgear.sakurajimarium_sword.name=Sakurajimarium Sword
 item.oedldoedlgear.sakurajimarium_sword.tip1=The full power of Mai?
 item.oedldoedlgear.sakurajimarium_shovel.name=Sakurajimarium Shovel
@@ -407,10 +392,10 @@ item.oedldoedlgear.kitagawarium_leggings.name=Kitagawarium Leggings
 item.oedldoedlgear.kitagawarium_leggings.tip1=The full power of Marin.
 item.oedldoedlgear.kitagawarium_boots.name=Kitagawarium Boots
 item.oedldoedlgear.kitagawarium_boots.tip1=The full power of Marin.
-item.oedldoedlgear.kitagawarium_armor.effects1=
-item.oedldoedlgear.kitagawarium_armor.effects2=
-item.oedldoedlgear.kitagawarium_armor.effects3=
-item.oedldoedlgear.kitagawarium_armor.effects4=
+item.oedldoedlgear.kitagawarium_armor.effects1=Attacked Entities are set on Fire during the Day
+item.oedldoedlgear.kitagawarium_armor.effects2=Hostile Entities around you take Damage 
+item.oedldoedlgear.kitagawarium_armor.effects3=Unlimited Air
+item.oedldoedlgear.kitagawarium_armor.effects4=Step Up
 item.oedldoedlgear.kitagawarium_sword.name=Kitagawarium Sword
 item.oedldoedlgear.kitagawarium_sword.tip1=The full power of Marin?
 item.oedldoedlgear.kitagawarium_shovel.name=Kitagawarium Shovel
@@ -430,49 +415,13 @@ item.oedldoedlgear.kitagawarium_shears.tip1=The full power of Marin?
 item.oedldoedlgear.kitagawarium_shield.name=Kitagawarium Shield
 item.oedldoedlgear.kitagawarium_shield.tip1=The full power of Marin?
 
-# infinity
-item.oedldoedlgear.infinity_helmet.name=Infinity Helmet
-item.oedldoedlgear.infinity_helmet.tip1=The most expensive helmet.
-item.oedldoedlgear.infinity_chestplate.name=Infinity Chestplate
-item.oedldoedlgear.infinity_chestplate.tip1=The most expensive chestplate.
-item.oedldoedlgear.infinity_leggings.name=Infinity Leggings
-item.oedldoedlgear.infinity_leggings.tip1=The most expensive leggings.
-item.oedldoedlgear.infinity_boots.name=Infinity Boots
-item.oedldoedlgear.infinity_boots.tip1=The most expensive boots.
-item.oedldoedlgear.infinity_armor.effects1=Almost Completely Invulnerable
-item.oedldoedlgear.infinity_armor.effects2=Mobs will no Longer Attack you
-item.oedldoedlgear.infinity_armor.effects3=Removes Nasty Effects
-item.oedldoedlgear.infinity_armor.effects4=Fastest Flight
-item.oedldoedlgear.infinity_armor.effects5=Looks Cool
-item.oedldoedlgear.infinity_sword.name=Sword of the Cosmos
-item.oedldoedlgear.infinity_sword.tip1=The most expensive sword.
-item.oedldoedlgear.infinity_shovel.name=Planet Eater
-item.oedldoedlgear.infinity_shovel.annotation1=AOE Mode:
-item.oedldoedlgear.infinity_shovel.tip1=The most expensive shovel.
-item.oedldoedlgear.infinity_pickaxe.name=World Breaker
-item.oedldoedlgear.infinity_pickaxe.annotation1=AOE Mode:
-item.oedldoedlgear.infinity_pickaxe.tip1=The most expensive pickaxe.
-item.oedldoedlgear.infinity_axe.name=Natures Ruin
-item.oedldoedlgear.infinity_axe.tip1=The most expensive axe.
-item.oedldoedlgear.infinity_hoe.name=Hoe of the Green Earth
-item.oedldoedlgear.infinity_hoe.tip1=The most expensive hoe.
-item.oedldoedlgear.infinity_smashbat.name=Smashbat of Indirect Teleportation
-item.oedldoedlgear.infinity_smashbat.tip1=The most expensive smashbat.
-item.oedldoedlgear.infinity_paxel.name=Dimension Demolisher
-item.oedldoedlgear.infinity_paxel.annotation1=AOE Mode:
-item.oedldoedlgear.infinity_paxel.tip1=The most expensive paxel.
-item.oedldoedlgear.infinity_shears.name=Shear Madness
-item.oedldoedlgear.infinity_shears.tip1=The most expensive shears.
-item.oedldoedlgear.infinity_shield.name=Block Defender
-item.oedldoedlgear.infinity_shield.tip1=The most expensive shield.
-
 # wizard
 item.oedldoedlgear.black_wizard_hat.name=Black Wizard Hat
-item.oedldoedlgear.black_wizard_hat.annotation1=Stored Potion:
+item.oedldoedlgear.black_wizard_hat.annotation1=Stored potion:
 item.oedldoedlgear.black_wizard_hat.annotation2=None
 item.oedldoedlgear.black_wizard_hat.tip1=Stores Potion Effects for later.
 item.oedldoedlgear.blue_wizard_hat.name=Blue Wizard Hat
-item.oedldoedlgear.blue_wizard_hat.annotation1=Stored Potion:
+item.oedldoedlgear.blue_wizard_hat.annotation1=Stored potion:
 item.oedldoedlgear.blue_wizard_hat.annotation2=None
 item.oedldoedlgear.blue_wizard_hat.tip1=Stores Potion Effects for later.
 
@@ -499,7 +448,7 @@ item.oedldoedlgear.flying_shooting_college_jacket.tip3=You are lucky to get your
 
 # güffy
 item.oedldoedlgear.gradient_gueffy_tag_quilted_jacket.name=Gradient Güffy Tag Quilted Jacket
-item.oedldoedlgear.gradient_gueffy_tag_quilted_jacket.tip1=From different Universe...?
+item.oedldoedlgear.gradient_gueffy_tag_quilted_jacket.tip1=From different a universe...?
 
 # travel
 item.oedldoedlgear.travellers_boots.name=Travellers Boots
@@ -594,10 +543,10 @@ item.oedldoedlgear.pork_hammer.name=Pork Hammer
 item.oedldoedlgear.pork_hammer.tip1=Spawns raw Porkchop, why?
 item.oedldoedlgear.pork_hammer.tip2=Also known as Ham-mer.
 item.oedldoedlgear.ban_hammer.name=Ban Hammer
-item.oedldoedlgear.ban_hammer.tip1=Bans players from Multiplayer Servers.
+item.oedldoedlgear.ban_hammer.tip1=Ban players from Multiplayer Servers.
 item.oedldoedlgear.ban_hammer.tip2=Succesfully banned player from this server!
 item.oedldoedlgear.kick_stick.name=Kick Stick
-item.oedldoedlgear.kick_stick.tip1=Kicks players from Multiplayer Servers.
+item.oedldoedlgear.kick_stick.tip1=Kick players from Multiplayer Servers.
 item.oedldoedlgear.kick_stick.tip2=Succesfully kicked player from this server!
 item.oedldoedlgear.explosion_staff.name=Staff of Explosion
 item.oedldoedlgear.explosion_staff.tip1=EXPLOOOOOOSION!
@@ -636,25 +585,6 @@ item.oedldoedlgear.charged_snowball.name=Charged Snowball
 item.oedldoedlgear.charged_snowball.tip1=Is there something that make sense?
 
 # ingreadients
-item.oedldoedlgear.base_toolkit.name=Base Toolkit
-item.oedldoedlgear.base_toolkit.tip1=The beginning of upgrades.
-item.oedldoedlgear.oedldoedl_toolkit.name=Oedldoedl Toolkit
-item.oedldoedlgear.oedldoedl_toolkit.tip1=Upgrade base to oedldoedl tools / armor.
-item.oedldoedlgear.gremorium_toolkit.name=Gremorium Toolkit
-item.oedldoedlgear.gremorium_toolkit.tip1=Upgrade base to gremorium tools / armor.
-item.oedldoedlgear.himejimarium_toolkit.name=Himejimarium Toolkit
-item.oedldoedlgear.himejimarium_toolkit.tip1=Upgrade base to himejimarium tools / armor.
-item.oedldoedlgear.toujourium_toolkit.name=Toujourium Toolkit
-item.oedldoedlgear.toujourium_toolkit.tip1=Upgrade base to toujourium tools / armor.
-item.oedldoedlgear.argentorium_toolkit.name=Argentorium Toolkit
-item.oedldoedlgear.argentorium_toolkit.tip1=Upgrade base to argentorium tools / armor.
-item.oedldoedlgear.quartarium_toolkit.name=Quartarium Toolkit
-item.oedldoedlgear.quartarium_toolkit.tip1=Upgrade base to quartarium tools / armor.
-item.oedldoedlgear.nagatorium_toolkit.name=Nagatorium Toolkit
-item.oedldoedlgear.nagatorium_toolkit.tip1=Upgrade base to nagatorium tools / armor.
-item.oedldoedlgear.sakurajimarium_toolkit.name=Sakurajimarium Toolkit
-item.oedldoedlgear.sakurajimarium_toolkit.tip1=Upgrade base to sakurajimarium tools / armor.
-
 item.oedldoedlgear.white_fabric.name=White Fabric
 item.oedldoedlgear.white_fabric.tip1=Forge is the better Modlader.
 item.oedldoedlgear.orange_fabric.name=Orange Fabric
@@ -757,7 +687,8 @@ tile.oedldoedlgear.enhanced_dirt.tip1=Better than dirt.
 tile.oedldoedlgear.enhanced_dirt.tip2=Expanded and Enhanced!
 tile.oedldoedlgear.magical_wood.name=Magical Wood
 tile.oedldoedlgear.magical_wood.tip1=Am I a wizard? NO!
-
+tile.oedldoedlgear.magical_wood_planks.name=Magical Wood Planks
+tile.oedldoedlgear.magical_wood_planks.tip1=Still NOT a wizard!
 # jump pads
 tile.oedldoedlgear.jump_pad.name=Jump Pad
 tile.oedldoedlgear.jump_pad.tip1=Get hight.

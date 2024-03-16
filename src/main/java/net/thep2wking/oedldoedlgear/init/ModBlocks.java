@@ -14,7 +14,8 @@ import net.thep2wking.oedldoedlgear.content.block.BlockJumpPad;
 public class ModBlocks {
 	public static final Block BADROCK = new ModBlockBase(OedldoedlGear.MODID, "badrock", OedldoedlGear.TAB, Material.ROCK, SoundType.STONE, MapColor.BLACK, 5, ModToolTypes.PICKAXE, 1000f, 10000f, 0);
 	public static final Block ENHANCED_DIRT = new ModBlockBase(OedldoedlGear.MODID, "enhanced_dirt", OedldoedlGear.TAB, Material.GOURD, SoundType.GROUND, MapColor.DIRT, 0, ModToolTypes.SHOVEL, 0.5f, 0.5f, 0);
-	public static final Block MAGICAL_WOOD = new ModBlockBase(OedldoedlGear.MODID, "magical_wood", OedldoedlGear.TAB, Material.WOOD, SoundType.WOOD, MapColor.YELLOW, 0, ModToolTypes.AXE, 3f, 3f, 4);
+	public static final Block MAGICAL_WOOD = new ModBlockBase(OedldoedlGear.MODID, "magical_wood", OedldoedlGear.TAB, Material.WOOD, SoundType.WOOD, MapColor.YELLOW, 0, ModToolTypes.AXE, 6f, 6f, 6);
+	public static final Block MAGICAL_WOOD_PLANKS = new ModBlockBase(OedldoedlGear.MODID, "magical_wood_planks", OedldoedlGear.TAB, Material.WOOD, SoundType.WOOD, MapColor.YELLOW, 0, ModToolTypes.AXE, 6f, 6f, 6);
 
 	public static final Block JUMP_PAD = new BlockJumpPad(OedldoedlGear.MODID, "jump_pad", OedldoedlGear.TAB, (float) GearConfig.CONTENT.JUMPPADS.JUMP_PAD_MOTION, Material.WOOD, SoundType.WOOD, MapColor.GREEN, 0, ModToolTypes.AXE, 1.5f, 1.5f, 0);
 	public static final Block JUMP_PAD_PLUS = new BlockJumpPad(OedldoedlGear.MODID, "jump_pad_plus", OedldoedlGear.TAB, (float) GearConfig.CONTENT.JUMPPADS.JUMP_PAD_PLUS_MOTION, Material.WOOD, SoundType.WOOD, MapColor.PURPLE, 0, ModToolTypes.AXE, 1.5f, 1.5f, 0);

@@ -36,21 +36,21 @@ import net.thep2wking.oedldoedlgear.init.ModItems;
 
 @Mod.EventBusSubscriber
 public class ItemArgentoriumArmor extends ModItemArmorBase {
-	public enum AttributeUUIDArg {
+	public enum ArgentoriumUUIDs {
 		HELMET_UUID("711b80d3-e561-4a7d-9c4a-2edb008ccaad"), CHESTPLATE_UUID("faaea4eb-ca15-49e5-a741-46d169adf826"),
 		LEGGINGS_UUID("123b072e-0e57-4535-9d3e-c80eb01bd09e"), BOOTS_UUID("5f2aed44-f8a9-483d-b513-d3bee1279dcb");
 
 		public String ids;
 
-		AttributeUUIDArg(String ids) {
+		ArgentoriumUUIDs(String ids) {
 			this.ids = ids;
 		}
 	}
 
-	public AttributeUUIDArg uuid;
+	public ArgentoriumUUIDs uuid;
 
 	public ItemArgentoriumArmor(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
-			EntityEquipmentSlot slot, AttributeUUIDArg uuid, EnumRarity rarity, boolean hasEffect, int tooltipLines,
+			EntityEquipmentSlot slot, ArgentoriumUUIDs uuid, EnumRarity rarity, boolean hasEffect, int tooltipLines,
 			int annotationLines) {
 		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines, annotationLines);
 		this.uuid = uuid;

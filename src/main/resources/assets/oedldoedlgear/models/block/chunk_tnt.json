@@ -1,9 +1,0 @@
-{
-    "parent": "minecraft:block/cube_bottom_top",
-    "textures": 
-    {
-        "top": "minecraft:blocks/tnt_top",
-        "bottom": "minecraft:blocks/tnt_bottom",
-        "side": "oedldoedlgear:blocks/chunk_tnt_side"
-    }
-}

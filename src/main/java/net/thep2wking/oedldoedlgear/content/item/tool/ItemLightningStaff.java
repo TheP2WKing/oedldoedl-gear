@@ -1,6 +1,7 @@
 package net.thep2wking.oedldoedlgear.content.item.tool;
 
 import java.util.List;
+import java.util.Random;
 
 import javax.annotation.Nullable;
 
@@ -66,10 +67,10 @@ public class ItemLightningStaff extends ModItemBase {
 			if (gothrough) {
 			} else {
 				if (!world.isRemote) {
-					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x + 2, end.y, end.z, false));
-					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x - 2, end.y, end.z, false));
-					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z + 2, false));
-					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z - 2, false));
+					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x + new Random().nextInt(3), end.y, end.z, false));
+					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x - new Random().nextInt(3), end.y, end.z, false));
+					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z + new Random().nextInt(3), false));
+					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z - new Random().nextInt(3), false));
 					player.world.addWeatherEffect(new EntityLightningBolt(world, end.x, end.y, end.z, false));
 				}
 				player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_COOLDOWN);
@@ -83,10 +84,10 @@ public class ItemLightningStaff extends ModItemBase {
 			int y = blockPos.getY();
 			int z = blockPos.getZ();
 			if (!world.isRemote) {
-				player.world.addWeatherEffect(new EntityLightningBolt(world, x + 2, y, z, false));
-				player.world.addWeatherEffect(new EntityLightningBolt(world, x - 2, y, z, false));
-				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z + 2, false));
-				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z - 2, false));
+				player.world.addWeatherEffect(new EntityLightningBolt(world, x + new Random().nextInt(3), y, z, false));
+				player.world.addWeatherEffect(new EntityLightningBolt(world, x - new Random().nextInt(3), y, z, false));
+				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z + new Random().nextInt(3), false));
+				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z - new Random().nextInt(3), false));
 				player.world.addWeatherEffect(new EntityLightningBolt(world, x, y, z, false));
 			}
 			player.getCooldownTracker().setCooldown(this, GearConfig.CONTENT.STAFFS.LIGHTNING_STAFF_COOLDOWN);

@@ -18,7 +18,6 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
@@ -27,7 +26,6 @@ import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 
-@Mod.EventBusSubscriber
 public class ItemEmeraldArmor extends ModItemArmorBase {
 	public ItemEmeraldArmor(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
 			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {

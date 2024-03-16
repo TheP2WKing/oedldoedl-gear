@@ -40,6 +40,7 @@ public class ItemFireWand extends ModItemBase {
 		world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_GHAST_SHOOT,
 				SoundCategory.AMBIENT, 1.0f, 1.0f);
 		player.getCooldownTracker().setCooldown(this, 20);
+		player.swingArm(hand);
 		if (!player.isCreative()) {
 			stack.damageItem(1, player);
 		}

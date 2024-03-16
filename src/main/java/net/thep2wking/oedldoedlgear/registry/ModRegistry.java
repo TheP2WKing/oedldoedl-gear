@@ -2,6 +2,8 @@ package net.thep2wking.oedldoedlgear.registry;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionType;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -12,6 +14,7 @@ import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.init.ModBlocks;
 import net.thep2wking.oedldoedlgear.init.ModItems;
+import net.thep2wking.oedldoedlgear.init.ModPotions;
 import net.thep2wking.oedldoedlgear.init.ModSounds;
 
 @Mod.EventBusSubscriber
@@ -28,6 +31,8 @@ public class ModRegistry {
 		ModRegistryHelper.registerBlock(event, ModBlocks.BADROCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.ENHANCED_DIRT);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MAGICAL_WOOD);
+		ModRegistryHelper.registerBlock(event, ModBlocks.MAGICAL_WOOD_PLANKS);
+
 		ModRegistryHelper.registerBlock(event, ModBlocks.JUMP_PAD);
 		ModRegistryHelper.registerBlock(event, ModBlocks.JUMP_PAD_PLUS);
 		ModRegistryHelper.registerBlock(event, ModBlocks.JUMP_PAD_PLUS_PLUS);
@@ -42,6 +47,8 @@ public class ModRegistry {
 		ModRegistryHelper.registerItemBlock(event, ModItems.BADROCK);
 		ModRegistryHelper.registerItemBlock(event, ModItems.ENHANCED_DIRT);
 		ModRegistryHelper.registerItemBlock(event, ModItems.MAGICAL_WOOD);
+		ModRegistryHelper.registerItemBlock(event, ModItems.MAGICAL_WOOD_PLANKS);
+
 		ModRegistryHelper.registerItemBlock(event, ModItems.JUMP_PAD);
 		ModRegistryHelper.registerItemBlock(event, ModItems.JUMP_PAD_PLUS);
 		ModRegistryHelper.registerItemBlock(event, ModItems.JUMP_PAD_PLUS_PLUS);
@@ -350,5 +357,22 @@ public class ModRegistry {
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.MEGUMIN);
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.QUIEK);
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.ONIISAN);
+	}
+
+	@SubscribeEvent
+	public static void onPotionRegister(RegistryEvent.Register<Potion> event) {
+		ModLogger.registeredPotionsLogger(OedldoedlGear.MODID);
+
+		event.getRegistry().register(ModPotions.FLIGHT);
+		event.getRegistry().register(ModPotions.MILK);
+	}
+
+	@SubscribeEvent
+	public static void onPotionTypeRegister(RegistryEvent.Register<PotionType> event) {
+		ModLogger.registeredPotionTypesLogger(OedldoedlGear.MODID);
+
+		event.getRegistry().register(ModPotions.FLIGHT_NORMAL);
+		event.getRegistry().register(ModPotions.FLIGHT_LONG);
+		event.getRegistry().register(ModPotions.MILK_NORMAL);
 	}
 }

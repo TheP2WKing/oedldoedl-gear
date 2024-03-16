@@ -7,11 +7,9 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.Mod;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemSmashbatBase;
 import net.thep2wking.oedldoedlcore.util.ModHitSound;
 
-@Mod.EventBusSubscriber
 public class ItemLaunchingSmashbat extends ModItemSmashbatBase {
 	public ItemLaunchingSmashbat(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
 			float attackSpeed, double horizontalMotion, double verticalMotion, ModHitSound hitSound, EnumRarity rarity,

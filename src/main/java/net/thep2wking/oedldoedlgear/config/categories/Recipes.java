@@ -11,4 +11,7 @@ public class Recipes {
 
 	@Config.Name("Enable Default Oredict")
 	public boolean DEFAULT_OREDICT = true;
+
+	@Config.Name("Enable Brewing Recipes")
+	public boolean BREWING_RECIPES = true;
 }
