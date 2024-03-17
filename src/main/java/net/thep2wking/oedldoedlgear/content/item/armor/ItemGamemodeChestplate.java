@@ -11,10 +11,12 @@ import com.google.common.collect.Multimap;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
@@ -42,6 +44,17 @@ public class ItemGamemodeChestplate extends ModItemArmorBase {
 	public ItemGamemodeChestplate(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
 			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines, annotationLines);
+	}
+
+	@Override
+	public boolean isEnchantable(ItemStack stack) {
+		return true;
+	}
+
+	@Override
+	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+		return enchantment.type.canEnchantItem(stack.getItem())
+				|| enchantment.canApply(new ItemStack(Items.IRON_CHESTPLATE));
 	}
 
 	public static final UUID CHESTPLATE_UUID = UUID.fromString("789e2e67-2351-483a-acd5-a2f1acfb7140");

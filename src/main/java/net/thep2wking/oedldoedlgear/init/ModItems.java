@@ -37,6 +37,7 @@ import net.thep2wking.oedldoedlgear.content.item.armor.ItemTravellersBoots;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemWizardHat;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemWoodenArmor;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemArgentoriumArmor.ArgentoriumUUIDs;
+import net.thep2wking.oedldoedlgear.content.item.armor.ItemCrocs;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemSakurajimariumArmor.SakurajimariumUUIDs;
 import net.thep2wking.oedldoedlgear.content.item.armor.ItemToujouriumArmor.ToujouriumUUIDs;
 import net.thep2wking.oedldoedlgear.content.item.misc.ItemChainmail;
@@ -186,6 +187,7 @@ public class ModItems {
 
 	// long fall armor
 	public static final Item LONG_FALL_BOOTS = new ItemLongFallBoots(OedldoedlGear.MODID, "long_fall_boots", OedldoedlGear.TAB, ModArmorMaterial.LONG_FALL_BOOTS, 0, EntityEquipmentSlot.FEET, ModRarities.AQUA, false, 1, 0);
+	public static final Item CROCS = new ItemCrocs(OedldoedlGear.MODID, "crocs", OedldoedlGear.TAB, ModArmorMaterial.CROCS, 0, EntityEquipmentSlot.FEET, ModRarities.GREEN, false, 2, 0);
 
 	// horsearmor
 	public static final Item BASE_HORSE_ARMOR = new ModItemHorseArmorBase(OedldoedlGear.MODID, "base_horse_armor",  OedldoedlGear.TAB, ModHorseArmorMaterial.BASE, ModRarities.WHITE, false, 1, 0);

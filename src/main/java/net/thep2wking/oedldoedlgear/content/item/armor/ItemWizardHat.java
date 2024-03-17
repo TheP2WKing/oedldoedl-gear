@@ -10,8 +10,10 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
@@ -35,6 +37,18 @@ public class ItemWizardHat extends ModItemArmorBase {
 		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines, annotationLines);
 	}
 
+	@Override
+	public boolean isEnchantable(ItemStack stack) {
+		return true;
+	}
+
+	@Override
+	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+		return enchantment.type.canEnchantItem(stack.getItem())
+				|| enchantment.canApply(new ItemStack(Items.IRON_HELMET));
+	}
+
+	@SideOnly(Side.CLIENT)
 	public ResourceLocation getTexture() {
 		return new ResourceLocation(modid, "textures/models/armor/" + name + "_layer_" + (renderIndex + 1) + ".png");
 	}
@@ -44,7 +58,7 @@ public class ItemWizardHat extends ModItemArmorBase {
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot,
 			ModelBiped _default) {
-		ModelBiped model = new ModelWizardHat(maxStackSize, getTexture());
+		ModelBiped model = new ModelWizardHat(1, getTexture());
 		model.isChild = _default.isChild;
 		model.isRiding = _default.isRiding;
 		model.isSneak = _default.isSneak;

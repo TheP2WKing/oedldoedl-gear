@@ -6,7 +6,9 @@ import javax.annotation.Nullable;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
@@ -29,8 +31,14 @@ public class ItemLongFallBoots extends ModItemArmorBase {
 	}
 
 	@Override
-	public boolean isDamageable() {
-		return false;
+	public boolean isEnchantable(ItemStack stack) {
+		return true;
+	}
+
+	@Override
+	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+		return enchantment.type.canEnchantItem(stack.getItem())
+				|| enchantment.canApply(new ItemStack(Items.IRON_BOOTS));
 	}
 
 	@SubscribeEvent

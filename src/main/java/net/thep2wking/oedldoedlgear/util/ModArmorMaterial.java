@@ -52,14 +52,18 @@ public class ModArmorMaterial {
 			ModItems.KITAGAWARIUM_INGOT, 0);
 
 	public static final ArmorMaterial WIZARED_HAT_BLACK = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
-			"black_wizard_hat", 0, new int[] { 0, 0, 0, 3 }, 2.0f, 20, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+			"black_wizard_hat", 0, new int[] { 0, 0, 0, 3 }, 1.0f, 22, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
 			net.thep2wking.oedldoedlgear.init.ModItems.BLACK_FABRIC, 0);
 	public static final ArmorMaterial WIZARED_HAT_BLUE = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
-			"blue_wizard_hat", 0, new int[] { 0, 0, 0, 3 }, 2.0f, 20, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+			"blue_wizard_hat", 0, new int[] { 0, 0, 0, 3 }, 1.0f, 22, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
 			net.thep2wking.oedldoedlgear.init.ModItems.BLUE_FABRIC, 0);
 	public static final ArmorMaterial LONG_FALL_BOOTS = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
-			"long_fall_boots", 0, new int[] { 4, 0, 0, 0 }, 2.0f, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+			"long_fall_boots", 0, new int[] { 4, 0, 0, 0 }, 2.0f, 12, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
 			Item.getItemFromBlock(Blocks.OBSIDIAN), 0);
+	public static final ArmorMaterial CROCS = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
+			"crocs", 0, new int[] { 2, 0, 0, 0 }, 0.0f, 16, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+			Item.getItemFromBlock(Blocks.SPONGE), 0);
+
 	public static final ArmorMaterial GAMEMODE_CHESTPLATE = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
 			"gamemode_chestplate", 0, new int[] { 0, 0, 20, 0 }, 20.0f, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
 			Item.getItemFromBlock(Blocks.COMMAND_BLOCK), 0);

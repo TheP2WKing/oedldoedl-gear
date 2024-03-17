@@ -470,6 +470,11 @@ item.oedldoedlgear.long_fall_boots.name=Long Fall Boots
 item.oedldoedlgear.long_fall_boots.tip1=Fall as long as you want.
 item.oedldoedlgear.long_fall_armor.effects1=Negates Fall Damage
 
+# crocs
+item.oedldoedlgear.crocs.name=Crocs
+item.oedldoedlgear.crocs.tip1=It is like a dream came true...
+item.oedldoedlgear.crocs.tip2=Minecraft (tm) x Crocs (tm)
+
 # horsearmor
 item.oedldoedlgear.base_horse_armor.name=Base Horse Armor
 item.oedldoedlgear.base_horse_armor.tip1=Basic horse armor.

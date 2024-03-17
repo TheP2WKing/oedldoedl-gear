@@ -144,6 +144,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.TRAVELLERS_EMERALD_BOOTS);
 
 		ModRegistryHelper.registerItem(event, ModItems.LONG_FALL_BOOTS);
+		ModRegistryHelper.registerItem(event, ModItems.CROCS);
 
 		ModRegistryHelper.registerItem(event, ModItems.BASE_HORSE_ARMOR);
 		ModRegistryHelper.registerItem(event, ModItems.CHAINMAIL_HORSE_ARMOR);
