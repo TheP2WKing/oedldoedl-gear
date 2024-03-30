@@ -16,12 +16,14 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.init.ModItems;
+import net.thep2wking.oedldoedlcore.util.ModFluidUtil;
 import net.thep2wking.oedldoedlcore.util.ModLogInUtil;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModPotionUtil;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlgear.init.ModEntities;
 import net.thep2wking.oedldoedlgear.registry.ModRecipes;
+import net.thep2wking.oedldoedlgear.registry.ModRegistry;
 import net.thep2wking.oedldoedlgear.util.proxy.CommonProxy;
 
 @Mod(modid = OedldoedlGear.MODID, name = OedldoedlGear.NAME, version = OedldoedlGear.VERSION, dependencies = OedldoedlGear.DEPENDENCIES)
@@ -59,6 +61,7 @@ public class OedldoedlGear {
         public void displayAllRelevantItems(NonNullList<ItemStack> list) {
             super.displayAllRelevantItems(list);
             ModPotionUtil.displayPotions(list, MODID);
+            ModFluidUtil.displayForgeBuckets(list, MODID);
         }
 	};
     
@@ -66,6 +69,7 @@ public class OedldoedlGear {
     public void preInit(FMLPreInitializationEvent event) {
         ModLogger.preInitLogger(MODID);
         ModEntities.registerEntities();
+        ModRegistry.registerFluids();
         PROXY.preInit(event);
     }
 

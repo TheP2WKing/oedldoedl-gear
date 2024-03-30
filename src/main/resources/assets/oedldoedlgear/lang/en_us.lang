@@ -8,6 +8,7 @@ item.oedldoedlcore.gear_icon.annotation3=Version: §e1.12.2-4.1.0
 sound.oedldoedlgear.megumin=Megumin screems
 sound.oedldoedlgear.quiek=Bottle quieking
 sound.oedldoedlgear.oniisan=Oneesan wispering
+sound.oedldoedlgear.moses=Moses performing miracles
 
 ## potions
 oedldoedlgear.flight=Flight
@@ -21,6 +22,16 @@ potion.effect.oedldoedlgear.milk=Bottle of Milk
 splash_potion.effect.oedldoedlgear.milk=Splash Bottle of Milk
 lingering_potion.effect.oedldoedlgear.milk=Lingering Bottle of Milk
 tipped_arrow.effect.oedldoedlgear.milk=Arrow of Milk
+
+oedldoedlgear.moses_blood=Moses Blood
+potion.effect.oedldoedlgear.moses_blood=Bottle of Moses Blood
+splash_potion.effect.oedldoedlgear.moses_blood=Splash Bottle of Moses Blood
+lingering_potion.effect.oedldoedlgear.moses_blood=Lingering Bottle of Moses Blood
+tipped_arrow.effect.oedldoedlgear.moses_blood=Arrow of Moses Blood
+
+# damage sources
+death.attack.oedldoedlgear.liquid_death=%1$s bathed in liquid death
+death.attack.oedldoedlgear.liquid_death.player=%1$s bathed in liquid death whilst trying to escape %2$s
 
 # base
 item.oedldoedlgear.base_helmet.name=Base Helmet
@@ -47,6 +58,8 @@ item.oedldoedlgear.base_smashbat.name=Base Smashbat
 item.oedldoedlgear.base_smashbat.tip1=Basic smashbat.
 item.oedldoedlgear.base_shears.name=Base Shears
 item.oedldoedlgear.base_shears.tip1=Basic shears.
+item.oedldoedlgear.base_bow.name=Base Bow
+item.oedldoedlgear.base_bow.tip1=Basic bow.
 item.oedldoedlgear.base_shield.name=Base Shield
 item.oedldoedlgear.base_shield.tip1=Basic sield.
 
@@ -156,6 +169,8 @@ item.oedldoedlgear.oedldoedl_smashbat.name=Oedldoedl Smashbat
 item.oedldoedlgear.oedldoedl_smashbat.tip1=A smashbat made for Oedldoedl Projects.
 item.oedldoedlgear.oedldoedl_shears.name=Oedldoedl Shears
 item.oedldoedlgear.oedldoedl_shears.tip1=Shears made for Oedldoedl Projects.
+item.oedldoedlgear.oedldoedl_bow.name=Oedldoedl Bow
+item.oedldoedlgear.oedldoedl_bow.tip1=A Bow made for Oedldoedl Projects.
 item.oedldoedlgear.oedldoedl_shield.name=Oedldoedl Shield
 item.oedldoedlgear.oedldoedl_shield.tip1=A shield made for Oedldoedl Projects.
 
@@ -188,6 +203,8 @@ item.oedldoedlgear.gremorium_smashbat.name=Gremorium Smashbat
 item.oedldoedlgear.gremorium_smashbat.tip1=The full power of Rias?
 item.oedldoedlgear.gremorium_shears.name=Gremorium Shears
 item.oedldoedlgear.gremorium_shears.tip1=The full power of Rias?
+item.oedldoedlgear.gremorium_bow.name=Gremorium Bow
+item.oedldoedlgear.gremorium_bow.tip1=The full power of Rias?
 item.oedldoedlgear.gremorium_shield.name=Gremorium Shield
 item.oedldoedlgear.gremorium_shield.tip1=The full power of Rias?
 
@@ -219,6 +236,8 @@ item.oedldoedlgear.himejimarium_smashbat.name=Himejimarium Smashbat
 item.oedldoedlgear.himejimarium_smashbat.tip1=The full power of Akeno?
 item.oedldoedlgear.himejimarium_shears.name=Himejimarium Shears
 item.oedldoedlgear.himejimarium_shears.tip1=The full power of Akeno?
+item.oedldoedlgear.himejimarium_bow.name=Himejimarium Bow
+item.oedldoedlgear.himejimarium_bow.tip1=The full power of Akeno?
 item.oedldoedlgear.himejimarium_shield.name=Himejimarium Shield
 item.oedldoedlgear.himejimarium_shield.tip1=The full power of Akeno?
 
@@ -251,6 +270,8 @@ item.oedldoedlgear.toujourium_smashbat.name=Toujourium Smashbat
 item.oedldoedlgear.toujourium_smashbat.tip1=The full power of Koneko?
 item.oedldoedlgear.toujourium_shears.name=Toujourium Shears
 item.oedldoedlgear.toujourium_shears.tip1=The full power of Koneko?
+item.oedldoedlgear.toujourium_bow.name=Toujourium Bow
+item.oedldoedlgear.toujourium_bow.tip1=The full power of Koneko?
 item.oedldoedlgear.toujourium_shield.name=Toujourium Shield
 item.oedldoedlgear.toujourium_shield.tip1=The full power of Koneko?
 
@@ -284,6 +305,8 @@ item.oedldoedlgear.argentorium_smashbat.name=Argentorium Smashbat
 item.oedldoedlgear.argentorium_smashbat.tip1=The full power of Asia?
 item.oedldoedlgear.argentorium_shears.name=Argentorium Shears
 item.oedldoedlgear.argentorium_shears.tip1=The full power of Asia?
+item.oedldoedlgear.argentorium_bow.name=Argentorium Bow
+item.oedldoedlgear.argentorium_bow.tip1=The full power of Asia?
 item.oedldoedlgear.argentorium_shield.name=Argentorium Shield
 item.oedldoedlgear.argentorium_shield.tip1=The full power of Asia?
 
@@ -315,6 +338,8 @@ item.oedldoedlgear.quartarium_smashbat.name=Quartarium Smashbat
 item.oedldoedlgear.quartarium_smashbat.tip1=The full power of Xenovia?
 item.oedldoedlgear.quartarium_shears.name=Quartarium Shears
 item.oedldoedlgear.quartarium_shears.tip1=The full power of Xenovia?
+item.oedldoedlgear.quartarium_bow.name=Quartarium Bow
+item.oedldoedlgear.quartarium_bow.tip1=The full power of Xenovia?  
 item.oedldoedlgear.quartarium_shield.name=Quartarium Shield
 item.oedldoedlgear.quartarium_shield.tip1=The full power of Xenovia?  
 
@@ -348,6 +373,8 @@ item.oedldoedlgear.nagatorium_smashbat.name=Nagatorium Smashbat
 item.oedldoedlgear.nagatorium_smashbat.tip1=The full power of Hayase?
 item.oedldoedlgear.nagatorium_shears.name=Nagatorium Shears
 item.oedldoedlgear.nagatorium_shears.tip1=The full power of Hayase?
+item.oedldoedlgear.nagatorium_bow.name=Nagatorium Bow
+item.oedldoedlgear.nagatorium_bow.tip1=The full power of Hayase?
 item.oedldoedlgear.nagatorium_shield.name=Nagatorium Shield
 item.oedldoedlgear.nagatorium_shield.tip1=The full power of Hayase?
 
@@ -380,6 +407,8 @@ item.oedldoedlgear.sakurajimarium_smashbat.name=Sakurajimarium Smashbat
 item.oedldoedlgear.sakurajimarium_smashbat.tip1=The full power of Mai?
 item.oedldoedlgear.sakurajimarium_shears.name=Sakurajimarium Shears
 item.oedldoedlgear.sakurajimarium_shears.tip1=The full power of Mai?
+item.oedldoedlgear.sakurajimarium_bow.name=Sakurajimarium Bow
+item.oedldoedlgear.sakurajimarium_bow.tip1=The full power of Mai?
 item.oedldoedlgear.sakurajimarium_shield.name=Sakurajimarium Shield
 item.oedldoedlgear.sakurajimarium_shield.tip1=The full power of Mai?
 
@@ -412,6 +441,8 @@ item.oedldoedlgear.kitagawarium_smashbat.name=Kitagawarium Smashbat
 item.oedldoedlgear.kitagawarium_smashbat.tip1=The full power of Marin?
 item.oedldoedlgear.kitagawarium_shears.name=Kitagawarium Shears
 item.oedldoedlgear.kitagawarium_shears.tip1=The full power of Marin?
+item.oedldoedlgear.kitagawarium_bow.name=Kitagawarium Bow
+item.oedldoedlgear.kitagawarium_bow.tip1=The full power of Marin?
 item.oedldoedlgear.kitagawarium_shield.name=Kitagawarium Shield
 item.oedldoedlgear.kitagawarium_shield.tip1=The full power of Marin?
 
@@ -474,6 +505,8 @@ item.oedldoedlgear.long_fall_armor.effects1=Negates Fall Damage
 item.oedldoedlgear.crocs.name=Crocs
 item.oedldoedlgear.crocs.tip1=It is like a dream came true...
 item.oedldoedlgear.crocs.tip2=Minecraft (tm) x Crocs (tm)
+item.oedldoedlgear.crocs_armor.effects1=Walk on almost all Liquids
+item.oedldoedlgear.crocs_armor.effects2=Temporary Fire Immunity
 
 # horsearmor
 item.oedldoedlgear.base_horse_armor.name=Base Horse Armor
@@ -555,19 +588,23 @@ item.oedldoedlgear.kick_stick.tip1=Kick players from Multiplayer Servers.
 item.oedldoedlgear.kick_stick.tip2=Succesfully kicked player from this server!
 item.oedldoedlgear.explosion_staff.name=Staff of Explosion
 item.oedldoedlgear.explosion_staff.tip1=EXPLOOOOOOSION!
-item.oedldoedlgear.explosion_staff.annotation1=Range in blocks:
+item.oedldoedlgear.explosion_staff.annotation1=Range in Blocks:
 item.oedldoedlgear.explosion_staff.annotation2=(Halved while Sneaking)
 item.oedldoedlgear.lightning_staff.name=Staff of Lightning
 item.oedldoedlgear.lightning_staff.tip1=(War) Thunder!
-item.oedldoedlgear.lightning_staff.annotation1=Range in blocks:
+item.oedldoedlgear.lightning_staff.annotation1=Range in Blocks:
 item.oedldoedlgear.lightning_staff.annotation2=(Halved while Sneaking)
 item.oedldoedlgear.frieren_staff.name=Staff of Frieren
 item.oedldoedlgear.frieren_staff.tip1=Beyond Minecrafts End...
-item.oedldoedlgear.frieren_staff.annotation1=Range in blocks:
+item.oedldoedlgear.frieren_staff.annotation1=Range in Blocks:
 item.oedldoedlgear.frieren_staff.annotation2=(Halved while Sneaking)
 item.oedldoedlgear.admin_staff.name=Staff of Administration
 item.oedldoedlgear.admin_staff.tip1=God of MC!
 item.oedldoedlgear.admin_staff.annotation1=Mode:
+item.oedldoedlgear.moses_staff.name=Staff of Moses
+item.oedldoedlgear.moses_staff.tip1=Not just a regular stick...
+item.oedldoedlgear.moses_staff.annotation1=Range in Blocks:
+item.oedldoedlgear.moses_staff.annotation2=(Convert Water while Sneaking)
 item.oedldoedlgear.skull_wand.name=Wand of Withering
 item.oedldoedlgear.skull_wand.tip1=Shoot starving skulls.
 item.oedldoedlgear.fire_wand.name=Wand of Fire
@@ -639,6 +676,8 @@ item.oedldoedlgear.charged_core.name=Charged Core
 item.oedldoedlgear.charged_core.tip1=Superchared!
 item.oedldoedlgear.mystic_core.name=Mystic Core
 item.oedldoedlgear.mystic_core.tip1=So old that helpful tooltips did not exist yet...
+item.oedldoedlgear.nature_core.name=Nature Core
+item.oedldoedlgear.nature_core.tip1=#TeamTrees
 
 item.oedldoedlgear.chainmail.name=Chainmail
 item.oedldoedlgear.chainmail.tip1=You have 1 unread mail...
@@ -680,10 +719,6 @@ item.oedldoedlgear.bill_of_revenge.tip5=That is apparently how live works...
 item.oedldoedlgear.bill_of_revenge.tip6=I wish you a lot of fun while desperate!
 item.oedldoedlgear.bill_of_revenge.tip7=§oInstall nasty laughting in the background here!
 
-# misc
-item.oedldoedlgear.squid_bucket.name=Bucket of Squid
-item.oedldoedlgear.squid_bucket.tip1=How did we get here?
-
 # blocks
 tile.oedldoedlgear.badrock.name=Badrock
 tile.oedldoedlgear.badrock.tip1=The pun is as bad as the rock.
@@ -694,6 +729,9 @@ tile.oedldoedlgear.magical_wood.name=Magical Wood
 tile.oedldoedlgear.magical_wood.tip1=Am I a wizard? NO!
 tile.oedldoedlgear.magical_wood_planks.name=Magical Wood Planks
 tile.oedldoedlgear.magical_wood_planks.tip1=Still NOT a wizard!
+
+tile.oedldoedlgear.transparent_replacement.name=Transparent Replacement
+
 # jump pads
 tile.oedldoedlgear.jump_pad.name=Jump Pad
 tile.oedldoedlgear.jump_pad.tip1=Get hight.
@@ -705,3 +743,9 @@ tile.oedldoedlgear.jump_pad_plus_plus_plus.name=Jump Pad+++
 tile.oedldoedlgear.jump_pad_plus_plus_plus.tip1=Get the ultimate hight.
 tile.oedldoedlgear.impact_pad.name=Impact Pad
 tile.oedldoedlgear.impact_pad.tip1=Uhhh...
+
+# fluids
+tile.oedldoedlgear.moses_blood.name=Moses Blood
+fluid.oedldoedlgear.moses_blood=Moses Blood
+tile.oedldoedlgear.liquid_death.name=Liquid Death
+fluid.oedldoedlgear.liquid_death=Liquid Death

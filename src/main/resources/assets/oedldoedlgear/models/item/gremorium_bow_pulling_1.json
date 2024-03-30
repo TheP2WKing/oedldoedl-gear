@@ -1,0 +1,7 @@
+{
+	"parent": "item/bow",
+	"textures": 
+	{
+		"layer0": "oedldoedlgear:items/gremorium_bow_pulling_1"
+	}
+}

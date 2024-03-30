@@ -8,6 +8,7 @@ import net.thep2wking.oedldoedlcore.api.armor.ModItemHorseArmorBase;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBlockBase;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemAxeBase;
+import net.thep2wking.oedldoedlcore.api.tool.ModItemBowBase;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemHoeBase;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemPaxelBase;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemPickaxeBase;
@@ -57,6 +58,7 @@ import net.thep2wking.oedldoedlgear.content.item.tool.ItemKickStick;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemLaunchingSmashbat;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemLightningSmashbat;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemLightningStaff;
+import net.thep2wking.oedldoedlgear.content.item.tool.ItemMosesStaff;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemNeedle;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemPorkHammer;
 import net.thep2wking.oedldoedlgear.content.item.tool.ItemRidingSmashbat;
@@ -203,6 +205,7 @@ public class ModItems {
 	public static final Item BASE_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "base_paxel", OedldoedlGear.TAB, ModToolMaterial.BASE, 4f, -3f, ModRarities.WHITE, false, 1, 0);
 	public static final Item BASE_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "base_smashbat", OedldoedlGear.TAB, ModToolMaterial.BASE, 0f, -2f, 9f, 4.5f, ModHitSound.METAL, ModRarities.WHITE, false, 1, 0);
 	public static final Item BASE_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "base_shears", OedldoedlGear.TAB, ModToolMaterial.BASE, ModRarities.WHITE, false, 1, 0);
+	public static final Item BASE_BOW = new ModItemBowBase(OedldoedlGear.MODID, "base_bow", OedldoedlGear.TAB, ModToolMaterial.BASE, ModRarities.WHITE, false, 1, 0);
 	public static final Item BASE_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "base_shield", OedldoedlGear.TAB, ModToolMaterial.BASE, ModRarities.WHITE, false, 1, 0);
 
 	// oedldoedl tools 
@@ -214,6 +217,7 @@ public class ModItems {
 	public static final Item OEDLDOEDL_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "oedldoedl_paxel", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, 4f, -3f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 	public static final Item OEDLDOEDL_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "oedldoedl_smashbat", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, 0f, -2f, 16f, 8f, ModHitSound.GEM, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 	public static final Item OEDLDOEDL_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "oedldoedl_shears", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
+	public static final Item OEDLDOEDL_BOW = new ModItemBowBase(OedldoedlGear.MODID, "oedldoedl_bow", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, 12.0f, 2, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 	public static final Item OEDLDOEDL_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "oedldoedl_shield", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, 2.0f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 
 	// dirt tools 
@@ -256,6 +260,7 @@ public class ModItems {
 	public static final Item GREMORIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "gremorium_paxel", OedldoedlGear.TAB, ModToolMaterial.GREMORIUM, 4f, -3f, ModRarities.DARK_RED, true, 1, 0).setRGBBarColor(0x990000);
 	public static final Item GREMORIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "gremorium_smashbat", OedldoedlGear.TAB, ModToolMaterial.GREMORIUM, 0f, -2f, 20f, 10f, ModHitSound.GEM, ModRarities.DARK_RED, true, 1, 0).setRGBBarColor(0x990000);
 	public static final Item GREMORIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "gremorium_shears", OedldoedlGear.TAB, ModToolMaterial.GREMORIUM, ModRarities.DARK_RED, true, 1, 0).setRGBBarColor(0x990000);
+	public static final Item GREMORIUM_BOW = new ModItemBowBase(OedldoedlGear.MODID, "gremorium_bow", OedldoedlGear.TAB, ModToolMaterial.GREMORIUM, 8.0f, 4, ModRarities.DARK_RED, true, 1, 0).setRGBBarColor(0x990000);
 	public static final Item GREMORIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "gremorium_shield", OedldoedlGear.TAB, ModToolMaterial.GREMORIUM, 4.0f, ModRarities.DARK_RED, true, 1, 0).setRGBBarColor(0x990000);
 
 	// himejimarium tools 
@@ -267,6 +272,7 @@ public class ModItems {
 	public static final Item HIMEJIMARIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "himejimarium_paxel", OedldoedlGear.TAB, ModToolMaterial.HIMEJIMARIUM, 4f, -3f, ModRarities.DARK_BLUE, true, 1, 0).setRGBBarColor(0x232033);
 	public static final Item HIMEJIMARIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "himejimarium_smashbat", OedldoedlGear.TAB, ModToolMaterial.HIMEJIMARIUM, 0f, -2f, 20f, 10f, ModHitSound.GEM, ModRarities.DARK_BLUE, true, 1, 0).setRGBBarColor(0x232033);
 	public static final Item HIMEJIMARIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "himejimarium_shears", OedldoedlGear.TAB, ModToolMaterial.HIMEJIMARIUM, ModRarities.DARK_BLUE, true, 1, 0).setRGBBarColor(0x232033);
+	public static final Item HIMEJIMARIUM_BOW = new ModItemBowBase(OedldoedlGear.MODID, "himejimarium_bow", OedldoedlGear.TAB, ModToolMaterial.HIMEJIMARIUM, 8.0f, 4, ModRarities.DARK_BLUE, true, 1, 0).setRGBBarColor(0x232033);
 	public static final Item HIMEJIMARIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "himejimarium_shield", OedldoedlGear.TAB, ModToolMaterial.HIMEJIMARIUM, 4.0f, ModRarities.DARK_BLUE, true, 1, 0).setRGBBarColor(0x232033);
 
 	// toujourium tools 
@@ -278,6 +284,7 @@ public class ModItems {
 	public static final Item TOUJOURIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "toujourium_paxel", OedldoedlGear.TAB, ModToolMaterial.TOUJOURIUM, 4f, -3f, ModRarities.GRAY, true, 1, 0).setRGBBarColor(0xc0c0c0);
 	public static final Item TOUJOURIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "toujourium_smashbat", OedldoedlGear.TAB, ModToolMaterial.TOUJOURIUM, 0f, -2f, 20f, 10f, ModHitSound.GEM, ModRarities.GRAY, true, 1, 0).setRGBBarColor(0xc0c0c0);
 	public static final Item TOUJOURIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "toujourium_shears", OedldoedlGear.TAB, ModToolMaterial.TOUJOURIUM, ModRarities.GRAY, true, 1, 0).setRGBBarColor(0xc0c0c0);
+	public static final Item TOUJOURIUM_BOW = new ModItemBowBase(OedldoedlGear.MODID, "toujourium_bow", OedldoedlGear.TAB, ModToolMaterial.TOUJOURIUM, 8.0f, 4, ModRarities.GRAY, true, 1, 0).setRGBBarColor(0xc0c0c0);
 	public static final Item TOUJOURIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "toujourium_shield", OedldoedlGear.TAB, ModToolMaterial.TOUJOURIUM, 4.0f, ModRarities.GRAY, true, 1, 0).setRGBBarColor(0xc0c0c0);
 
 	// argentorium tools 
@@ -289,6 +296,7 @@ public class ModItems {
 	public static final Item ARGENTORIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "argentorium_paxel", OedldoedlGear.TAB, ModToolMaterial.ARGENTORIUM, 4f, -3f, ModRarities.YELLOW, true, 1, 0).setRGBBarColor(0xfbd985);
 	public static final Item ARGENTORIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "argentorium_smashbat", OedldoedlGear.TAB, ModToolMaterial.ARGENTORIUM, 0f, -2f, 20f, 10f, ModHitSound.GEM, ModRarities.YELLOW, true, 1, 0).setRGBBarColor(0xfbd985);
 	public static final Item ARGENTORIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "argentorium_shears", OedldoedlGear.TAB, ModToolMaterial.ARGENTORIUM, ModRarities.YELLOW, true, 1, 0).setRGBBarColor(0xfbd985);
+	public static final Item ARGENTORIUM_BOW = new ModItemBowBase(OedldoedlGear.MODID, "argentorium_bow", OedldoedlGear.TAB, ModToolMaterial.ARGENTORIUM, 8.0f, 4, ModRarities.YELLOW, true, 1, 0).setRGBBarColor(0xfbd985);
 	public static final Item ARGENTORIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "argentorium_shield", OedldoedlGear.TAB, ModToolMaterial.ARGENTORIUM, 4.0f, ModRarities.YELLOW, true, 1, 0).setRGBBarColor(0xfbd985);
 
 	// quartarium tools 
@@ -300,6 +308,7 @@ public class ModItems {
 	public static final Item QUARTARIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "quartarium_paxel", OedldoedlGear.TAB, ModToolMaterial.QUARTARIUM, 4f, -3f, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
 	public static final Item QUARTARIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "quartarium_smashbat", OedldoedlGear.TAB, ModToolMaterial.QUARTARIUM, 0f, -2f, 20f, 10f, ModHitSound.GEM, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
 	public static final Item QUARTARIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "quartarium_shears", OedldoedlGear.TAB, ModToolMaterial.QUARTARIUM, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
+	public static final Item QUARTARIUM_BOW = new ModItemBowBase(OedldoedlGear.MODID, "quartarium_bow", OedldoedlGear.TAB, ModToolMaterial.QUARTARIUM, 8.0f, 4, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
 	public static final Item QUARTARIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "quartarium_shield", OedldoedlGear.TAB, ModToolMaterial.QUARTARIUM, 4.0f, ModRarities.BLUE, true, 1, 0).setRGBBarColor(0x0e5191);
 
 	// nagatorium tools 
@@ -311,6 +320,7 @@ public class ModItems {
 	public static final Item NAGATORIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "nagatorium_paxel", OedldoedlGear.TAB, ModToolMaterial.NAGATORIUM, 4f, -3f, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
 	public static final Item NAGATORIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "nagatorium_smashbat", OedldoedlGear.TAB, ModToolMaterial.NAGATORIUM, 0f, -2f, 20f, 10f, ModHitSound.GEM, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
 	public static final Item NAGATORIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "nagatorium_shears", OedldoedlGear.TAB, ModToolMaterial.NAGATORIUM, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
+	public static final Item NAGATORIUM_BOW = new ModItemBowBase(OedldoedlGear.MODID, "nagatorium_bow", OedldoedlGear.TAB, ModToolMaterial.NAGATORIUM, 8.0f, 4, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
 	public static final Item NAGATORIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "nagatorium_shield", OedldoedlGear.TAB, ModToolMaterial.NAGATORIUM, 4.0f, ModRarities.DARK_PURPLE, true, 1, 0).setRGBBarColor(0x650fc1);
 
 	// sakurajimarium tools 
@@ -322,6 +332,7 @@ public class ModItems {
 	public static final Item SAKURAJIMARIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "sakurajimarium_paxel", OedldoedlGear.TAB, ModToolMaterial.SAKURAJIMARIUM, 4f, -3f, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 	public static final Item SAKURAJIMARIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "sakurajimarium_smashbat", OedldoedlGear.TAB, ModToolMaterial.SAKURAJIMARIUM, 0f, -2f, 20f, 10f, ModHitSound.GEM, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 	public static final Item SAKURAJIMARIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "sakurajimarium_shears", OedldoedlGear.TAB, ModToolMaterial.SAKURAJIMARIUM, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
+	public static final Item SAKURAJIMARIUM_BOW = new ModItemBowBase(OedldoedlGear.MODID, "sakurajimarium_bow", OedldoedlGear.TAB, ModToolMaterial.SAKURAJIMARIUM, 8.0f, 4, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 	public static final Item SAKURAJIMARIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "sakurajimarium_shield", OedldoedlGear.TAB, ModToolMaterial.SAKURAJIMARIUM, 4.0f, ModRarities.DARK_GRAY, true, 1, 0).setRGBBarColor(0x2a2929);
 
 	// kitagawarium tools 
@@ -333,6 +344,7 @@ public class ModItems {
 	public static final Item KITAGAWARIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "kitagawarium_paxel", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 4f, -3f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
 	public static final Item KITAGAWARIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "kitagawarium_smashbat", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 0f, -2f, 20f, 10f, ModHitSound.GEM, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
 	public static final Item KITAGAWARIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "kitagawarium_shears", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
+	public static final Item KITAGAWARIUM_BOW = new ModItemBowBase(OedldoedlGear.MODID, "kitagawarium_bow", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 8.0f, 4, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
 	public static final Item KITAGAWARIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "kitagawarium_shield", OedldoedlGear.TAB, ModToolMaterial.KITAGAWARIUM, 4.0f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0x97173e);
 
 	// wooden tools
@@ -374,13 +386,14 @@ public class ModItems {
 	public static final Item LIGHTNING_STAFF = new ItemLightningStaff(OedldoedlGear.MODID, "lightning_staff", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 1);
 	public static final Item FRIEREN_STAFF = new ItemFrierenStaff(OedldoedlGear.MODID, "frieren_staff", OedldoedlGear.TAB, ModRarities.GOLD, false, 1, 1);
 	public static final Item ADMIN_STAFF = new ItemAdminStaff(OedldoedlGear.MODID, "admin_staff", OedldoedlGear.TAB, ModRarities.RED, true, 1, 1);
+	public static final Item MOSES_STAFF = new ItemMosesStaff(OedldoedlGear.MODID, "moses_staff", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 1);
 	public static final Item SKULL_WAND = new ItemSkullWand(OedldoedlGear.MODID, "skull_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item FIRE_WAND = new ItemFireWand(OedldoedlGear.MODID, "fire_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item FLY_SWATTER = new ItemFlySwatter(OedldoedlGear.MODID, "fly_swatter", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item BEDROCK_BREAKER = new ItemBedrockBreaker(OedldoedlGear.MODID, "bedrock_breaker", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 0);
 	public static final Item NEEDLE = new ItemNeedle(OedldoedlGear.MODID, "needle", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item BREF_POWER = new ItemBrefPower(OedldoedlGear.MODID, "bref_power", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
-
+	
 	// throwables
 	public static final Item ROCKY_SNOWBALL = new ItemRockySnowball(OedldoedlGear.MODID, "rocky_snowball", OedldoedlGear.TAB, ModRarities.WHITE, false, 1, 0);
 	public static final Item EXPLOSIVE_SNOWBALL = new ItemExplosiveSnowball(OedldoedlGear.MODID, "explosive_snowball", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
@@ -409,6 +422,7 @@ public class ModItems {
 	public static final Item EXPLOSION_CORE = new ModItemBase(OedldoedlGear.MODID, "explosion_core", OedldoedlGear.TAB, ModRarities.RED, false, 1, 0);
 	public static final Item CHARGED_CORE = new ModItemBase(OedldoedlGear.MODID, "charged_core", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 0);
 	public static final Item MYSTIC_CORE = new ModItemBase(OedldoedlGear.MODID, "mystic_core", OedldoedlGear.TAB, ModRarities.GOLD, false, 1, 0);
+	public static final Item NATURE_CORE = new ModItemBase(OedldoedlGear.MODID, "nature_core", OedldoedlGear.TAB, ModRarities.GREEN, false, 1, 0);
 
 	public static final Item CHAINMAIL = new ItemChainmail(OedldoedlGear.MODID, "chainmail", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	

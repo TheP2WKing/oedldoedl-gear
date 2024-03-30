@@ -1,9 +1,12 @@
 package net.thep2wking.oedldoedlgear.util;
 
+import net.thep2wking.oedldoedlcore.util.ModFluidUtil;
 import net.thep2wking.oedldoedlcore.util.ModRenderHelper;
+import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.content.entity.EntityChargedSnowball;
 import net.thep2wking.oedldoedlgear.content.entity.EntityExplosiveSnowball;
 import net.thep2wking.oedldoedlgear.content.entity.EntityRockySnowball;
+import net.thep2wking.oedldoedlgear.init.ModBlocks;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 
 public class ModRenderer {
@@ -11,5 +14,10 @@ public class ModRenderer {
 		ModRenderHelper.addThrowableRender(EntityRockySnowball.class, ModItems.ROCKY_SNOWBALL);
 		ModRenderHelper.addThrowableRender(EntityExplosiveSnowball.class, ModItems.EXPLOSIVE_SNOWBALL);
 		ModRenderHelper.addThrowableRender(EntityChargedSnowball.class, ModItems.CHARGED_SNOWBALL);
+	}
+
+	public static void registerFluidRenderer() {
+		ModFluidUtil.addRenderForFluid(OedldoedlGear.MODID, "moses_blood", ModBlocks.MOSES_BLOOD);
+		ModFluidUtil.addRenderForFluid(OedldoedlGear.MODID, "liquid_death", ModBlocks.LIQUID_DEATH);
 	}
 }

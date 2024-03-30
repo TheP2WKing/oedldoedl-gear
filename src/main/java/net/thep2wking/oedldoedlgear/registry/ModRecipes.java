@@ -4,12 +4,14 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.PotionTypes;
 import net.minecraft.item.ItemStack;
+import net.thep2wking.oedldoedlcore.util.ModFluidUtil;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModNBTUtil;
 import net.thep2wking.oedldoedlcore.util.ModRecipeHelper;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
 import net.thep2wking.oedldoedlgear.init.ModBlocks;
+import net.thep2wking.oedldoedlgear.init.ModFluids;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 import net.thep2wking.oedldoedlgear.init.ModPotions;
 import net.thep2wking.oedldoedlgear.util.ModGearRecipeHelper;
@@ -36,6 +38,7 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("coreExplosion", ModItems.EXPLOSION_CORE, 0);
 			ModRecipeHelper.addOreDict("coreCharged", ModItems.CHARGED_CORE, 0);
 			ModRecipeHelper.addOreDict("coreMystic", ModItems.MYSTIC_CORE, 0);
+			ModRecipeHelper.addOreDict("coreNature", ModItems.NATURE_CORE, 0);
 
 			ModRecipeHelper.addOreDict("chainmail", ModItems.CHAINMAIL, 0);
 
@@ -171,16 +174,16 @@ public class ModRecipes {
 					new ItemStack(ModItems.BASE_SHOVEL, 1, 0), new ItemStack(ModItems.BASE_PICKAXE, 1, 0),
 					new ItemStack(ModItems.BASE_AXE, 1, 0), new ItemStack(ModItems.BASE_HOE, 1, 0),
 					new ItemStack(ModItems.BASE_PAXEL, 1, 0), new ItemStack(ModItems.BASE_SMASHBAT, 1, 0),
-					new ItemStack(ModItems.BASE_SHEARS, 1, 0), new ItemStack(ModItems.BASE_SHIELD, 1, 0),
-					"stickWood", "ingotBase");
+					new ItemStack(ModItems.BASE_SHEARS, 1, 0), new ItemStack(ModItems.BASE_BOW, 1, 0),
+					new ItemStack(ModItems.BASE_SHIELD, 1, 0), "stickWood", "ingotBase");
 
 			ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "oedldoedl",
 					new ItemStack(ModItems.OEDLDOEDL_SWORD, 1, 0),
 					new ItemStack(ModItems.OEDLDOEDL_SHOVEL, 1, 0), new ItemStack(ModItems.OEDLDOEDL_PICKAXE, 1, 0),
 					new ItemStack(ModItems.OEDLDOEDL_AXE, 1, 0), new ItemStack(ModItems.OEDLDOEDL_HOE, 1, 0),
 					new ItemStack(ModItems.OEDLDOEDL_PAXEL, 1, 0), new ItemStack(ModItems.OEDLDOEDL_SMASHBAT, 1, 0),
-					new ItemStack(ModItems.OEDLDOEDL_SHEARS, 1, 0), new ItemStack(ModItems.OEDLDOEDL_SHIELD, 1, 0),
-					"stickWood", "ingotOedldoedl");
+					new ItemStack(ModItems.OEDLDOEDL_SHEARS, 1, 0), new ItemStack(ModItems.OEDLDOEDL_BOW, 1, 0),
+					new ItemStack(ModItems.OEDLDOEDL_SHIELD, 1, 0), "stickWood", "ingotOedldoedl");
 			ModRecipeHelper.addSwordRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_SWORD, 1, 0),
 					"stickWood", "dirtEnhanced");
 			ModRecipeHelper.addShovelRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_SHOVEL, 1, 0),
@@ -240,8 +243,8 @@ public class ModRecipes {
 					new ItemStack(ModItems.GREMORIUM_SHOVEL, 1, 0), new ItemStack(ModItems.GREMORIUM_PICKAXE, 1, 0),
 					new ItemStack(ModItems.GREMORIUM_AXE, 1, 0), new ItemStack(ModItems.GREMORIUM_HOE, 1, 0),
 					new ItemStack(ModItems.GREMORIUM_PAXEL, 1, 0), new ItemStack(ModItems.GREMORIUM_SMASHBAT, 1, 0),
-					new ItemStack(ModItems.GREMORIUM_SHEARS, 1, 0), new ItemStack(ModItems.GREMORIUM_SHIELD, 1, 0),
-					"stickWood", "ingotGremorium");
+					new ItemStack(ModItems.GREMORIUM_SHEARS, 1, 0), new ItemStack(ModItems.GREMORIUM_BOW, 1, 0),
+					new ItemStack(ModItems.GREMORIUM_SHIELD, 1, 0), "stickWood", "ingotGremorium");
 			ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "himejimarium",
 					new ItemStack(ModItems.HIMEJIMARIUM_SWORD, 1, 0),
 					new ItemStack(ModItems.HIMEJIMARIUM_SHOVEL, 1, 0),
@@ -250,36 +253,36 @@ public class ModRecipes {
 					new ItemStack(ModItems.HIMEJIMARIUM_PAXEL, 1, 0),
 					new ItemStack(ModItems.HIMEJIMARIUM_SMASHBAT, 1, 0),
 					new ItemStack(ModItems.HIMEJIMARIUM_SHEARS, 1, 0),
-					new ItemStack(ModItems.HIMEJIMARIUM_SHIELD, 1, 0),
-					"stickWood", "ingotHimejimarium");
+					new ItemStack(ModItems.HIMEJIMARIUM_BOW, 1, 0),
+					new ItemStack(ModItems.HIMEJIMARIUM_SHIELD, 1, 0), "stickWood", "ingotHimejimarium");
 			ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "toujourium",
 					new ItemStack(ModItems.TOUJOURIUM_SWORD, 1, 0),
 					new ItemStack(ModItems.TOUJOURIUM_SHOVEL, 1, 0), new ItemStack(ModItems.TOUJOURIUM_PICKAXE, 1, 0),
 					new ItemStack(ModItems.TOUJOURIUM_AXE, 1, 0), new ItemStack(ModItems.TOUJOURIUM_HOE, 1, 0),
 					new ItemStack(ModItems.TOUJOURIUM_PAXEL, 1, 0), new ItemStack(ModItems.TOUJOURIUM_SMASHBAT, 1, 0),
-					new ItemStack(ModItems.TOUJOURIUM_SHEARS, 1, 0), new ItemStack(ModItems.TOUJOURIUM_SHIELD, 1, 0),
-					"stickWood", "ingotToujourium");
+					new ItemStack(ModItems.TOUJOURIUM_SHEARS, 1, 0), new ItemStack(ModItems.TOUJOURIUM_BOW, 1, 0),
+					new ItemStack(ModItems.TOUJOURIUM_SHIELD, 1, 0), "stickWood", "ingotToujourium");
 			ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "argentorium",
 					new ItemStack(ModItems.ARGENTORIUM_SWORD, 1, 0),
 					new ItemStack(ModItems.ARGENTORIUM_SHOVEL, 1, 0), new ItemStack(ModItems.ARGENTORIUM_PICKAXE, 1, 0),
 					new ItemStack(ModItems.ARGENTORIUM_AXE, 1, 0), new ItemStack(ModItems.ARGENTORIUM_HOE, 1, 0),
 					new ItemStack(ModItems.ARGENTORIUM_PAXEL, 1, 0), new ItemStack(ModItems.ARGENTORIUM_SMASHBAT, 1, 0),
-					new ItemStack(ModItems.ARGENTORIUM_SHEARS, 1, 0), new ItemStack(ModItems.ARGENTORIUM_SHIELD, 1, 0),
-					"stickWood", "ingotArgentorium");
+					new ItemStack(ModItems.ARGENTORIUM_SHEARS, 1, 0), new ItemStack(ModItems.ARGENTORIUM_BOW, 1, 0),
+					new ItemStack(ModItems.ARGENTORIUM_SHIELD, 1, 0), "stickWood", "ingotArgentorium");
 			ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "quartarium",
 					new ItemStack(ModItems.QUARTARIUM_SWORD, 1, 0),
 					new ItemStack(ModItems.QUARTARIUM_SHOVEL, 1, 0), new ItemStack(ModItems.QUARTARIUM_PICKAXE, 1, 0),
 					new ItemStack(ModItems.QUARTARIUM_AXE, 1, 0), new ItemStack(ModItems.QUARTARIUM_HOE, 1, 0),
 					new ItemStack(ModItems.QUARTARIUM_PAXEL, 1, 0), new ItemStack(ModItems.QUARTARIUM_SMASHBAT, 1, 0),
-					new ItemStack(ModItems.QUARTARIUM_SHEARS, 1, 0), new ItemStack(ModItems.QUARTARIUM_SHIELD, 1, 0),
-					"stickWood", "ingotQuartarium");
+					new ItemStack(ModItems.QUARTARIUM_SHEARS, 1, 0), new ItemStack(ModItems.QUARTARIUM_BOW, 1, 0),
+					new ItemStack(ModItems.QUARTARIUM_SHIELD, 1, 0), "stickWood", "ingotQuartarium");
 			ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "nagatorium",
 					new ItemStack(ModItems.NAGATORIUM_SWORD, 1, 0),
 					new ItemStack(ModItems.NAGATORIUM_SHOVEL, 1, 0), new ItemStack(ModItems.NAGATORIUM_PICKAXE, 1, 0),
 					new ItemStack(ModItems.NAGATORIUM_AXE, 1, 0), new ItemStack(ModItems.NAGATORIUM_HOE, 1, 0),
 					new ItemStack(ModItems.NAGATORIUM_PAXEL, 1, 0), new ItemStack(ModItems.NAGATORIUM_SMASHBAT, 1, 0),
-					new ItemStack(ModItems.NAGATORIUM_SHEARS, 1, 0), new ItemStack(ModItems.NAGATORIUM_SHIELD, 1, 0),
-					"stickWood", "ingotNagatorium");
+					new ItemStack(ModItems.NAGATORIUM_SHEARS, 1, 0), new ItemStack(ModItems.NAGATORIUM_BOW, 1, 0),
+					new ItemStack(ModItems.NAGATORIUM_SHIELD, 1, 0), "stickWood", "ingotNagatorium");
 			ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "sakurajimarium",
 					new ItemStack(ModItems.SAKURAJIMARIUM_SWORD, 1, 0),
 					new ItemStack(ModItems.SAKURAJIMARIUM_SHOVEL, 1, 0),
@@ -288,8 +291,8 @@ public class ModRecipes {
 					new ItemStack(ModItems.SAKURAJIMARIUM_PAXEL, 1, 0),
 					new ItemStack(ModItems.SAKURAJIMARIUM_SMASHBAT, 1, 0),
 					new ItemStack(ModItems.SAKURAJIMARIUM_SHEARS, 1, 0),
-					new ItemStack(ModItems.SAKURAJIMARIUM_SHIELD, 1, 0),
-					"stickWood", "ingotSakurajimarium");
+					new ItemStack(ModItems.SAKURAJIMARIUM_BOW, 1, 0),
+					new ItemStack(ModItems.SAKURAJIMARIUM_SHIELD, 1, 0), "stickWood", "ingotSakurajimarium");
 			ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "kitagawarium",
 					new ItemStack(ModItems.KITAGAWARIUM_SWORD, 1, 0),
 					new ItemStack(ModItems.KITAGAWARIUM_SHOVEL, 1, 0),
@@ -298,8 +301,8 @@ public class ModRecipes {
 					new ItemStack(ModItems.KITAGAWARIUM_PAXEL, 1, 0),
 					new ItemStack(ModItems.KITAGAWARIUM_SMASHBAT, 1, 0),
 					new ItemStack(ModItems.KITAGAWARIUM_SHEARS, 1, 0),
-					new ItemStack(ModItems.KITAGAWARIUM_SHIELD, 1, 0),
-					"stickWood", "ingotKitagawarium");
+					new ItemStack(ModItems.KITAGAWARIUM_BOW, 1, 0),
+					new ItemStack(ModItems.KITAGAWARIUM_SHIELD, 1, 0), "stickWood", "ingotKitagawarium");
 
 			ModRecipeHelper.addPaxelRecipe(OedldoedlGear.MODID, "wooden", new ItemStack(ModItems.WOODEN_PAXEL, 1, 0),
 					"stickWood", new ItemStack(Items.WOODEN_AXE, 1, 0), new ItemStack(Items.WOODEN_SHOVEL, 1, 0),
@@ -394,6 +397,8 @@ public class ModRecipes {
 
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/long_fall_boots",
 					new ItemStack(ModItems.LONG_FALL_BOOTS, 1, 0), "A A", "B B", 'A', "gemDiamond", 'B', "obsidian");
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/crocs",
+					new ItemStack(ModItems.CROCS, 1, 0), "A A", "B B", 'A', "fabricGreen", 'B', "sponge");
 
 			ModRecipeHelper.addHorseArmorRecipe(OedldoedlGear.MODID, "base",
 					new ItemStack(ModItems.BASE_HORSE_ARMOR, 1, 0), "ingotBase");
@@ -440,6 +445,9 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/admin_staff",
 					ModNBTUtil.addNBTItem(ModItems.ADMIN_STAFF, "Mode", "Day"), " AA", " BA", "B  ", 'A',
 					"commandBlock", 'B', "stickWood");
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/moses_staff",
+					new ItemStack(ModItems.MOSES_STAFF, 1, 0), " AB", "BCA", "DB ", 'A', "blockMagicWood", 'B',
+					"blockPlankMagicWood", 'C', "coreNature", 'D', "stickWood");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/skull_wand",
 					new ItemStack(ModItems.SKULL_WAND, 1, 0), " AB", " CD", "C  ", 'A', "tnt", 'B',
 					new ItemStack(Items.SKULL, 1, 1), 'C', "stickWood", 'D', "ingotGold");
@@ -511,6 +519,10 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "mystic_core",
 					new ItemStack(ModItems.MYSTIC_CORE, 1, 0), "ABA", "CDC", "ABA", 'A', "ingotGold", 'B',
 					"dyeRed", 'C', ModNBTUtil.addSplashPotion("strong_harming"), 'D', "blockOedldoedl");
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "nature_core",
+					new ItemStack(ModItems.NATURE_CORE, 1, 0), "ABA", "CDC", "ABA", 'A', "treeSapling", 'B',
+					"treeLeaves", 'C', "vine", 'D', "blockOedldoedl");
+
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "chainmail", new ItemStack(ModItems.CHAINMAIL, 4, 0),
 					"AAA", "BCB", "ABA", 'A', "nuggetIron", 'B', "ingotIron", 'C', "paper");
 
@@ -539,6 +551,11 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "impact_pad",
 					new ItemStack(ModBlocks.IMPACT_PAD, 1, 0),
 					"A", "B", 'A', "wool", 'B', new ItemStack(Blocks.WOODEN_PRESSURE_PLATE, 1, 0));
+
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "liquid_death",
+					ModFluidUtil.addFluidBucket(ModFluids.LIQUID_DEATH), "ABA", "CDC", "ABA", 'A', "nuggetSadistium",
+					'B', "dyePurple", 'C', ModNBTUtil.addSplashPotion("minecraft:strong_harming"), 'D',
+					ModFluidUtil.addFluidBucket(ModFluids.MOSES_BLOOD));
 		}
 
 		if (GearConfig.RECIPES.BREWING_RECIPES) {
@@ -549,6 +566,9 @@ public class ModRecipes {
 
 			ModRecipeHelper.addBrewingRecipe(ModPotions.MILK_NORMAL, PotionTypes.WATER,
 					new ItemStack(Items.MILK_BUCKET, 1, 0));
+
+			ModRecipeHelper.addBrewingRecipe(ModPotions.MOSES_BLOOD_NORMAL, PotionTypes.STRONG_HEALING,
+					ModFluidUtil.addFluidBucket(ModFluids.MOSES_BLOOD));
 		}
 	}
 }

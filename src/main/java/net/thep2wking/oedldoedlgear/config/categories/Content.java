@@ -17,6 +17,9 @@ public class Content {
 	@Config.Name("Gamemode Chestplate Switch Gamemodes")
 	public boolean GAMEMODE_CHESTPLATE_SWITCH_GAMEMODES = true;
 
+	@Config.Name("Crocs Can Walk On Lava")
+	public boolean CROCS_CAN_WALK_ON_LAVA = true;
+
 	@Config.Name("Dirt Armor Spawns Diamonds")
 	public boolean DIRT_ARMOR_SPAWNS_DIAMONDS = true;
 
@@ -161,6 +164,27 @@ public class Content {
 		@Config.Name("Frieren Staff Magic Damage")
 		@Config.RangeInt(min = 0, max = 1000000)
 		public int FRIEREN_STAFF_MAGIC_DAMAGE = 12;
+
+		@Config.Name("Moses Staff Range")
+		@Config.RangeInt(min = 0, max = 100)
+		public int MOSES_STAFF_RANGE = 30;
+
+		@Config.Name("Moses Staff Cooldown")
+		@Config.RangeInt(min = 0, max = 1000)
+		public int MOSES_STAFF_COOLDOWN = 40;
+
+		@Config.Name("Moses Staff Vertical Extension")
+		@Config.RangeInt(min = 0, max = 100)
+		public int MOSES_STAFF_VERTICAL_EXTENSION = 20;
+
+		@Config.Name("Moses Staff Can Split Lava")
+		public boolean MOSES_STAFF_CAN_SPLIT_LAVA = true;
+
+		@Config.Name("Moses Staff Can Convert Water")
+		public boolean MOSES_STAFF_CAN_CONVERT_WATER = true;
+
+		@Config.Name("Moses Staff Transparent Replacement Debug Mode")
+		public boolean MOSES_STAFF_TRANSPARENT_REPLACEMENT_DEBUG_MODE= false;
 	}
 
 	@Config.Name("smashbats")

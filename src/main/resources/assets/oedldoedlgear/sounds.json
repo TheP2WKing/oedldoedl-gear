@@ -14,10 +14,17 @@
         ]
     },
     "oniisan": {
-        "category": "blocks",
+        "category": "ambient",
         "subtitle": "sound.oedldoedlgear.oniisan",
         "sounds": [
             "oedldoedlgear:oniisan"
+        ]
+    },
+    "moses": {
+        "category": "ambient",
+        "subtitle": "sound.oedldoedlgear.moses",
+        "sounds": [
+            "oedldoedlgear:moses"
         ]
     }
 }

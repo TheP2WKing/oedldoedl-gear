@@ -8,4 +8,5 @@ public class ModSounds {
 	public static final SoundEvent MEGUMIN = new ModSoundEventBase(OedldoedlGear.MODID, "megumin");
 	public static final SoundEvent QUIEK = new ModSoundEventBase(OedldoedlGear.MODID, "quiek");
 	public static final SoundEvent ONIISAN = new ModSoundEventBase(OedldoedlGear.MODID, "oniisan");
+	public static final SoundEvent MOSES = new ModSoundEventBase(OedldoedlGear.MODID, "moses");
 }

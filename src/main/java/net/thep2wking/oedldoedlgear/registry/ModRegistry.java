@@ -13,20 +13,26 @@ import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.init.ModBlocks;
+import net.thep2wking.oedldoedlgear.init.ModFluids;
 import net.thep2wking.oedldoedlgear.init.ModItems;
 import net.thep2wking.oedldoedlgear.init.ModPotions;
 import net.thep2wking.oedldoedlgear.init.ModSounds;
+import net.thep2wking.oedldoedlgear.util.ModRenderer;
 
 @Mod.EventBusSubscriber
 public class ModRegistry {
 	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event) {
 		ModRegistryHelper.registerModels(event, OedldoedlGear.MODID);
+		ModRenderer.registerFluidRenderer();
 	}
 	
 	@SubscribeEvent
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) {
 		ModLogger.registeredBlocksLogger(OedldoedlGear.MODID);
+
+		ModRegistryHelper.registerBlock(event, ModBlocks.MOSES_BLOOD);
+		ModRegistryHelper.registerBlock(event, ModBlocks.LIQUID_DEATH);
 
 		ModRegistryHelper.registerBlock(event, ModBlocks.BADROCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.ENHANCED_DIRT);
@@ -38,6 +44,8 @@ public class ModRegistry {
 		ModRegistryHelper.registerBlock(event, ModBlocks.JUMP_PAD_PLUS_PLUS);
 		ModRegistryHelper.registerBlock(event, ModBlocks.JUMP_PAD_PLUS_PLUS_PLUS);
 		ModRegistryHelper.registerBlock(event, ModBlocks.IMPACT_PAD);
+
+		ModRegistryHelper.registerBlock(event, ModBlocks.TRANSPARENT_REPLACEMENT);
 	}
 
 	@SubscribeEvent
@@ -158,6 +166,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.BASE_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.BASE_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.BASE_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.BASE_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.BASE_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SWORD);
@@ -168,6 +177,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.DIRT_SWORD);
@@ -205,6 +215,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.GREMORIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.HIMEJIMARIUM_SWORD);
@@ -215,6 +226,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.HIMEJIMARIUM_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.HIMEJIMARIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.HIMEJIMARIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.HIMEJIMARIUM_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.HIMEJIMARIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.TOUJOURIUM_SWORD);
@@ -225,6 +237,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.TOUJOURIUM_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.TOUJOURIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.TOUJOURIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.TOUJOURIUM_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.TOUJOURIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.ARGENTORIUM_SWORD);
@@ -235,6 +248,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.ARGENTORIUM_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.ARGENTORIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.ARGENTORIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.ARGENTORIUM_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.ARGENTORIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.QUARTARIUM_SWORD);
@@ -245,6 +259,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.QUARTARIUM_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.QUARTARIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.QUARTARIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.QUARTARIUM_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.QUARTARIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.NAGATORIUM_SWORD);
@@ -255,6 +270,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.NAGATORIUM_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.NAGATORIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.NAGATORIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.NAGATORIUM_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.NAGATORIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_SWORD);
@@ -265,6 +281,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.SAKURAJIMARIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_SWORD);
@@ -275,6 +292,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_PAXEL);
 		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_SMASHBAT);
 		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.KITAGAWARIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.WOODEN_PAXEL);
@@ -309,6 +327,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.LIGHTNING_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.FRIEREN_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.ADMIN_STAFF);
+		ModRegistryHelper.registerItem(event, ModItems.MOSES_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.SKULL_WAND);
 		ModRegistryHelper.registerItem(event, ModItems.FIRE_WAND);
 		ModRegistryHelper.registerItem(event, ModItems.FLY_SWATTER);
@@ -342,6 +361,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.EXPLOSION_CORE);
 		ModRegistryHelper.registerItem(event, ModItems.CHARGED_CORE);
 		ModRegistryHelper.registerItem(event, ModItems.MYSTIC_CORE);
+		ModRegistryHelper.registerItem(event, ModItems.NATURE_CORE);
 
 		ModRegistryHelper.registerItem(event, ModItems.CHAINMAIL);
 
@@ -358,6 +378,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.MEGUMIN);
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.QUIEK);
 		ModRegistryHelper.registerSoundEvent(event, ModSounds.ONIISAN);
+		ModRegistryHelper.registerSoundEvent(event, ModSounds.MOSES);
 	}
 
 	@SubscribeEvent
@@ -366,6 +387,7 @@ public class ModRegistry {
 
 		event.getRegistry().register(ModPotions.FLIGHT);
 		event.getRegistry().register(ModPotions.MILK);
+		event.getRegistry().register(ModPotions.MOSES_BLOOD);
 	}
 
 	@SubscribeEvent
@@ -375,5 +397,13 @@ public class ModRegistry {
 		event.getRegistry().register(ModPotions.FLIGHT_NORMAL);
 		event.getRegistry().register(ModPotions.FLIGHT_LONG);
 		event.getRegistry().register(ModPotions.MILK_NORMAL);
+		event.getRegistry().register(ModPotions.MOSES_BLOOD_NORMAL);
+	}
+
+	public static void registerFluids() {
+		ModLogger.registeredFluidsLogger(OedldoedlGear.MODID);
+
+		ModRegistryHelper.registerFluid(ModFluids.MOSES_BLOOD);
+		ModRegistryHelper.registerFluid(ModFluids.LIQUID_DEATH);
 	}
 }
