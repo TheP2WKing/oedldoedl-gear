@@ -534,8 +534,8 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "magical_wood",
 					new ItemStack(ModBlocks.MAGICAL_WOOD, 1, 0), "ABA", "BCB", "ABA", 'A', "nuggetGold", 'B',
 					"ingotGold", 'C', "bookshelf");
-			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "magical_wood_planks",
-					new ItemStack(ModBlocks.MAGICAL_WOOD_PLANKS, 4, 0), "A", 'A', "blockMagicWood");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlGear.MODID, "magical_wood_planks",
+					new ItemStack(ModBlocks.MAGICAL_WOOD_PLANKS, 4, 0), "blockMagicWood");
 
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "jump_pad", new ItemStack(ModBlocks.JUMP_PAD, 1, 0),
 					"A", "B", 'A', "slimeball", 'B', new ItemStack(Blocks.WOODEN_PRESSURE_PLATE, 1, 0));
@@ -567,8 +567,10 @@ public class ModRecipes {
 			ModRecipeHelper.addBrewingRecipe(ModPotions.MILK_NORMAL, PotionTypes.WATER,
 					new ItemStack(Items.MILK_BUCKET, 1, 0));
 
-			ModRecipeHelper.addBrewingRecipe(ModPotions.MOSES_BLOOD_NORMAL, PotionTypes.STRONG_HEALING,
-					ModFluidUtil.addFluidBucket(ModFluids.MOSES_BLOOD));
+			ModRecipeHelper.addForgBucketBrewingRecipe(ModPotions.MOSES_BLOOD_NORMAL, PotionTypes.STRONG_HEALING,
+					ModFluids.MOSES_BLOOD);
+			ModRecipeHelper.addForgBucketBrewingRecipe(PotionTypes.HARMING, PotionTypes.HEALING,
+					ModFluids.LIQUID_DEATH);
 		}
 	}
 }
