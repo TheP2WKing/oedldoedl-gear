@@ -347,15 +347,13 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/black_wizard_hat",
 					new ItemStack(ModItems.BLACK_WIZARD_HAT, 1, 0), " A ", " B ", "BBB", 'A', "ghastTear", 'B',
 					"fabricBlack");
-			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/black_wizard_hat_clear",
-					new ItemStack(ModItems.BLACK_WIZARD_HAT, 1, 0), "A", 'A',
-					new ItemStack(ModItems.BLACK_WIZARD_HAT, 1, 0));
+			ModRecipeHelper.addShapelessRecipe(OedldoedlGear.MODID, "armor/black_wizard_hat_clear",
+					new ItemStack(ModItems.BLACK_WIZARD_HAT, 1, 0), new ItemStack(ModItems.BLACK_WIZARD_HAT, 1, 0));
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/blue_wizard_hat",
 					new ItemStack(ModItems.BLUE_WIZARD_HAT, 1, 0), " A ", " B ", "BCB", 'A', "ghastTear", 'B',
 					"fabricBlue", 'C', "fabricYellow");
-			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "armor/blue_wizard_hat_clear",
-					new ItemStack(ModItems.BLUE_WIZARD_HAT, 1, 0), "A", 'A',
-					new ItemStack(ModItems.BLUE_WIZARD_HAT, 1, 0));
+			ModRecipeHelper.addShapelessRecipe(OedldoedlGear.MODID, "armor/blue_wizard_hat_clear",
+					new ItemStack(ModItems.BLUE_WIZARD_HAT, 1, 0), new ItemStack(ModItems.BLUE_WIZARD_HAT, 1, 0));
 			ModRecipeHelper.addChestplateRecipe(OedldoedlGear.MODID, "gamemode",
 					new ItemStack(ModItems.GAMEMODE_CHESTPLATE, 1, 0), "commandBlock");
 
