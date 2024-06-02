@@ -1,5 +1,31 @@
 # Changelog
 
+## [4.1.0] - 2024-06-02
+
+### Added
+
+- added the crocs from the Minecraft Twitter clip (and the ability to walk on water)
+- added 10 bows for all oedldoeld materials
+- added Moses staff that splits water
+- added Moses blood that heals all your pain (or at least refills your health)
+- added magical wood planks
+- added potion of flight
+- added bottle of milk (splash potion)
+- added missing armor effects for kitagawarium and sakurajimarium armor
+- added liquid death
+
+### Changed
+
+- fixed that some armor effects were broken due to wrong usage of Forge EventBusSubscriber
+- all right-clickable items now have the proper hand swing animation
+- frieren staff lightning is now randomly offsetted
+- shapeless recipes are now truly shapeless and use oredict (no more shaped fabric)
+- fixed that some armor pieces were not enchantable
+
+### Removed
+
+- removed legacy assets
+  
 ## [4.0.0] - 2024-03-03
 
 ### 1.12.2 isn't dead, it just took some time
