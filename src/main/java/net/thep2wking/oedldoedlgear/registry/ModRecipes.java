@@ -470,7 +470,7 @@ public class ModRecipes {
 					new ItemStack(ModItems.EXPLOSIVE_SNOWBALL, 8, 0), "AAA", "ABA", "AAA", 'A', "snowball", 'B', "tnt");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "charged_snowball",
 					new ItemStack(ModItems.CHARGED_SNOWBALL, 8, 0), "AAA", "ABA", "AAA", 'A', "snowball", 'B',
-					"essenceCharged");
+					"coreCharged");
 
 			ModGearRecipeHelper.addFabricRecipe(OedldoedlGear.MODID, "white_fabric",
 					new ItemStack(ModItems.WHITE_FABRIC, 2, 0), "white");
