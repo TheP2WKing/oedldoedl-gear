@@ -87,23 +87,22 @@ public class ItemAdminStaff extends ModItemBase {
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		if (GearConfig.CONTENT.ADMINTOOLS.ENABLE_ADMIN_STAFF) {
 			ItemStack stack = player.getHeldItem(hand);
+			player.swingArm(hand);
 			if (!world.isRemote && player.isSneaking()) {
 				NBTTagCompound tags = stack.getTagCompound();
 				Mode mode = getMode(stack);
 				mode = mode.getNext();
 				setMode(stack, mode);
 				stack.setTagCompound(tags);
-				player.swingArm(hand);
 				player.sendMessage(
 						new TextComponentString(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
 								+ I18n.format(this.getUnlocalizedName() + ".annotation1"))
 								.appendSibling(new TextComponentString(
 										" " + TextFormatting.YELLOW + getMode(stack).name().toString())));
-				return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
-
+				player.swingArm(hand);
 			} else if (!world.isRemote) {
 				if (getMode(stack) == Mode.Day || getMode(stack) == Mode.Night || getMode(stack) == Mode.Clear
-						|| getMode(stack) == Mode.Rain || getMode(stack) == Mode.Thunder) {
+				|| getMode(stack) == Mode.Rain || getMode(stack) == Mode.Thunder) {
 					if (getMode(stack) == Mode.Day) {
 						world.getWorldInfo().setWorldTime(1000);
 					} else if (getMode(stack) == Mode.Night) {
@@ -120,7 +119,6 @@ public class ItemAdminStaff extends ModItemBase {
 						world.getWorldInfo().setThundering(true);
 					}
 				}
-
 				if (getMode(stack) == Mode.Creative || getMode(stack) == Mode.Survival) {
 					if (getMode(stack) == Mode.Creative) {
 						player.setGameType(GameType.CREATIVE);
@@ -128,7 +126,9 @@ public class ItemAdminStaff extends ModItemBase {
 						player.setGameType(GameType.SURVIVAL);
 					}
 				}
+				player.swingArm(hand);
 			}
+			player.swingArm(hand);
 			return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
 		}
 		return super.onItemRightClick(world, player, hand);

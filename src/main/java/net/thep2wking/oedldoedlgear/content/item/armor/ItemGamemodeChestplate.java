@@ -90,7 +90,6 @@ public class ItemGamemodeChestplate extends ModItemArmorBase {
 			ItemStack stack = new ItemStack(this);
 			NBTTagCompound compound = new NBTTagCompound();
 			compound.setBoolean("Gamemode", true);
-			;
 			stack.setTagCompound(compound);
 			items.add(stack);
 		}
@@ -100,7 +99,6 @@ public class ItemGamemodeChestplate extends ModItemArmorBase {
 	public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
 		NBTTagCompound compound = new NBTTagCompound();
 		compound.setBoolean("Gamemode", true);
-		;
 		stack.setTagCompound(compound);
 		super.onCreated(stack, worldIn, playerIn);
 	}
@@ -119,14 +117,15 @@ public class ItemGamemodeChestplate extends ModItemArmorBase {
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		if (GearConfig.CONTENT.GAMEMODE_CHESTPLATE_SWITCH_GAMEMODES) {
 			ItemStack stack = player.getHeldItem(hand);
+			player.swingArm(hand);
 			if (!world.isRemote && player.isSneaking()) {
 				NBTTagCompound compound = stack.getTagCompound();
 				if (compound == null)
 					compound = new NBTTagCompound();
 				compound.setBoolean("Gamemode", !compound.getBoolean("Gamemode"));
 				stack.setTagCompound(compound);
-				player.swingArm(hand);
 				if (!compound.getBoolean("Gamemode")) {
+					player.swingArm(hand);
 					player.sendMessage(
 							new TextComponentString(
 									CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
@@ -134,6 +133,7 @@ public class ItemGamemodeChestplate extends ModItemArmorBase {
 									.appendSibling(new TextComponentString(
 											" " + TextFormatting.YELLOW + getMode(stack).toString())));
 				} else {
+					player.swingArm(hand);
 					player.sendMessage(
 							new TextComponentString(
 									CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
@@ -148,6 +148,7 @@ public class ItemGamemodeChestplate extends ModItemArmorBase {
 				if (itemstack1.isEmpty()) {
 					player.setItemStackToSlot(entityequipmentslot, itemstack.copy());
 					itemstack.setCount(0);
+					player.swingArm(hand);
 					return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemstack);
 				} else {
 					return new ActionResult<ItemStack>(EnumActionResult.FAIL, itemstack);

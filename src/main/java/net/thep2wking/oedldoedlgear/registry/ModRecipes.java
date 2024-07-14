@@ -440,12 +440,12 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/frieren_staff",
 					new ItemStack(ModItems.FRIEREN_STAFF, 1, 0), " AB", "CDA", "AC ", 'A', "blockMagicWood", 'B',
 					"ingotGold", 'C', "fabricRed", 'D', "coreMystic");
-			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/admin_staff",
-					ModNBTUtil.addNBTItem(ModItems.ADMIN_STAFF, "Mode", "Day"), " AA", " BA", "B  ", 'A',
-					"commandBlock", 'B', "stickWood");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/moses_staff",
 					new ItemStack(ModItems.MOSES_STAFF, 1, 0), " AB", "BCA", "DB ", 'A', "blockMagicWood", 'B',
 					"blockPlankMagicWood", 'C', "coreNature", 'D', "stickWood");
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/admin_staff",
+					ModNBTUtil.addNBTItem(ModItems.ADMIN_STAFF, "Mode", "Day"), " AA", " BA", "B  ", 'A',
+					"commandBlock", 'B', "stickWood");
 			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "tool/skull_wand",
 					new ItemStack(ModItems.SKULL_WAND, 1, 0), " AB", " CD", "C  ", 'A', "tnt", 'B',
 					new ItemStack(Items.SKULL, 1, 1), 'C', "stickWood", 'D', "ingotGold");

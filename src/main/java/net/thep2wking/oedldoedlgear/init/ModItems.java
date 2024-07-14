@@ -385,8 +385,8 @@ public class ModItems {
 	public static final Item EXPLOSION_STAFF = new ItemExplosionStaff(OedldoedlGear.MODID, "explosion_staff", OedldoedlGear.TAB, ModRarities.RED, false, 1, 1);
 	public static final Item LIGHTNING_STAFF = new ItemLightningStaff(OedldoedlGear.MODID, "lightning_staff", OedldoedlGear.TAB, ModRarities.AQUA, false, 1, 1);
 	public static final Item FRIEREN_STAFF = new ItemFrierenStaff(OedldoedlGear.MODID, "frieren_staff", OedldoedlGear.TAB, ModRarities.GOLD, false, 1, 1);
-	public static final Item ADMIN_STAFF = new ItemAdminStaff(OedldoedlGear.MODID, "admin_staff", OedldoedlGear.TAB, ModRarities.RED, true, 1, 1);
 	public static final Item MOSES_STAFF = new ItemMosesStaff(OedldoedlGear.MODID, "moses_staff", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 1);
+	public static final Item ADMIN_STAFF = new ItemAdminStaff(OedldoedlGear.MODID, "admin_staff", OedldoedlGear.TAB, ModRarities.RED, true, 1, 1);
 	public static final Item SKULL_WAND = new ItemSkullWand(OedldoedlGear.MODID, "skull_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item FIRE_WAND = new ItemFireWand(OedldoedlGear.MODID, "fire_wand", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);
 	public static final Item FLY_SWATTER = new ItemFlySwatter(OedldoedlGear.MODID, "fly_swatter", OedldoedlGear.TAB, ModRarities.YELLOW, false, 1, 0);

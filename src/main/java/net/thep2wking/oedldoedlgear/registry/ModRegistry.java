@@ -326,8 +326,8 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.EXPLOSION_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.LIGHTNING_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.FRIEREN_STAFF);
-		ModRegistryHelper.registerItem(event, ModItems.ADMIN_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.MOSES_STAFF);
+		ModRegistryHelper.registerItem(event, ModItems.ADMIN_STAFF);
 		ModRegistryHelper.registerItem(event, ModItems.SKULL_WAND);
 		ModRegistryHelper.registerItem(event, ModItems.FIRE_WAND);
 		ModRegistryHelper.registerItem(event, ModItems.FLY_SWATTER);
