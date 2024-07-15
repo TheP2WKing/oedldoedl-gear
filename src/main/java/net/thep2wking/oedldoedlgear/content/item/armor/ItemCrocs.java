@@ -35,7 +35,6 @@ import net.thep2wking.oedldoedlgear.model.ModelCrocs;
 
 @Mod.EventBusSubscriber
 public class ItemCrocs extends ModItemArmorBase {
-
 	public ItemCrocs(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
 			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines, annotationLines);
