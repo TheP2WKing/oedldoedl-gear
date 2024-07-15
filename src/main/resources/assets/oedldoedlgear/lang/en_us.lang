@@ -90,6 +90,36 @@ item.oedldoedlgear.dirt_smashbat.tip1=No dirty tricks...
 item.oedldoedlgear.dirt_shears.name=Dirt Shears
 item.oedldoedlgear.dirt_shears.tip1=No dirty tricks...
 
+# caterium
+item.oedldoedlgear.caterium_helmet.name=Caterium Helmet
+item.oedldoedlgear.caterium_helmet.tip1=Advanced helmet
+item.oedldoedlgear.caterium_chestplate.name=Caterium Chestplate
+item.oedldoedlgear.caterium_chestplate.tip1=Advanced chestplate.
+item.oedldoedlgear.caterium_leggings.name=Caterium Leggings
+item.oedldoedlgear.caterium_leggings.tip1=Advanced leggings.
+item.oedldoedlgear.caterium_boots.name=Caterium Boots
+item.oedldoedlgear.caterium_boots.tip1=Advanced boots.
+item.oedldoedlgear.caterium_sword.name=Caterium Sword
+item.oedldoedlgear.caterium_sword.tip1=Advanced sword.
+item.oedldoedlgear.caterium_shovel.name=Caterium Shovel
+item.oedldoedlgear.caterium_shovel.tip1=Advanced shovel.
+item.oedldoedlgear.caterium_pickaxe.name=Caterium Pickaxe
+item.oedldoedlgear.caterium_pickaxe.tip1=Advanced pickaxe.
+item.oedldoedlgear.caterium_axe.name=Caterium Axe
+item.oedldoedlgear.caterium_axe.tip1=Advanced axe.
+item.oedldoedlgear.caterium_hoe.name=Caterium Hoe
+item.oedldoedlgear.caterium_hoe.tip1=Advanced hoe.
+item.oedldoedlgear.caterium_paxel.name=Caterium Paxel
+item.oedldoedlgear.caterium_paxel.tip1=Advanced paxel.
+item.oedldoedlgear.caterium_smashbat.name=Caterium Smashbat
+item.oedldoedlgear.caterium_smashbat.tip1=Advanced smashbat.
+item.oedldoedlgear.caterium_shears.name=Caterium Shears
+item.oedldoedlgear.caterium_shears.tip1=Advanced shears.
+item.oedldoedlgear.caterium_bow.name=Caterium Bow
+item.oedldoedlgear.caterium_bow.tip1=Advanced bow.
+item.oedldoedlgear.caterium_shield.name=Caterium Shield
+item.oedldoedlgear.caterium_shield.tip1=Advanced shield.
+
 # emerald
 item.oedldoedlgear.emerald_helmet.name=Emerald Helmet
 item.oedldoedlgear.emerald_helmet.tip1=Every crappy MCreator mod adds that.

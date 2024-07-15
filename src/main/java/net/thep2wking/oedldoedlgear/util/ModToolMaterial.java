@@ -13,7 +13,8 @@ public class ModToolMaterial {
 			2f, 8, ModItems.BASE_INGOT, 0);
 	public static final ToolMaterial OEDLDOEDL = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "oedldoedl",
 			4096, 5, 16f, 8f, 20, ModItems.OEDLDOEDL_INGOT, 0);
-
+	public static final ToolMaterial CATERIUM = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "caterium", 1245, 3, 5.5f,
+			3.5f, 10, ModItems.CATERIUM_INGOT, 0);
 	public static final ToolMaterial DIRT = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "dirt", 26,
 			0, 1.5f, -0.5f, 4, ModBlocks.ENHANCED_DIRT, 0);
 	public static final ToolMaterial EMERALD = ModToolMaterialBase.addToolMaterial(OedldoedlGear.MODID, "emerald", 1789,

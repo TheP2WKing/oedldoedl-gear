@@ -16,7 +16,8 @@ public class ModArmorMaterial {
 	public static final ArmorMaterial OEDLDOEDL = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID,
 			"oedldoedl", 140, new int[] { 6, 10, 12, 6 }, 6.0f, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
 			ModItems.OEDLDOEDL_INGOT, 0);
-
+	public static final ArmorMaterial CATERIUM = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "caterium",
+			29, new int[] { 4, 7, 6, 4 }, 1.0f, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, ModItems.CATERIUM_INGOT, 0);
 	public static final ArmorMaterial DIRT = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "dirt", 4,
 			new int[] { 1, 1, 1, 1 }, 0f, 4, SoundEvents.BLOCK_GRAVEL_PLACE, ModBlocks.ENHANCED_DIRT, 0);
 	public static final ArmorMaterial WOOD = ModArmorMaterialBase.addArmorMaterial(OedldoedlGear.MODID, "wood", 8,

@@ -1,0 +1,7 @@
+{
+	"parent": "item/bow",
+	"textures": 
+	{
+		"layer0": "oedldoedlgear:items/caterium_bow_pulling_1"
+	}
+}

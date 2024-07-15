@@ -31,8 +31,6 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("plankMagicWood", ModBlocks.MAGICAL_WOOD_PLANKS, 0);
 			ModRecipeHelper.addOreDict("plankWood", ModBlocks.MAGICAL_WOOD_PLANKS, 0);
 
-			ModRecipeHelper.addOreDict("toolNeedle", ModItems.NEEDLE, 0);
-
 			ModRecipeHelper.addOreDict("leatherTravellers", ModItems.TRAVELLERS_LEATHER, 0);
 
 			ModRecipeHelper.addOreDict("coreExplosion", ModItems.EXPLOSION_CORE, 0);
@@ -47,8 +45,33 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("paperLicense", ModItems.CRAFTING_LICENSE, 0);
 			ModRecipeHelper.addOreDict("paperTos", ModItems.OEDLDOEDL_TOS, 0);
 
+			ModRecipeHelper.addOreDict("toolNeedle", ModItems.NEEDLE, 0);
+
+			ModRecipeHelper.addOreDict("toolShears", ModItems.BASE_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.OEDLDOEDL_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.CATERIUM_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.DIRT_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.EMERALD_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.SLIME_SHEARS, 0);
+
+			ModRecipeHelper.addOreDict("toolShears", ModItems.GREMORIUM_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.HIMEJIMARIUM_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.TOUJOURIUM_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.ARGENTORIUM_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.QUARTARIUM_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.NAGATORIUM_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.SAKURAJIMARIUM_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.KITAGAWARIUM_SHEARS, 0);
+
+			ModRecipeHelper.addOreDict("toolShears", ModItems.WOODEN_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.STONE_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.GOLDEN_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.BASE_SHEARS, 0);
+			ModRecipeHelper.addOreDict("toolShears", ModItems.DIAMOND_SHEARS, 0);
+
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.BASE_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.OEDLDOEDL_HOE, 0);
+			ModRecipeHelper.addOreDict("toolHoe", ModItems.CATERIUM_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.DIRT_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.EMERALD_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", ModItems.SLIME_HOE, 0);
@@ -109,6 +132,9 @@ public class ModRecipes {
 					new ItemStack(ModItems.OEDLDOEDL_HELMET, 1, 0), new ItemStack(ModItems.OEDLDOEDL_CHESTPLATE, 1, 0),
 					new ItemStack(ModItems.OEDLDOEDL_LEGGINGS, 1, 0), new ItemStack(ModItems.OEDLDOEDL_BOOTS, 1, 0),
 					"ingotOedldoedl");
+			ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "caterium", new ItemStack(ModItems.CATERIUM_HELMET, 1, 0),
+					new ItemStack(ModItems.CATERIUM_CHESTPLATE, 1, 0), new ItemStack(ModItems.CATERIUM_LEGGINGS, 1, 0),
+					new ItemStack(ModItems.CATERIUM_BOOTS, 1, 0), "ingotCaterium");
 			ModRecipeHelper.addFullArmorRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_HELMET, 1, 0),
 					new ItemStack(ModItems.DIRT_CHESTPLATE, 1, 0), new ItemStack(ModItems.DIRT_LEGGINGS, 1, 0),
 					new ItemStack(ModItems.DIRT_BOOTS, 1, 0), "dirtEnhanced");
@@ -184,6 +210,13 @@ public class ModRecipes {
 					new ItemStack(ModItems.OEDLDOEDL_PAXEL, 1, 0), new ItemStack(ModItems.OEDLDOEDL_SMASHBAT, 1, 0),
 					new ItemStack(ModItems.OEDLDOEDL_SHEARS, 1, 0), new ItemStack(ModItems.OEDLDOEDL_BOW, 1, 0),
 					new ItemStack(ModItems.OEDLDOEDL_SHIELD, 1, 0), "stickWood", "ingotOedldoedl");
+			ModRecipeHelper.addFullToolRecipe(OedldoedlGear.MODID, "caterium",
+					new ItemStack(ModItems.CATERIUM_SWORD, 1, 0),
+					new ItemStack(ModItems.CATERIUM_SHOVEL, 1, 0), new ItemStack(ModItems.CATERIUM_PICKAXE, 1, 0),
+					new ItemStack(ModItems.CATERIUM_AXE, 1, 0), new ItemStack(ModItems.CATERIUM_HOE, 1, 0),
+					new ItemStack(ModItems.CATERIUM_PAXEL, 1, 0), new ItemStack(ModItems.CATERIUM_SMASHBAT, 1, 0),
+					new ItemStack(ModItems.CATERIUM_SHEARS, 1, 0), new ItemStack(ModItems.CATERIUM_BOW, 1, 0),
+					new ItemStack(ModItems.CATERIUM_SHIELD, 1, 0), "stickWood", "ingotCaterium");
 			ModRecipeHelper.addSwordRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_SWORD, 1, 0),
 					"stickWood", "dirtEnhanced");
 			ModRecipeHelper.addShovelRecipe(OedldoedlGear.MODID, "dirt", new ItemStack(ModItems.DIRT_SHOVEL, 1, 0),

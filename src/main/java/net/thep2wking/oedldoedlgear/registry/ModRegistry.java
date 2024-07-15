@@ -73,6 +73,11 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_LEGGINGS);
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_BOOTS);
 
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_HELMET);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_CHESTPLATE);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_LEGGINGS);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_BOOTS);
+
 		ModRegistryHelper.registerItem(event, ModItems.DIRT_HELMET);
 		ModRegistryHelper.registerItem(event, ModItems.DIRT_CHESTPLATE);
 		ModRegistryHelper.registerItem(event, ModItems.DIRT_LEGGINGS);
@@ -179,6 +184,17 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SHEARS);
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_BOW);
 		ModRegistryHelper.registerItem(event, ModItems.OEDLDOEDL_SHIELD);
+
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_SWORD);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_SHOVEL);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_PICKAXE);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_AXE);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_HOE);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_PAXEL);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_SMASHBAT);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_SHEARS);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_BOW);
+		ModRegistryHelper.registerItem(event, ModItems.CATERIUM_SHIELD);
 
 		ModRegistryHelper.registerItem(event, ModItems.DIRT_SWORD);
 		ModRegistryHelper.registerItem(event, ModItems.DIRT_SHOVEL);

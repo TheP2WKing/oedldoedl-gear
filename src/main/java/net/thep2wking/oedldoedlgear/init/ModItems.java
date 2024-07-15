@@ -92,6 +92,12 @@ public class ModItems {
 	public static final Item OEDLDOEDL_LEGGINGS = new ItemOedldoedlArmor(OedldoedlGear.MODID, "oedldoedl_leggings", OedldoedlGear.TAB, ModArmorMaterial.OEDLDOEDL, 1, EntityEquipmentSlot.LEGS, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 	public static final Item OEDLDOEDL_BOOTS = new ItemOedldoedlArmor(OedldoedlGear.MODID, "oedldoedl_boots", OedldoedlGear.TAB, ModArmorMaterial.OEDLDOEDL, 0, EntityEquipmentSlot.FEET, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 
+	// caterium armor
+	public static final Item CATERIUM_HELMET = new ModItemArmorBase(OedldoedlGear.MODID, "caterium_helmet", OedldoedlGear.TAB, ModArmorMaterial.CATERIUM, 0, EntityEquipmentSlot.HEAD, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_CHESTPLATE = new ModItemArmorBase(OedldoedlGear.MODID, "caterium_chestplate", OedldoedlGear.TAB, ModArmorMaterial.CATERIUM, 0, EntityEquipmentSlot.CHEST, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_LEGGINGS = new ModItemArmorBase(OedldoedlGear.MODID, "caterium_leggings", OedldoedlGear.TAB, ModArmorMaterial.CATERIUM, 1, EntityEquipmentSlot.LEGS, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_BOOTS = new ModItemArmorBase(OedldoedlGear.MODID, "caterium_boots", OedldoedlGear.TAB, ModArmorMaterial.CATERIUM, 0, EntityEquipmentSlot.FEET, ModRarities.YELLOW, false, 1, 0);
+
 	// dirt armor
 	public static final Item DIRT_HELMET = new ItemDirtArmor(OedldoedlGear.MODID, "dirt_helmet", OedldoedlGear.TAB, ModArmorMaterial.DIRT, 0, EntityEquipmentSlot.HEAD, ModRarities.YELLOW, true, 1, 0);
 	public static final Item DIRT_CHESTPLATE = new ItemDirtArmor(OedldoedlGear.MODID, "dirt_chestplate", OedldoedlGear.TAB, ModArmorMaterial.DIRT, 0, EntityEquipmentSlot.CHEST, ModRarities.YELLOW, true, 1, 0);
@@ -219,6 +225,18 @@ public class ModItems {
 	public static final Item OEDLDOEDL_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "oedldoedl_shears", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 	public static final Item OEDLDOEDL_BOW = new ModItemBowBase(OedldoedlGear.MODID, "oedldoedl_bow", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, 12.0f, 2, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
 	public static final Item OEDLDOEDL_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "oedldoedl_shield", OedldoedlGear.TAB, ModToolMaterial.OEDLDOEDL, 2.0f, ModRarities.LIGHT_PURPLE, true, 1, 0).setRGBBarColor(0xbf40bf);
+
+	// base tools 
+	public static final Item CATERIUM_SWORD = new ModItemSwordBase(OedldoedlGear.MODID, "caterium_sword", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, 3f, -2.4f, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_SHOVEL = new ModItemShovelBase(OedldoedlGear.MODID, "caterium_shovel", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, 1.5f, -3f, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_PICKAXE = new ModItemPickaxeBase(OedldoedlGear.MODID, "caterium_pickaxe", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, 1f, -2.8f, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_AXE = new ModItemAxeBase(OedldoedlGear.MODID, "caterium_axe", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, 8f, -3.1f, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_HOE = new ModItemHoeBase(OedldoedlGear.MODID, "caterium_hoe", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, -2f, -1f, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_PAXEL = new ModItemPaxelBase(OedldoedlGear.MODID, "caterium_paxel", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, 4f, -3f, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_SMASHBAT = new ModItemSmashbatBase(OedldoedlGear.MODID, "caterium_smashbat", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, 0f, -2f, 9f, 4.5f, ModHitSound.METAL, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_SHEARS = new ModItemShearsBase(OedldoedlGear.MODID, "caterium_shears", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_BOW = new ModItemBowBase(OedldoedlGear.MODID, "caterium_bow", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, ModRarities.YELLOW, false, 1, 0);
+	public static final Item CATERIUM_SHIELD = new ModItemShieldBase(OedldoedlGear.MODID, "caterium_shield", OedldoedlGear.TAB, ModToolMaterial.CATERIUM, ModRarities.YELLOW, false, 1, 0);
 
 	// dirt tools 
 	public static final Item DIRT_SWORD = new ModItemSwordBase(OedldoedlGear.MODID, "dirt_sword", OedldoedlGear.TAB, ModToolMaterial.DIRT, 3f, -2.4f, ModRarities.YELLOW, true, 1, 0);
