@@ -44,9 +44,9 @@ public class ItemChainmail extends ModItemBase {
 			if (!playerIn.capabilities.isCreativeMode) {
 				playerIn.getHeldItemMainhand().shrink(1);
 			}
+			playerIn.swingArm(handIn);
 			worldIn.playSound(null, playerIn.getPosition(), SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, SoundCategory.PLAYERS,
-					1f,
-					1f);
+					1f, 1f);
 			return ActionResult.newResult(EnumActionResult.SUCCESS, itemstack);
 		}
 		return super.onItemRightClick(worldIn, playerIn, handIn);

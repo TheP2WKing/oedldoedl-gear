@@ -79,7 +79,7 @@ public class OedldoedlGear {
     public static class ModJoinMessage {
         @SubscribeEvent
         public static void addJoinMessage(PlayerLoggedInEvent event) {
-            ModLogInUtil.addJoinMessage(event, NAME, MODID, VERSION);
+            ModLogInUtil.addJoinMessage(event, NAME, MODID, VERSION, true);
         }
     }
 }

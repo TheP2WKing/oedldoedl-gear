@@ -4,6 +4,9 @@ itemGroup.oedldoedlgear.name=§dOedldoedl Gear
 # icons
 item.oedldoedlcore.gear_icon.annotation3=Version: §e1.12.2-4.2.0
 
+# join message
+join.oedldoedlgear.message=Tools and armor on this wonderful world!
+
 # sounds
 sound.oedldoedlgear.megumin=Megumin screems
 sound.oedldoedlgear.quiek=Bottle quieking
