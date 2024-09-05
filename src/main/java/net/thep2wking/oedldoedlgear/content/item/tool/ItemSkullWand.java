@@ -58,18 +58,21 @@ public class ItemSkullWand extends ModItemBase {
 		}
 
 		if (!world.isRemote) {
-			double vecX = (double) (-MathHelper.sin(player.rotationYaw / 180.0F * (float) Math.PI)
-					* MathHelper.cos(player.rotationPitch / 180.0F * (float) Math.PI));
-			double vecY = (double) (-MathHelper.sin(player.rotationPitch / 180.0F * (float) Math.PI));
-			double vecZ = (double) (MathHelper.cos(player.rotationYaw / 180.0F * (float) Math.PI)
-					* MathHelper.cos(player.rotationPitch / 180.0F * (float) Math.PI));
-			double deltaX = (double) (-MathHelper.sin(player.rotationYaw / 180.0F * (float) Math.PI));
-			double deltaZ = (double) (MathHelper.cos(player.rotationYaw / 180.0F * (float) Math.PI));
-			EntityWitherSkull skull = new EntityWitherSkull(world, player.posX + deltaX, player.posY + 1,
-					player.posZ + deltaZ, vecX, vecY, vecZ) {
+			float yaw = player.rotationYaw;
+			float pitch = player.rotationPitch;
+			double vecX = -MathHelper.sin(yaw * (float) Math.PI / 180.0F)
+					* MathHelper.cos(pitch * (float) Math.PI / 180.0F);
+			double vecY = -MathHelper.sin(pitch * (float) Math.PI / 180.0F);
+			double vecZ = MathHelper.cos(yaw * (float) Math.PI / 180.0F)
+					* MathHelper.cos(pitch * (float) Math.PI / 180.0F);
+			double deltaX = -MathHelper.sin(yaw * (float) Math.PI / 180.0F);
+			double deltaZ = MathHelper.cos(yaw * (float) Math.PI / 180.0F);
+			EntityWitherSkull skull = new EntityWitherSkull(world, player.posX + deltaX,
+					player.posY + player.getEyeHeight() - 0.25, player.posZ + deltaZ, vecX, vecY, vecZ) {
 				@Override
 				public void onImpact(RayTraceResult result) {
-					if (!this.world.isRemote && result.entityHit != null && result.entityHit instanceof EntityLivingBase) {
+					if (!this.world.isRemote && result.entityHit != null
+							&& result.entityHit instanceof EntityLivingBase) {
 						EntityLivingBase entity = (EntityLivingBase) result.entityHit;
 						entity.addPotionEffect(new PotionEffect(MobEffects.WITHER, 200, 1));
 					}

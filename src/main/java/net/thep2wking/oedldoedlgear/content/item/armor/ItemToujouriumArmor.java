@@ -1,15 +1,13 @@
 package net.thep2wking.oedldoedlgear.content.item.armor;
 
 import java.util.List;
-import java.util.UUID;
-
 import javax.annotation.Nullable;
 
-import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -18,6 +16,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,6 +25,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
+import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
@@ -33,24 +33,9 @@ import net.thep2wking.oedldoedlgear.init.ModItems;
 
 @Mod.EventBusSubscriber
 public class ItemToujouriumArmor extends ModItemArmorBase {
-	public enum ToujouriumUUIDs {
-		HELMET_UUID("72973f80-73c6-434e-bbce-cb28a5c5d6c3"), CHESTPLATE_UUID("edddc8d4-84a4-42fa-8654-d5704ca26225"),
-		LEGGINGS_UUID("0222ad71-5a72-4490-acce-fd8fb8eb70ee"), BOOTS_UUID("1229d236-1cbd-4415-b367-1f0ed5a00ae6");
-
-		public String ids;
-
-		ToujouriumUUIDs(String ids) {
-			this.ids = ids;
-		}
-	}
-
-	public ToujouriumUUIDs uuid;
-
 	public ItemToujouriumArmor(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
-			EntityEquipmentSlot slot, ToujouriumUUIDs uuid, EnumRarity rarity, boolean hasEffect, int tooltipLines,
-			int annotationLines) {
+			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(modid, name, tab, material, renderIndex, slot, rarity, hasEffect, tooltipLines, annotationLines);
-		this.uuid = uuid;
 	}
 
 	@Override
@@ -58,23 +43,14 @@ public class ItemToujouriumArmor extends ModItemArmorBase {
 		return 6757;
 	}
 
-	public static final UUID HELMET_UUID = UUID.fromString("9b138dbb-5bf2-4d7e-a847-4f00028282d5");
-	public static final UUID CHESTPLATE_UUID = UUID.fromString("3e14006b-b061-442f-82c8-c01a45aa447e");
-	public static final UUID LEGGINGS_UUID = UUID.fromString("f7a931a6-df2b-4252-af36-3b6ba816b698");
-	public static final UUID BOOTS_UUID = UUID.fromString("85c94001-ad40-4dfc-8b7a-da670c35ec10");
-
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
-		if (slot == this.getEquipmentSlot()) {
-			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
-				ModArmorHelper.addKnockbackResistanceModifier(attributes, this, slot, HELMET_UUID, CHESTPLATE_UUID,
-						LEGGINGS_UUID, BOOTS_UUID, 1);
-			}
-			return attributes;
+		Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot, stack);
+		if (slot == armorType && GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+			ModArmorHelper.addFullArmorModifier(multimap, stack, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD);
 		}
-		return attributes;
+		return multimap;
 	}
 
 	@Override

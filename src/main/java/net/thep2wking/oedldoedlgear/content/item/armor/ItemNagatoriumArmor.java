@@ -1,16 +1,15 @@
 package net.thep2wking.oedldoedlgear.content.item.armor;
 
 import java.util.List;
-import java.util.UUID;
 
 import javax.annotation.Nullable;
 
-import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -20,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EntityDamageSource;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -28,6 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModPotionUtil;
+import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
@@ -45,23 +46,14 @@ public class ItemNagatoriumArmor extends ModItemArmorBase {
 		return 7656;
 	}
 
-	public static final UUID HELMET_UUID = UUID.fromString("8ffc6b5f-b61a-4ba8-842b-e031f51faee0");
-	public static final UUID CHESTPLATE_UUID = UUID.fromString("f21ebcb6-3726-46d2-b7b2-3ee77ff303ef");
-	public static final UUID LEGGINGS_UUID = UUID.fromString("dfa3b11d-4b9e-4fef-be21-3727a64cf7b4");
-	public static final UUID BOOTS_UUID = UUID.fromString("5f8d64cc-bfff-404e-8528-8a1fbd10e33a");
-
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
-		if (slot == this.getEquipmentSlot()) {
-			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
-				ModArmorHelper.addKnockbackResistanceModifier(attributes, this, slot, HELMET_UUID, CHESTPLATE_UUID,
-						LEGGINGS_UUID, BOOTS_UUID, 1);
-			}
-			return attributes;
+		Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot, stack);
+		if (slot == armorType && GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+			ModArmorHelper.addFullArmorModifier(multimap, stack, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD);
 		}
-		return attributes;
+		return multimap;
 	}
 
 	@Override
@@ -77,7 +69,7 @@ public class ItemNagatoriumArmor extends ModItemArmorBase {
 			if (GearConfig.PROPERTIES.ARMOR_NIGHT_VISION) {
 				player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
 			}
-			
+
 			ModPotionUtil.invertEffect(player, MobEffects.HUNGER, MobEffects.SATURATION, 200, 0);
 			ModPotionUtil.invertEffect(player, MobEffects.INSTANT_DAMAGE, MobEffects.INSTANT_HEALTH, 200, 0);
 			ModPotionUtil.invertEffect(player, MobEffects.MINING_FATIGUE, MobEffects.HASTE, 200, 0);
@@ -85,7 +77,7 @@ public class ItemNagatoriumArmor extends ModItemArmorBase {
 			ModPotionUtil.invertEffect(player, MobEffects.SLOWNESS, MobEffects.SPEED, 200, 0);
 			ModPotionUtil.invertEffect(player, MobEffects.WEAKNESS, MobEffects.STRENGTH, 200, 0);
 			ModPotionUtil.invertEffect(player, MobEffects.WITHER, MobEffects.REGENERATION, 200, 0);
-			
+
 			player.removePotionEffect(MobEffects.LEVITATION);
 			player.removePotionEffect(MobEffects.BLINDNESS);
 			player.removePotionEffect(MobEffects.GLOWING);

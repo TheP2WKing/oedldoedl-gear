@@ -61,26 +61,22 @@ public class ItemArgentoriumArmor extends ModItemArmorBase {
 		return 8355;
 	}
 
-	public static final UUID HELMET_UUID = UUID.fromString("b50da645-e7f0-42f8-ae0f-53c638c8a699");
-	public static final UUID CHESTPLATE_UUID = UUID.fromString("663d7a4b-a0cc-46e2-884c-a7e81f7b4853");
-	public static final UUID LEGGINGS_UUID = UUID.fromString("ce943ee0-ba7e-41ee-930a-7f97e28d287c");
-	public static final UUID BOOTS_UUID = UUID.fromString("68c8e01f-3a53-4e45-93f8-b822aecaff21");
-
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
-		if (slot == this.getEquipmentSlot()) {
-			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			attributes.put(SharedMonsterAttributes.MAX_HEALTH.getName(),
+		Multimap<String, AttributeModifier> multimap = LinkedHashMultimap.create();
+		if (slot == armorType) {
+			multimap.putAll(super.getAttributeModifiers(slot, stack));
+		}
+		if (slot == armorType && GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+			ModArmorHelper.addFullArmorModifier(multimap, stack, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD);
+		}
+		if (slot == armorType) {
+			multimap.put(SharedMonsterAttributes.MAX_HEALTH.getName(),
 					new AttributeModifier(UUID.fromString(this.uuid.ids), ModReferences.ATTRIBUTE_MAX_HEALTH, 10,
 							AttributeModifierOperation.ADD));
-			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
-				ModArmorHelper.addKnockbackResistanceModifier(attributes, this, slot, HELMET_UUID, CHESTPLATE_UUID,
-						LEGGINGS_UUID, BOOTS_UUID, 1);
-			}
-			return attributes;
 		}
-		return attributes;
+		return multimap;
 	}
 
 	@Override

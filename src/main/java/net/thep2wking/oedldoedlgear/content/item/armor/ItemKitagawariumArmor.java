@@ -1,17 +1,15 @@
 package net.thep2wking.oedldoedlgear.content.item.armor;
 
 import java.util.List;
-import java.util.UUID;
-
 import javax.annotation.Nullable;
 
-import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,6 +21,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -31,6 +30,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 import net.thep2wking.oedldoedlcore.init.ModPotions;
 import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
+import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
@@ -48,23 +48,14 @@ public class ItemKitagawariumArmor extends ModItemArmorBase {
 		return 8658;
 	}
 
-	public static final UUID HELMET_UUID = UUID.fromString("71f82823-01c2-4f84-99f2-0911578165ce");
-	public static final UUID CHESTPLATE_UUID = UUID.fromString("25a9184d-8712-44cd-abc6-bb94e979a92e");
-	public static final UUID LEGGINGS_UUID = UUID.fromString("dfca663b-0fc4-4c48-83df-2a6a1c4711ca");
-	public static final UUID BOOTS_UUID = UUID.fromString("83058706-db6e-4884-be09-a6d8d13fabf8");
-
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
-		if (slot == this.getEquipmentSlot()) {
-			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
-				ModArmorHelper.addKnockbackResistanceModifier(attributes, this, slot, HELMET_UUID, CHESTPLATE_UUID,
-						LEGGINGS_UUID, BOOTS_UUID, 1);
-			}
-			return attributes;
+		Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot, stack);
+		if (slot == armorType && GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+			ModArmorHelper.addFullArmorModifier(multimap, stack, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD);
 		}
-		return attributes;
+		return multimap;
 	}
 
 	@Override

@@ -1,15 +1,13 @@
 package net.thep2wking.oedldoedlgear.content.item.armor;
 
 import java.util.List;
-import java.util.UUID;
-
 import javax.annotation.Nullable;
 
-import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -18,10 +16,12 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
+import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
@@ -38,23 +38,14 @@ public class ItemGremoriumArmor extends ModItemArmorBase {
 		return 9958;
 	}
 
-	public static final UUID HELMET_UUID = UUID.fromString("264fe2c2-dc00-439e-9d37-1aabfe562c14");
-	public static final UUID CHESTPLATE_UUID = UUID.fromString("292ae143-fd48-49fc-91b4-698e3efc9314");
-	public static final UUID LEGGINGS_UUID = UUID.fromString("cd32645f-1a26-4898-b0f1-36e703c06509");
-	public static final UUID BOOTS_UUID = UUID.fromString("98cef06b-b7ba-4833-9888-84f352921381");
-
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
-		if (slot == this.getEquipmentSlot()) {
-			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
-				ModArmorHelper.addKnockbackResistanceModifier(attributes, this, slot, HELMET_UUID, CHESTPLATE_UUID,
-						LEGGINGS_UUID, BOOTS_UUID, 1);
-			}
-			return attributes;
+		Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot, stack);
+		if (slot == armorType && GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+			ModArmorHelper.addFullArmorModifier(multimap, stack, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD);
 		}
-		return attributes;
+		return multimap;
 	}
 
 	@Override
@@ -71,7 +62,9 @@ public class ItemGremoriumArmor extends ModItemArmorBase {
 				player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, false, false));
 			}
 
-			player.capabilities.setFlySpeed(0.1F);
+			if (world.isRemote) {
+				player.capabilities.setFlySpeed(0.1F);
+			}
 			player.capabilities.allowFlying = true;
 			player.removePotionEffect(MobEffects.POISON);
 			player.removePotionEffect(MobEffects.INSTANT_DAMAGE);
@@ -83,7 +76,9 @@ public class ItemGremoriumArmor extends ModItemArmorBase {
 				player.capabilities.allowFlying = false;
 				player.capabilities.isFlying = false;
 			}
-			player.capabilities.setFlySpeed(0.05F);
+			if (world.isRemote) {
+				player.capabilities.setFlySpeed(0.05F);
+			}
 			player.stepHeight = 0.6F;
 		}
 	}

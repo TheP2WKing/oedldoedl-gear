@@ -15,7 +15,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.GameType;
 import net.minecraft.world.World;
@@ -94,11 +93,7 @@ public class ItemAdminStaff extends ModItemBase {
 				mode = mode.getNext();
 				setMode(stack, mode);
 				stack.setTagCompound(tags);
-				player.sendMessage(
-						new TextComponentString(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
-								+ I18n.format(this.getUnlocalizedName() + ".annotation1"))
-								.appendSibling(new TextComponentString(
-										" " + TextFormatting.YELLOW + getMode(stack).name().toString())));
+				ModTooltips.sendItemInfoChatComponent(player, stack, getMode(stack).name(), TextFormatting.YELLOW);
 				player.swingArm(hand);
 			} else if (!world.isRemote) {
 				if (getMode(stack) == Mode.Day || getMode(stack) == Mode.Night || getMode(stack) == Mode.Clear

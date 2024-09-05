@@ -1,6 +1,5 @@
 package net.thep2wking.oedldoedlgear.content.item.tool;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -12,6 +11,7 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
+import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
 
 public class ItemKickStick extends ModItemBase {
@@ -41,11 +41,7 @@ public class ItemKickStick extends ModItemBase {
 			if (target instanceof EntityPlayerMP && server != null) {
 				((EntityPlayerMP) playerTarget).connection
 						.disconnect(new TextComponentString(GearConfig.CONTENT.ADMINTOOLS.BAN_MESSAGE));
-				player.sendMessage(new TextComponentString("[")
-						.appendSibling(new TextComponentString(
-								TextFormatting.RED + I18n.format(this.getUnlocalizedName() + ".name")))
-						.appendSibling(new TextComponentString("] "))
-						.appendSibling(new TextComponentString(I18n.format(this.getUnlocalizedName() + ".tip2"))));
+				ModTooltips.sendItemInfoChatComponent(player, stack, 1, TextFormatting.RED);
 			}
 		}
 		return super.hitEntity(stack, target, attacker);

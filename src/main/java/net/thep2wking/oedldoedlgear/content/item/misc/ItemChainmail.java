@@ -32,12 +32,12 @@ public class ItemChainmail extends ModItemBase {
 			if (!worldIn.isRemote) {
 				if (random.nextFloat() <= GearConfig.CONTENT.CHAINMAIL_NOTE_OF_SUFFERING_CHANCE) {
 					worldIn.spawnEntity(
-							new EntityItem(worldIn, playerIn.getPosition().getX(), playerIn.getPosition().getY() + 0.5,
-									playerIn.getPosition().getZ(), new ItemStack(ModItems.NOTE_OF_SUFFERING)));
+							new EntityItem(worldIn, playerIn.posX, playerIn.posY + 0.5, playerIn.posZ,
+									new ItemStack(ModItems.NOTE_OF_SUFFERING)));
 				} else {
 					worldIn.spawnEntity(
-							new EntityItem(worldIn, playerIn.getPosition().getX(), playerIn.getPosition().getY() + 0.5,
-									playerIn.getPosition().getZ(), new ItemStack(Items.PAPER)));
+							new EntityItem(worldIn, playerIn.posX, playerIn.posY + 0.5, playerIn.posZ,
+									new ItemStack(Items.PAPER)));
 				}
 			}
 

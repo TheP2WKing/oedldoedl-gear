@@ -10,6 +10,7 @@ import com.google.common.collect.Multimap;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -57,25 +58,22 @@ public class ItemSakurajimariumArmor extends ModItemArmorBase {
 		return 8054;
 	}
 
-	public static final UUID HELMET_UUID = UUID.fromString("8e50582a-9f5d-4a29-9359-09d18f5dd0b9");
-	public static final UUID CHESTPLATE_UUID = UUID.fromString("0341c7d4-5dca-4039-baa1-8b7b9c2a6b85");
-	public static final UUID LEGGINGS_UUID = UUID.fromString("4b5bde74-fba9-4218-a424-56de0b6c5060");
-	public static final UUID BOOTS_UUID = UUID.fromString("adb43a9d-9075-4ad2-9f21-38c0099d2fea");
-
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
-		if (slot == this.getEquipmentSlot()) {
-			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			attributes.put(EntityPlayer.REACH_DISTANCE.getName(), new AttributeModifier(UUID.fromString(this.uuid.ids),
-					ModReferences.ATTRIBUTE_REACH_DISTANCE, 0.5, AttributeModifierOperation.ADD));
-			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
-				ModArmorHelper.addKnockbackResistanceModifier(attributes, this, slot, HELMET_UUID, CHESTPLATE_UUID,
-						LEGGINGS_UUID, BOOTS_UUID, 1);
-			}
-			return attributes;
+		Multimap<String, AttributeModifier> multimap = LinkedHashMultimap.create();
+		if (slot == armorType) {
+			multimap.putAll(super.getAttributeModifiers(slot, stack));
 		}
-		return attributes;
+		if (slot == armorType && GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+			ModArmorHelper.addFullArmorModifier(multimap, stack, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 1, AttributeModifierOperation.ADD);
+		}
+		if (slot == armorType) {
+			multimap.put(EntityPlayer.REACH_DISTANCE.getName(),
+					new AttributeModifier(UUID.fromString(this.uuid.ids), ModReferences.ATTRIBUTE_REACH_DISTANCE, 0.5,
+							AttributeModifierOperation.ADD));
+		}
+		return multimap;
 	}
 
 	@Override

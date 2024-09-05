@@ -1,11 +1,8 @@
 package net.thep2wking.oedldoedlgear.content.item.armor;
 
 import java.util.List;
-import java.util.UUID;
-
 import javax.annotation.Nullable;
 
-import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.client.resources.I18n;
@@ -25,7 +22,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.GameType;
 import net.minecraft.world.World;
@@ -57,21 +53,14 @@ public class ItemGamemodeChestplate extends ModItemArmorBase {
 				|| enchantment.canApply(new ItemStack(Items.IRON_CHESTPLATE));
 	}
 
-	public static final UUID CHESTPLATE_UUID = UUID.fromString("789e2e67-2351-483a-acd5-a2f1acfb7140");
-
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
-		if (slot == this.getEquipmentSlot()) {
-			attributes.putAll(super.getAttributeModifiers(this.getEquipmentSlot(), new ItemStack(this)));
-			if (GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
-				ModArmorHelper.addChestplateModifier(attributes, this, slot,
-						SharedMonsterAttributes.KNOCKBACK_RESISTANCE, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 20,
-						AttributeModifierOperation.ADD, CHESTPLATE_UUID);
-			}
-			return attributes;
+		Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot, stack);
+		if (slot == armorType && GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
+			ModArmorHelper.addFullArmorModifier(multimap, stack, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 20, AttributeModifierOperation.ADD);
 		}
-		return attributes;
+		return multimap;
 	}
 
 	@Override
@@ -126,20 +115,10 @@ public class ItemGamemodeChestplate extends ModItemArmorBase {
 				stack.setTagCompound(compound);
 				if (!compound.getBoolean("Gamemode")) {
 					player.swingArm(hand);
-					player.sendMessage(
-							new TextComponentString(
-									CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
-											+ I18n.format(this.getUnlocalizedName() + ".annotation1"))
-									.appendSibling(new TextComponentString(
-											" " + TextFormatting.YELLOW + getMode(stack).toString())));
+					ModTooltips.sendItemInfoChatComponent(player, stack, getMode(stack), TextFormatting.YELLOW);
 				} else {
 					player.swingArm(hand);
-					player.sendMessage(
-							new TextComponentString(
-									CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
-											+ I18n.format(this.getUnlocalizedName() + ".annotation1"))
-									.appendSibling(new TextComponentString(
-											" " + TextFormatting.YELLOW + getMode(stack).toString())));
+					ModTooltips.sendItemInfoChatComponent(player, stack, getMode(stack), TextFormatting.YELLOW);
 				}
 			} else if (!world.isRemote && !player.isSneaking() && !player.isCreative()) {
 				ItemStack itemstack = player.getHeldItem(hand);

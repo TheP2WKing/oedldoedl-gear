@@ -85,9 +85,11 @@ public class ItemFrierenStaff extends ModItemBase {
 						for (int k = -1; k < 2; k++) { // - 1 2
 							placePos.setPos(pos.getX() + i, pos.getY() + k, pos.getZ() + j);
 
-							ModCustomParticleRenderer.addParticleFromHex(world, placePos, "#686080");
-							ModCustomParticleRenderer.addParticleFromHex(world, placePos, "#92a29e");
-							ModCustomParticleRenderer.addParticleFromHex(world, placePos, "#ffffff");
+							if (world.isRemote) {
+								ModCustomParticleRenderer.addParticleFromHex(world, placePos, "#92a29e");
+								ModCustomParticleRenderer.addParticleFromHex(world, placePos, "#ffffff");
+								ModCustomParticleRenderer.addParticleFromHex(world, placePos, "#686080");
+							}
 
 							List<EntityLivingBase> entity = world.getEntitiesWithinAABB(EntityLivingBase.class,
 									new AxisAlignedBB(placePos));
