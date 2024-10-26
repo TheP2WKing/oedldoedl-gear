@@ -1,31 +1,19 @@
 package net.thep2wking.oedldoedlgear.content.item.armor;
 
-import java.util.List;
-
-import javax.annotation.Nullable;
-
+import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.armor.ModItemArmorBase;
 import net.thep2wking.oedldoedlcore.util.ModArmorHelper;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
-import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
-import net.thep2wking.oedldoedlgear.init.ModItems;
 
 public class ItemEmeraldArmor extends ModItemArmorBase {
 	public ItemEmeraldArmor(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
@@ -35,43 +23,14 @@ public class ItemEmeraldArmor extends ModItemArmorBase {
 
 	@Override
 	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
-		Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot, stack);
+		Multimap<String, AttributeModifier> multimap = LinkedHashMultimap.create();
+		if (slot == armorType) {
+			multimap.putAll(super.getAttributeModifiers(slot, stack));
+		}
 		if (slot == armorType && GearConfig.PROPERTIES.ARMOR_KNOCKBACK_RESISTANCE) {
-			ModArmorHelper.addFullArmorModifier(multimap, stack, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
-					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, 0.1, AttributeModifierOperation.ADD);
+			ModArmorHelper.addFullArmorModifier(multimap, stack, slot, SharedMonsterAttributes.LUCK,
+					ModReferences.ATTRIBUTE_LUCK, 0.25, AttributeModifierOperation.ADD_MULTIPLE);
 		}
 		return multimap;
-	}
-
-	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		if (ModArmorHelper.hasFullArmorSet(player, ModItems.EMERALD_HELMET, ModItems.EMERALD_CHESTPLATE,
-				ModItems.EMERALD_LEGGINGS, ModItems.EMERALD_BOOTS)) {
-			player.addPotionEffect(new PotionEffect(MobEffects.LUCK, 200, 0, false, false));
-		}
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		if (ModTooltips.showAnnotationTip()) {
-			for (int i = 1; i <= annotationLines; ++i) {
-				ModTooltips.addAnnotation(tooltip, this.getUnlocalizedName(), i);
-			}
-		}
-		if (ModTooltips.showInfoTip()) {
-			for (int i = 1; i <= tooltipLines; ++i) {
-				ModTooltips.addInformation(tooltip, this.getUnlocalizedName(), i);
-			}
-		} else if (ModTooltips.showInfoTipKey() && !(tooltipLines == 0)) {
-			ModTooltips.addKey(tooltip, ModTooltips.KEY_INFO);
-		}
-
-		if (ModTooltips.showEffectTip()) {
-			ModTooltips.addEffectHeader(tooltip, ModTooltips.EFFECT_FULL_ARMOR);
-			ModTooltips.addPotionEffect(tooltip, MobEffects.LUCK.getName(), false, 1, 200);
-		} else if (ModTooltips.showEffectTipKey()) {
-			ModTooltips.addKey(tooltip, ModTooltips.KEY_EFFECTS);
-		}
 	}
 }
