@@ -9,7 +9,7 @@ import net.thep2wking.oedldoedlcore.api.block.ModBlockBase;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 import net.thep2wking.oedldoedlgear.config.GearConfig;
-import net.thep2wking.oedldoedlgear.content.block.BlockFluidLiquidDeath;
+import net.thep2wking.oedldoedlgear.content.block.BlockFluidDeath;
 import net.thep2wking.oedldoedlgear.content.block.BlockFluidMosesBlood;
 import net.thep2wking.oedldoedlgear.content.block.BlockImpactPad;
 import net.thep2wking.oedldoedlgear.content.block.BlockJumpPad;
@@ -17,7 +17,7 @@ import net.thep2wking.oedldoedlgear.content.block.BlockTransparentReplacement;
 
 public class ModBlocks {
 	public static final BlockFluidClassic MOSES_BLOOD = new BlockFluidMosesBlood(OedldoedlGear.MODID, "moses_blood", ModFluids.MOSES_BLOOD, Material.WATER, MapColor.RED_STAINED_HARDENED_CLAY);
-	public static final BlockFluidClassic LIQUID_DEATH = new BlockFluidLiquidDeath(OedldoedlGear.MODID, "liquid_death", ModFluids.LIQUID_DEATH, Material.WATER, MapColor.PURPLE_STAINED_HARDENED_CLAY);
+	public static final BlockFluidClassic DEATH = new BlockFluidDeath(OedldoedlGear.MODID, "death", ModFluids.DEATH, Material.WATER, MapColor.PURPLE_STAINED_HARDENED_CLAY);
 
 	public static final Block BADROCK = new ModBlockBase(OedldoedlGear.MODID, "badrock", OedldoedlGear.TAB, Material.ROCK, SoundType.STONE, MapColor.BLACK, 5, ModToolTypes.PICKAXE, 1000f, 10000f, 0);
 	public static final Block ENHANCED_DIRT = new ModBlockBase(OedldoedlGear.MODID, "enhanced_dirt", OedldoedlGear.TAB, Material.GOURD, SoundType.GROUND, MapColor.DIRT, 0, ModToolTypes.SHOVEL, 0.5f, 0.5f, 0);

@@ -32,7 +32,7 @@ public class ModRegistry {
 		ModLogger.registeredBlocksLogger(OedldoedlGear.MODID);
 
 		ModRegistryHelper.registerBlock(event, ModBlocks.MOSES_BLOOD);
-		ModRegistryHelper.registerBlock(event, ModBlocks.LIQUID_DEATH);
+		ModRegistryHelper.registerBlock(event, ModBlocks.DEATH);
 
 		ModRegistryHelper.registerBlock(event, ModBlocks.BADROCK);
 		ModRegistryHelper.registerBlock(event, ModBlocks.ENHANCED_DIRT);
@@ -420,6 +420,6 @@ public class ModRegistry {
 		ModLogger.registeredFluidsLogger(OedldoedlGear.MODID);
 
 		ModRegistryHelper.registerFluid(ModFluids.MOSES_BLOOD);
-		ModRegistryHelper.registerFluid(ModFluids.LIQUID_DEATH);
+		ModRegistryHelper.registerFluid(ModFluids.DEATH);
 	}
 }

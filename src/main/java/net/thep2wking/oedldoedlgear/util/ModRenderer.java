@@ -18,6 +18,6 @@ public class ModRenderer {
 
 	public static void registerFluidRenderer() {
 		ModFluidUtil.addRenderForFluid(OedldoedlGear.MODID, "moses_blood", ModBlocks.MOSES_BLOOD);
-		ModFluidUtil.addRenderForFluid(OedldoedlGear.MODID, "liquid_death", ModBlocks.LIQUID_DEATH);
+		ModFluidUtil.addRenderForFluid(OedldoedlGear.MODID, "death", ModBlocks.DEATH);
 	}
 }

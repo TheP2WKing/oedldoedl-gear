@@ -33,8 +33,8 @@ lingering_potion.effect.oedldoedlgear.moses_blood=Lingering Bottle of Moses Bloo
 tipped_arrow.effect.oedldoedlgear.moses_blood=Arrow of Moses Blood
 
 # damage sources
-death.attack.oedldoedlgear.liquid_death=%1$s bathed in liquid death
-death.attack.oedldoedlgear.liquid_death.player=%1$s bathed in liquid death whilst trying to escape %2$s
+death.attack.oedldoedlgear.death=%1$s bathed in liquid death
+death.attack.oedldoedlgear.death.player=%1$s bathed in liquid death whilst trying to escape %2$s
 
 # base
 item.oedldoedlgear.base_helmet.name=Base Helmet
@@ -780,5 +780,5 @@ tile.oedldoedlgear.impact_pad.tip1=Uhhh...
 # fluids
 tile.oedldoedlgear.moses_blood.name=Moses Blood
 fluid.oedldoedlgear.moses_blood=Moses Blood
-tile.oedldoedlgear.liquid_death.name=Liquid Death
-fluid.oedldoedlgear.liquid_death=Liquid Death
+tile.oedldoedlgear.death.name=Death
+fluid.oedldoedlgear.death=Death

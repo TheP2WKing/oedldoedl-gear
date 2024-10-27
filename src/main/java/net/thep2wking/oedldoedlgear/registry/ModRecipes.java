@@ -583,8 +583,8 @@ public class ModRecipes {
 					new ItemStack(ModBlocks.IMPACT_PAD, 1, 0),
 					"A", "B", 'A', "wool", 'B', new ItemStack(Blocks.WOODEN_PRESSURE_PLATE, 1, 0));
 
-			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "liquid_death",
-					ModFluidUtil.addFluidBucket(ModFluids.LIQUID_DEATH), "ABA", "CDC", "ABA", 'A', "nuggetSadistium",
+			ModRecipeHelper.addShapedRecipe(OedldoedlGear.MODID, "death_bucket",
+					ModFluidUtil.addFluidBucket(ModFluids.DEATH), "ABA", "CDC", "ABA", 'A', "nuggetSadistium",
 					'B', "dyePurple", 'C', ModNBTUtil.addSplashPotion("minecraft:strong_harming"), 'D',
 					ModFluidUtil.addFluidBucket(ModFluids.MOSES_BLOOD));
 		}
@@ -601,7 +601,7 @@ public class ModRecipes {
 			ModRecipeHelper.addForgBucketBrewingRecipe(ModPotions.MOSES_BLOOD_NORMAL, PotionTypes.STRONG_HEALING,
 					ModFluids.MOSES_BLOOD);
 			ModRecipeHelper.addForgBucketBrewingRecipe(PotionTypes.HARMING, PotionTypes.HEALING,
-					ModFluids.LIQUID_DEATH);
+					ModFluids.DEATH);
 		}
 	}
 }

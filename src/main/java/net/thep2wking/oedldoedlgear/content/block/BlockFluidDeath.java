@@ -12,11 +12,11 @@ import net.minecraftforge.fluids.Fluid;
 import net.thep2wking.oedldoedlcore.api.fluid.ModBlockFluidBase;
 import net.thep2wking.oedldoedlgear.OedldoedlGear;
 
-public class BlockFluidLiquidDeath extends ModBlockFluidBase {
-	public static final DamageSource DAMAGE_SOURCE = new DamageSource(OedldoedlGear.MODID + ".liquid_death")
+public class BlockFluidDeath extends ModBlockFluidBase {
+	public static final DamageSource DAMAGE_SOURCE = new DamageSource(OedldoedlGear.MODID + ".death")
 			.setMagicDamage();
 
-	public BlockFluidLiquidDeath(String modid, String name, Fluid fluid, Material material, MapColor mapColor) {
+	public BlockFluidDeath(String modid, String name, Fluid fluid, Material material, MapColor mapColor) {
 		super(modid, name, fluid, material, mapColor);
 	}
 
