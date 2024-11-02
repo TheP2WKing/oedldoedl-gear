@@ -12,6 +12,7 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
 
@@ -41,22 +42,18 @@ public class ItemFireWand extends ModItemBase {
 				SoundCategory.AMBIENT, 1.0f, 1.0f);
 		player.getCooldownTracker().setCooldown(this, 20);
 		player.swingArm(hand);
-		if (!player.isCreative()) {
+		if (!player.capabilities.isCreativeMode) {
 			stack.damageItem(1, player);
 		}
-
 		if (!world.isRemote) {
-			float yaw = player.rotationYaw;
-			float pitch = player.rotationPitch;
-			double vecX = -MathHelper.sin(yaw * (float) Math.PI / 180.0F)
-					* MathHelper.cos(pitch * (float) Math.PI / 180.0F);
-			double vecY = -MathHelper.sin(pitch * (float) Math.PI / 180.0F);
-			double vecZ = MathHelper.cos(yaw * (float) Math.PI / 180.0F)
-					* MathHelper.cos(pitch * (float) Math.PI / 180.0F);
-			double deltaX = -MathHelper.sin(yaw * (float) Math.PI / 180.0F);
-			double deltaZ = MathHelper.cos(yaw * (float) Math.PI / 180.0F);
-			EntityLargeFireball fireball = new EntityLargeFireball(world, player.posX + deltaX,
-					player.posY + player.getEyeHeight() - 0.25, player.posZ + deltaZ, vecX, vecY, vecZ);
+			Vec3d look = player.getLookVec();
+			double deltaX = (double) (-MathHelper.sin(player.rotationYaw / 180.0F * (float) Math.PI));
+			double deltaZ = (double) (MathHelper.cos(player.rotationYaw / 180.0F * (float) Math.PI));
+			EntityLargeFireball fireball = new EntityLargeFireball(world, player, 0, 0, 0);
+			fireball.setPosition(player.posX + deltaX, player.posY + player.getEyeHeight() - 0.25, player.posZ + deltaZ);
+			fireball.accelerationX = look.x * 0.2;
+			fireball.accelerationY = look.y * 0.2;
+			fireball.accelerationZ = look.z * 0.2;
 			world.spawnEntity(fireball);
 		}
 		return ActionResult.newResult(EnumActionResult.SUCCESS, stack);

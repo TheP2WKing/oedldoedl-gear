@@ -21,6 +21,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -53,22 +54,14 @@ public class ItemSkullWand extends ModItemBase {
 				SoundCategory.AMBIENT, 1.0f, 1.0f);
 		player.getCooldownTracker().setCooldown(this, 20);
 		player.swingArm(hand);
-		if (!player.isCreative()) {
+		if (!player.capabilities.isCreativeMode) {
 			stack.damageItem(1, player);
 		}
-
 		if (!world.isRemote) {
-			float yaw = player.rotationYaw;
-			float pitch = player.rotationPitch;
-			double vecX = -MathHelper.sin(yaw * (float) Math.PI / 180.0F)
-					* MathHelper.cos(pitch * (float) Math.PI / 180.0F);
-			double vecY = -MathHelper.sin(pitch * (float) Math.PI / 180.0F);
-			double vecZ = MathHelper.cos(yaw * (float) Math.PI / 180.0F)
-					* MathHelper.cos(pitch * (float) Math.PI / 180.0F);
-			double deltaX = -MathHelper.sin(yaw * (float) Math.PI / 180.0F);
-			double deltaZ = MathHelper.cos(yaw * (float) Math.PI / 180.0F);
-			EntityWitherSkull skull = new EntityWitherSkull(world, player.posX + deltaX,
-					player.posY + player.getEyeHeight() - 0.25, player.posZ + deltaZ, vecX, vecY, vecZ) {
+			Vec3d look = player.getLookVec();
+			double deltaX = (double) (-MathHelper.sin(player.rotationYaw / 180.0F * (float) Math.PI));
+			double deltaZ = (double) (MathHelper.cos(player.rotationYaw / 180.0F * (float) Math.PI));
+			EntityWitherSkull skull = new EntityWitherSkull(world, player, 0, 0, 0) {
 				@Override
 				public void onImpact(RayTraceResult result) {
 					if (!this.world.isRemote && result.entityHit != null
@@ -80,6 +73,10 @@ public class ItemSkullWand extends ModItemBase {
 					this.setDead();
 				}
 			};
+			skull.setPosition(player.posX + deltaX, player.posY + player.getEyeHeight() - 0.25, player.posZ + deltaZ);
+			skull.accelerationX = look.x * 0.2;
+			skull.accelerationY = look.y * 0.2;
+			skull.accelerationZ = look.z * 0.2;
 			world.spawnEntity(skull);
 		}
 		return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
