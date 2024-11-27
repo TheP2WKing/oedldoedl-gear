@@ -1,5 +1,32 @@
 # Changelog
 
+## [4.2.0] - 2024-11-27
+
+### Added
+
+- added respective caterium armor and tools
+
+### Changed
+
+- updated creative tab implementation
+- some tools now using proper swing hand animation when used
+- emerald armor now used luck modifier instead of luck potion
+- slime armor no longer has knockback resistance
+- liquid death got replaced by simply death to prevent crashing with thaumcraft
+- updated texture of fire and skull wand
+- updated travellers leather texture
+
+### Fixed
+
+- fixed some crafting recipes that used outdated oredict names
+- fixed server crash when equipping armor with custom attribute modifier
+- fixed crashed related to text translation on a server when items print a chat component to the chat
+- fixed server crash when using fire and skull wand
+
+### Removed
+
+- removed legacy shield assets
+
 ## [4.1.0] - 2024-06-09
 
 ### Added
